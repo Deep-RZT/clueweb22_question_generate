@@ -1,0 +1,57 @@
+Optical Telescopes | Let's Talk Science
+Home
+Educational Resources
+Backgrounders
+Optical Telescopes
+Backgrounders
+Optical Telescopes
+Boy looking through telescope at night (stevecoleimages, iStockphoto)
+Format
+Text , Images
+Subjects
+Physics , Waves, Sound, Light , Space Science , Astronomy
+Let's Talk Science
+January 30, 2020
+Readability
+8.43
+How does this align with my curriculum?
+Learn about the history of telescopes and the function of refracting and reflecting optical telescopes.
+Astronomy
+Astronomy comes from the Greek words “ astron” meaning ‘star’ and “ nomos” meaning ‘law.’ It is the study of everything that exists beyond the Earth. It is really all about the study of light. Whether you are doing research, or just gazing up at the night sky, everything that you learn comes in the form of light. On a clear dark night, there is a lot to see! Long ago, astronomers used to try to document it all with the naked eye. But the human eye is not good at seeing details of dim and distant objects. There is much we cannot see with our eyes alone.
+The Telescope
+A telescope is a tool that makes far off things look up-close and bright. The invention of the first telescope is a little sketchy. Most people believe that Galileo Galilei invented the first telescope in 1609. But people knew how to build telescopes before that. We just do not have any evidence before Galileo. The earliest telescopes we know of were made in 1608 by various optical craftsmen in the Netherlands. One of them, Hans Lippershey, publicized his design well enough that news reached Galileo in Italy in 1609. When Galileo heard of the existence of a telescope, he built his own. Within a year he had improved Lippershey’s design. And his name became associated with the first telescope. Galileo’s used his telescope to make observations of Jupiter’s largest moons.
+Fresco of Galileo Galilei showing the Doge (duke) of Venice how to use his telescope (Source: Giuseppe Bertini [Public domain] via Wikimedia Commons ).
+In 1923, Edwin Hubble used the most powerful telescope on Earth at the time to look at the Andromeda Galaxy. He is the person after whom the famous space telescope is named. Astronomers knew that the Andromeda Galaxy was made up of stars. But it was Hubble who was able to measure how far away it is. Astronomers had already figured out the rough size of the Milky Way. Hubble used that data to calculate that the Andromeda Galaxy was at least ten times further away than the edge of our galaxy. This discovery led to further observations that helped astronomers find other galaxies. It also helped to expand our ideas about the Universe.
+How Do Telescopes Work?
+So how exactly do telescopes work? Let's consider a basic telescope. If you were looking to buy a telescope, a knowledgeable friend might tell you that there are two basic designs. There are refracting telescopes (refractors) and reflecting telescopes ( reflectors ).
+Refracting Telescopes
+Refracting telescopes are the long, tube-shaped telescopes which you might imagine Galileo using. Refractors use lenses to refract (bend) incoming light through a tube to a focal point. Refractors typically have two lenses. The objective lens is the lens at the front of the telescope through which the light passes. The eyepiece or lens is the lens, which magnifies the image.
+Parts and function of a refracting telescope (©2020 Let’s Talk Science).
+Reflecting Telescopes
+Reflecting telescopes use mirrors instead of lenses to reflect light to a focal point. Reflectors have two mirrors. The primary mirror is the big curved mirror at the back that starts to focus the light. The secondary mirror is the smaller mirror at the front that redirects the light towards your eye. Reflectors also have eyepiece lenses.
+Parts and function of a reflecting telescope (©2020 Let’s Talk Science).
+It's not really fair to say which type of telescope is 'better’. They both have their advantages and disadvantages. It depends on what you want to look at. Whether you want to take pictures, if you want portability, etc. Most modern observatories, which are buildings containing telescopes, use reflectors. This is because their telescopes are so huge! Their size allows for a lot of light to pass through them/ For telescopes that size, the weight of the lenses and the length of the tube makes refractors impractical.
+The 2.54 m diameter Hooker telescope at Mount Wilson Observatory, California, a reflector, was completed in 1917 (Source: NASA ).
+Aperture
+There are two other important aspects of telescopes. These are the aperture and focal length (see above). The aperture of the telescope is the diameter of the opening on the front. The bigger the aperture the greater the amount of light that can enter the telescope. The pupil in your eye is your body's aperture. It can only open a few millimetres. Optical telescopes rarely have apertures smaller than 8 cm. Large telescopes in observatories can have apertures that are greater than 10 m in diameter! Since the dimmest objects in the universe do not give us a lot of light to work with, we need telescopes with big apertures to collect enough light from the object to see them!
+The Canada-France-Hawaii Telescope, located at the Mauna Kea Observatory in Hawaii (Source: Vadim Kurland [CC BY] via Wikimedia Commons ).
+Focal Length
+Focal length is the length from the aperture to the focal point in the telescope. The longer the focal length, the smaller the patch of sky you can see. The upside is that longer focal lengths allow for greater possible magnification. Focal length is another advantage for reflectors. Since refractors bend light down their tube, the tube has to be at least as long as the focal length. Reflectors, on the other hand, use mirrors to reflect light. This means that they can be shorter than their focal length. The light still travels the full focal length, but the tube itself does not need to be as long. The eyepiece is near the focal point of the primary mirror to magnify the image.
+Therefore, you might be thinking that every telescope should have the biggest aperture and longest focal length possible. Aside from limitations such as cost and storage space, there are other reasons why this is not a good idea. First, for anyone who studies our solar system, aperture really is not that important. Most of the planets are visible using even the smallest telescopes. Objects like the Moon are so bright that too large an aperture may be an issue. Secondly, even smaller-sized telescopes, such as ones with apertures of 20 cm, are capable of seeing hundreds of galaxies and nebulae, some of which are almost a hundred million light-years away! Galaxies are large systems of stars, gases and dust and nebulae are interstellar clouds of dust and hydrogen gas. It can actually help to use low magnification for these types of objects. Objects, such as star clusters and galaxies can be too large to 'zoom in' on. The Andromeda Galaxy, for example, appears to be larger than the full moon in the night sky!
+Andromeda Galaxy (©2013 Richard Bloch. Used with permission).
+Spotlight on Innovation
+Saving the Night Sky
+If you were to travel beyond a city and look back at it, you may see a glow in the sky. This is called sky glow, which is an example of light pollution. Light pollution is the brightening of the night sky caused by artificial light. Scientists are very concerned with the negative impacts of light pollution. It has been shown to disrupt wildlife patterns, and prevent astronomers from studying stars, galaxies, and planets. Not to mention that it keeps us from seeing the scenic beauty of our night sky!
+In 2007, in response to the concerns of light pollution, the International Dark-Sky Association (IDA), established the world’s first international dark sky reserve. It is located around the Mont-Mégantic Park in the province of Quebec. The purpose of a dark sky reserve is to protect the starry nights and nocturnal environment. It also there to promote and support the study of astronomy and space sciences. An area can be designated as a dark sky reserve if it is a large area of very dark sky that is actively protected for scientific, educational, cultural and environmental reasons.
+The Royal Astronomical Society of Canada also recognizes several areas across the country as dark sky preserves. These include Wood Buffalo National Park (AB), Point Pelee National Park (ON) and Fundy National Park (NB), just to name a few.
+Composite image of Earth at night showing light pollution (Data courtesy Marc Imhoff of NASA GSFC and Christopher Elvidge of NOAA NGDC via Wikimedia Commons ).
+References
+Greene, N. (2019, July 3). Hans Lippershey: Telescope and microscope inventor. ThoughtCo.
+Owens, S. (n.d.). Reflecting vs. refracting stargazing telescopes. Dummies.
+Smith, R. (n.d.). Edwin Hubble. Encyclopaedia Britannica.
+University of Oregon. (n.d.). Reflecting telescope.
+Van Alden, A. (n.d.). Galileo. Encyclopaedia Britannica.
+Let's Talk Science needs your input!
+Our programs and resources are offered at no cost thanks to generous contributions from our supporters.
+Please take a minute to tell us the name of your school/organization so we can better understand the impact of our programs.
+Open Survey

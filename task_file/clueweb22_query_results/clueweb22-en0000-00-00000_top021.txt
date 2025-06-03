@@ -1,0 +1,70 @@
+Timeline | ESA/Hubble | ESA/Hubble
+Timeline
+Year
+Event
+1946
+The astronomer Lyman Spitzer writes a report on the advantages of an extra-terrestrial observatory.
+1977
+The American congress approves the funding for the Large Space Telescope.
+1978
+Astronauts begin the training for space telescope missions.
+1979
+Work begins on the 2.4-metre main mirror of the telescope.
+1981
+The Space Telescope Science Institute (STScI) begins its operations on the campus of the John Hopkins University in Baltimore, USA.
+1983
+The Large Space Telescope is renamed the Hubble Space Telescope, after the renowned astronomer Edwin Powell Hubble, who proved the existence of other galaxies and discovered the first evidence for an expanding Universe.
+1984
+The Space Telescope-European Coordinating Facility begins its operation in Garching at Munich, Germany.
+1985
+The work on building Hubble is completed.
+1986
+Hubble’s launch is delayed after the Challenger disaster, which puts all shuttle flights on hold.
+1990
+The shuttle Discovery (STS-31) is launched on 24 April 1990 and brings Hubble into space. On 25 April Hubble is deployed into its orbit by the space shuttle crew.
+The first images made on 25 June reveal that the main mirror of Hubble has a spherical aberration which causes all images to be blurred.
+Within the same year COSTAR is approved: This instrument is a complex package of five optical mirror pairs which are going to rectify the spherical aberration of Hubble’s main mirror.
+1993
+The space shuttle Endeavour is launched on 2 December to conduct the First Servicing  Mission on Hubble. During the mission the corrective optics of COSTAR are installed which  replace the High Speed Photometer. The WFPC2 (Wide Field and Planetary Camera 2), which  was built with its own corrective optics, replaced the WFPC1 (Wide Field and Planetary Camera  1).
+1994
+Hubble provides detailed observations of the comet Shoemaker–Levy 9 as it collides with  the planet Jupiter [1]. In addition, by observing the galaxy M87 Hubble provides conclusive evidence for the existence of Supermassive Black Holes in the centres of galaxies [2] .
+1995
+Hubble takes the famous photo of the Eagle Nebula which later will be called “the pillars  of creation” [3] .
+1996
+The first Hubble Deep Field, which was observed by the end of 1995, is revealed and  allows astronomers to  study galaxies in the early Universe [4]. In the same year Hubble  resolves the host galaxies of quasars [5] .
+1997
+Servicing Mission 2 (STS-82) is launched on 11 February. The crew of the space shuttle  Discovery replace the instruments FOS (Faint Object Spectrograph) and GHRS (Goddard High  Resolution Spectrograph) with STIS (Space Telescope Imaging Spectrograph) and NICMOS  (Near Infrared Camera and Multi-Object Spectrograph). Within 1997 Hubble also observes the  visible afterglow of a gamma-ray burst in a distant galaxy [6] .
+1998
+On 29 October the HST Orbital System Test (HOST) is launched with the space shuttle  Discovery (STS-95). The HOST mission is testing new technologies to be used in Hubble on the  third Servicing Mission and beyond.
+1999
+The Servicing Mission 3A (STS-103) is launched on 19 December. The astronauts on  board the Discovery replace the six gyroscopes of the telescope, which help it pointing at  celestial objects, and conduct a general maintenance. This is the first servicing mission which is  not replacing any older science instruments.
+2001
+Hubble is able to measure the elements on the atmosphere of the exoplanet HD 209458b [7] .
+2002
+The Servicing Mission 3B is launched on 1 March. During the Mission the ACS  (Advanced Camera for Surveys), the NICMOS Cooling System (NCS) and new solar panels are  installed. Hubble also detects an object in the Kuiper belt at the edge of our Solar System which  is larger than Pluto [8]. This discovery leads to a debate on Pluto's status as a planet.
+2003
+The space shuttle Columbia disintegrates during the atmospheric re-entry, no crew  members survive and the shuttle  programme is grounded.
+2004
+The Hubble Ultra Deep Field is released allowing astronomers to look even further back  in the time of the cosmos [9]. Another servicing mission is cancelled out of concern for shuttle  safety and the power supply on STIS (Space Telescope Imaging Spectrograph) fails.
+2005
+Hubble images two previously unknown moons orbit ing Pluto [10] .
+2006
+It is decided that servicing mission 4 will go ahead [11] .
+2007
+Hubble observations show that the dwarf planet Eris is bigger than Pluto [12]. A 3D-map,  based on images by Hubble, showing the distribution of dark matter in the Universe is revealed [13]. Also in 2007 the power supply on the Advanced Camera for Surveys, one of Hubble’s key  instruments, fails.
+2008
+Hubble takes a picture of the exoplanet Formalhaut b, the first visual image of an  exoplanet [14]. In the same year Hubble finds organic molecules on an extrasolar planet and the  telescope’s 100 000th orbit around Earth is celebrated [15] .
+2009
+Servicing Mission 4 (STS-125) is launched on 11 May [16]. The astronauts install two new  instruments, WFC3 (Wide Field Camera 3) and COS (Cosmic Origins Spectrograph) which  make Hubble 100 times more powerful than when it was launched. During the servicing mission  the damaged instruments are repaired, the gyroscopes and batteries are replaced, and the Soft  Capture Mechanism as well as NBLs (New Outer Blanket Layers) are installed.
+2010
+Hubble images reveal distant galaxies with likely redshifts greater than 8, showing the  Universe as it was when it was less than a tenth of its current age [17]. Hubble also  photographs a never-before-seen evidence of a collision between two asteroids [18] .
+2011
+Hubble makes its millionth observation, a spectroscopic analysis of the exoplanet  HAT-P-7b. The 10 000th scientific paper using Hubble data is published [19] .
+2012
+Images taken by Hubble show seven primitive galaxies from a distant population that  formed more  than 13 billion years ago. The galaxies are seen as they were when the Universe  was less than 4 percent of its present age. Later in the year even that record is broken as  Hubble finds an object back from a time when the Universe was only 3 percent of its  present  age, only 470 million years after the Big Bang [20]. Hubble observations also lead to a new  class of exoplanet [21] .
+2013
+Hubble is also used in this year to determine for the first time the true colour of a planet  orbiting another star [22] and finds water vapour erupting off the surface of Jupiter’s moon  Europa [23] .
+2014
+Hubble becomes the first telescope ever to observe an asteroid disintegrating [24] and it  reveals the most detailed weather map for an exoplanet ever [25] .
+2015
+Hubble observes, for the first time, four images of a distant exploding star arranged in a  cross-shaped pattern by the powerful gravity of a foreground galaxy embedded in a massive  cluster of galaxies [26]. It also celebrates its 25th year in orbit with celebrations across the  globe! [27] [28] .

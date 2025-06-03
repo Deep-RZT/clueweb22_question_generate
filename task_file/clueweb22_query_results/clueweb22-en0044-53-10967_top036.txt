@@ -1,0 +1,30 @@
+Clifford - 4115X
+Clifford 4115X
+Basic 1-Way Remote Start System
+Clifford | Remote Start | 4115X
+Overview
+Start your engine from up to a 1/4 mile away with this entry level Clifford remote start system. This system comes with two 1-button remotes and several features, such as keyless entry and SmartStart compatibility.
+(2 Reviews)
+Tweet
+Features
+Includes two 1-Way remotes
+Up to 1/4 mile range*
+Auxiliary channel
+Bitwriter programmable for easy configuration
+Onboard remote start relays
+Separate ESP2 and D2D ports
+Directed SmartStart Compatible
+Where To Buy
+Download (Multilingual) Guide
+Download 4115X Guide
+*Range based on line-of-sight, unobstructed testing in ideal conditions. Actual range will vary due to local conditions including, but not limited to, environment, terrain, physical obstructions, vehicle location and orientation, interference and other possible impediments.
+**Additional parts and labor may be required.
+Technologies
+ESP2
+ESP2 is Directed's exclusive serial communications protocol that allows extra ultra-security, high-speed communication between systems and enables many of Directed's key features.
+XR Plus
+Directed Electronics recently made a significant performance upgrade to the RF receiver section of many of our award-winning security and remote start systems. The new XR+ Extreme Range superheterodyne receiver has an improved sensitivity specification of between 3 dB and 6 DB, which equates to a measurable range increase on the order of 15 percent. It also offers improved image rejection for certain types of RF interference, resulting in improved reliability.
+SmartStart Compatible
+If you already have a compatible Clifford remote start system in your car, the DSM300/DSM350 will add SmartStart capability to your system.
+Now you can remote start or lock and unlock your car just by pushing a button on your Smartphone using the exciting new Clifford SmartStart app from Directed Electronics.
+The simple graphical interface gives you control over the following features of your installed Clifford remote start or security/remote start system: Lock/arm, Unlock/disarm, Remote Start, Trunk release, Panic or car finder. You can also control multiple vehicles - great for families! - and assign more than one user to control a vehicle. It's easy with SmartStart!

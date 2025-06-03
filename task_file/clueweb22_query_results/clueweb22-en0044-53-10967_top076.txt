@@ -1,0 +1,238 @@
+CLIFFORD 5806X OWNER'S MANUAL Pdf Download | ManualsLib
+Manuals
+Brands
+Clifford Manuals
+Remote Starter
+5806X
+Owner's manual
+Clifford 5806X Owner's Manual
+Clifford auto state-of-the-art remote start and security system
+Also See for 5806X
+Owner's manual - 19 pages
+Owner's manual - 54 pages
+1
+2
+3
+Table Of Contents
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+page of 53
+Go
+Table of Contents
+Bookmarks
+Advertisement
+Download this manual See also: Owner's Manual
+The company behind Clifford
+Systems is Directed.
+Since its inception, Directed has had one purpose, to
+provide consumers with the finest vehicle security and
+accessories available. The recipient of nearly 100 pat-
+ents and Innovations Awards in the field of advanced
+electronic technology.
+Quality Directed products are sold and serviced
+throughout North America and around the world.
+Call (800) 876-0800 for more information about our
+products and ser vic es.
+©
+2013 Directed, All rights reserved.
+Vista, CA 92081
+Directed is committed to delivering world class
+www.clifford.com
+quality products and services that excite and
+delight our customers.
+Auto Security
+®
+G5806X 2013 06
+O W N E R' S
+T H E S C I E N C E O F S E C U R I T Y
+™
+M
+G U I D E
+O
+D
+E
+L
+5 806X
+Table of Contents
+Previous Page
+Next Page
+1
+2
+3
+4
+5
+Advertisement
+Also See for Clifford 5806X
+Clifford 5806X Owner's Manual 54 pages
+Clifford 5806X Owner's Manual 19 pages
+Related Manuals for Clifford 5806X
+Remote Starter Clifford 590.2X Owner's Manual
+(92 pages)
+Remote Starter Clifford CLIFFORD 50.7X Installation Manual
+Security and remote start (64 pages)
+Remote Starter Clifford AUTO SECURITY Owner's Manual
+Remote keyless entry system (12 pages)
+Remote Starter Clifford 1.2 Installation Manual
+Remote start keyless entry (64 pages)
+Remote Starter Clifford 4811X Owner's Manual
+(69 pages)
+Remote Starter Clifford IntelliStart 4 Owner's Manual
+Dei clifford intellistart 4 car alarms: owners guide (17 pages)
+Remote Starter Clifford 4706X Responder LC3 Owner's Manual
+Remote start and keyless entry system (57 pages)
+Remote Starter Clifford Responder LE 3.3X Installation Manual
+Responder le security and remote start (90 pages)
+Remote Starter Clifford OmniStart User Manual
+Remote engine starting convenience system (12 pages)
+Remote Starter Clifford Matrix RSIII Owner's Manual
+Remote start with security system (53 pages)
+Remote Starter CLIFFORD 3.3X Owner's Manual
+Responder le security and remote start (56 pages)
+Remote Starter Clifford 20.7 Owner's Manual
+Remote start keyless entry (52 pages)
+Remote Starter Clifford III Owner's Manual
+Clifford owner's manual world-class auto security smart remote starter iii (16 pages)
+Summary of Contents for Clifford 5806X
+Page 1 The company behind Clifford Auto Security ® Systems is Directed. Since its inception, Directed has had one purpose, to provide consumers with the finest vehicle security and accessories available. The recipient of nearly 100 pat- ents and Innovations Awards in the field of advanced electronic technology.
+Page 2: Important Information
+Congratulations Congratulations on the purchase of your state-of-the-art remote start and security system. Reading this Owner’s Guide prior to using your system will help maximize the use of your system and its many fea- tures. For any additional questions please contact your authorized Directed dealer or contact Directed at 1-800-753-0600.
+Page 4: Table Of Contents
+Contents Getting Started ....................4 Keys to using this manual ..............4 Responder LE 2-Way Remote Control ..............5 Control Center ....................6 Using your System ....................7 Commands and Confirmations .............. 7 Performing Commands ................. 7 Remote Control Command table ............8 Fault Condition Alerts ................
+Page 5 Alarm Features ....................24 Normal Arm Protection ............... 24 Sensor Silent Arm protection ............... 24 Full Silent Arm Protection ..............25 Sensor Warn-away ................25 Full Trigger ..................25 Emergency Override ................25 Trigger Zone Fault Report..............26 Alarm Report ..................26 Nuisance Prevention (NPC) ..............
+Page 6 Government Regulations ..................44 Warning! Safety First ..................46 Installation ..................46 Remote Start Capable ................ 46 Manual Transmission Vehicles ............. 46 Interference ..................48 Upgrades ..................48 Water/Heat Resistance ..............48 Limited lifetime consumer warranty ..............49...
+Page 7: Getting Started
+Getting Started Keys to using this manual Speciﬁc actions (in bold type) and style conventions are used consis- tently throughout this manual, they are as follows: Press: implies pushing in and releasing a button. Hold: is used after Press actions when a button needs to be held in position for an extended period of time, typically several sec- onds.
+Page 8: Responder Le 2-Way Remote Control
+Responder LE 2-Way Remote Control Feature Description Internal Antenna Used for transmitting and receiving* information Command buttons (4) Used to perform arming, disarming, auxiliary channel and remote start commands A U X Used to access function levels for commands, configura- Function button tion menus for programming, Car Selection, and to request reports.
+Page 9: Control Center
+Control Center Control Center Button The Control Center, typically located on the upper part of the front windshield sends and receives commands or messages to and from your system. It consists of: The In-vehicle system antenna, for 2 way communication. The Status LED, as a visual indicator of the system’s status.
+Page 10: Using Your System
+Using your System Commands and Conﬁrmations Commands, Basic or Advanced, are used to activate system features and are performed by pressing one of the Command buttons. Basic commands control the most often used security and remote start fea- tures while Advanced commands control more specialized features and request reports.
+Page 11: Remote Control Command Table
+Remote Control Command table Direct Access LEVEL 1 LEVEL 2 LEVEL 3 LEVEL 4 Arm/Lock Silent Arm Sensor Sensor Silent Full Silent (Panic) Bypass Disarm/Unlock Silent Disarm Remote Valet Car Finder Remote Start Runtime Timer Start Smart Start Defogger Reset Aux/Trunk AUX 1 AUX 2...
+Page 12 ** Remote Start feature not available when the Remote Start status is incorrect upon receiving the command. (Example: Runtime reset command received when remote start is off). Refer to the notes included in the command descriptions that ad- dress these faults or go to Remote Start Faults under the “Remote Start Features”...
+Page 13: Basic Commands (Direct Access)
+Basic Commands (Direct Access) No conﬁrmation LED’s on. Press and release The alarm arms, doors lock (if connected), and the siren chirps and parking lights ﬂash once. The Arm LED and beeps play to conﬁrm. If Valet mode* is On, the doors lock and the Arm LED and a fault tone plays.
+Page 14: Remote Start
+triggered; the siren will chirp four or ﬁve times, and the Disarm LED and four or ﬁve fault tones play to alert of the report. Remote Start Press and release Activates (or if On, deactivates) the remote starter. The engine and parking lights turn On and the Remote start LED and On tones play, or the engine and parking lights turn Off and the Remote start LED and Off tones play to conﬁrm.
+Page 15: Advanced Commands: (Level 1)
+Advanced Commands: (Level 1) Press and release the button one time ﬁrst, before pressing one of the following command buttons. Silent Arm Press and release The alarm arms, doors lock (if connected), and the parking lights ﬂash once. The Arm LED turns on to conﬁrm. Valet mode* or Trigger Zone Fault Report** messages may be received.
+Page 16: Aux 1
+AUX 1 Press and release AUX Activates (or if On, deactivates) the Aux 1 output. The Aux LED and On tones or Off tones play to conﬁrm. Temperature Request Press and hold the button Requests the vehicle’s interior temperature and displays it by illuminat- ing the conﬁrmation LED’s;...
+Page 17: Advanced Commands: (Level 2)
+Advanced Commands: (Level 2) Press and release the button two times ﬁrst, before pressing one of the following command buttons. Sensor Bypass Press and release Performing the Sensor Bypass command will incrementally bypass sen- sor operations and be conﬁrmed as follows: Warn-away bypass: The Parking lights ﬂash two times.
+Page 18: Timer Start
+Timer Start* Press and release Activates (or if On, deactivates) Timer Start. The parking lights ﬂash quickly four times for On and slowly four times for Off. The Remote Start LED and beeps play (one for on, two for off) to conﬁrm.. Note System needs to be armed or Timer Start will not start the engine.
+Page 19: Advanced Commands: (Level 3)
+Advanced Commands: (Level 3) Press and release the button three times ﬁrst, before pressing one of the following command buttons. Sensor Silent Arm* Press and release The alarm arms, doors lock, and the siren chirps and parking lights ﬂash three times. The Arm LED, one beep and three fault tones play to conﬁrm.
+Page 20: Aux 3
+AUX 3 Press and release AUX Activates (or if On, deactivates) the Aux 3 output. The Aux LED and On tones or Off tones play to conﬁrm. Runtime Remaining Press and hold the button Requests the remaining Remote start runtime and temporarily displays it in 4 increments using the conﬁrmation LED’s.
+Page 21: Advanced Commands: (Level 4)
+Advanced Commands: (Level 4) Press and release the button four times ﬁrst, before pressing one of the following command buttons. Full Silent Arm* Press and release The alarm arms, doors lock, and the siren chirps and parking lights ﬂash four times. The Arm LED, one beep and four fault tones play to conﬁrm.
+Page 22: Remote Control Conﬁguration
+Remote Control Conﬁguration The Responder LE and 1-way companion remote controls have op- erations that can be conﬁgured to a user’s personal preferences. The following instruction directs you through the available programming options for both remote controls. Remote Programming To Enter Programming: Press and hold the button for eight sec- onds, the remote emits one long beep and the transmit LED turns on to indicate the Main Menu is accessed.
+Page 23: Remote Features
+plained. Press and hold the button for one second, three transmit LED ﬂashes and three beeps indicate remote is ready to pair. Press the button. Wait several seconds as the remote generates a security encryp- tion and sends it to the Control Center. The siren chirps and the LE 2-way remote control emits several tones to indicate Pairing is complete (there is no audible conﬁrmation with the 1-way).
+Page 24: Car 2
+Feature Button LED on LED off LED Flash LED Double Press Flash Car 2 Car 2 On Car 2 Off Page Mode* Paging On Paging Off Power Power Save1 Save 2 1-way companion remote control The 1-way remote will ﬂash the transmit LED to indicate the setting. Feature Button Press LED on...
+Page 25 If Auto Unlocking is not desired this message can be turned off by an authorized Directed Dealer. Page Mode Options: Power Save 1, Power Save 2, On, Off Paging is how the Responder LE remote monitors your system’s mes- sages. Power Save extends battery life by turning Paging Off after one week if the remote control is not used during this period.
+Page 26: Remote Beep
+Remote Beep Options: On, Off, Triggers Only The Responder LE emits a beep as conﬁrmation of button presses and command responses. When set to Off, beeps are not emitted for any operations except programming. For Triggers Only, beeps will only be emitted for Full Trigger messages.
+Page 27: Alarm Features
+Alarm Features Normal Arm Protection Status LED: The Control Center Status LED ﬂashes as a visual indicator that your vehicle’s security system is active. Starter Kill: The Failsafe starter kill relay prevents the engine from starting Note May require additional parts and installation Sensor triggers: The shock sensor can distinguish minor impacts from major impacts to the vehicle exterior.
+Page 28: Full Silent Arm Protection
+Full Silent Arm Protection Sensor Warn-away, Sensor Full Trigger and Point of Entry activations will only send messages to the remote, with parking light ﬂash and siren outputs defeated. Sensor Warn-away When the system sensors detect a Warn-away trigger the siren chirps and parking lights ﬂash for three seconds.
+Page 29: Trigger Zone Fault Report
+Trigger Zone Fault Report When armed by remote command the system runs a status check of the alarm trigger zones. Faulty zones (usually caused by dome light delay or open trunk) are bypassed and reported via the control center LED and remote, while all other trigger zones remain active and are monitored to protect the vehicle.
+Page 30: Nuisance Prevention (Npc)
+“Nuisance Prevention (NPC)” on page 27 * See for more details. Nuisance Prevention (NPC) NPC monitors all alarm zones and, if any are triggered excessively, bypasses them until corrected. If a point of entry (trunk, hood, door) is left open following a forced entry, it is bypassed. It becomes active again only after being closed.
+Page 31: Remote Start Features
+Remote Start Features Key Takeover When you are ready to drive The system keeps the engine running until the vehicle is ready to be driven. To perform Key Takeover: Disarm the system and enter the vehicle, do not step on the foot brake.
+Page 32 cally start the engine to maintain battery charge or combat extreme cold when parked for an extended period of time. Precautions for the Advanced Start features: Park the vehicle in a well ventilated area away from windows and doors that lead into inhabited spaces. Arm and Lock the vehicle, the engine will not start unless the doors are locked.
+Page 33: Temperature Reporting
+message will be sent to the remote controls. When the Remote start runtime expires the engine shuts off, the Remote Start Off message is sent to the remote control and the countdown timer restarts. Smart Start is exited after the ﬁnal start. Note The temperature and battery thresholds can be changed by an authorized Directed dealer if a higher or lower threshold...
+Page 34: Manual Transmission Start (Mts Mode)
+With the engine running, set the parking brake and release the foot brake. Press the button, the parking lights will turn on and the Re- mote start LED and On tones play on the remote control. Turn the key to off, and remove it from the ignition, the engine continues running for the programmed runtime.
+Page 35: Turbo Timer Mode
+Turn Off and remove the key from the ignition switch, the engine remains running. Exit the vehicle, close all the doors and arm the system. The engine turns off and after a few seconds, the Remote Start LED and Off tones play to conﬁrm. If the door is opened in Step 3 then the engine continues to run.
+Page 36: Remote Start Faults
+Remote Start Faults For user safety, the system must be properly conﬁgured or remote start will not activate. The Remote Start Fault output ( LED on and long fault tone) may be caused by any of several conﬁguration issues. If the remote start fails to activate, refer to the following table for the com- mand type and parking light ﬂashes that will identify the conﬁguration issue and solution.
+Page 37: Remote And System Operations
+Remote and System Operations Passive Arming* Park and exit the vehicle, after the doors are closed the Passive arm- ing countdown begins. The led ﬂashes quickly and upon reaching 20 seconds the siren then chirps once. At 30 seconds the system arms itself.
+Page 38: Valet Mode
+Valet Mode Valet mode can be entered and exited by performing the Remote Valet command or manually using the vehicle key and the control button. When entered, the alarm functions are defeated while the conve- nience features still operate normally. Arm and Disarm commands lock and unlock the doors.
+Page 39: Out Of Range
+Out of Range Each time a command is performed the Responder LE will expect a command conﬁrmation from the system. If a command conﬁrmation is not received the and transmit LED’s ﬂash and a long fault tone plays as an alert. No Remote Output Occasionally when a command is performed the remote may not generate a command conﬁrmation output or Out of Range output.
+Page 40: Car Select
+Car Select Car 2 must ﬁrst be turned On (See Remote Control Conﬁguration sec- tion to turn on). Press and hold the button for three seconds. The remote ﬂash- es the LED and beeps once or twice to indicate the selected Car is 1 or 2.
+Page 41: System Expansion Options
+System Expansion Options Controlling two vehicles (Car Select) The Responder LE and 1way companion remote can control systems in two different vehicles saving the need for multiple remote controls. This feature also allows for customized system conﬁgurations on each vehicle that has more than one driver. See Owner Recognition follow- ing for details.
+Page 42 Driver door priority unlocking The door unlocking operation can be conﬁgured to emulate an OEM style of driver priority unlocking for added security during disarming. Auxiliary Channels The auxiliary channel outputs of this system can activate many of the convenience features found in today’s vehicles. The system installer can clarify if any of the following listed features are compatible with your vehicle.
+Page 43: Battery Information
+Battery Information The Responder LE remote is powered by 2 batteries (CR-2016) and the 1-way companion remote by 1 battery (CR-2032) that can be purchased at most retailers. When the battery begins to weaken, the operating range will be reduced. The information and precautions in this section can help maximize your battery’s life and usage in provid- ing your Responder LE and 1-way companion remote controls with many years of trouble free operation.
+Page 44: Battery Replacement
+Turn Paging off: The remote will not wake up to check for mes- sages with Paging off in the Setup Remote menu. Caution! The remote will not receive trigger messages from the system. Turn Beeps off: The Button beeps can be turned off in the Setup Remote menu.
+Page 45: Glossary Of Terms
+Glossary of Terms Document Terminology Control Module The “brain” of your system. Usually hidden underneath the dash area of the vehicle. It houses the microprocessor which monitors your vehicle and controls all of the system’s func- tions. Responder LE (2-way A hand-held, remote control which operates the various func- Remote Control) tions of your system and receives messages and pages from...
+Page 46: Patent Information
+Patent Information This product is covered by one or more of the following United States patents: Remote Start Patents: 5,349,931; 5,872,519; 5,914,667; 5,952,933; 5,945,936; 5,990,786; 6,028,372; 6,467,448; 6,561,151; 7,191,053; 7,483,783 Vehicle Security Patents: 5,467,070; 5,532,670; 5,534,845; 5,563,576; 5,646,591; 5,650,774; 5,673,017; 5,712,638; 5,872,519; 5,914,667; 5,952,933;...
+Page 47: Government Regulations
+Government Regulations This device complies with Part 15 of FCC rules. Operation is subject to the fol- lowing two conditions: (1) This device may not cause harmful interference, and (2) This device must accept any interference received, including interference that may cause undesirable operation. This equipment has been tested and found to comply with the limits for a class B digital device, pursuant to Part 15 of the FCC Rules.
+Page 48 Control Center To satisfy FCC RF exposure compliance requirements, the device and its an- tenna must maintain a separation distance of 20 cm or more from the person’s body, except for the hand and wrists, to satisfy RF exposure compliance. This device complies with the Industry Canada Radio Standards Speciﬁcation RSS 210.
+Page 49: Warning! Safety First
+Warning! Safety First Please read the safety warnings below before proceeding. Improper use of the product may be dangerous or illegal. Installation Due to the complexity of this system, installation of this product must only be performed by an authorized Directed dealer. If you have any questions, ask your retailer or contact Directed directly at 1-800-753-0600.
+Page 50 Before remote starting a manual transmission vehicle, be sure to: Leave the vehicle in neutral and be sure no one is standing in front or behind the vehicle. Only remote start on a ﬂat surface Have the parking brake fully engaged WARNING! It is the responsibility of the owner to ensure the parking/emer- gency brake properly functions.
+Page 51: Interference
+GEAR IS CONTRARY TO ITS INTENDED MODE OF OPERATION. OPER- ATING THE REMOTE START SYSTEM UNDER THESE CONDITIONS MAY RESULT IN PROPERTY DAMAGE OR PERSONAL INJURY. YOU MUST IMME- DIATELY CEASE THE USE OF THE UNIT AND SEEK THE ASSISTANCE OF AN AUTHORIZED Directed DEALER TO REPAIR OR DISCONNECT THE INSTALLED REMOTE START MODULE.
+Page 52: Limited Lifetime Consumer Warranty
+Limited lifetime consumer warranty Directed Electronics. (“Directed”) promises to the original purchaser to repair or replace (at Directed’s election) with a comparable reconditioned model any Directed unit (hereaf- ter the “unit”), excluding without limitation the siren, the remote transmitters, the associated sensors and accessories, which proves to be defective in workmanship or material under reasonable use during the lifetime of the vehicle provided the following conditions are met: the unit was purchased from an authorized Directed dealer, the unit was professionally...
+Page 53 ANY CONSEQUENTIAL DAMAGES OF ANY KIND. IN THE EVENT OF A CLAIM OR A DISPUTE INVOLVING DIRECTED OR ITS SUBSIDIARY, THE VENUE SHALL BE SAN DIEGO COUNTY IN THE STATE OF CALIFORNIA. CALIFORNIA STATE LAWS AND APPLICABLE FEDERAL LAWS SHALL APPLY AND GOVERN THE DISPUTE. THE MAXIMUM RECOVERY UNDER ANY CLAIM AGAINST DIRECTED SHALL BE STRICTLY LIMITED TO THE AUTHORIZED DIRECTED DEALER’S PURCHASE PRICE OF THE UNIT.
+2012-2022 ManualsLib

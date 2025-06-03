@@ -1,0 +1,62 @@
+The Optics of Telescopes | Let's Talk Science
+Home
+Educational Resources
+Backgrounders
+The Optics of Telescopes
+Backgrounders
+The Optics of Telescopes
+Adult and children looking through telescope (inhauscreative, iStockphoto)
+Format
+Text Images
+Subjects
+, Waves, Sound, Light , Space Science , Astronomy , Technology & Engineering
+Richard Bloch & Let's Talk Science
+August 21, 2019
+Readability
+7.25
+How does this align with my curriculum?
+Learn about telescopes, how they work & why they're important to astronomers.
+When you think of telescopes, what do you think of? A long tube that astronomers look through to see the stars on a dark night? That’s true. But it’s only one type of telescope. There are telescopes on the ground, in the sky, and in space. They are watching the planets, stars, and galaxies all the time.
+Astronomers used to work really hard to document it all with the naked eye. But the human eye isn't so great at picking out the details of dim and distant objects, even on a clear night. What humans needed was a tool to help make far away things look closer and brighter. Enter the optical telescope.
+Who invented the optical telescope?
+The earliest optical telescopes we know of were made in 1608. They were made in the Netherlands by various optical craftsmen. One of them, Hans Lippershey, publicized his design well enough that news reached Galileo Galilei in Italy in 1609. When Galileo heard of the telescope, he built his own.
+Living “statue” of Galileo Galilei at his telescope in La Rambla‎‎, Spain (Source: Nicholas Gemini [CC BY-SA 4.0] via Wikimedia Commons ).
+Galileo did not invent the telescope. But within one year, he had greatly improved on Lippershey’s design. He promoted his own telescopes. He also observed Jupiter’s largest moons. These are the reasons why, when many people hear the words “invention of the telescope,” they think of Galileo!
+How do optical telescopes work?
+The world's largest refracting telescope is the Yerkes Observatory 40-inch Refractor (Source: Kb9vrg [Public domain] via Wikimedia Commons ).
+Let's consider a basic optical telescope. If you were looking to buy a telescope for yourself, you would learn that there are two basic designs:
+refracting telescopes, also known as refractors
+reflecting telescopes, also known as reflectors
+A refractor uses lenses within a tube to refract (bend) light. It's the type of long telescope which you might imagine old-time astronomers, like Galileo, using. Reflectors, on the other hand, use mirrors instead of lenses to reflect light.
+Most modern observatories use reflectors because their telescopes are so huge. Refractors would not be practical. Their lenses would be very heavy and their tubes would need to be very long.
+What are the parts of a telescope?
+A refractor is made up of a long tube containing lenses. The objective lens is the front lens. In other words, it’s the lens at the end where the light comes in. Modern refractors have a second tube that contains the eyepiece or ocular lens. The eyepiece is exactly what it sounds like. It’s a piece you put in the telescope to look through with your eye. In a refractor, the eyepiece may contain several lenses. These lenses can be adjusted to focus the image.
+Parts of a refracting telescope (©2019 Let’s Talk Science based on an image by Krishnavedala [CC BY-SA 4.0] via Wikimedia Commons ).
+A classical Newtonian reflector also has a long tube. But instead of an objective lens, it has an objective or primary mirror. Remember, an objective lens is at the end of the tube where the light comes in. In contrast, the mirror is at the opposite end of the tube.
+The objective mirror is not a flat mirror. Instead, it’s a curved (concave) mirror. Reflectors have a second mirror called the secondary mirror. The secondary mirror is a flat plane mirror .This mirror is at the opposite end from the primary mirror. It  is at a 45 degree angle to the direction of the light reflected by the primary mirror. In this type of reflector, the eyepiece is on the side of the tube (not the end).
+Parts of a reflecting telescope (©2019 Let’s Talk Science based on an image by Krishnavedala [CC BY-SA 4.0] via Wikimedia Commons ).
+How does light travel in each type of telescope?
+In a refractor, light enters the telescope near the objective lens. The objective lens is a convex lens. This lens converges the light. The rays of light converge at the focal point. At this point they again begin to diverge. A second convex lens in the eyepiece takes the converging light and straightens it back out. This magnifies the image at the focal point and brings it into focus. Because of this, a refractor has to have a long, clear path to allow the light rays to bend. One of the downsides of this type of telescope is that the image appears upside down.
+Path of rays through a refracting telescope (©2019 Let’s Talk Science based on an image by Krishnavedala [CC BY-SA 4.0] via Wikimedia Commons ).
+In a reflector, light enters the telescope at the end opposite the primary mirror. The mirror is a concave mirror. Similar to a convex lens, a concave mirror converges the light at the secondary mirror. The rays of light converge at the focal point. At this point they again begin to diverge. The convex lens in the eyepiece takes the converging light and straightens it back out. As with the refractor, the image is still upside down. It appears as a virtual image beyond the telescope in the direction the person is looking.
+Path of light rays through a reflecting telescope (©2019 Let’s Talk Science based on an image by Krishnavedala [CC BY-SA 4.0] via Wikimedia Commons ).
+Remember how we said lenses in a refractor telescope would be heavy? Well, mirrors are less heavy than lenses. That’s why people have been able to build very large reflecting telescopes.
+Why are telescopes in observatories so big?
+The dimmest objects in the universe don't give us a lot of light to work with. Telescopes have a few ways of making those far away objects look brighter and clearer.
+The size of the aperture of a telescope is very important. The aperture is the diameter of the opening on the front of a telescope. The bigger the aperture, the more light can enter the telescope. Your eye has an aperture, too: your pupil. This aperture is only ever a few millimetres large. But optical telescopes rarely have apertures smaller than 8 centimetres. Telescopes in big observatories can have apertures of 10 metres or more!
+The focal length is also important. The focal length is the length from the aperture to the focal point of the telescope. The longer the focal length, the smaller the patch of sky you're observing. But a longer focal length also gives a higher possible magnification .
+This is another advantage of reflectors. Refractors bend light down their tube. That means the tube has to be at least as long as the focal length. Since reflectors use mirrors, they can be shorter than their focal length. By reflecting light between multiple mirrors, the light still travels the full focal length. However, the tube itself is not so long.
+What if I only have a small telescope?
+So should every telescope have the biggest aperture and longest focal length possible? This is not always necessary. First, for anyone studying the solar system, aperture really isn't that important. Most of the planets are visible using even the smallest telescopes. Objects like the Moon are so bright that having a large aperture can actually let in too much light and make it hard to see details, like the craters on the Moon’s surface.
+Secondly, even small-sized telescopes are capable of seeing hundreds of galaxies and nebulae. Some of these galaxies and nebulae are almost a hundred million light-years away! Having a shorter focal length is good for looking at very large objects that don’t need as much magnification. These objects are simply too large to 'zoom in' on. This includes things like constellations or even the Andromeda Galaxy, which is larger than the full Moon in the night sky.
+Whew! That sounds like a lot of stuff to remember! Luckily, like anything else, the more time you spend around telescopes, the simpler they seem. Find a local astronomy club near you to try a telescope yourself!
+References
+Abel, P. G. (2015, October). Absolute beginners no. 3: A short introduction to some common types of telescope. British Astronomical Association.
+Helden, A. V. (1995). The telescope. The Galileo Project.
+McFadden, C. (2018, May 27). A brief history of the telescope: From 1608 to gamma-rays. Interesting Engineering.
+Morgan, S. (n.d.). Astronomy notes 4 - Light and telescopes. University of Northern Iowa.
+Tang, Y. (n.d.). Telescopes - Curious about astronomy? Ask an astronomer. Cornell University.
+Let's Talk Science needs your input!
+Our programs and resources are offered at no cost thanks to generous contributions from our supporters.
+Please take a minute to tell us the name of your school/organization so we can better understand the impact of our programs.
+Open Survey

@@ -1,0 +1,352 @@
+2025-05-26 18:22:59,338 - fresh_start_1000 - INFO - 🎯 Target: Collect 1000 energy papers
+2025-05-26 18:22:59,338 - fresh_start_1000 - INFO - 📋 Using 73 keywords
+2025-05-26 18:22:59,338 - fresh_start_1000 - INFO - 🔍 Keyword 1/73: 'energy'
+2025-05-26 18:22:59,338 - arxiv_crawler - INFO - ArXiv query: ti:"energy" OR abs:"energy" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:23:11,042 - arxiv_crawler - INFO - Found 50 papers for keyword 'energy' on arXiv
+2025-05-26 18:23:11,043 - fresh_start_1000 - INFO -   ✅ arXiv: +15 papers (total: 15)
+2025-05-26 18:23:12,048 - openalex_crawler - INFO - OpenAlex query: energy
+2025-05-26 18:23:13,713 - openalex_crawler - INFO - Found 50 papers for keyword 'energy' on OpenAlex
+2025-05-26 18:23:13,714 - fresh_start_1000 - INFO -   ✅ OpenAlex: +10 papers (total: 25)
+2025-05-26 18:23:14,719 - fresh_start_1000 - INFO - 🔍 Keyword 2/73: 'energy system'
+2025-05-26 18:23:14,719 - arxiv_crawler - INFO - ArXiv query: ti:"energy system" OR abs:"energy system" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:23:15,671 - arxiv_crawler - INFO - Found 50 papers for keyword 'energy system' on arXiv
+2025-05-26 18:23:15,671 - fresh_start_1000 - INFO -   ✅ arXiv: +15 papers (total: 40)
+2025-05-26 18:23:16,676 - openalex_crawler - INFO - OpenAlex query: energy system
+2025-05-26 18:23:17,256 - openalex_crawler - INFO - Found 50 papers for keyword 'energy system' on OpenAlex
+2025-05-26 18:23:17,256 - fresh_start_1000 - INFO -   ✅ OpenAlex: +10 papers (total: 50)
+2025-05-26 18:23:18,261 - fresh_start_1000 - INFO - 🔍 Keyword 3/73: 'energy infrastructure'
+2025-05-26 18:23:18,262 - arxiv_crawler - INFO - ArXiv query: ti:"energy infrastructure" OR abs:"energy infrastructure" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:23:19,163 - arxiv_crawler - INFO - Found 38 papers for keyword 'energy infrastructure' on arXiv
+2025-05-26 18:23:19,163 - fresh_start_1000 - INFO -   ✅ arXiv: +15 papers (total: 65)
+2025-05-26 18:23:20,168 - openalex_crawler - INFO - OpenAlex query: energy infrastructure
+2025-05-26 18:23:20,713 - openalex_crawler - ERROR - Error searching OpenAlex for keyword 'energy infrastructure': 'NoneType' object has no attribute 'get'
+2025-05-26 18:23:20,713 - fresh_start_1000 - INFO -   ✅ OpenAlex: +10 papers (total: 75)
+2025-05-26 18:23:21,718 - fresh_start_1000 - INFO - 🔍 Keyword 4/73: 'energy transition'
+2025-05-26 18:23:21,718 - arxiv_crawler - INFO - ArXiv query: ti:"energy transition" OR abs:"energy transition" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:23:23,120 - arxiv_crawler - INFO - Found 50 papers for keyword 'energy transition' on arXiv
+2025-05-26 18:23:23,120 - fresh_start_1000 - INFO -   ✅ arXiv: +15 papers (total: 90)
+2025-05-26 18:23:24,125 - openalex_crawler - INFO - OpenAlex query: energy transition
+2025-05-26 18:23:24,685 - openalex_crawler - INFO - Found 50 papers for keyword 'energy transition' on OpenAlex
+2025-05-26 18:23:24,685 - fresh_start_1000 - INFO -   ✅ OpenAlex: +10 papers (total: 100)
+2025-05-26 18:23:25,689 - fresh_start_1000 - INFO - 🔍 Keyword 5/73: 'energy security'
+2025-05-26 18:23:25,689 - arxiv_crawler - INFO - ArXiv query: ti:"energy security" OR abs:"energy security" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:23:26,611 - arxiv_crawler - INFO - Found 19 papers for keyword 'energy security' on arXiv
+2025-05-26 18:23:26,611 - fresh_start_1000 - INFO -   ✅ arXiv: +15 papers (total: 115)
+2025-05-26 18:23:27,615 - openalex_crawler - INFO - OpenAlex query: energy security
+2025-05-26 18:23:28,165 - openalex_crawler - INFO - Found 50 papers for keyword 'energy security' on OpenAlex
+2025-05-26 18:23:28,166 - fresh_start_1000 - INFO -   ✅ OpenAlex: +10 papers (total: 125)
+2025-05-26 18:23:29,171 - fresh_start_1000 - INFO - 🔍 Keyword 6/73: 'energy planning'
+2025-05-26 18:23:29,171 - arxiv_crawler - INFO - ArXiv query: ti:"energy planning" OR abs:"energy planning" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:23:30,044 - arxiv_crawler - INFO - Found 16 papers for keyword 'energy planning' on arXiv
+2025-05-26 18:23:30,044 - fresh_start_1000 - INFO -   ✅ arXiv: +15 papers (total: 140)
+2025-05-26 18:23:31,047 - openalex_crawler - INFO - OpenAlex query: energy planning
+2025-05-26 18:23:31,619 - openalex_crawler - INFO - Found 50 papers for keyword 'energy planning' on OpenAlex
+2025-05-26 18:23:31,619 - fresh_start_1000 - INFO -   ✅ OpenAlex: +10 papers (total: 150)
+2025-05-26 18:23:32,625 - fresh_start_1000 - INFO - 🔍 Keyword 7/73: 'energy economics'
+2025-05-26 18:23:32,625 - arxiv_crawler - INFO - ArXiv query: ti:"energy economics" OR abs:"energy economics" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:23:33,436 - arxiv_crawler - INFO - Found 6 papers for keyword 'energy economics' on arXiv
+2025-05-26 18:23:33,436 - fresh_start_1000 - INFO -   ✅ arXiv: +6 papers (total: 156)
+2025-05-26 18:23:34,441 - openalex_crawler - INFO - OpenAlex query: energy economics
+2025-05-26 18:23:35,029 - openalex_crawler - INFO - Found 50 papers for keyword 'energy economics' on OpenAlex
+2025-05-26 18:23:35,030 - fresh_start_1000 - INFO -   ✅ OpenAlex: +10 papers (total: 166)
+2025-05-26 18:23:36,035 - fresh_start_1000 - INFO - 🔍 Keyword 8/73: 'energy consumption'
+2025-05-26 18:23:36,035 - arxiv_crawler - INFO - ArXiv query: ti:"energy consumption" OR abs:"energy consumption" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:23:37,277 - arxiv_crawler - INFO - Found 50 papers for keyword 'energy consumption' on arXiv
+2025-05-26 18:23:37,277 - fresh_start_1000 - INFO -   ✅ arXiv: +15 papers (total: 181)
+2025-05-26 18:23:38,282 - openalex_crawler - INFO - OpenAlex query: energy consumption
+2025-05-26 18:23:38,836 - openalex_crawler - ERROR - Error searching OpenAlex for keyword 'energy consumption': 'NoneType' object has no attribute 'get'
+2025-05-26 18:23:38,837 - fresh_start_1000 - INFO -   ✅ OpenAlex: +4 papers (total: 185)
+2025-05-26 18:23:39,841 - fresh_start_1000 - INFO - 🔍 Keyword 9/73: 'energy demand'
+2025-05-26 18:23:39,841 - arxiv_crawler - INFO - ArXiv query: ti:"energy demand" OR abs:"energy demand" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:23:41,149 - arxiv_crawler - INFO - Found 50 papers for keyword 'energy demand' on arXiv
+2025-05-26 18:23:41,149 - fresh_start_1000 - INFO -   ✅ arXiv: +15 papers (total: 200)
+2025-05-26 18:23:42,154 - openalex_crawler - INFO - OpenAlex query: energy demand
+2025-05-26 18:23:42,704 - openalex_crawler - INFO - Found 50 papers for keyword 'energy demand' on OpenAlex
+2025-05-26 18:23:42,705 - fresh_start_1000 - INFO -   ✅ OpenAlex: +10 papers (total: 210)
+2025-05-26 18:23:43,710 - fresh_start_1000 - INFO - 🔍 Keyword 10/73: 'energy policy'
+2025-05-26 18:23:43,710 - arxiv_crawler - INFO - ArXiv query: ti:"energy policy" OR abs:"energy policy" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:23:44,553 - arxiv_crawler - INFO - Found 14 papers for keyword 'energy policy' on arXiv
+2025-05-26 18:23:44,553 - fresh_start_1000 - INFO -   ✅ arXiv: +14 papers (total: 224)
+2025-05-26 18:23:45,558 - openalex_crawler - INFO - OpenAlex query: energy policy
+2025-05-26 18:23:46,163 - openalex_crawler - ERROR - Error searching OpenAlex for keyword 'energy policy': 'NoneType' object has no attribute 'get'
+2025-05-26 18:23:46,164 - fresh_start_1000 - INFO -   ✅ OpenAlex: +10 papers (total: 234)
+2025-05-26 18:23:47,174 - fresh_start_1000 - INFO - 💾 Saved checkpoint: 234 papers to data/metadata/papers_20250526_182347.json
+2025-05-26 18:23:47,174 - fresh_start_1000 - INFO - 📊 Progress: 10/73 keywords, 234 papers collected
+2025-05-26 18:23:47,174 - fresh_start_1000 - INFO - 🔍 Keyword 11/73: 'sustainable energy'
+2025-05-26 18:23:47,174 - arxiv_crawler - INFO - ArXiv query: ti:"sustainable energy" OR abs:"sustainable energy" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:23:48,412 - arxiv_crawler - INFO - Found 50 papers for keyword 'sustainable energy' on arXiv
+2025-05-26 18:23:48,413 - fresh_start_1000 - INFO -   ✅ arXiv: +15 papers (total: 249)
+2025-05-26 18:23:49,414 - openalex_crawler - INFO - OpenAlex query: sustainable energy
+2025-05-26 18:23:49,975 - openalex_crawler - ERROR - Error searching OpenAlex for keyword 'sustainable energy': 'NoneType' object has no attribute 'get'
+2025-05-26 18:23:49,976 - fresh_start_1000 - INFO -   ✅ OpenAlex: +10 papers (total: 259)
+2025-05-26 18:23:50,980 - fresh_start_1000 - INFO - 🔍 Keyword 12/73: 'carbon neutrality'
+2025-05-26 18:23:50,981 - arxiv_crawler - INFO - ArXiv query: ti:"carbon neutrality" OR abs:"carbon neutrality" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:23:52,356 - arxiv_crawler - INFO - Found 50 papers for keyword 'carbon neutrality' on arXiv
+2025-05-26 18:23:52,356 - fresh_start_1000 - INFO -   ✅ arXiv: +15 papers (total: 274)
+2025-05-26 18:23:53,358 - openalex_crawler - INFO - OpenAlex query: carbon neutrality
+2025-05-26 18:23:53,905 - openalex_crawler - INFO - Found 50 papers for keyword 'carbon neutrality' on OpenAlex
+2025-05-26 18:23:53,906 - fresh_start_1000 - INFO -   ✅ OpenAlex: +10 papers (total: 284)
+2025-05-26 18:23:54,910 - fresh_start_1000 - INFO - 🔍 Keyword 13/73: 'power system'
+2025-05-26 18:23:54,910 - arxiv_crawler - INFO - ArXiv query: ti:"power system" OR abs:"power system" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:23:56,367 - arxiv_crawler - INFO - Found 50 papers for keyword 'power system' on arXiv
+2025-05-26 18:23:56,367 - fresh_start_1000 - INFO -   ✅ arXiv: +15 papers (total: 299)
+2025-05-26 18:23:57,373 - openalex_crawler - INFO - OpenAlex query: power system
+2025-05-26 18:23:57,906 - openalex_crawler - ERROR - Error searching OpenAlex for keyword 'power system': 'NoneType' object has no attribute 'get'
+2025-05-26 18:23:57,906 - fresh_start_1000 - INFO -   ✅ OpenAlex: +10 papers (total: 309)
+2025-05-26 18:23:58,910 - fresh_start_1000 - INFO - 🔍 Keyword 14/73: 'electricity generation'
+2025-05-26 18:23:58,910 - arxiv_crawler - INFO - ArXiv query: ti:"electricity generation" OR abs:"electricity generation" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:24:00,429 - arxiv_crawler - INFO - Found 50 papers for keyword 'electricity generation' on arXiv
+2025-05-26 18:24:00,429 - fresh_start_1000 - INFO -   ✅ arXiv: +15 papers (total: 324)
+2025-05-26 18:24:01,432 - openalex_crawler - INFO - OpenAlex query: electricity generation
+2025-05-26 18:24:01,967 - openalex_crawler - INFO - Found 50 papers for keyword 'electricity generation' on OpenAlex
+2025-05-26 18:24:01,968 - fresh_start_1000 - INFO -   ✅ OpenAlex: +10 papers (total: 334)
+2025-05-26 18:24:02,973 - fresh_start_1000 - INFO - 🔍 Keyword 15/73: 'electric grid'
+2025-05-26 18:24:02,973 - arxiv_crawler - INFO - ArXiv query: ti:"electric grid" OR abs:"electric grid" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:24:04,296 - arxiv_crawler - INFO - Found 50 papers for keyword 'electric grid' on arXiv
+2025-05-26 18:24:04,296 - fresh_start_1000 - INFO -   ✅ arXiv: +15 papers (total: 349)
+2025-05-26 18:24:05,300 - openalex_crawler - INFO - OpenAlex query: electric grid
+2025-05-26 18:24:05,833 - openalex_crawler - ERROR - Error searching OpenAlex for keyword 'electric grid': 'NoneType' object has no attribute 'get'
+2025-05-26 18:24:05,833 - fresh_start_1000 - INFO -   ✅ OpenAlex: +10 papers (total: 359)
+2025-05-26 18:24:06,838 - fresh_start_1000 - INFO - 🔍 Keyword 16/73: 'smart grid'
+2025-05-26 18:24:06,838 - arxiv_crawler - INFO - ArXiv query: ti:"smart grid" OR abs:"smart grid" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:24:09,367 - arxiv_crawler - INFO - Found 50 papers for keyword 'smart grid' on arXiv
+2025-05-26 18:24:09,367 - fresh_start_1000 - INFO -   ✅ arXiv: +15 papers (total: 374)
+2025-05-26 18:24:10,369 - openalex_crawler - INFO - OpenAlex query: smart grid
+2025-05-26 18:24:10,919 - openalex_crawler - ERROR - Error searching OpenAlex for keyword 'smart grid': 'NoneType' object has no attribute 'get'
+2025-05-26 18:24:10,920 - fresh_start_1000 - INFO -   ✅ OpenAlex: +10 papers (total: 384)
+2025-05-26 18:24:11,925 - fresh_start_1000 - INFO - 🔍 Keyword 17/73: 'load forecasting'
+2025-05-26 18:24:11,926 - arxiv_crawler - INFO - ArXiv query: ti:"load forecasting" OR abs:"load forecasting" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:24:13,259 - arxiv_crawler - INFO - Found 50 papers for keyword 'load forecasting' on arXiv
+2025-05-26 18:24:13,259 - fresh_start_1000 - INFO -   ✅ arXiv: +15 papers (total: 399)
+2025-05-26 18:24:14,260 - openalex_crawler - INFO - OpenAlex query: load forecasting
+2025-05-26 18:24:14,778 - openalex_crawler - ERROR - Error searching OpenAlex for keyword 'load forecasting': 'NoneType' object has no attribute 'get'
+2025-05-26 18:24:14,778 - fresh_start_1000 - INFO -   ✅ OpenAlex: +9 papers (total: 408)
+2025-05-26 18:24:15,783 - fresh_start_1000 - INFO - 🔍 Keyword 18/73: 'transmission network'
+2025-05-26 18:24:15,784 - arxiv_crawler - INFO - ArXiv query: ti:"transmission network" OR abs:"transmission network" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:24:17,247 - arxiv_crawler - INFO - Found 50 papers for keyword 'transmission network' on arXiv
+2025-05-26 18:24:17,248 - fresh_start_1000 - INFO -   ✅ arXiv: +15 papers (total: 423)
+2025-05-26 18:24:18,253 - openalex_crawler - INFO - OpenAlex query: transmission network
+2025-05-26 18:24:18,904 - openalex_crawler - ERROR - Error searching OpenAlex for keyword 'transmission network': 'NoneType' object has no attribute 'get'
+2025-05-26 18:24:18,904 - fresh_start_1000 - INFO -   ✅ OpenAlex: +10 papers (total: 433)
+2025-05-26 18:24:19,910 - fresh_start_1000 - INFO - 🔍 Keyword 19/73: 'grid integration'
+2025-05-26 18:24:19,910 - arxiv_crawler - INFO - ArXiv query: ti:"grid integration" OR abs:"grid integration" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:24:20,791 - arxiv_crawler - INFO - Found 35 papers for keyword 'grid integration' on arXiv
+2025-05-26 18:24:20,791 - fresh_start_1000 - INFO -   ✅ arXiv: +15 papers (total: 448)
+2025-05-26 18:24:21,792 - openalex_crawler - INFO - OpenAlex query: grid integration
+2025-05-26 18:24:22,327 - openalex_crawler - ERROR - Error searching OpenAlex for keyword 'grid integration': 'NoneType' object has no attribute 'get'
+2025-05-26 18:24:23,330 - fresh_start_1000 - INFO - 🔍 Keyword 20/73: 'distributed energy resources'
+2025-05-26 18:24:23,330 - arxiv_crawler - INFO - ArXiv query: ti:"distributed energy resources" OR abs:"distributed energy resources" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:24:24,841 - arxiv_crawler - INFO - Found 50 papers for keyword 'distributed energy resources' on arXiv
+2025-05-26 18:24:24,842 - fresh_start_1000 - INFO -   ✅ arXiv: +15 papers (total: 463)
+2025-05-26 18:24:25,847 - openalex_crawler - INFO - OpenAlex query: distributed energy resources
+2025-05-26 18:24:26,388 - openalex_crawler - ERROR - Error searching OpenAlex for keyword 'distributed energy resources': 'NoneType' object has no attribute 'get'
+2025-05-26 18:24:26,388 - fresh_start_1000 - INFO -   ✅ OpenAlex: +8 papers (total: 471)
+2025-05-26 18:24:27,400 - fresh_start_1000 - INFO - 💾 Saved checkpoint: 471 papers to data/metadata/papers_20250526_182427.json
+2025-05-26 18:24:27,400 - fresh_start_1000 - INFO - 📊 Progress: 20/73 keywords, 471 papers collected
+2025-05-26 18:24:27,400 - fresh_start_1000 - INFO - 🔍 Keyword 21/73: 'energy storage'
+2025-05-26 18:24:27,400 - arxiv_crawler - INFO - ArXiv query: ti:"energy storage" OR abs:"energy storage" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:24:28,967 - arxiv_crawler - INFO - Found 50 papers for keyword 'energy storage' on arXiv
+2025-05-26 18:24:28,967 - fresh_start_1000 - INFO -   ✅ arXiv: +15 papers (total: 486)
+2025-05-26 18:24:29,972 - openalex_crawler - INFO - OpenAlex query: energy storage
+2025-05-26 18:24:30,539 - openalex_crawler - INFO - Found 50 papers for keyword 'energy storage' on OpenAlex
+2025-05-26 18:24:30,540 - fresh_start_1000 - INFO -   ✅ OpenAlex: +10 papers (total: 496)
+2025-05-26 18:24:31,545 - fresh_start_1000 - INFO - 🔍 Keyword 22/73: 'pumped hydro storage'
+2025-05-26 18:24:31,545 - arxiv_crawler - INFO - ArXiv query: ti:"pumped hydro storage" OR abs:"pumped hydro storage" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:24:32,322 - arxiv_crawler - INFO - Found 5 papers for keyword 'pumped hydro storage' on arXiv
+2025-05-26 18:24:32,322 - fresh_start_1000 - INFO -   ✅ arXiv: +5 papers (total: 501)
+2025-05-26 18:24:33,327 - openalex_crawler - INFO - OpenAlex query: pumped hydro storage
+2025-05-26 18:24:35,807 - openalex_crawler - ERROR - Error searching OpenAlex for keyword 'pumped hydro storage': 'NoneType' object has no attribute 'get'
+2025-05-26 18:24:35,808 - fresh_start_1000 - INFO -   ✅ OpenAlex: +10 papers (total: 511)
+2025-05-26 18:24:36,813 - fresh_start_1000 - INFO - 🔍 Keyword 23/73: 'battery storage'
+2025-05-26 18:24:36,813 - arxiv_crawler - INFO - ArXiv query: ti:"battery storage" OR abs:"battery storage" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:24:37,831 - arxiv_crawler - INFO - Found 50 papers for keyword 'battery storage' on arXiv
+2025-05-26 18:24:37,831 - fresh_start_1000 - INFO -   ✅ arXiv: +15 papers (total: 526)
+2025-05-26 18:24:38,836 - openalex_crawler - INFO - OpenAlex query: battery storage
+2025-05-26 18:24:39,367 - openalex_crawler - INFO - Found 50 papers for keyword 'battery storage' on OpenAlex
+2025-05-26 18:24:39,367 - fresh_start_1000 - INFO -   ✅ OpenAlex: +10 papers (total: 536)
+2025-05-26 18:24:40,372 - fresh_start_1000 - INFO - 🔍 Keyword 24/73: 'fossil fuel'
+2025-05-26 18:24:40,373 - arxiv_crawler - INFO - ArXiv query: ti:"fossil fuel" OR abs:"fossil fuel" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:24:41,869 - arxiv_crawler - INFO - Found 50 papers for keyword 'fossil fuel' on arXiv
+2025-05-26 18:24:41,870 - fresh_start_1000 - INFO -   ✅ arXiv: +15 papers (total: 551)
+2025-05-26 18:24:42,872 - openalex_crawler - INFO - OpenAlex query: fossil fuel
+2025-05-26 18:24:43,426 - openalex_crawler - INFO - Found 50 papers for keyword 'fossil fuel' on OpenAlex
+2025-05-26 18:24:43,427 - fresh_start_1000 - INFO -   ✅ OpenAlex: +10 papers (total: 561)
+2025-05-26 18:24:44,432 - fresh_start_1000 - INFO - 🔍 Keyword 25/73: 'natural gas'
+2025-05-26 18:24:44,432 - arxiv_crawler - INFO - ArXiv query: ti:"natural gas" OR abs:"natural gas" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:24:45,826 - arxiv_crawler - INFO - Found 50 papers for keyword 'natural gas' on arXiv
+2025-05-26 18:24:45,826 - fresh_start_1000 - INFO -   ✅ arXiv: +15 papers (total: 576)
+2025-05-26 18:24:46,831 - openalex_crawler - INFO - OpenAlex query: natural gas
+2025-05-26 18:24:47,417 - openalex_crawler - INFO - Found 49 papers for keyword 'natural gas' on OpenAlex
+2025-05-26 18:24:47,418 - fresh_start_1000 - INFO -   ✅ OpenAlex: +10 papers (total: 586)
+2025-05-26 18:24:48,423 - fresh_start_1000 - INFO - 🔍 Keyword 26/73: 'gas pipeline'
+2025-05-26 18:24:48,423 - arxiv_crawler - INFO - ArXiv query: ti:"gas pipeline" OR abs:"gas pipeline" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:24:49,289 - arxiv_crawler - INFO - Found 23 papers for keyword 'gas pipeline' on arXiv
+2025-05-26 18:24:49,289 - fresh_start_1000 - INFO -   ✅ arXiv: +15 papers (total: 601)
+2025-05-26 18:24:50,292 - openalex_crawler - INFO - OpenAlex query: gas pipeline
+2025-05-26 18:24:50,851 - openalex_crawler - ERROR - Error searching OpenAlex for keyword 'gas pipeline': 'NoneType' object has no attribute 'get'
+2025-05-26 18:24:50,851 - fresh_start_1000 - INFO -   ✅ OpenAlex: +10 papers (total: 611)
+2025-05-26 18:24:51,855 - fresh_start_1000 - INFO - 🔍 Keyword 27/73: 'LNG'
+2025-05-26 18:24:51,855 - arxiv_crawler - INFO - ArXiv query: ti:"LNG" OR abs:"LNG" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:24:52,651 - arxiv_crawler - INFO - Found 2 papers for keyword 'LNG' on arXiv
+2025-05-26 18:24:52,651 - fresh_start_1000 - INFO -   ✅ arXiv: +2 papers (total: 613)
+2025-05-26 18:24:53,656 - openalex_crawler - INFO - OpenAlex query: LNG
+2025-05-26 18:24:54,180 - openalex_crawler - INFO - Found 50 papers for keyword 'LNG' on OpenAlex
+2025-05-26 18:24:54,180 - fresh_start_1000 - INFO -   ✅ OpenAlex: +10 papers (total: 623)
+2025-05-26 18:24:55,184 - fresh_start_1000 - INFO - 🔍 Keyword 28/73: 'coal power'
+2025-05-26 18:24:55,185 - arxiv_crawler - INFO - ArXiv query: ti:"coal power" OR abs:"coal power" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:24:56,046 - arxiv_crawler - INFO - Found 9 papers for keyword 'coal power' on arXiv
+2025-05-26 18:24:56,046 - fresh_start_1000 - INFO -   ✅ arXiv: +9 papers (total: 632)
+2025-05-26 18:24:57,051 - openalex_crawler - INFO - OpenAlex query: coal power
+2025-05-26 18:24:57,592 - openalex_crawler - INFO - Found 50 papers for keyword 'coal power' on OpenAlex
+2025-05-26 18:24:57,593 - fresh_start_1000 - INFO -   ✅ OpenAlex: +10 papers (total: 642)
+2025-05-26 18:24:58,598 - fresh_start_1000 - INFO - 🔍 Keyword 29/73: 'oil and gas'
+2025-05-26 18:24:58,598 - arxiv_crawler - INFO - ArXiv query: ti:"oil and gas" OR abs:"oil and gas" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:24:59,525 - arxiv_crawler - INFO - Found 18 papers for keyword 'oil and gas' on arXiv
+2025-05-26 18:24:59,525 - fresh_start_1000 - INFO -   ✅ arXiv: +15 papers (total: 657)
+2025-05-26 18:25:00,526 - openalex_crawler - INFO - OpenAlex query: oil and gas
+2025-05-26 18:25:01,120 - openalex_crawler - ERROR - Error searching OpenAlex for keyword 'oil and gas': 'NoneType' object has no attribute 'get'
+2025-05-26 18:25:01,121 - fresh_start_1000 - INFO -   ✅ OpenAlex: +10 papers (total: 667)
+2025-05-26 18:25:02,126 - fresh_start_1000 - INFO - 🔍 Keyword 30/73: 'shale gas'
+2025-05-26 18:25:02,126 - arxiv_crawler - INFO - ArXiv query: ti:"shale gas" OR abs:"shale gas" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:25:02,883 - arxiv_crawler - INFO - Found 1 papers for keyword 'shale gas' on arXiv
+2025-05-26 18:25:02,884 - fresh_start_1000 - INFO -   ✅ arXiv: +1 papers (total: 668)
+2025-05-26 18:25:03,889 - openalex_crawler - INFO - OpenAlex query: shale gas
+2025-05-26 18:25:04,426 - openalex_crawler - INFO - Found 50 papers for keyword 'shale gas' on OpenAlex
+2025-05-26 18:25:04,427 - fresh_start_1000 - INFO -   ✅ OpenAlex: +10 papers (total: 678)
+2025-05-26 18:25:05,445 - fresh_start_1000 - INFO - 💾 Saved checkpoint: 678 papers to data/metadata/papers_20250526_182505.json
+2025-05-26 18:25:05,445 - fresh_start_1000 - INFO - 📊 Progress: 30/73 keywords, 678 papers collected
+2025-05-26 18:25:05,445 - fresh_start_1000 - INFO - 🔍 Keyword 31/73: 'petroleum refining'
+2025-05-26 18:25:05,445 - arxiv_crawler - INFO - ArXiv query: ti:"petroleum refining" OR abs:"petroleum refining" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:25:06,278 - arxiv_crawler - INFO - Found 2 papers for keyword 'petroleum refining' on arXiv
+2025-05-26 18:25:06,278 - fresh_start_1000 - INFO -   ✅ arXiv: +2 papers (total: 680)
+2025-05-26 18:25:07,283 - openalex_crawler - INFO - OpenAlex query: petroleum refining
+2025-05-26 18:25:07,837 - openalex_crawler - INFO - Found 49 papers for keyword 'petroleum refining' on OpenAlex
+2025-05-26 18:25:07,837 - fresh_start_1000 - INFO -   ✅ OpenAlex: +10 papers (total: 690)
+2025-05-26 18:25:08,841 - fresh_start_1000 - INFO - 🔍 Keyword 32/73: 'carbon capture and storage'
+2025-05-26 18:25:08,841 - arxiv_crawler - INFO - ArXiv query: ti:"carbon capture and storage" OR abs:"carbon capture and storage" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:25:09,869 - arxiv_crawler - INFO - Found 36 papers for keyword 'carbon capture and storage' on arXiv
+2025-05-26 18:25:09,869 - fresh_start_1000 - INFO -   ✅ arXiv: +15 papers (total: 705)
+2025-05-26 18:25:10,874 - openalex_crawler - INFO - OpenAlex query: carbon capture and storage
+2025-05-26 18:25:11,814 - openalex_crawler - INFO - Found 50 papers for keyword 'carbon capture and storage' on OpenAlex
+2025-05-26 18:25:11,815 - fresh_start_1000 - INFO -   ✅ OpenAlex: +10 papers (total: 715)
+2025-05-26 18:25:12,820 - fresh_start_1000 - INFO - 🔍 Keyword 33/73: 'CCS'
+2025-05-26 18:25:12,820 - arxiv_crawler - INFO - ArXiv query: ti:"CCS" OR abs:"CCS" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:25:13,849 - arxiv_crawler - INFO - Found 50 papers for keyword 'CCS' on arXiv
+2025-05-26 18:25:13,849 - fresh_start_1000 - INFO -   ✅ arXiv: +15 papers (total: 730)
+2025-05-26 18:25:14,854 - openalex_crawler - INFO - OpenAlex query: CCS
+2025-05-26 18:25:15,418 - openalex_crawler - INFO - Found 50 papers for keyword 'CCS' on OpenAlex
+2025-05-26 18:25:15,418 - fresh_start_1000 - INFO -   ✅ OpenAlex: +10 papers (total: 740)
+2025-05-26 18:25:16,420 - fresh_start_1000 - INFO - 🔍 Keyword 34/73: 'renewable energy'
+2025-05-26 18:25:16,420 - arxiv_crawler - INFO - ArXiv query: ti:"renewable energy" OR abs:"renewable energy" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:25:17,813 - arxiv_crawler - INFO - Found 50 papers for keyword 'renewable energy' on arXiv
+2025-05-26 18:25:17,813 - fresh_start_1000 - INFO -   ✅ arXiv: +15 papers (total: 755)
+2025-05-26 18:25:18,818 - openalex_crawler - INFO - OpenAlex query: renewable energy
+2025-05-26 18:25:19,429 - openalex_crawler - INFO - Found 50 papers for keyword 'renewable energy' on OpenAlex
+2025-05-26 18:25:19,430 - fresh_start_1000 - INFO -   ✅ OpenAlex: +10 papers (total: 765)
+2025-05-26 18:25:20,434 - fresh_start_1000 - INFO - 🔍 Keyword 35/73: 'solar energy'
+2025-05-26 18:25:20,434 - arxiv_crawler - INFO - ArXiv query: ti:"solar energy" OR abs:"solar energy" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:25:21,808 - arxiv_crawler - INFO - Found 50 papers for keyword 'solar energy' on arXiv
+2025-05-26 18:25:21,808 - fresh_start_1000 - INFO -   ✅ arXiv: +15 papers (total: 780)
+2025-05-26 18:25:22,814 - openalex_crawler - INFO - OpenAlex query: solar energy
+2025-05-26 18:25:23,348 - openalex_crawler - INFO - Found 49 papers for keyword 'solar energy' on OpenAlex
+2025-05-26 18:25:23,348 - fresh_start_1000 - INFO -   ✅ OpenAlex: +10 papers (total: 790)
+2025-05-26 18:25:24,354 - fresh_start_1000 - INFO - 🔍 Keyword 36/73: 'photovoltaic'
+2025-05-26 18:25:24,354 - arxiv_crawler - INFO - ArXiv query: ti:"photovoltaic" OR abs:"photovoltaic" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:25:25,983 - arxiv_crawler - INFO - Found 50 papers for keyword 'photovoltaic' on arXiv
+2025-05-26 18:25:25,983 - fresh_start_1000 - INFO -   ✅ arXiv: +15 papers (total: 805)
+2025-05-26 18:25:26,988 - openalex_crawler - INFO - OpenAlex query: photovoltaic
+2025-05-26 18:25:27,549 - openalex_crawler - INFO - Found 50 papers for keyword 'photovoltaic' on OpenAlex
+2025-05-26 18:25:27,549 - fresh_start_1000 - INFO -   ✅ OpenAlex: +10 papers (total: 815)
+2025-05-26 18:25:28,554 - fresh_start_1000 - INFO - 🔍 Keyword 37/73: 'wind energy'
+2025-05-26 18:25:28,555 - arxiv_crawler - INFO - ArXiv query: ti:"wind energy" OR abs:"wind energy" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:25:29,962 - arxiv_crawler - INFO - Found 50 papers for keyword 'wind energy' on arXiv
+2025-05-26 18:25:29,962 - fresh_start_1000 - INFO -   ✅ arXiv: +15 papers (total: 830)
+2025-05-26 18:25:30,967 - openalex_crawler - INFO - OpenAlex query: wind energy
+2025-05-26 18:25:31,710 - openalex_crawler - INFO - Found 50 papers for keyword 'wind energy' on OpenAlex
+2025-05-26 18:25:31,711 - fresh_start_1000 - INFO -   ✅ OpenAlex: +10 papers (total: 840)
+2025-05-26 18:25:32,716 - fresh_start_1000 - INFO - 🔍 Keyword 38/73: 'onshore wind'
+2025-05-26 18:25:32,716 - arxiv_crawler - INFO - ArXiv query: ti:"onshore wind" OR abs:"onshore wind" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:25:33,372 - arxiv_crawler - INFO - Found 13 papers for keyword 'onshore wind' on arXiv
+2025-05-26 18:25:33,372 - fresh_start_1000 - INFO -   ✅ arXiv: +13 papers (total: 853)
+2025-05-26 18:25:34,377 - openalex_crawler - INFO - OpenAlex query: onshore wind
+2025-05-26 18:25:35,420 - openalex_crawler - INFO - Found 50 papers for keyword 'onshore wind' on OpenAlex
+2025-05-26 18:25:35,420 - fresh_start_1000 - INFO -   ✅ OpenAlex: +10 papers (total: 863)
+2025-05-26 18:25:36,425 - fresh_start_1000 - INFO - 🔍 Keyword 39/73: 'offshore wind'
+2025-05-26 18:25:36,425 - arxiv_crawler - INFO - ArXiv query: ti:"offshore wind" OR abs:"offshore wind" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:25:37,357 - arxiv_crawler - INFO - Found 50 papers for keyword 'offshore wind' on arXiv
+2025-05-26 18:25:37,357 - fresh_start_1000 - INFO -   ✅ arXiv: +15 papers (total: 878)
+2025-05-26 18:25:38,359 - openalex_crawler - INFO - OpenAlex query: offshore wind
+2025-05-26 18:25:38,929 - openalex_crawler - INFO - Found 50 papers for keyword 'offshore wind' on OpenAlex
+2025-05-26 18:25:38,929 - fresh_start_1000 - INFO -   ✅ OpenAlex: +10 papers (total: 888)
+2025-05-26 18:25:39,934 - fresh_start_1000 - INFO - 🔍 Keyword 40/73: 'geothermal energy'
+2025-05-26 18:25:39,934 - arxiv_crawler - INFO - ArXiv query: ti:"geothermal energy" OR abs:"geothermal energy" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:25:40,727 - arxiv_crawler - INFO - Found 11 papers for keyword 'geothermal energy' on arXiv
+2025-05-26 18:25:40,727 - fresh_start_1000 - INFO -   ✅ arXiv: +11 papers (total: 899)
+2025-05-26 18:25:41,732 - openalex_crawler - INFO - OpenAlex query: geothermal energy
+2025-05-26 18:25:42,264 - openalex_crawler - INFO - Found 49 papers for keyword 'geothermal energy' on OpenAlex
+2025-05-26 18:25:42,265 - fresh_start_1000 - INFO -   ✅ OpenAlex: +10 papers (total: 909)
+2025-05-26 18:25:43,284 - fresh_start_1000 - INFO - 💾 Saved checkpoint: 909 papers to data/metadata/papers_20250526_182543.json
+2025-05-26 18:25:43,284 - fresh_start_1000 - INFO - 📊 Progress: 40/73 keywords, 909 papers collected
+2025-05-26 18:25:43,284 - fresh_start_1000 - INFO - 🔍 Keyword 41/73: 'hydropower'
+2025-05-26 18:25:43,284 - arxiv_crawler - INFO - ArXiv query: ti:"hydropower" OR abs:"hydropower" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:25:44,356 - arxiv_crawler - INFO - Found 40 papers for keyword 'hydropower' on arXiv
+2025-05-26 18:25:44,356 - fresh_start_1000 - INFO -   ✅ arXiv: +15 papers (total: 924)
+2025-05-26 18:25:45,361 - openalex_crawler - INFO - OpenAlex query: hydropower
+2025-05-26 18:25:45,907 - openalex_crawler - INFO - Found 50 papers for keyword 'hydropower' on OpenAlex
+2025-05-26 18:25:45,908 - fresh_start_1000 - INFO -   ✅ OpenAlex: +10 papers (total: 934)
+2025-05-26 18:25:46,913 - fresh_start_1000 - INFO - 🔍 Keyword 42/73: 'hydroelectric'
+2025-05-26 18:25:46,913 - arxiv_crawler - INFO - ArXiv query: ti:"hydroelectric" OR abs:"hydroelectric" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:25:47,866 - arxiv_crawler - INFO - Found 23 papers for keyword 'hydroelectric' on arXiv
+2025-05-26 18:25:47,866 - fresh_start_1000 - INFO -   ✅ arXiv: +15 papers (total: 949)
+2025-05-26 18:25:48,868 - openalex_crawler - INFO - OpenAlex query: hydroelectric
+2025-05-26 18:25:49,414 - openalex_crawler - INFO - Found 50 papers for keyword 'hydroelectric' on OpenAlex
+2025-05-26 18:25:49,415 - fresh_start_1000 - INFO -   ✅ OpenAlex: +10 papers (total: 959)
+2025-05-26 18:25:50,417 - fresh_start_1000 - INFO - 🔍 Keyword 43/73: 'bioenergy'
+2025-05-26 18:25:50,418 - arxiv_crawler - INFO - ArXiv query: ti:"bioenergy" OR abs:"bioenergy" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:25:51,255 - arxiv_crawler - INFO - Found 6 papers for keyword 'bioenergy' on arXiv
+2025-05-26 18:25:51,255 - fresh_start_1000 - INFO -   ✅ arXiv: +6 papers (total: 965)
+2025-05-26 18:25:52,259 - openalex_crawler - INFO - OpenAlex query: bioenergy
+2025-05-26 18:25:52,825 - openalex_crawler - INFO - Found 50 papers for keyword 'bioenergy' on OpenAlex
+2025-05-26 18:25:52,826 - fresh_start_1000 - INFO -   ✅ OpenAlex: +10 papers (total: 975)
+2025-05-26 18:25:53,828 - fresh_start_1000 - INFO - 🔍 Keyword 44/73: 'biomass'
+2025-05-26 18:25:53,828 - arxiv_crawler - INFO - ArXiv query: ti:"biomass" OR abs:"biomass" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:25:55,229 - arxiv_crawler - INFO - Found 50 papers for keyword 'biomass' on arXiv
+2025-05-26 18:25:55,230 - fresh_start_1000 - INFO -   ✅ arXiv: +15 papers (total: 990)
+2025-05-26 18:25:56,235 - openalex_crawler - INFO - OpenAlex query: biomass
+2025-05-26 18:25:56,792 - openalex_crawler - INFO - Found 50 papers for keyword 'biomass' on OpenAlex
+2025-05-26 18:25:56,792 - fresh_start_1000 - INFO -   ✅ OpenAlex: +10 papers (total: 1000)
+2025-05-26 18:25:57,798 - fresh_start_1000 - INFO - 🔄 Removed 51 duplicates, 949 unique papers remain
+2025-05-26 18:25:57,799 - fresh_start_1000 - WARNING - Only collected 949 papers, need 1000
+2025-05-26 18:25:57,799 - fresh_start_1000 - INFO - 🔄 Collecting 51 more papers...
+2025-05-26 18:25:57,799 - arxiv_crawler - INFO - ArXiv query: ti:"renewable energy systems" OR abs:"renewable energy systems" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:25:58,913 - arxiv_crawler - INFO - Found 39 papers for keyword 'renewable energy systems' on arXiv
+2025-05-26 18:25:58,914 - fresh_start_1000 - INFO -   ✅ 'renewable energy systems': +20 papers
+2025-05-26 18:25:59,919 - arxiv_crawler - INFO - ArXiv query: ti:"smart energy" OR abs:"smart energy" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:26:02,455 - arxiv_crawler - INFO - Found 28 papers for keyword 'smart energy' on arXiv
+2025-05-26 18:26:02,455 - fresh_start_1000 - INFO -   ✅ 'smart energy': +20 papers
+2025-05-26 18:26:03,459 - arxiv_crawler - INFO - ArXiv query: ti:"energy efficiency" OR abs:"energy efficiency" AND (cat:physics.soc-ph OR cat:eess.SY OR cat:cs.SY OR cat:physics.app-ph OR cat:cond-mat.mtrl-sci OR cat:physics.chem-ph)
+2025-05-26 18:26:06,504 - arxiv_crawler - INFO - Found 50 papers for keyword 'energy efficiency' on arXiv
+2025-05-26 18:26:06,504 - fresh_start_1000 - INFO -   ✅ 'energy efficiency': +11 papers
+2025-05-26 18:26:07,527 - fresh_start_1000 - INFO - 💾 Saved checkpoint: 1000 papers to data/metadata/papers_20250526_182607.json
+2025-05-26 18:26:07,527 - fresh_start_1000 - INFO - ✅ Collection complete: 1000 papers
+2025-05-26 18:26:07,528 - fresh_start_1000 - INFO - 📥 Starting PDF downloads for 1000 papers
+2025-05-26 18:26:07,529 - fresh_start_1000 - INFO - 📁 Found 574 already downloaded papers
+2025-05-26 18:26:07,529 - fresh_start_1000 - INFO - 📍 Resuming from paper 592/1000
+2025-05-26 18:26:07,529 - fresh_start_1000 - INFO - 📥 Downloading 592/1000: Earth's Global Energy Budget...
+2025-05-26 18:26:07,529 - fresh_start_1000 - WARNING -   ❌ Failed to download
+2025-05-26 18:26:17,533 - fresh_start_1000 - INFO - 📥 Downloading 593/1000: Revisiting brittle fracture as an energy minimizat...
+2025-05-26 18:26:17,533 - fresh_start_1000 - WARNING -   ❌ Failed to download
+2025-05-26 18:26:27,518 - fresh_start_1000 - INFO - 📥 Downloading 594/1000: The energy release in great earthquakes...
+2025-05-26 18:26:27,518 - fresh_start_1000 - WARNING -   ❌ Failed to download
+2025-05-26 18:26:37,512 - fresh_start_1000 - INFO - 📥 Downloading 595/1000: FLUXNET: A New Tool to Study the Temporal and Spat...
+2025-05-26 18:26:37,512 - fresh_start_1000 - WARNING -   ❌ Failed to download
+2025-05-26 18:26:47,512 - fresh_start_1000 - INFO - 📥 Downloading 596/1000: Nanostructured Materials for Electrochemical Energ...
+2025-05-26 18:26:47,512 - fresh_start_1000 - WARNING -   ❌ Failed to download
+2025-05-26 18:26:57,514 - fresh_start_1000 - INFO - 📥 Downloading 597/1000: The Surface Energy Balance System (SEBS) for estim...
+2025-05-26 18:26:57,514 - fresh_start_1000 - WARNING -   ❌ Failed to download
+2025-05-26 18:27:07,518 - fresh_start_1000 - INFO - 📥 Downloading 598/1000: Earth's Annual Global Mean Energy Budget...
+2025-05-26 18:27:07,518 - fresh_start_1000 - WARNING -   ❌ Failed to download
+2025-05-26 18:27:17,522 - fresh_start_1000 - INFO - 📥 Downloading 599/1000: Clouds and the Earth's Radiant Energy System (CERE...
+2025-05-26 18:27:17,522 - fresh_start_1000 - WARNING -   ❌ Failed to download
+2025-05-26 18:27:27,523 - fresh_start_1000 - INFO - 📥 Downloading 600/1000: Quantifying the impacts of climate change and extr...
+2025-05-26 18:27:27,523 - fresh_start_1000 - WARNING -   ❌ Failed to download

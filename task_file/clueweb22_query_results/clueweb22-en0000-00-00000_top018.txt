@@ -1,0 +1,70 @@
+The most important telescopes in history | New Scientist
+The most important telescopes in history
+25 February 2009
+In celebration of the International Year of Astronomy in 2009, New Scientist takes you on an armchair tour of some of the most important telescopes ever built. For more information on these and other pioneering telescopes, read Eyes on the Skies: 400 Years of Telescopic Discovery by Govert Schilling and Lars Lindberg Christensen (Wiley-VCH, 2009).
+Galileo's refractor
+(1609)
+The exact origin of the telescope is still controversial. The oldest existing documents attribute its invention to the Dutch spectacle maker Hans Lipperhey in the early 17 th century. Lipperhey found that placing a convex lens at one end of a tube and a concave lens at the other allowed him to magnify distant objects.
+Though he didn't invent the telescope, Galileo improved on its design - gradually increasing its magnification power. And he was the first to realise that it could be used to study the heavens rather than just to magnify objects on Earth.
+Here you can see Galileo demonstrating one of his telescopes to the ruler of Venice in August 1609 (Galileo is standing to the right of the telescope). In the years to come, Galileo's observations - including the discovery of four large moons orbiting Jupiter - would lend credence to the sun-centred worldview of Nicolaus Copernicus, who removed the Earth from its central position in the universe.
+(Image: Science Photo Library: from Eyes on the Skies: 400 Years of Telescopic Discovery by Govert Schilling and Lars Lindberg Christensen)
+Newton's reflecting telescope
+(1668)
+Instead of using glass lenses to bend, or refract, light, Isaac Newton used a curved mirror to reflect light to a focal point. This design, which uses mirrors as buckets to collect light, can magnify 
+objects far more than is possible with a lens. It also minimises the problem of chromatic aberration - colour defects that are caused by the lens bending different wavelengths of light by different amounts.
+However, due to problems with accurately grinding the metal mirror, Newton's first reflector, a replica of which is seen here, actually caused more image distortions than other contemporary telescopes. As a result, more than a century passed before reflecting telescopes became popular among astronomers.
+(Image: Andrew Dunn, from Eyes on the Skies: 400 Years of Telescopic Discovery by Govert Schilling and Lars Lindberg Christensen)
+Herschel's telescopes
+In the late 1700s, German musician William Herschel and his sister Caroline began making large reflecting telescopes. With a mirror measuring 1.2 metres in diameter, Herschel's largest telescope (pictured) was an unwieldy instrument, requiring four servants to operate its wheels, ropes and pulleys. It remained the largest telescope in the world until the mid-nineteenth century.
+Herschel scanned the heavens systematically and catalogued hundreds of nebulae and binary stars (in 1781, with a smaller telescope, he discovered that an object previously thought to be a star was in fact the planet Uranus).  In the 1830s, Herschel's son John spent a few years in South Africa, where he set up a similar, but smaller telescope to study the southern skies.
+(Image: Sheila Terry/Science Photo Library, from Eyes on the Skies: 400 Years of Telescopic Discovery by Govert Schilling and Lars Lindberg Christensen)
+Yerkes refractor
+(1895).
+American astronomer George Ellery Hale was behind the construction of a refracting telescope with a 1-metre-wide primary lens - at the time, the world's largest telescope - at the Yerkes Observatory in Williams Bay, Wisconsin. Ground by American telescope builders Alvan Clark and Sons, the primary lens was completed in 1895 and is still the largest ever made. But refractor builders had reached their limit with the Yerkes Telescope - larger lenses would sag under their own weight, among other problems, so telescope makers turned once again to reflectors.
+(Image: Alain Riazuelo, from Eyes on the Skies: 400 Years of Telescopic Discovery by Govert Schilling and Lars Lindberg Christensen)
+Mount Wilson 60-inch telescope
+(1908).
+Even as the colossal Yerkes refractor in Wisconsin was being dedicated in 1897, the glass for what would become the first of today's generation of telescopes - a large reflector - was sitting in the basement below it. The indefatigable George Ellery Hale eventually built this reflector on Mount Wilson, northeast of Los Angeles, California, in 1908.
+The talented optician George Ritchey designed the 60-inch (1.5 m) telescope, pioneering a way to deflect light to instruments outside the telescope. This "Coudé system" allowed astronomers to use many different instruments to analyse the light.
+In this 1946 photo, the observatory's night assistant Gene Hancock smokes his pipe while manually controlling the motion of the 60-inch telescope. Today, computers take care of a telescope's slow tracking motion, which is needed to compensate for the motion of the sky due to the Earth's rotation.
+(Image: Biller Miller, from Eyes on the Skies: 400 Years of Telescopic Discovery by Govert Schilling and Lars Lindberg Christensen)
+Hooker 100-inch telescope
+(1917).
+The 60-inch telescope at Mount Wilson had not even been tested before George Ellery Hale once again set his sights on an even bigger design. He found a businessman named John Hooker to finance the construction of a 100-inch (2.5 m) reflector at Mount Wilson Observatory. It was built in 1917 and held the record for the world's largest telescope for the next 30 years.
+Edwin Hubble used this telescope to discover that "spiral nebulae" were in fact galaxies beyond our own and that they were moving away from us, revealing that the universe is expanding.
+(Image: Pedro Re, George Willis Ritchey, from Eyes on the Skies: 400 Years of Telescopic Discovery by Govert Schilling and Lars Lindberg Christensen)
+Hale 200-inch telescope
+(1948).
+George Ellery Hale was not satisfied with the record-breaking 100-inch Hooker telescope - he wanted to build a telescope twice as large. So he built the 200-inch (5.1-m) Hale telescope southeast of Los Angeles on Palomar Mountain. It was completed in 1948, 10 years after his death, and held the record for the world's largest telescope for the next 45 years.
+The giant mirror was made out of a new glass blend called Pyrex, which does not change its shape as much as ordinary glass does when the temperature changes. The mirror lies at the bottom of the telescope tube (pointing straight up in this photograph) and reflects starlight to the observer's cabin at the top. A secondary mirror can also reflect the light back through a central hole in the primary mirror to detectors at the rear of the instrument.
+(Image: Tom Jarrett, from Eyes on the Skies: 400 Years of Telescopic Discovery by Govert Schilling and Lars Lindberg Christensen)
+Horn Antenna
+(1959).
+The Horn Antenna at Bell Telephone Laboratories in New Jersey was used to make one of the most important discoveries in all of astronomy - the detection of the cosmic microwave background radiation. Built in 1959, it was originally used to bounce radio waves off a simple satellite called Echo 1 and record their faint reflected signals.
+It was later opened up for use by astronomers, and in 1965 Bell Labs' Arno Penzias and Robert Wilson discovered a constant "static" at microwave wavelengths no matter where they looked in the sky. Initially, they suspected the source might be pigeon droppings, but the noise persisted even after they swept the antenna clean.
+It turned out that the pair had discovered the "afterglow" of the big bang - radiation emitted not long after the big bang, when the universe was very hot and dense. As the universe expanded, this high-energy radiation stretched into low-energy microwaves. The scientists won a Nobel Prize for their work in 1978.
+(Image: Wiki commons)
+Very Large Array
+(1980).
+Located just outside Socorro, New Mexico, the Very Large Array (VLA), in action since 1980, is a collection of 27 radio antennas, each measuring 25 metres across. Like other radio interferometers, the Y-shaped array functions as a single giant telescope by electronically combining the data from all 27 antennas. Astronomers from around the world use the VLA to study everything from black holes to ghostly planetary nebulae.
+(Image: NRAO/AUI (Kristal Armendari), from Eyes on the Skies: 400 Years of Telescopic Discovery by Govert Schilling and Lars Lindberg Christensen)
+Hubble Space Telescope
+(1990).
+Ever since its launch in April 1990, the iconic telescope has made revolutionary breakthroughs from its vantage point high above the blurring effects of the Earth's atmosphere. Astronomers have used it to accurately determine the expansion rate of the universe and to discover dark energy, the mysterious force that is accelerating that expansion. Hubble was the first mission designed to be visited and repaired by astronauts - and on 11 May 2009 the space shuttle Atlantis launched to service the telescope for the fifth and final time, allowing it to operate until at least 2014.
+(Image: NASA)
+Keck telescopes
+(1993 and 1996).
+It is impossible to cast monolithic telescope mirrors larger than 8.4 metres across using present day technology. Thus, the 10-metre mirrors of the Keck telescopes at Mauna Kea, Hawaii, consist of 36 smaller hexagonal segments - a technique that will also be used in the future for extremely large telescopes. The construction left of centre in this extreme fish-eye photo is the cage for the secondary mirror.
+(Image: NASA/JPL-Caltech, from Eyes on the Skies: 400 Years of Telescopic Discovery by Govert Schilling and Lars Lindberg Christensen)
+Sloan 2.5-m telescope
+(1998).
+The Sloan Digital Sky Survey 2.5-metre telescope at Apache Point Observatory, New Mexico, houses an incredibly complex digital camera, possibly the most complicated ever constructed. Inside are 30 charge coupled device (CCD) detectors cooled to -80 °C. The Sloan telescope has automatically mapped the northern sky in unprecedented detail.
+(Image: Fermilab Visual Media Services, from Eyes on the Skies: 400 Years of Telescopic Discovery by Govert Schilling and Lars Lindberg Christensen)
+WMAP
+(2001).
+NASA launched this space telescope in June 2001 to study the cosmic microwave background, relic radiation from the big bang. WMAP produced the first sharp map of the sky at microwave wavelengths and pinned down the age of the universe at 13.7 billion years. It also measured the composition of the universe, which is made up of about 72% dark energy, 23% dark matter, and only about 5% ordinary matter. Its successor, the European Space Agency's Planck satellite, launched into space on 14 May 2009. Planck is expected to have about 10 times the sensitivity and three times the angular resolution of WMAP and could provide key evidence to support the theory of inflation, which states that the universe expanded exponentially right after the big bang.
+(Illustration: NASA/WMAP Science Team)
+Swift
+(2004).
+This space telescope was designed to study fleeting cosmic explosions called gamma-ray bursts (GRB), which are thought to be created when massive stars die or when two dense objects - such as neutron stars - merge. Before Swift launched in 2004, it used to take about six hours to alert astronomers about a GRB, but Swift swivels automatically to observe a burst in just a minute. It has observed hundreds of GRBs, and in April 2009 detected a burst that was later determined to be the most distant object ever confirmed in the universe.
+(Illustration: Spectrum/NASA E/PO/Sonoma State University/Aurore Simonnet)

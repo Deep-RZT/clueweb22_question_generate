@@ -1,0 +1,16 @@
+Clifford CliffNet Wizard Security System - Car Alarms, Remote Starters, SmartStart
+UK Products - Accessories Clifford CliffNet Wizard
+Clifford CliffNet Wizard
+One of the best things about Clifford's G5 technology is the ability to plug your Windows PC into the system/accessory chain and run the CliffNet Wizard. CliffNet Wizard allows you to customize and control your Clifford G5 system and accessories with point-and-click ease. It even adds features, such as selection from among 15 different Personalized Siren Sounds, that aren't available through the system's standard PlainView 2 code-protected programming.
+Overview
+Overview
+Point & Click Control
+One of the coolest things about Clifford's G5 technology is the ability to plug your Windows PC into the system/accessory chain and run the CliffNet Wizard. CliffNet Wizard allows you to customize and control your Clifford G5 system and accessories with point-and-click ease. It even adds features, such as selection from among 15 different Personalized Siren Sounds, that aren't available through the system's standard PlainView 2 code-protected programming.
+Download CliffNet Wizard
+Communication with your G5 system requires that your Authorized Clifford Dealer install the DataPort Replicator Cable (included in the optional Wizard Kit (Consumer) to your G5 system. This provides an easy-to-access DB9 serial com port underdash or in the glove compartment. If you have an older version of CliffNet Wizard, you can install the latest version over it (i.e., you don't need to uninstall).
+Please follow instructions below to install Cliffnet Wizard:
+1 - Click here to download CliffNetWizard.zip (7.4MB) to your local computer.
+2 - Double click on CliffNetWizard.zip (the file on your local computer) to extract the file.
+3 - Select a location on your local computer to save the extracted files.
+4 - Double click on setup.exe to start installation.
+Contact your local dealer for more information.

@@ -1,0 +1,78 @@
+CNC | Service Schedules
+Service Schedules
+JVH Service
+Actions ,
+Vessel Name
+a
+PENANG BRIDGE
+a
+GREEN WAVE
+a
+CONCERTO
+a
+PENANG BRIDGE
+Voyage Ref.
+Local Voyage Ref.
+0FX57S1NC
+0FX59S1NC
+0FX5BS1NC
+0FX5DS1NC
+TOKYO
+Monday, April 4, 2022
+Wednesday, April 13, 2022
+Wednesday, April 20, 2022
+Tuesday, April 26, 2022
+SHIMIZU
+Tuesday, April 5, 2022
+Thursday, April 14, 2022
+Friday, April 22, 2022
+Wednesday, April 27, 2022
+NAGOYA
+Wednesday, April 6, 2022
+Friday, April 15, 2022
+Saturday, April 23, 2022
+Wednesday, April 27, 2022
+KOBE
+Thursday, April 7, 2022
+Saturday, April 16, 2022
+Sunday, April 24, 2022
+Thursday, April 28, 2022
+BUSAN, KOREA
+Saturday, April 9, 2022
+Monday, April 18, 2022
+Tuesday, April 26, 2022
+Saturday, April 30, 2022
+KEELUNG
+Tuesday, April 12, 2022
+Thursday, April 21, 2022
+Thursday, April 28, 2022
+Monday, May 2, 2022
+KAOHSIUNG
+Wednesday, April 13, 2022
+Friday, April 22, 2022
+Friday, April 29, 2022
+Wednesday, May 4, 2022
+Voyage Ref.
+Local Voyage Ref.
+0FX58N1NC
+0FX5AN1NC
+0FX5CN1NC
+0FX5EN1NC
+HAIPHONG
+Saturday, April 16, 2022
+Monday, April 25, 2022
+Sunday, May 1, 2022
+Friday, May 6, 2022
+KAOHSIUNG
+Friday, April 22, 2022
+Saturday, April 30, 2022
+Saturday, May 7, 2022
+Thursday, May 12, 2022
+TOKYO
+Tuesday, April 26, 2022
+Wednesday, May 4, 2022
+Wednesday, May 11, 2022
+Wednesday, May 18, 2022
+>
+Past call Last updated call Future call
+!Schedules, ports of call and prices described here above, are only for indicative and commercial purpose and cannot be considered as contractual commitment. As modifications and updates can be made at any time, you are invited to check them regularly or to contact our local agents.

@@ -1,0 +1,141 @@
+History Of the Telescope - Who Invented the Telescope? | IE
+A Brief History of The Telescope: From 1608 to Gamma-Rays
+The history of the telescope is a long and very interesting one.
+By Christopher McFadden
+Dec 07, 2020
+1, 2
+The telescope has undergone an enormous transformation since it was first patented in the 17th Century. Some of the greatest minds from Galileo Galilei to Sir Isaac Newton to the great Edwin Hubble would all contribute, over time, to the development of this advanced scientific piece of equipment.
+Here we will journey through time and explore 15 of the most significant telescopes through history along with their inventors (where applicable), ranging from the first recorded telescope to space-based telescopes capable of observing everything from visible light to gamma rays.
+RELATED: WORLD'S LARGEST RADIO TELESCOPE NOW OPEN - AND IT IS A MONSTER!
+The following list is in chronological order but is not exhaustive.
+1. Who invented the telescope? Hans Lippershey is one contender
+Source: Numlx/Wikimedia Commons
+It is not known who first invented the telescope, but Dutch eyeglass maker Hans Lippershey (or Lipperhey) was the first person to patent the telescope in 1608. His device, called a kijker ("looker"), was, according to Hans, able to magnify an image up to three times.
+It consisted of a concave eyepiece that was aligned with another convex objective lens. According to one story, he conceived of the idea when seeing two children in his shop holding up two lenses that appeared to make a distant weather vane appear closer.
+Others claimed at the time that he stole the design from Zacharias Jansen , another glassmaker from the same town. Yet another Dutchman, Jacob Metius, applied for a patent for a telescope a few weeks after Lippershey. When Metius applied for a patent, both applications were rejected due to the counterclaims and the official's opinion that the design was easy to reproduce.
+Many historians recognize Lippershey as the inventor of the first telescope, as he was the first to apply for a patent. It also appears that both Lippershey and Metius developed their designs independently, while Jansen is credited with inventing the compound microscope.
+Lippershey's telescope. Source: Livrustkammaren /Wikimedia Commons
+Both men received a reward, and Lippershey was awarded a significant commission to make copies of his telescope. His telescopes would later be supplied to the high society around Europe, including Henry IV of France.
+It was Hans' telescope that would later catch the eye of Jacques Bovedere of Paris. He reported the invention to none other than Galileo Galilei, who promptly began to build his own.
+2. Galileo used his telescope to peer into the cosmos
+Source: Peter Paul Rubens/Wikimedia Commons
+Galileo heard about Hans Lippershey 's ingenious device via his French associate Jacques Bovedere in 1609. He immediately set about designing and building his own telescope, although he had never seen Han's device.
+Nonetheless, he was able to make significant improvements on the performance of his telescope, reaching magnifications of around 20 times. Pleased with his creation, he subsequently presented it to the Venetian Senate, who rewarded him by making him a lecturer at the University of Padua for life.
+As impressive as this was, he went further, as history attests. Galileo would be the first recorded person to point his telescope skyward. With his telescope, he was able to make out the cratered surfaces of the moon, drew the moon's phases in detail, and even described the Milky Way.
+His observations also led him to discover the rings of Saturn, sunspots, and four of Jupiter's moons, as well as a glimpse of diffuse light arching across the sky which would later be known as the Milky Way. Galileo would quickly become convinced that Copernicus's Heliocentric model was absolutely correct — a position that would ultimately see him put under house arrest by the Catholic Inquisition until his death in 1642.
+3. The Keplerian telescope was devised in 1611
+Source: MarkusHagenlocher/Wikimedia Commons
+After the groundbreaking work of Hans Lippershey and Galileo Galilei, other scientists around Europe began to design and build their own telescopes. Chief amongst the early pioneers was the one and only Johannes Kepler.
+Kepler made detailed studies of telescopic optics and devised his own apparatus with two convex lenses — the famous Keplerian Telescope. He built one in 1611 and while the design greatly improved the device's magnification, it also rendered the observed image upside down.
+Apart from his significant contributions to astronomy, he was instrumental in the field of optics in general. His groundbreaking manuscript Astronomia Pars Optica would earn him the title of the 'Founder of Modern Optics'.
+This book contained his observations and rationalization about many aspects of optics, including the use of pinhole cameras to take pictures, explanations of the refraction in the eye, and his understanding of depth perception.
+In a later work, Dioptrice made him the first person in history to describe real, virtual, upright, and inverted images and the concept of magnification. He would also become the first person to explain how a telescope actually works.
+Kepler also discovered the properties of total internal reflection.
+4. Christiaan Huygens uses his DIY telescope to find Titan
+Source: NASA/Flickr
+Dutch astronomer Christiaan Huygens, inspired by the earlier works of Galileo, built the most powerful telescope of his day in 1655. His enormous apparatus (for the time) was built to make detailed studies of the planets and solar system.
+Huygens's greatest contributions to the development of telescopes were his invention of the Huygens ocular and the aerial (or tubeless) telescope. He would also demonstrate the great utility of a micrometer.
+Huygens also made great improvements to the grinding of lenses, beginning in 1654. After some consultation with well-known opticians, he and his brother acquired some grinding plates and other equipment needed to build a telescope.
+After some trial and error, a 12 foot (3.7 meters) telescope was ready for use. He would use it, to his great satisfaction, to make detailed observations of Saturn.
+Using his telescope, Huygens was able to observe a bright moon that orbited Saturn, which he dubbed 'Saturni Luna'. This name stuck until John Herschel renamed it Titan in 1847. Christiaan also studied Saturn itself in great detail using his telescope, and he was the first to document the true shape of the planet's rings in 1659 - they had previously been referred to as the 'ears' of Saturn.
+5. Isaac Newton built the first reflecting telescope
+Source: Solipsist/Wikimedia Commons
+Sir Isaac Newton would later build on the work of his predecessors, notably Kepler, and reasoned that telescopes should use a series of mirrors rather than lenses. He believed, amongst other things, this setup would solve the chromatic aberration issues that plagued refracting telescopes.
+Newton believed that this issue could never actually be cured using refracting telescopes and resolved himself to find a new solution.
+Following through on his thoughts the first reflecting telescope, the Newtonian Telescope (Reflector) was built in 1668. Newton's breakthrough was to use a large concave primary mirror to focus light (objective) onto a smaller flat diagonal mirror that projected an image into an eyepiece on the side of the telescope.
+Contrary to popular belief, Newton was not the first to devise the idea of a reflecting telescope . Galileo Galilei and Giovanni Francesco Sagredo had discussed the possibility after the invention of the refracting telescope.
+Other scientists of the time, like Niccolò Zucchi, may have conducted similar experiments in 1616. It is also possible that Newton read James Gregory's 1663 book Optica Promota that had a description of the concept of a reflecting microscope which used parabolic mirrors.
+Newton's telescope would prove to have a number of advantages over existing models of the time:
+- No chromatic aberration
+- Cheaper to build
+- Construction and assembly was a lot simpler
+- Wider field of view due to short focal view
+- The design was much shorter and more compact than its predecessors, making it more portable.
+5. Chester Hall solves the color distortion issue with refracting telescopes
+Source: DrBob/Wikimedia Commons
+For the next 60 years or so, minor improvements were made to the technology by the likes of Laurent Cassegrain (who introduced hyperbolic and parabolic mirrors) and John Hadley (who improved Newton's model). The next big leap came in 1729.
+An Englishman, Chester Moore Hall, greatly reduced the chromatic aberration of refracting telescopes when he introduced a new form of lens. This lens consisted of two types of glass, the crown and flint, that were cemented together.
+With this development, Hall proved that Isaac Newton was mistaken in his supposition that color distortion could not be solved using refracting rather than reflecting telescopes.
+Hall discovered his solution by studying the human eye. This led him to the belief that achromatic lenses must be possible somehow.
+He experimented with many kinds of glass until he found the perfect combination of crown and flint glass that met his specific requirements. In 1733, he built several telescopes with apertures of 2.5 inches (6.5 cm) and focal lengths of 20 inches (50 cm).
+6. The first gigantic telescope was built in 1789
+Source: Mike Young/Wikimedia Commons
+In 1789 , the first giant reflector telescope was built in the UK by William Herschel. He oversaw the construction of a 40 ft (12 meters) long Newtonian-based reflector telescope.
+This enormous telescope was the largest in its day and would have been a real sight to see. However, as impressive as this must have been, it was far from perfect.
+Herschel solved an issue with the poor reflective quality of the speculum metal often used in Newtonian telescopes. He did this by simply omitting the diagonal mirror completely and tilting the primary mirror to allow the user to directly view the scene.
+This would come to be known as the Herschelian telescope.
+However, Herschel's huge telescope had a number of issues that would lead him to prefer to use a smaller 20 ft (6 meters) long telescope for astronomical observations.
+Using his telescopes, Herschel was able to discover some moons around the gas giants, notably Titania and Oberon of Uranus, along with Uranus itself. Using his bigger telescope, Herschel was also able to find the sixth and seventh of Saturn's moons - Enceladus and Mimas.
+7. The 1800s and the rise of the giant telescopes
+Source: Birr Castle
+Between 1844 and 1846, William Parsons (1800-1867), the Third Earl of Rosse, built a series of telescopes at his home of Birr Castle, in Ireland. Today, we can routinely make large mirrors, some in excess of 29 ft (9 meters). In the 1800s; however, it was a much more challenging endeavor. Today's mirrors tend to be made by coating glass in reflective metal, but back then mirrors were cast from a heavier and temperamental alloy of copper and tin called speculum (originally devised by Isaac Newton).
+Altogether, Lord Rosse cast around five metal mirrors with a six-foot (1.8 meters) diameter and weighing over 4 tonnes.
+The resulting reflecting telescope, known as the "Leviathan of Parsonstown" had a tube 49 ft (15 meters) long suspended between massive masonry walls, looking more like a fortification than a piece of scientific apparatus.
+This gigantic telescope was used by Lord Rosse for many years to study the night sky. He was particularly interested in the study of 'nebulae' and became the first person to observe the spiral arms of the M51 nebula.
+Lord Rosse's telescope fell into disuse in the latter half of the 19th Century and was dismantled in 1908. It was, however, reconstructed in the late 1990s by the present Earl.
+8. The Yerkes Observatory, Wisconsin pushed the limit
+Source: Kb9vrg/Wikimedia Commons
+The Yerkes Observatory in Williams Bay, Wisconsin was founded by George Ellery Hale and paid for by Charles T. Yerkes. It would become the world's largest refracting telescope at the time, in 1897.
+The telescope and housing are a true melding of science and art and is sometimes referred to as "the birthplace of astrophysics". Yerkes marks a significant change in thinking around exploration using telescopes, from a largely amateur hobby to a dedicated and serious scientific pursuit.
+This telescope pushed the limits of the maximum size of refracting telescopes, as it used the biggest lenses possible without having the entire apparatus collapse under its own weight. The telescope used an impressive 3.34 ft (102 cm) diameter doublet lens, which is still the largest of its kind used for astronomy.
+Partly because of this, many astronomers finally realized that the future of large telescopes was to use mirrors rather than lenses.
+The facility has been used by many famous astronomers in history including none other than Edwin Hubble , Subrahmanyan Chandrasekhar, Russian-American astronomer Otto Struve,Gerard Kuiper, and the great Carl Sagan.
+9. The radio telescope is born
+Reconstruction of the Reber Radio Telescope. Source: Jrek TuszynskiWikimedia Commons
+Radio Telescope was born in the early 1930s when a Bell Telephone Laboratories engineer, Karl Guthe Jansky, was tasked with finding the source of static that interfered with radio and telephone services. Jansky built an array of dipoles and reflectors that were designed to receive a shortwave radio signal at around 20.5 MHz.
+The entire apparatus was set up on a turntable, allowing it to turn a full 360 degrees. Jansky's "merry-go-round", as it came to be known, measured 98 ft (30 meters) in diameter and stood at 20 ft (6 meters) tall.
+Using this apparatus he was able to determine three types of interference:
+- Nearby thunderstorm static
+- Distant thunderstorm static
+- A curious, constant "faint hiss" in the background that repeated in a cycle
+Jansky correctly suspected this last source originated from outside our solar system, with its source coming roughly from the constellation of Sagittarius.
+Amateur radio enthusiast, Grote Reber, inspired by Jansky's work, would go on to develop the first device to 'see' the radio waves. He did this by building the first parabolic 'dish' telescope, which had a diameter of 29 ft (9 meters), in his back garden in Wheaton, Ilinois in 1937.
+He repeated Jansky's pioneering work, identifying the Milky Way as the first off-world radio source, and he went on to conduct the first sky survey at very high radio frequencies, discovering other radio sources.
+10. Lovell's telescope takes radio telescopes to a whole new level
+Source: Mike Peel/Wikimedia Commons
+Building on the pioneering work of Jansky and Grote, British Astronomer Sir Bernard Lovell made plans to build a large radio telescope in the 1950s. After working on radar during the Second World War, Bernard saw the great scientific potential of radio telescopes in studying the cosmos.
+His vision was to build a huge 250-foot (76 meters) diameter dish radio telescope that could be aimed at any point in the sky. After a series of big technical and financial problems, it was finally built in the summer of 1957 at Jodrell Bank in the UK.
+This iconic scientific apparatus has since played an important role in the research of meteors , quasars , pulsars, a nd was heavily involved with the tracking of space probes a t the start of the Space Age.
+11. The Hubble Space Telescope was a massive milestone in telescope history
+Source: NASA
+In 1990, NASA and the ESA co-operated to build and deploy the Hubble Space Telescope, making it one of the first telescopes to be launched into space. Although not the first space telescope, Hubble is one of the largest and most flexible.
+Since its deployment into low earth orbit, it has taken part in many vital research projects. Liberated from the distortion of Earth's atmosphere (and background light), Hubble can provide very clear images of the stars and planets that are unparalleled.
+The telescope consists of a 7.87 ft (2.4 meters) mirror and a suite of other instruments to observe near UV, visible light, and near IR spectra. O ver 30 years of operation, new, cutting-edge scientific instruments have been added to the telescope during astronaut servicing missions. This has greatly extended the telescope’s lifetime.
+Hubble could be able to stay in service well into the 2030s.
+12. The Compton Gamma Ray Observatory was a game-changer
+Source: NASA/Wikimedia Commons
+In 1991, a revolutionary space telescope was deployed with the goal of detecting photons with energies between 20 keV and 30n GeV. Called the Compton Gamma Ray Observatory (CGRO), it consisted of four telescopes on a single platform that observed X-rays and gamma rays.
+After a long development period, CGRO was delivered into low Earth orbit by the Space Shuttle Atlantis during the STS-37 mission in April 1991. It continued operations until its deorbit in June 2000 .
+CGRO was the heaviest astrophysical payload ever flown at that time at 17 tonnes and cost around $617 million to develop.
+Along with the Hubble Space Telescope, CGRO formed part of NASA's '' Great Observatories" series of telescopes.
+13. The W. M. Keck Observatory is the world's second-largest telescope
+Source: NASA/Wikimedia Commons
+Currently, the second-largest telescope in the world, the W. M. Keck Observatory is a twin-telescope astronomical observatory near the summit of Mauna Kea in Hawaii. It is built at an incredible 13,600 feet (4,145 meters) above sea level and offers unparalleled Earthbound views of the cosmos.
+Proposed in 1977, both of its telescopes comprise 32 ft (10-meter) primary mirrors and it was built between 1990 and 1996. The primary breakthrough necessary to build such large mirrors was the concept of using smaller, usually hexagonal, mirror segments to form a larger contiguous mirror.
+In the case of the Keck telescopes, each mirror comprises 36 segments, each 5.9 ft (1.8 meters) wide, 24 ft (7.5 meters) thick, and weighing half a ton.
+14. The Herschel Space Observatory was the largest infrared telescope ever sent into space
+Source: NASA/Wikimedia Commons
+Active between 2009 and 2013, the Herschel Space Observatory was built by the European Space Agency. It was the largest ever infrared telescope to be launched into space.
+Its operational window was so short due to its limited supply of coolant for its vital instruments.
+It consisted of an 11.5 ft (3.5-meter) mirror with other highly specialized instruments sensitive to far-infrared and submillimeter wavebands between 55 and 672 micrometers. The Herschel Space Observatory formed the final component of the Horizon 2000 program along with SOHO/Cluster II , XMM-Newton and Rosetta.
+The space telescope was primarily built to observe the coldest and dustiest objects in space. Especially looking for areas of solar genesis in areas where dusty galaxies were likely to start forming new stars.
+15. The James Webb Space Telescope will replace the aging Hubble Telescope
+The James Webb Space Telescope —developed jointly by NASA, the ESA, and the Canadian Space Agency—is intended to replace the aging Hubble Space Telescope and will offer unprecedented imagery of the cosmos once deployed.
+Once in space, it will offer unprecedented resolution and sensitivity and provide a broad range of investigative abilities that should yield important data for astrophysicists and cosmologists.
+After numerous delays, redesigns, and cost overruns, in March 2018, NASA delayed the JWST 's launch yet again, after the telescope's sun shield ripped during a practice deployment and the sun shield's cables did not sufficiently tighten. Deployment is now scheduled for launch in October 2021.
+And that's your lot for today folks.
+Before you go, and if you are interested in telescopes (which we guess you are), here are some of the best telescopes you can buy online below.
+Orion StarBlast
+National Geographic 76/350 Dobsonian
+National Geographic AZ 60/700 Refractor telescope
+Avalon Venture HD spotting scope
+Bresser Arcturus 60/700 AZ telescope
+Celestron Astro Fi 102
+Celestron Star Sense Explorer DX 130 AZ
+Orion SpaceProbe
+Interesting Engineering is a participant of the Amazon Services LLC Associates Program and various other affiliate programs, and as such there might be affiliate links to the products in this article. By clicking the links and shopping at partner sites, you do not only get the materials you need but also are supporting our website.
+Advertisement
+Follow Us on
+GET YOUR DAILY NEWS DIRECTLY IN YOUR INBOX
+Stay ahead with the latest science, technology and innovation news, for free:
+JOIN FREE

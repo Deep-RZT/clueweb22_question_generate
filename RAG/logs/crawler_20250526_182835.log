@@ -1,0 +1,8 @@
+2025-05-26 18:28:35,440 - fresh_start_1000 - INFO - 📂 Loading existing papers from: data/metadata/papers_20250526_182607.json
+2025-05-26 18:28:35,447 - fresh_start_1000 - INFO - ✅ Loaded 1000 existing papers
+2025-05-26 18:28:35,447 - fresh_start_1000 - INFO - ✅ Already have 1000 papers, skipping collection
+2025-05-26 18:28:35,447 - fresh_start_1000 - INFO - 📥 Starting PDF downloads for 1000 papers
+2025-05-26 18:28:35,448 - fresh_start_1000 - INFO - 📁 Found 574 already downloaded papers
+2025-05-26 18:28:35,448 - fresh_start_1000 - INFO - 📍 Resuming from paper 592/1000
+2025-05-26 18:28:35,448 - fresh_start_1000 - INFO - 📥 Downloading 592/1000: Earth's Global Energy Budget...
+2025-05-26 18:28:35,448 - fresh_start_1000 - WARNING -   ❌ Failed to download

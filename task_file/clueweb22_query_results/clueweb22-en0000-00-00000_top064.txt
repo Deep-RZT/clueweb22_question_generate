@@ -1,0 +1,52 @@
+Hubble Space Telescope | History, Discoveries, & Facts | Britannica
+Home Science Astronomy
+Hubble Space Telescope
+astronomy
+Alternate titles: HST
+By The Editors of Encyclopaedia Britannica • Last Updated: Mar 30, 2022 • Edit History
+Summary
+Read a brief summary of this topic
+How the Hubble Space Telescope works—and why it's important
+Learn about the Hubble Space Telescope's impact on astronomy.
+© Behind the News (A Britannica Publishing Partner)See all videos for this article
+Hubble Space Telescope (HST),  the first sophisticated optical observatory placed into orbit around Earth. Earth’s atmosphere obscures ground-based astronomers’ view of celestial objects by absorbing or distorting light rays from them. A telescope stationed in outer space is entirely above the atmosphere, however, and receives images of much greater brightness, clarity, and detail than do ground-based telescopes with comparable optics.
+Hubble Space Telescope
+Hubble Space Telescope in the cargo bay of the orbiting space shuttle Discovery (STS-82) after its servicing by astronauts and prior to its release, February 1997.
+NASA
+After the U.S. Congress had authorized its construction in 1977, the Hubble Space Telescope (HST) was built under the supervision of the National Aeronautics and Space Administration (NASA) of the United States and was named after Edwin Hubble, the foremost American astronomer of the 20th century. The HST was placed into orbit about 600 km (370 miles) above Earth by the crew of the space shuttle Discovery on April 25, 1990.
+Hubble Space Telescope
+Cutaway of the NASA Hubble Space Telescope, revealing the Optical Telescope Assembly, the heart of the spacecraft, built by Hughes Danbury Optical Systems, Inc.
+Courtesy of Hughes Danbury Optical Systems, Inc.
+Britannica Quiz
+A History of Everyday Technology in 68 Quiz Questions
+Have you ever wanted a nonchronological history of technologies that became, during one era or another, part of everyday experience? And have you wanted that history in the form of a quiz? You’re in luck! Test your knowledge. Take this quiz.
+The HST is a large reflecting telescope whose mirror optics gather light from celestial objects and direct it into two cameras and two spectrographs (which separate radiation into a spectrum and record the spectrum). The HST has a 2.4-metre (94-inch) primary mirror, a smaller secondary mirror, and various recording instruments that can detect visible, ultraviolet, and infrared light. The most important of these instruments, the wide-field planetary camera, can take either wide-field or high-resolution images of the planets and of galactic and extragalactic objects. This camera is designed to achieve image resolutions 10 times greater than that of even the largest Earth-based telescope. A faint-object camera can detect an object 50 times fainter than anything observable by any ground-based telescope; a faint-object spectrograph gathers data on the object’s chemical composition. A high-resolution spectrograph receives distant objects’ ultraviolet light that cannot reach Earth because of atmospheric absorption.
+MyCn18 nebula
+Image of MyCn18, a young planetary nebula located about 8,000 light-years away, taken with the Wide Field and Planetary Camera 2 aboard NASA's Hubble Space Telescope.
+Photo AURA/STScl/NASA/JPL (NASA photo # STScl-PRC96-07)
+About one month after launch, it became apparent that the HST’s large primary mirror had been ground to the wrong shape owing to faulty testing procedures by the mirror’s manufacturer. The resulting optical defect, spherical aberration, caused the mirror to produce fuzzy rather than sharp images. The HST also developed problems with its gyroscopes and with its solar-power arrays. On December 2–13, 1993, a mission of the NASA space shuttle Endeavour sought to correct the telescope’s optical system and other problems. In five space walks, the shuttle astronauts replaced the HST’s wide-field planetary camera and installed a new device containing 10 tiny mirrors to correct the light paths from the primary mirror to the other three scientific instruments. The mission proved an unqualified success, and the HST soon began operating at its full potential, returning spectacular photographs of various cosmic phenomena.
+Three subsequent space shuttle missions in 1997, 1999, and 2002 repaired the HST’s gyroscopes and added new instruments including a near-infrared spectrometer and a wide-field camera. The final space shuttle mission to service the HST, intended to install a new camera and an ultraviolet spectrograph, was launched in 2009. The HST is scheduled to remain operational through at least 2021, after which it is expected to be replaced by the James Webb Space Telescope, equipped with a mirror seven times larger than that of the HST.
+astronauts John Grunsfeld and Richard Linnehan with the Hubble Space Telescope, 2002
+Astronauts John Grunsfeld and Richard Linnehan near the Hubble Space Telescope, temporarily hosted in the space shuttle Columbia 's cargo bay, March 8, 2002.
+NASA
+Sagittarius star cloud
+The Hubble Space Telescope captured this dazzling image of a star cloud in the constellation Sagittarius. Most of these stars are fairly faint and are orange or red, which are the main colours of the Sun. The blue and green stars are hotter than the Sun, while the bright red stars are red giants, which are much cooler stars that are near the end of their lives.
+The Hubble Heritage Team (AURA/STScI/NASA)
+Explore the working principle of the Hubble Space Telescope
+Overview of the Hubble Space Telescope, including how it works and its important discoveries.
+Encyclopædia Britannica, Inc. See all videos for this article
+The HST’s discoveries have revolutionized astronomy. Observations of Cepheid variables in nearby galaxies allowed the first accurate determination of Hubble’s constant, which is the rate of the universe’s expansion. The HST photographed young stars with disks that will eventually become planetary systems. The Hubble Deep Field, a photograph of about 1,500 galaxies, revealed galactic evolution over nearly the entire history of the universe. Within the solar system, the HST was also used to discover Hydra and Nix, two moons of the dwarf planet Pluto.
+NGC 604 nebula
+Hubble Space Telescope image of NGC 604, a nebula in the neighbouring spiral galaxy M33, located 2.7 million light-years away in the constellation Triangulum.
+Hui Yang (University of Illinois), Jeff J. Hester (University of Arizona), and the National Aeronautics and Space Administration
+The Editors of Encyclopaedia Britannica This article was most recently revised and updated by Erik Gregersen.
+Home Science Astronomy
+Hubble Space Telescope
+EGRET all-sky map
+Chandra X-ray Observatory
+Sagittarius A*
+Spitzer Space Telescope
+Workers at the Kennedy Space Center at Cape Canaveral, Florida, inspecting the Spitzer Space Telescope on May 2, 2003.
+NASA
+Beyond Einstein Great Observatories
+Laser Interferometer Space Antenna (LISA) Encyclopædia Britannica, Inc.

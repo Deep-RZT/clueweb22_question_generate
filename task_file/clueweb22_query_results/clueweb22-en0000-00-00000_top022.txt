@@ -1,0 +1,122 @@
+The Evolution Of The Telescope - MagellanTV
+EXPLORE
+The Dark Side
+History
+Science
+Natural World
+Majestic Earth
+Human Spirit
+Travel the World
+GENRES
+Biography
+Space
+Science & Tech
+Mind & Body
+Earth
+Travel & Adventure
+Nature
+Ancient History
+Early Modern
+Current History
+War & Military
+True Crime
+Historical Drama
+Art & Culture
+ARTICLES
+Store
+EXPLORE
+The Dark Side
+History
+Science
+Natural World
+Majestic Earth
+Human Spirit
+Travel the World
+GENRES
+Biography
+Space
+Science & Tech
+Mind & Body
+Earth
+Travel & Adventure
+Nature
+Ancient History
+Early Modern
+Current History
+War & Military
+True Crime
+Historical Drama
+Art & Culture
+ARTICLES
+Store
+search
+Astronomy
+The Complex Evolution Of The Telescope
+BY Kevin Martin PUBLISHED Jun 11, 2019
+share
+Telescopes have changed dramatically since Galileo first used one to scope out the heavenly bodies visible in the night sky. Or have they? Reviewing the development and advances in telescope design – and functionality – reveals that many of the instrument’s main properties were present in the creation of the earliest functional telescopes.
+It’s said that Galileo Galilei pointed his hand-crafted telescope toward the heavens one night in 1609, and the science of astronomy immediately took an evolutionary – and revolutionary – leap forward. A version of a handheld telescope had been introduced one year earlier by an eyeglass maker in the Netherlands named Hans Lippershey. When Galileo saw the design, he immediately perceived its potential for the study and observation of the cosmos and made several improvements to Lippershey’s invention.
+Galileo revealing his discoveries using his hand-crafted telescope.
+The entire complicated history of the evolution of the telescope is encapsulated in this story. Inventors devise instruments that advance both telescope design and discoveries in space. Designs are shared, borrowed, enlarged, and improved; astronomers use the new devices to peer ever more deeply into the heavens.
+Galileo first used his telescope to examine the Moon and its phases, and he made detailed drawings of the features of the lunar landscape with greater accuracy than anyone had seen before. Of course, as we learned in grade school, he was able to use his invention to support Copernicus’s hypothesis that the Sun was at the center of our planetary system, and not the Earth. For this insight, and his refusal to recant what the Roman Catholic Church termed heresy, in 1633 he was sentenced to house arrest and sacrificed his freedom till his death in 1647.
+Galileo actually faced the Inquisition for his belief, and was found guilty. However, he was neither tortured nor killed, as was typical under Church law. Though many have surmised that he was saved by his prominence, it is more likely that it was his age and ill health that saved him from the rack.
+As the 17 th century progressed, other inventors, optical researchers, and scientists contributed to the telescope’s evolution. Johannes Kepler changed the shape of the glass within the instrument’s assembly, then, in 1655, Christiaan Huygens made a larger, more powerful “Keplerian” telescope.
+A Reflecting Design for Telescopes: Newton’s Innovation
+Following Huygens’s improvement in the telescope’s power, mathematician and scientist Sir Isaac Newton became interested in improving its optical quality. Up to that point, observations were still marred by the appearance of bands of color across the image, a result of the use of refracting glass. Ever seen the cover of Pink Floyd’s Dark Side of the Moon? Well, the image of a ray of light being split into a spectrum of colored bands is what the earliest telescope-assisted astronomers had to contend with.
+Newton’s great innovation came with the novel hypothesis that a mirror’s reflection would do a better job of sending a clear, “color-corrected” image to the viewer than the existing refracting lenses. So, after years of trial and error, and massive amounts of experimental materials and polishing techniques, in 1668 Newton added a flat, spherical mirror to reflect light, thus becoming the first person to develop a working reflecting telescope.
+The Herschel Reflecting Telescope.
+Now one could see the heavens in even more magnificence, and the increase in color fidelity, clarity, and depth was cause for celebration. That celebration, however, was short-lived, as the next improvement came only four years later, in 1672, when Laurent Cassegrain enhanced the design again with a second lens, this time a convex mirror that improved the image observed by the viewer.
+Later, in mid-18 th century England, the problem of distorted color reproduction was further addressed by Chester Moore Hall, who developed a color-correcting “achromatic” lens. Soon after, an innovator named John Dolland mass-produced Hall’s telescope design, giving rise to amateur astronomers across the world.
+What’s the distinction between refracting and reflecting telescopes? Both are optical, meaning they take in light from the visible spectrum. And both types have their “works” contained in a large tube. But the difference is that the earlier refracting telescopes used optical glass through which to view the cosmos, while reflecting telescopes use mirrors, with one mirror tilted to an eyepiece mounted on the side of the tube.
+Image quality took another evolutionary leap in the 19th century when optical researcher and inventor Léon Foucault took to “silvering” the mirrors used for telescopes. This success was followed in the 1930s by “aluminizing” the coatings of mirrors. Aluminized mirrors maintain the reflective coating longer and need less maintenance.
+How the Evolution of Telescopes Led to Today’s Space Exploration
+Remember Laurent Cassegrain, who way back in the 17 th century designed an innovation for the telescope by adding a second mirror? It turns out that his research and design reached across hundreds of years to inspire scientists in the 20 th century – and even gave rise to the science of the Hubble Space Telescope!
+The international team that devised the Hubble adapted Cassegrain’s two-mirror design. Positioning a convex second mirror in the tube to reflect the images caught on the telescope’s concave main mirror became the fundamental design for both terrestrial and extraterrestrial telescopes, especially since the 1950s, when serious study and planning began to place such instruments in outer space.
+Some smaller, “amateur” telescopes use the secondary mirror in a telescope’s tube to direct reflected light to an eyepiece on the side. In the Hubble there is actually a hole in the center of the concave mirror, and the concentrated light can be viewed at the bottom of the outward-facing tube, as you can see in this illustration .
+The Hubble Space Telescope
+Other handheld telescopes for enthusiasts follow the design of refracting telescopes using ground optical glass. These are generally smaller in focal length than reflecting telescopes because of the weight associated with the large lenses needed for deeper sky viewing. The light weight of mirrors makes them advantageous for larger telescopes, including mega-telescopes such as those located in Chile,Hawai‘i, the Canary Islands, and other select locations around the globe.
+Because of the Earth’s atmosphere, there is always a slight distortion associated with terrestrial telescopes. Breaking free of Earth’s atmosphere gives an otherwise unobtainable advantage. Nonetheless, scientists have selected terrestrial sites using some extremely specific criteria. To qualify as a potential site for a land-based telescope research station, it must be located:
+at as high an altitude as possible (while still allowing researchers to breathe)
+in as dry a region as possible, such as Chile’s Atacama Desert
+in as low-turbulence an environment as possible (to further minimize optical distortion)
+What Are the Parts of a Telescope?
+As you’ve read, refractive and reflective telescopes have more similarities than differences. These derive from their common ancestor, the handheld telescope developed by Lippershey and Galileo. Here are common elements shared by these two types of optical telescopes:
+Lens – This is the medium through which, or off which, light passes, or is reflected. Reflecting telescopes use finely finished mirrors, and refracting telescopes use precision-ground optical glass.
+Tube – The housing for telescopes is round and long, though its exact shape is determined by focal length, which we’ll discuss below.
+Eyepiece – Both types of telescopes have eyepieces that allow viewers to focus on individual objects they wish to track. Reflecting ’scopes use mirrors, and refracting ’scopes use glass to open up celestial vistas.
+Tripod and mount – While not part of the telescope’s viewing apparatus per se, the tripod allows for image stabilization, and the mount allows for the telescope tube to be shifted to point at different parts of the sky.
+How Do Telescopes Work? A Look through the Lens
+At its core, the telescope works quite simply. Light enters through one end of the telescope tube and hits the lens or mirror, where the image captured in the lens is focused and magnified using the eyepiece.
+But this description doesn’t quite fit all types of telescopes, particularly those that capture light beyond the visible spectrum. You see, visible light is but one segment on the spectrum of electromagnetic radiation, which includes (from longest to shortest) radio and infrared light, then visible light, followed by ultraviolet, X-ray, and gamma ray. Each type of radiation needs a different type of telescope reception.
+Radio telescopes, for example, capture light from radio waves, which are among the longest light waves. So special instruments much larger than optical ’scopes had to be devised. Looking much like satellite dishes, these radio wave detectors – often grouped together for added strength – send data to researchers for analysis using computers and other instruments. Since many objects in space give off waves in the radio frequencies, we can learn much more about such phenomena as black holes, distant nebulae, and galaxies by analyzing those frequencies.
+The Very Large Array of radio wave receivers is among the largest telescopes in the world. Located on the desert plains of central New Mexico, this system of linked dish receivers has been fully operational since 1980. It is actively surveying the sky for undiscovered objects.
+Radio wave receivers for high-powered telescopes.
+Other telescopes record radiation in a variety of invisible spectra. As land-based telescopes have gotten larger and more complex, the means for receiving those signals have been added to the toolkit for contemporary astronomical research. And that’s why these Earth-bound telescopes have grown so large and complex. Different instruments and image recording techniques are utilized to capture light from the longest to the shortest frequencies.
+Beyond the Earth, space telescopes such as the Hubble and, starting in 2021, the James Webb Space Telescope, will be able to gather all the scientific data available to their brethren on the ground, but without the inevitable distortion caused by peering through Earth’s atmosphere.
+On space telescopes, images are captured as they receive light in various spectra and direct the resulting images to a variety of instruments loaded onboard. These data are used to address unanswered questions about the Universe. Over the years it’s been in service, the Hubble has spurred many astronomical discoveries, such as the age of the Universe, the identity of quasars, and the existence of dark energy.
+Telescope Magnification: Calculator and Formula
+Are you an amateur astronomer, a telescope enthusiast wondering just how strong your own ’scope is? Unfortunately, you can’t just walk up to any telescope and instantly perceive its magnification strength. However, there is an easy formula to figure out the precise magnification of your telescope’s lens.
+If you happen to know the focal length of both the lens and the eyepiece, the process is a breeze. Let’s say your ‘scope has a focal length of 1,050mm. Just take that number and divide by the focal length of your eyepiece, for example 25mm, and you arrive at your answer:
+1050 (/) 25 (=) 42x magnification
+This can be very helpful when choosing a telescope for home use, and if you fear you can’t remember the equation’s steps, here a link that you can bookmark.
+The Telescope: Window to the Universe
+Modern telescopes, especially contemporary versions that fly through space or are grounded on dry mountaintops across the world, are capable of singular achievements. The possibilities they provide to explain how the Universe works are virtually unlimited. Yet the principles that these extremely complex instruments are based upon are over four centuries old.
+Masters of invention, including Galileo, Kepler, Newton, and even lesser-known Laurent Cassegrain, made contributions in the 17 th century that resound today in the astonishing discoveries of all our mega-telescopes – and even the small, portable one that may have your name on it.
+It is said that looking through the eyepiece of a telescope is like looking through a time machine to glimpse the past of all the planets, stars, and galaxies. Next time you peer into a telescope or view its photo or video images, remember those grand thinkers and inventors whose imprints are on every wonder of astronomy you’ll ever see. The telescope has had a long and complex history, and it’s every bit as connected to what transpired in the 17 th century as it is to the present day.
+Culture
+Science
+History
+In the Space Race between the U.S. and U.S.S.R., America relied on the rocket designs of Wernher von Braun. Sometimes...
+Space
+NASA is planning a return to crewed missions and it’s starting out with a big bang – landing astronauts on the surface of the Moon by 2024. This...
+Space
+Culture
+Science
+Space
+Space
+The Juno probe has revealed Jupiter's majestic weather patterns in amazing detail. But are Jupiter's colors really that dynamic? It turns out, no. But just because these images utilize "false color" doesn't mean they're "fake news."
+Space
+A Caltech team is on the hunt for hidden planets. Building on research first published in 2016, they amassed enough...
+Space
+Journeys To Jupiter - 2001: A Space Odyssey Turns 50
+Fifty years ago, Stanley Kubrick released his film 2001: A Space Odyssey, a classic tale of an epic journey to Jupiter....

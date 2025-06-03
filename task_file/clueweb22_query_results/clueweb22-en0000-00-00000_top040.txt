@@ -1,0 +1,91 @@
+Reflecting Telescope - Definition, Type and Difference With Refracting
+Reflecting Telescope
+Physics
+Reflecting Telescope
+Download PDF
+NCERT Solutions
+Popular Textbook Solutions
+CBSE
+ICSE
+State Boards
+Competitive Exams
+Important Concepts
+Other
+More About Optical Telescope
+Is this page helpful?
+Given the mysterious beauty of the boundless cosmos, there’s no doubt that telescopes are in the middle of the most fascinating instruments in the field of science.
+Telescope
+The word ‘Telescope’ was coined by Giovanni Demisiani in 1611.
+Telescope, is an instrument used to form magnified images of distant particles. The first telescope's invention is a bit hazy. A telescope is an optical device that observes distant objects using lenses, curved mirrors, or a combination of the two. It may also be used to observe distant objects using electromagnetic radiation emission, absorption, or reflection.
+The first practical telescopes were refracting telescopes with glass lenses, which Galileo discovered in the Netherlands at the beginning of the 17th century. The telescope is the most important research tool in astronomy. Telescopes enable you to absorb and analyse radiation from astronomical phenomena, including those that are far apart in the cosmos.
+Eyeglass-makers had been experimenting with lenses before 1600. The first mention of a telescope happens in a letter written in 1608, by Hans Lippershey, who was a Dutch spectacle maker in the process of seeking a patent for a telescope. The patent was denied because of easy telescope duplication, and  there was difficulty in the process of patent enforcement. The instrument spread very rapidly. Galileo made sense of it in the early 1600s, and he made improvements in lens grinding that did increase the magnification from a relatively low value of two to as much as thirty. With these powerful telescopes, he made observations in the Milky Way, of the mountains on the Moon, the phases of Venus, and the moons in the planet Jupiter. These early telescopes were a type of ‘opera glass,’ which produced erect or right side up images. But they had very limited magnification. When Johannes Kepler, who was a German mathematician and astronomer working in Prague under Tycho Brahe, heard of Galileo’s discoveries, he perfected a more different kind of telescope. Kepler’s design inverts the image in general , it is much more than everything else.
+The reflecting telescope makes use of mirrors to collect and focus light. Telescope now implies the diverse range of instruments that are capable of detecting various regions of the electromagnetic spectrum
+In the twentieth century, new types of telescopes were discovered, including radio telescopes in the 1930s and infrared telescopes in the 1960s. Let's discuss the types of telescopes and their names.
+Types of Telescope
+Optical telescopes
+Radio telescopes
+X-ray telescopes
+Gamma-ray telescopes
+As we know there are different types of telescope available for different observations. Here, we will discuss optical telescopes and their types.
+Optical Telescopes
+An optical telescope converges and focuses light mostly from the visible part of the electromagnetic spectrum (while some work in the infrared and ultraviolet). Optical telescopes increase the observed angular size of distant objects along with their observed brightness.
+An optical telescope creates a magnified image for direct view, or to make a photograph, also for collecting data through electronic image sensors.
+(Image will be uploaded soon)
+Telescopes use one or more curved optical components, normally made of glass lenses and mirrors, to collect light and other electromagnetic radiation and carry it to a focal point, allowing the image to be viewed, photographed, analysed, and sent to a device.
+A telescope is used in many non-astronomical instruments as well as in astronomy, including theodolites, spotting scopes, monoculars, binoculars, camera lenses, and spy glasses. Optical telescopes use polished mirrors or glass lenses to focus observable light as it comes in through the hole. The word is most often applied to a monocular with a fixed mount for observing the sky and handheld binoculars are widely used for a variety of purposes.
+There are Three Main Optical Telescope Types: reflecting and refracting telescopes.
+Please observe the following image, the difference between reflecting and refracting is represented easily.
+(Image will be uploaded soon)
+Refracting Telescopes
+A refracting telescope is also called a refractor telescope.  This telescope is a type of optical telescope that uses a lens as its main purpose is to form an image. This telescope is used in spy glasses and astronomical instruments, as well as it is used for long-focus camera lenses. The magnification of a refractor is measured by measuring the focal length of the object lens by the focal length of the telescope's eyepiece.
+A lens is usually at the front, followed by a long tube, and then an eyepiece or instrumentation at the back, where the telescope image is brought into focus. The diameter of the design is referred to as the hole its ranges from a few centimetres for small spotting telescopes up to one meter for the largest refractor in existence. The design, as well as the eyepiece, may have specific components. Small spotting telescopes may contain an extra lens in the back of the eyepiece to erect the image so that it does not appear upside-down.
+(Image will be uploaded soon)
+However, refracting telescopes is very common in the second half of the nineteenth century, reflecting telescopes have since replaced them for more scientific purposes, as they allow for a larger hole.
+Telescopes which make use of the refractive property of lenses are called refractors. If a refractor has a large light-gathering power (a necessity for astronomical observations), the lenses should be quite large. The instrument at the Yerkes Observatory has an objective lens with a diameter of 1 m. Lenses of such size are tough to manufacture. They have great weight and are subjected to cracking due to temperature changes. For these reasons, large diameter refractors are not practical instruments. Very few of them are still in use for astronomical research operations.
+Difference Between Reflectors and Refractors
+Refractor telescopes use specialized lenses that make them a favourite for deep space objects like galaxies. On the other hand, reflector telescopes are more popular with larger and brighter objects like the moon and planets. Refractors telescopes utilize specially designed lenses to focus the light on an image. A Reflector telescope uses mirrors, which causes light to reflect at different angles within the optical tube and extends the overall light path. Reflecting telescopes have many advantages as compared to refracting telescopes.  The reflector telescope price is cheaper to make than refractors of the same size. Because the light is reflecting off the objective, compared to passing through it, only one side of the reflector telescope's objective needs to be perfect. Hence the reflector telescope price is less than the refracting telescope.
+Reflecting Telescopes
+A reflecting telescope is also called a reflector. It works by using signals or a collection of curved mirrors to reflect light and create an image. In the seventeenth century, a reflecting telescope was discovered by sir Isaac Newton as a replacement for the refracting telescope, at that time, was a design that had a lot of chromatic aberration on it.  The telescope design allows for very large diameter objectives. Since the mirror is used in telescope, the design of the telescope is referred to as a "catoptric" telescope. It is a telescope that uses a combination of curved mirrors to reflect light and produce an image of a distant object. It is used to examine the visible region of the electromagnetic region as well as the shorter ( i.e ultraviolet) and longer (i.e infrared) wavelength regions adjacent to it. Reflecting telescope is so called because the primary mirror reflects the light to a focus instead of refracting it. The primary mirror is a concave spherical or parabolic shape and inverts the image at the focal plane. A secondary curved mirror which is in combination with an eyepiece, is used to observe the image.
+(Image will be uploaded soon)
+Reflecting telescopes are extraordinarily popular for astronomy and many famous telescopes such as the ‘hubble space telescope’ and ‘popular amateur models’ use the design of the reflecting telescope. Besides, the reflected telescope concept has been extended to other wavelengths of light, and for example, x-ray telescopes also use the reflection principle to make image forming optics.
+Let's discuss some reflecting type telescopes and their major differences. These include the Newtonian, Cassegrain, and schmidt-cassegrain telescopes.
+Newtonian Telescope
+Newtonian telescope also called the Newtonian reflector telescope. These telescopes are usually less expensive for any given objective diameter than any quality telescopes of other types. This telescope was invented by the english scientist sir isaac newton therefore the telescope is also called as isaac newton telescope. Since only one surface must be ground and polished to achieve a complex form, fabrication is much simpler than other telescope designs.
+A short focal ratio can be more easily obtained and leads to a wider field of view.
+Light approaches the telescope from the left side and hits the primary mirror at the back of the telescope. A focused image is bounced off of a secondary mirror, via an eyepiece, and to the observer's eye. In a reflecting telescope, a secondary mirror focuses light from the main mirror to a different focal point. The eyepiece of a telescope is present at the top end of the telescope. Newtonian telescopes are generally cheaper as compared to the other telescopes with a similar configuration for any given aperture. The production of these telescopes is simple. They involve only one surface that requires ground. They get polished into a complex shape.
+(Image will be uploaded soon)
+Cassegrain Reflector Telescope
+The cassegrain reflector is a composition of a primary concave mirror and a secondary convex mirror. In a symmetrical cassegrain telescope, both mirrors are aligned about the optical axis, and the primary mirror generally contains a hole in the centre, thus enabling the light to reach an eyepiece, a microphone, or an image sensor. The cassegrain configuration uses a parabolic reflector as the primary and the hyperbolic reflector as a secondary mirror.
+In a cassegrain telescope, the primary mirror and secondary mirror both are curved. The light hits the concave primary mirror, which reflects the convex secondary mirror. The convex secondary mirror then reflects the light through a small hole in the concave primary mirror to the eyepiece. Hence the design allows the shorter tube relative to its mirror diameter because the telescope's focal length is longer than the length of the tube.
+Variations of cassegrain reflector telescopes:
+Ritchey–Chrétien telescope
+Dall–Kirkham telescope
+Off-axis configuration
+Schiefspiegler telescope
+Yolo reflector
+Catadioptric Cassegrains
+Schmidt-Cassegrain Telescope
+Maksutov-Cassegrain Telescope
+Argunov-Cassegrain Telescope
+Klevtsov-Cassegrain telescope
+(Image will be uploaded soon)
+Is this page helpful?
+Book your Free Demo session
+Get a flavour of LIVE classes here at Vedantu
+Select your Class
+Book a free demo
+Transparent, Translucent and Opaque Objects
+Power Formula
+Distance and Displacement
+FAQs (Frequently Asked Questions)
+Reflecting telescopes are used for mirrors instead of lenses to collect light. In a reflector, the light travels from the telescope tube to the large concave primary mirror, which reflects the light up the tube to the smaller convex secondary mirror, which in turn reflects the light with regards to the eyepiece. Reflecting telescopes are shorter than refractors because the light is reflected back and forth rather than travelling in a straight line from one end of the telescope tube to the other.
+2. What is the difference between a reflecting telescope and refracting telescope?
+The difference between a reflecting telescope and refracting telescopes is that a reflecting telescope has a single or a combination of curved mirrors in order to reflect the light rays and form an image. And the refracting telescope has a lens as its objective lens to form an image. A reflecting telescope, the main component is a mirror that bounces the light rays and then focuses it into a small area. And the refracting telescope uses lenses to focus the light rays as it travels towards the other end of the telescope.
+3. What is the difference between optical telescopes and radio telescopes?
+If an image is to be observed and studied, these telescopes work by employing one or more curved optical lenses or mirrors. They gather light and bring that light or radiation to a focal point. Optical telescopes are mostly used for astronomical projects and in camera lenses, binoculars. There are three main types of optical telescopes : Refractive telescopes make use of the lenses to form an image, The reflecting telescope arranges mirrors to form an image, The catadioptric telescope uses mirrors with lenses to form an image.
+Radio telescopes, on the other hand, collect and correlate signals. With this, high resolution images can be formed. Radio telescopes collect microwave radiation which has the capacity to pass through gases, dust clouds and the atmosphere. They use longer wavelengths.
+X Ray, Gamma ray telescopes are installed on Earth orbiting satellites and high flying balloons. Higher energy X ray and Gamma ray telescopes don't allow to focus completely and use coded aperture masks.  The patterns created by the masks are used to reconstruct an image. Detecting high energy gamma rays with higher frequency and shorter wavelength is tougher. It is different from detecting regular gamma rays.
+Cosmic ray telescopes detect cosmic rays. They have an array of different detector types which are spread out over a large area.
+Energetic neutral atom instruments study the magnetosphere of various bodies. They detect fast moving electrically neutral atoms detected by solar wind.
+Neutrino detectors are used for neutrino astronomy.
+Gravitational wave telescopes are being used for gravitational wave astronomy.  They are detected through extremely precise measurements.

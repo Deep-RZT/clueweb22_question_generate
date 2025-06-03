@@ -1,0 +1,118 @@
+History of the telescope.
+Contrary to popular opinion, Galileo did not invent the telescope.
+In 1609 the great Italian scientist turned his telescope toward
+the stars and saw the craters of the moon, sunspots, the four large moons
+of Jupiter, and the rings of Saturn. He saw the rings as "horns" since his telescope
+could not resolve the gap between the rings. His telescope provided limited 
+magnification--only 30 power--and a narrow field of view; Galileo could see
+no more than a quarter of the moon's face at a time without moving his telescope.
+He was the first to publish his findings and risk the censure of the church and his colleagues.
+Following is a chronological history of the invention and development of the telescope.
+c. 3500 B.C. Phonenicians cooking on sand discover glass.
+424 B.C. Aristophanes uses a glass sphere filled with water to start fires.
+Lenses would not be used to study the stars for 2000 years.
+14th century--convex lenses to correct farsightedness are developed.
+15th century--concave lenses to correct nearsightedness are developed.
+1608--In the Netherlands, Hans Lippershey discovers that holding two lenses up some distance apart
+bring objects closer. He applies for a patent on his invention. This is the first documented
+creation of a telescope. The idea is independently developed by Jacub Metius and
+Sacharias Janssen. The patent to Lippershey is denied.
+1609--Thomas Harriot (1560 – 1621) English astronomer, mathematician, ethnographer, and translator becomes the first person to make a drawing of the Moon through a telescope, on July 26, 1609, over four months before Galileo.
+1609-- Galileo, after simply hearing that the device was invented, builds several telescopes
+of his own and turns them toward the heavens. He dared to publish his findings and was nearly burned at the stake for it. 
+There are other earlier recorded astronomical uses including viewing stars with Lippershey's own first telescope during its 
+demonstration and Thomas Harriot's views of the moon not long after.
+1611--The term "telescope" is coined by Prince Frederick Sesi at a reception where
+Galileo is demonstrating his instruments.
+1611--Johannes Kepler switches from a concave eyepiece to a convex eyepiece. This not only
+allowed a larger field of view,  but it allowed for the projection of images (such as the sun)
+onto a flat white screen. Although the images are inverted, Kepler demonstrates how a third
+convex lens turns the images right-side-up again. The use of a third lens also degrades the images,
+so this form of the telescope is not widely used. For terrestrial applications, particularly military
+applications, the Galilean form of the telescope is the most widely used.
+Johannes Kepler studies the human eye and notices that the eye's lens is hyperboloidal. He suggests
+the use of hyperboloidal lenses in the telescope. Spherical lenses are not very sharp because they 
+smear the rays of light over a very small area, a phenonomenon now known as spherical abberation.
+1637--Rene Descartes demonstrated that speherical lenses cannot produce pinpoints of light. He studies
+elliptical and hyperboloidal lenses and demonstrates that different combinations of hyperboloidal lenses
+or elliptical lenses will produce a pinpoint of light and a sharper image. He has a Parisian optician produce
+hyperboloidal lenses for a demonstration, but the lenses are a failure. Although the lenses corrected for spherical
+abberation, they introduced another probelm--chromatic abberation, which made the problem worse. Chromatic abberation
+means that different colors are focused at widely differing points, producing smeared images with halos around them.
+1673--Johannus Hevelius realized that the longer the telescope was, the closer together 
+the different colored points of light would be at the focal point, yielding a sharper image. He constructs a telescope
+140 feet long which probably gave very sharp images, but it was almost impossible to keep the two lenses aligned
+because the supporting structure (usually a long tube) could not be made rigid enough.
+1675--Christian Huygens suggests getting rid of the supporting structure and mounting the objective lens on the top
+of a long pole. These were called "aerial telescopes" because they were open to the air. They were also much easier to
+build and use. At the same time, Huygens developed a compound negative eyepiece using two air-spaced convex lenses.
+This arrangement cancelled out some of the chromatic aberration that occurred in a single lens eyepiece.
+1668--Robert Hooke demonstrates how to shorten the tube by using three or four perfectly flat mirrors to reflect the
+image back and forth in a shorter tube. A 60-foot long telescope can be reduced to 12 feet long, greatly simplifying
+support and stability.
+1636--Marin Mersenne hit upon the idea of using two paraboloidal mirrors instead of lenses, but he never builds this
+telescope, having been persuaded by Descartes that it could never work. The main advantage of using mirrors over
+refracting lenses is that mirrors focus all points of the spectrum at the same point--no chromatic aberration!
+1663--James Gregory designed a telescope using a concave primary mirror (slightly hyperboloid) 
+concave ellipsoidal secondary mirror. The first mirror gathers the light and reflects it onto the secondary. The secondary 
+mirror focuses the light back through a hole in the primary mirror. This is the basis for many telescopes made today, but
+the opticians of his time were not able to produce mirrors of high enough quality to give good results.
+1672--Cassegrain proposed a similar design using a convex secondary mirror that allowed the tube to be shortened even
+more. More importantly, it cancelled abberations from the primary mirror and would have resulted in much sharper images,
+had opticians been able to produce quality mirrors. It is interesting that Gregory, Cassegrain, and later Newton were
+able to invent designs that were so far ahead of their time that no one could actually make one.
+1668--Newton produces the first successful reflecting telescope, 
+using a two-inch diameter concave spherical mirror, a  flat, angled secondary mirror, and a convex eyepiece lens. 
+(See the drawing of Newton's telescope in this website.)
+As is often the case in physics, the simplest solution is often the most practical one. The reflector telescope that Newton designed
+opened the door to magnifying objects millions of times--far beyond what
+could ever be obtained with a lens. There were problems with his mirror. It was made of copper and tin (called "speculum") and polished to a high degree
+of reflectivity. It would tarnish quickly and need re-polishing at least twice a year. Newton was the most important thinker of his day, and he believed
+that only mirrors would eliminate chromatic abberation and that it could never be done with lenses.
+The mirror telescopes of the day suffered from poor image quality. This was due to the use of a spherically ground primary mirror.
+ Newton's mirror did not bring all rays of light to common focus. The shape of the mirror, if extended 360 degrees, would make a complete circle. 
+ Such a mirror is incapable of bringing central light beams to the same point of focus as those nearer the rim. It wasn't until 1730 when 
+ John Short corrected this problem (for on-axis light) by parabolizing the mirror. (See below).
+1729--Chester Moor Hall develops an achromatic lens. Two pieces of glass with different indices of refraction can be combined
+to produce a lens that tends to focus most colors at a very close (though not exact) point. Red and Green neatly blended at a point, but blue-violet still
+missed that point by a small amount. The result was a much sharper image with violet halos around brighter objects. Refractors are suddenly popular again. 
+The images still show simple optical distortion around the edges, which mirrors developed around the same time did not.
+1730--The Scottish Instrument maker James Short invents the first parabolic and elliptic, 
+distortionless mirror ideal for reflecting telescopes. Short accomplished this in a very practical manner: Since parallel rays nearer 
+the center of a spherical mirror overshoot the marginal rays coming from the edge of the mirror, why not just deepen the center to bring all
+the rays of light to the same point of focus? James Short built over 1,360 telescopes. All had speculum mirrors. (It wasn't until the 1850's
+that silver replaced speculum. SIlver had a longer lifespan, but still loses reflectivity quickly over time due to oxidation. By 1930 telescope
+mirrors were being coated with aluminum, which is further overcoated with a clear coating.) Short was closely involved with the
+Transit of Venus observations made throughout the world on 6th June 1761. His instruments travelled on the ship Endeavour with Captain Cook to
+observe the Transit of Venus on 3rd June 1769. (See The Telescopes of Captain James Cook on this website.
+1757--John Dolland improves upon the achromatic objective lens by placing a concave flint glass lens between two convex crown glass lenses. This
+triplet uses the natural differences between the refractive indices of the two types of glass to cancel out chromatic aberration even  more.
+Some historians claim that the triplet was introduced in 1765 by Peter, son of John Dollond. Many excellent telescopes of this kind were made by him.
+1789--Sir William Herschel constructs a forty foot long telescope with a four-foot diameter mirror. Reflector telescopes have become popular again
+because they can be built with enormous mirrors, capable of gathering hundreds or even thousands of times more light than a refractor. Today we
+call them "light buckets."
+1893--H. Dennis Taylor, optical manager of T. Cooke & Sons of York, makers of astronomical telescopes, designed and patented the revolutionary, and 
+now famous, triplet design (British patent no. 1991).  This lens eliminated the optical distortion  at the outer edge of lenses.  
+The Cooke Triplet was a significant improvement of the Dolland triplet of more than a century earlier. The cooke triplet, seen at left,
+is made of three different types of glass. No. 1 in the diagram is Schott's baryta light flint glass. No. 2 is Schott's boro-silicate flint glass,
+and No. 3 is Schott's light silicate crown glass. The lenses are air-spaced, that is, not touching each other. 
+See American Astronomical Society Mitchell telescope for an example of a Clark telescope using a Cooke Triplet.
+Postscript: It wasn't until the mid-nineteenth century that opticians managed to get blue-violet to join red and green at the same point of focus. The use of
+flourite as an element in the doublet objectives of high-powered optical microscopes was copied by telescope makers. Three element telescope designs (triplets)
+with one element made of flourite now produce images that appear perfectly focused and free of all chromatic aberration to the human eye as well as to film
+and CCD's.
+
+Also see: The History of the Telescope & the Binocular An excellent collection
+of articles and images related to the history of the telescope by Peter Abraham.
+Home Page
+Introduction
+Before the Telescope
+17th Century Telescopes
+18th Century Telescopes
+19th Century Telescopes
+20th-century Telescopes
+Captain James Cook
+Spyglasses
+Links
+Bibliography
+Fakes

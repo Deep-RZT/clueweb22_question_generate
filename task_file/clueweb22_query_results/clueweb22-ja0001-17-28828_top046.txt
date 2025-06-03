@@ -1,0 +1,78 @@
+APL | Service Schedules
+Service Schedules
+Japan Straits Express (JSX)
+,
+Vessel Name
+a
+SPIL NIKEN
+a
+GH TRAMONTANE
+a
+CMA CGM MOMBASA
+a
+CNC TIGER
+Voyage Ref.
+Local Voyage Ref.
+0IZAYS1PL
+0IZB0S1PL
+0IZB2S1PL
+0IZB6S1PL
+TOKYO
+Thursday, March 31, 2022
+Wednesday, April 6, 2022
+Monday, April 11, 2022
+Monday, April 25, 2022
+YOKOHAMA
+Friday, April 1, 2022
+Thursday, April 7, 2022
+Tuesday, April 12, 2022
+Tuesday, April 26, 2022
+OMAEZAKI, 22
+Omitted
+Friday, April 8, 2022
+Thursday, April 14, 2022
+Wednesday, April 27, 2022
+NAGOYA
+Sunday, April 3, 2022
+Saturday, April 9, 2022
+Friday, April 15, 2022
+Thursday, April 28, 2022
+KOBE
+Monday, April 4, 2022
+Sunday, April 10, 2022
+Saturday, April 16, 2022
+Friday, April 29, 2022
+Voyage Ref.
+Local Voyage Ref.
+0IZAZN1PL
+0IZB1N1PL
+0IZB3N1PL
+0IZB6S1PL
+SINGAPORE
+Tuesday, April 12, 2022
+Monday, April 18, 2022
+Tuesday, April 26, 2022
+--
+SINGAPORE
+--
+Friday, April 22, 2022
+--
+--
+PORT KLANG
+Thursday, April 14, 2022
+Monday, April 25, 2022
+Thursday, April 28, 2022
+--
+MANILA
+Wednesday, April 20, 2022
+Friday, April 29, 2022
+Monday, May 2, 2022
+--
+TOKYO
+Tuesday, April 26, 2022
+Wednesday, May 4, 2022
+Monday, May 9, 2022
+--
+>
+Past call Last updated call Future call
+!Schedules, ports of call and prices described here above, are only for indicative and commercial purpose and cannot be considered as contractual commitment. As modifications and updates can be made at any time, you are invited to check them regularly or to contact our local agents.
