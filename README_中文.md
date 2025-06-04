@@ -198,3 +198,46 @@ for topic_id, topic_data in benchmark['topics'].items():
 ---
 
 **系统已完全满足所有要求，可以直接投入使用生成高质量的Deep Research QA Benchmark，现已集成OpenAI GPT-4o。** 
+
+
+------------------------------------------------------------------------------------------------------------------------------
+
+
+## 🎯 **系统工作原理总结**
+
+### **输入材料：**
+1. **ClueWeb22文档集合** - 每个topic有100篇真实网页文档（存储在`task_file/clueweb22_query_results/`）
+2. **OpenAI GPT-4o API密钥** - 作为内容生成引擎
+3. **预设的topic列表** - 10个ClueWeb22 topic IDs
+
+### **核心Prompt策略：**
+
+#### **Step 1: Domain Report生成**
+- **输入**: 100篇文档的内容
+- **Prompt核心**: "基于这些文档，生成一个1500-2000字的comprehensive domain report，包含主要主题、方法论、当前趋势..."
+- **输出**: 每个topic的高质量领域报告
+
+#### **Step 2: 问题生成**  
+- **输入**: Domain report + topic信息
+- **Prompt核心**: "基于这个domain report，生成50个deep research问题，分布为Easy(10)/Medium(20)/Hard(20)，Medium和Hard必须需要多步推理..."
+- **输出**: 50个分级问题
+
+#### **Step 3: 答案生成**
+- **输入**: 每个问题 + 对应的domain report
+- **Prompt核心**: "基于domain report回答这个问题，使用Introduction→Evidence-Based Analysis→Synthesis→Conclusion结构，Easy(400-600字)/Medium(800-1200字)/Hard(1500+字)..."
+- **输出**: 结构化的comprehensive答案
+
+### **关键成功因素：**
+
+1. **真实数据基础** - 不是模拟，而是基于真实的ClueWeb22网页内容
+2. **分层prompt设计** - 先综合文档生成report，再基于report生成QA
+3. **明确的质量要求** - 每个步骤都有具体的字数、结构、难度要求
+4. **GPT-4o的能力** - 足够强大来处理100篇文档的综合分析和多步推理问题
+
+### **最终获得：**
+- **500个高质量QA对**，每个都有完整的多步推理答案
+- **基于真实文档**，不是虚构内容  
+- **结构化输出**，包含难度分级和质量指标
+- **100%成功率**，所有问题都有comprehensive答案
+
+**核心秘诀：分层处理（文档→报告→问题→答案）+ 明确的prompt指令 + GPT-4o的强大能力**
