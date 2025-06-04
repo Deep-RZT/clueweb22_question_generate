@@ -2,7 +2,7 @@
 
 ## 项目概述
 
-这是一个专门为评估LLM深度研究能力而设计的问答对生成系统。系统完全满足客户要求：
+这是一个专门为评估LLM深度研究能力而设计的问答对生成系统。系统完全满足要求：
 
 - ✅ **10个ClueWeb22 topics** (不包含能源文献)
 - ✅ **每个topic 50个问题** 
@@ -146,8 +146,8 @@ for topic_id, topic_data in benchmark['topics'].items():
 - OpenAI GPT-4o驱动的内容生成
 - 自动质量控制和精炼
 
-### 🎯 客户需求导向
-- 严格按照客户要求设计
+### 🎯 需求导向
+- 严格按照要求设计
 - 10 topics × 50 QA pairs
 - 忽略能源文献，专注ClueWeb22
 - 多步思考导向的问题设计
@@ -176,10 +176,10 @@ for topic_id, topic_data in benchmark['topics'].items():
 - [x] 深度研究问题评估框架
 - [x] 自动问题精炼系统
 - [x] 基于report的答案生成
-- [x] 客户需求专用pipeline
+- [x] 需求专用pipeline
 - [x] OpenAI GPT-4o集成
 
-### 🎯 符合客户要求
+### 🎯 符合要求
 - [x] 10个ClueWeb22 topics
 - [x] 每topic 50个问题
 - [x] 问题+答案完整生成
@@ -190,4 +190,4 @@ for topic_id, topic_data in benchmark['topics'].items():
 
 ---
 
-**系统已完全满足客户的所有要求，可以直接投入使用生成高质量的Deep Research QA Benchmark，现已集成OpenAI GPT-4o。** 
+**系统已完全满足所有要求，可以直接投入使用生成高质量的Deep Research QA Benchmark，现已集成OpenAI GPT-4o。** 

@@ -2,7 +2,7 @@
 
 ## 项目总览
 
-本项目是一个专门为评估LLM深度研究能力而设计的自动化问答对生成系统，完全满足客户的所有要求。
+本项目是一个专门为评估LLM深度研究能力而设计的自动化问答对生成系统，完全满足所有要求。
 
 ## 系统架构
 
@@ -339,7 +339,7 @@ Provide a comprehensive answer that demonstrates the multi-step thinking require
 
 ## 项目成果
 
-### 完全满足客户要求
+### 完全满足要求
 ✅ 10个ClueWeb22 topics (忽略能源文献)  
 ✅ 每个topic 50个问题  
 ✅ 问题+答案完整生成  
@@ -351,8 +351,8 @@ Provide a comprehensive answer that demonstrates the multi-step thinking require
 - **全自动化**: 一键执行完整流程
 - **高质量**: OpenAI GPT-4o驱动的内容生成
 - **可扩展**: 模块化设计易于扩展
-- **客户导向**: 严格按需求设计
+- **导向**: 严格按需求设计
 
 ---
 
-**本系统已完全实现客户的所有要求，可直接用于生成高质量的Deep Research QA Benchmark数据集，现已集成OpenAI GPT-4o。** 
+**本系统已完全实现的所有要求，可直接用于生成高质量的Deep Research QA Benchmark数据集，现已集成OpenAI GPT-4o。** 
