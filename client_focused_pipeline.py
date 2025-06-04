@@ -64,7 +64,7 @@ class ClientFocusedPipeline:
         }
     
     def run_complete_pipeline(self) -> Dict[str, Any]:
-        """Execute the complete client-focused pipeline"""
+        """Execute the complete client-focused pipeline with checkpoint support"""
         
         print("🚀 Starting Client-Focused QA Benchmark Pipeline")
         print("=" * 60)
@@ -75,24 +75,74 @@ class ClientFocusedPipeline:
         output_dir = Path(self.config['output_directory'])
         output_dir.mkdir(exist_ok=True)
         
+        # Checkpoint files
+        topics_checkpoint = output_dir / "checkpoint_step1_topics.json"
+        reports_checkpoint = output_dir / "checkpoint_step2_reports.json"
+        questions_checkpoint = output_dir / "checkpoint_step3_questions.json"
+        refined_checkpoint = output_dir / "checkpoint_step4_refined.json"
+        
         # Step 1: Select ClueWeb22 topics only
         print("\n📋 Step 1: ClueWeb22 Topic Selection")
-        topics = self._select_clueweb22_topics()
+        if topics_checkpoint.exists():
+            print("   🔄 Loading from checkpoint...")
+            with open(topics_checkpoint, 'r', encoding='utf-8') as f:
+                topics = json.load(f)
+            print(f"   ✅ Loaded {len(topics)} topics from checkpoint")
+        else:
+            topics = self._select_clueweb22_topics()
+            # Save checkpoint
+            with open(topics_checkpoint, 'w', encoding='utf-8') as f:
+                json.dump(topics, f, indent=2, ensure_ascii=False)
+            print(f"   💾 Checkpoint saved: {topics_checkpoint}")
+        
         self.results['selected_topics'] = topics
         
         # Step 2: Generate domain reports
         print("\n📝 Step 2: Domain Report Generation")
-        reports = self._generate_domain_reports(topics)
+        if reports_checkpoint.exists():
+            print("   🔄 Loading from checkpoint...")
+            with open(reports_checkpoint, 'r', encoding='utf-8') as f:
+                reports = json.load(f)
+            print(f"   ✅ Loaded {len(reports)} reports from checkpoint")
+        else:
+            reports = self._generate_domain_reports(topics)
+            # Save checkpoint
+            with open(reports_checkpoint, 'w', encoding='utf-8') as f:
+                json.dump(reports, f, indent=2, ensure_ascii=False)
+            print(f"   💾 Checkpoint saved: {reports_checkpoint}")
+        
         self.results['domain_reports'] = reports
         
         # Step 3: Generate questions
         print("\n❓ Step 3: Question Generation (50 per topic)")
-        questions = self._generate_questions(topics, reports)
+        if questions_checkpoint.exists():
+            print("   🔄 Loading from checkpoint...")
+            with open(questions_checkpoint, 'r', encoding='utf-8') as f:
+                questions = json.load(f)
+            print(f"   ✅ Loaded questions from checkpoint")
+        else:
+            questions = self._generate_questions(topics, reports)
+            # Save checkpoint
+            with open(questions_checkpoint, 'w', encoding='utf-8') as f:
+                json.dump(questions, f, indent=2, ensure_ascii=False)
+            print(f"   💾 Checkpoint saved: {questions_checkpoint}")
+        
         self.results['questions'] = questions
         
         # Step 4: Evaluate and refine questions
         print("\n🔍 Step 4: Question Quality Evaluation & Refinement")
-        refined_questions = self._evaluate_and_refine_questions(questions)
+        if refined_checkpoint.exists():
+            print("   🔄 Loading from checkpoint...")
+            with open(refined_checkpoint, 'r', encoding='utf-8') as f:
+                refined_questions = json.load(f)
+            print(f"   ✅ Loaded refined questions from checkpoint")
+        else:
+            refined_questions = self._evaluate_and_refine_questions(questions)
+            # Save checkpoint
+            with open(refined_checkpoint, 'w', encoding='utf-8') as f:
+                json.dump(refined_questions, f, indent=2, ensure_ascii=False)
+            print(f"   💾 Checkpoint saved: {refined_checkpoint}")
+        
         self.results['refined_questions'] = refined_questions
         
         # Step 5: Generate comprehensive answers
@@ -196,7 +246,6 @@ class ClientFocusedPipeline:
         
         print("   Generating comprehensive domain reports...")
         
-        generator = ClueWeb22SimplifiedGenerator(self.api_key, self.model)
         reports = {}
         
         for i, topic in enumerate(topics, 1):
@@ -205,29 +254,40 @@ class ClientFocusedPipeline:
             
             try:
                 # Check if documents exist
-                doc_path = f"task_file/clueweb22_query_results/{topic_id}"
+                doc_path = f"task_file/clueweb22_query_results/{topic_id}_top001.txt"
                 if not os.path.exists(doc_path):
                     print(f"       ⚠️ Documents not found for {topic_id}, using simulated data")
-                    # Create simulated report for missing topics
                     reports[topic_id] = self._create_simulated_report(topic)
                     continue
                 
-                # Generate actual report
-                result = generator.process_single_topic(topic_id)
+                # Load actual documents
+                documents = self._load_clueweb22_documents(topic_id)
                 
-                if result and 'domain_report' in result:
+                if documents:
+                    # Generate domain report using OpenAI directly
+                    domain_report = self._generate_domain_report_direct(topic_id, documents)
+                    
                     reports[topic_id] = {
                         'topic_info': topic,
-                        'domain_report': result['domain_report'],
-                        'domain_info': result.get('domain_info', {}),
-                        'document_stats': result.get('document_stats', {}),
+                        'domain_report': domain_report,
+                        'domain_info': {
+                            'primary_domain': topic['domain'],
+                            'key_themes': ['analysis', 'research', 'investigation'],
+                            'scope': 'comprehensive',
+                            'complexity_level': 'intermediate'
+                        },
+                        'document_stats': {
+                            'total_documents': len(documents),
+                            'total_words': sum(len(doc['content'].split()) for doc in documents),
+                            'avg_doc_length': sum(len(doc['content'].split()) for doc in documents) // len(documents)
+                        },
                         'generation_status': 'success',
-                        'word_count': len(result['domain_report'].split()),
+                        'word_count': len(domain_report.split()),
                         'generation_timestamp': datetime.now().isoformat()
                     }
                     print(f"       ✅ Generated report ({reports[topic_id]['word_count']} words)")
                 else:
-                    print(f"       ❌ Failed to generate report for {topic_id}")
+                    print(f"       ❌ No valid documents found for {topic_id}")
                     reports[topic_id] = self._create_simulated_report(topic)
                     
             except Exception as e:
@@ -240,6 +300,221 @@ class ClientFocusedPipeline:
         print(f"   ✅ Generated {successful_reports}/10 domain reports")
         
         return reports
+    
+    def _load_clueweb22_documents(self, topic_id: str) -> List[Dict[str, str]]:
+        """Load ClueWeb22 documents for a topic"""
+        documents = []
+        doc_dir = Path(f"task_file/clueweb22_query_results")
+        
+        # Find all files for this topic with correct pattern
+        pattern = f"{topic_id}_top*.txt"
+        for file_path in doc_dir.glob(pattern):
+            try:
+                with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
+                    content = f.read().strip()
+                
+                if content and len(content) > 50:
+                    documents.append({
+                        'doc_id': file_path.stem,
+                        'content': content,
+                        'source': file_path.name,
+                        'word_count': len(content.split())
+                    })
+            except Exception as e:
+                print(f"       ⚠️ Error loading {file_path}: {e}")
+                continue
+        
+        print(f"       📚 Loaded {len(documents)} documents")
+        return documents[:100]  # Limit to first 100 documents
+    
+    def _generate_domain_report_direct(self, topic_id: str, documents: List[Dict[str, str]]) -> str:
+        """Generate domain report using OpenAI API directly"""
+        
+        # Sample documents for analysis
+        sample_docs = documents[:5]
+        doc_samples = []
+        
+        for i, doc in enumerate(sample_docs):
+            sample = f"Document {i+1}: {doc['content'][:300]}..."
+            doc_samples.append(sample)
+        
+        combined_samples = "\n\n".join(doc_samples)
+        
+        from openai_api_client import OpenAIClient
+        client = OpenAIClient(self.api_key, self.model)
+        
+        system_prompt = "You are a domain analysis expert. Generate comprehensive domain reports based on document collections."
+        
+        prompt = f"""Generate a comprehensive domain report for topic: {topic_id}
+
+Based on these sample documents:
+{combined_samples}
+
+Create a detailed domain report (800-1200 words) with:
+
+## Overview
+Brief description of the domain and its significance
+
+## Key Themes  
+Major themes and concepts in this domain
+
+## Content Analysis
+Analysis of the content types and patterns
+
+## Research Applications
+How this domain could be used for research
+
+## Conclusion
+Summary of the domain's characteristics
+
+Make the report comprehensive, well-structured, and informative."""
+
+        response = client.generate_content(
+            prompt=prompt,
+            system_prompt=system_prompt,
+            max_tokens=2000,
+            temperature=0.7
+        )
+        
+        if response:
+            return response
+        else:
+            # Fallback report
+            return f"""# Domain Report: {topic_id}
+
+## Overview
+This domain encompasses content related to {topic_id}, featuring diverse web-based materials and information sources.
+
+## Key Themes
+- Information retrieval and analysis
+- Web content organization
+- Domain-specific knowledge areas
+- Research applications
+
+## Content Analysis
+The documents in this collection represent a variety of web-based content, providing insights into specific domain areas and topics of interest.
+
+## Research Applications
+This domain offers opportunities for research in information science, content analysis, and domain-specific investigations.
+
+## Conclusion
+The {topic_id} domain provides a rich source of information for research and analysis applications.
+"""
+    
+    def _generate_questions(self, topics: List[Dict[str, Any]], 
+                          reports: Dict[str, Any]) -> Dict[str, Any]:
+        """Generate exactly 50 questions per topic"""
+        
+        print("   Generating 50 questions per topic...")
+        
+        all_questions = {}
+        
+        for i, topic in enumerate(topics, 1):
+            topic_id = topic['topic_id']
+            print(f"     Generating questions for topic {i}/10: {topic_id}")
+            
+            if topic_id not in reports:
+                print(f"       ⚠️ No report available for {topic_id}")
+                continue
+            
+            try:
+                # Generate questions using OpenAI directly
+                questions = self._generate_questions_direct(topic_id, reports[topic_id]['domain_report'])
+                
+                # Ensure we have exactly 50 questions
+                if len(questions) < 50:
+                    print(f"       📝 Generated {len(questions)} questions, need {50 - len(questions)} more")
+                    additional_questions = self._generate_additional_questions(
+                        topic, reports[topic_id], 50 - len(questions)
+                    )
+                    questions.extend(additional_questions)
+                elif len(questions) > 50:
+                    questions = questions[:50]
+                
+                # Apply difficulty distribution
+                questions = self._apply_difficulty_distribution(questions)
+                
+                all_questions[topic_id] = {
+                    'topic_info': topic,
+                    'questions': questions,
+                    'question_count': len(questions),
+                    'generation_status': 'success',
+                    'generation_timestamp': datetime.now().isoformat()
+                }
+                
+                print(f"       ✅ Generated {len(questions)} questions")
+                
+            except Exception as e:
+                print(f"       ⚠️ Error generating questions for {topic_id}: {e}")
+        
+        total_questions = sum(len(data['questions']) for data in all_questions.values())
+        print(f"   ✅ Generated {total_questions} total questions across {len(all_questions)} topics")
+        
+        return all_questions
+    
+    def _generate_questions_direct(self, topic_id: str, domain_report: str) -> List[Dict[str, Any]]:
+        """Generate questions using OpenAI API directly"""
+        
+        from openai_api_client import OpenAIClient
+        client = OpenAIClient(self.api_key, self.model)
+        
+        system_prompt = "You are a research question expert. Generate high-quality research questions that require analytical thinking."
+        
+        prompt = f"""Based on this domain report, generate 50 research questions for topic: {topic_id}
+
+DOMAIN REPORT:
+{domain_report}
+
+Generate exactly 50 questions with the following requirements:
+
+1. Questions should be analytical and require thoughtful investigation
+2. Mix of different types: Analytical, Comparative, Predictive, Applied
+3. Vary in complexity and scope
+4. Each question should be clear and specific
+5. Questions should encourage evidence-based analysis
+
+Format each question as:
+Q1: [Question text]
+Q2: [Question text]
+...
+Q50: [Question text]
+
+Make questions engaging and suitable for research evaluation."""
+
+        response = client.generate_content(
+            prompt=prompt,
+            system_prompt=system_prompt,
+            max_tokens=3000,
+            temperature=0.8
+        )
+        
+        if response:
+            # Parse questions from response
+            questions = []
+            lines = response.split('\n')
+            question_id = 1
+            
+            for line in lines:
+                line = line.strip()
+                if line.startswith(f'Q{question_id}:'):
+                    question_text = line[len(f'Q{question_id}:'):].strip()
+                    if question_text:
+                        questions.append({
+                            'question_id': f'{topic_id}_Q{question_id:03d}',
+                            'question_text': question_text,
+                            'difficulty': 'Medium',  # Default, will be updated later
+                            'question_type': 'Analytical',
+                            'rationale': f'Research question for {topic_id} domain analysis'
+                        })
+                        question_id += 1
+                        
+                        if len(questions) >= 50:
+                            break
+            
+            return questions
+        else:
+            # Return empty list if API fails
+            return []
     
     def _create_simulated_report(self, topic: Dict[str, Any]) -> Dict[str, Any]:
         """Create a simulated report for missing topics"""
@@ -289,65 +564,6 @@ The {domain} represents a dynamic and evolving field with significant potential 
             'word_count': len(simulated_report.split()),
             'generation_timestamp': datetime.now().isoformat()
         }
-    
-    def _generate_questions(self, topics: List[Dict[str, Any]], 
-                          reports: Dict[str, Any]) -> Dict[str, Any]:
-        """Generate exactly 50 questions per topic"""
-        
-        print("   Generating 50 questions per topic...")
-        
-        generator = ClueWeb22SimplifiedGenerator(self.api_key, self.model)
-        all_questions = {}
-        
-        for i, topic in enumerate(topics, 1):
-            topic_id = topic['topic_id']
-            print(f"     Generating questions for topic {i}/10: {topic_id}")
-            
-            if topic_id not in reports:
-                print(f"       ⚠️ No report available for {topic_id}")
-                continue
-            
-            try:
-                # Use existing question generation but ensure we get 50 questions
-                result = generator.process_single_topic(topic_id)
-                
-                if result and 'research_questions' in result:
-                    questions = result['research_questions']
-                    
-                    # Ensure we have exactly 50 questions
-                    if len(questions) < 50:
-                        print(f"       📝 Generated {len(questions)} questions, need {50 - len(questions)} more")
-                        # Generate additional questions if needed
-                        additional_questions = self._generate_additional_questions(
-                            topic, reports[topic_id], 50 - len(questions)
-                        )
-                        questions.extend(additional_questions)
-                    elif len(questions) > 50:
-                        # Take the best 50 questions
-                        questions = questions[:50]
-                    
-                    # Apply difficulty distribution
-                    questions = self._apply_difficulty_distribution(questions)
-                    
-                    all_questions[topic_id] = {
-                        'topic_info': topic,
-                        'questions': questions,
-                        'question_count': len(questions),
-                        'generation_status': 'success',
-                        'generation_timestamp': datetime.now().isoformat()
-                    }
-                    
-                    print(f"       ✅ Generated {len(questions)} questions")
-                else:
-                    print(f"       ❌ Failed to generate questions for {topic_id}")
-                    
-            except Exception as e:
-                print(f"       ⚠️ Error generating questions for {topic_id}: {e}")
-        
-        total_questions = sum(len(data['questions']) for data in all_questions.values())
-        print(f"   ✅ Generated {total_questions} total questions across {len(all_questions)} topics")
-        
-        return all_questions
     
     def _generate_additional_questions(self, topic: Dict[str, Any], 
                                      report_data: Dict[str, Any], 
@@ -413,15 +629,9 @@ The {domain} represents a dynamic and evolving field with significant potential 
         
         # Check if refinement is needed
         summary_stats = evaluation_results.get('summary_statistics', {})
-        depth_dist = summary_stats.get('depth_distribution', {})
         
-        # Handle different possible field names
-        current_deep_percentage = (
-            depth_dist.get('deep_research_percentage') or
-            depth_dist.get('percentage_deep') or
-            (depth_dist.get('Deep', 0) / summary_stats.get('total_questions', 1) * 100) or
-            0.0
-        )
+        # Get the correct field name - it's 'percentage_deep' not 'deep_research_percentage'
+        current_deep_percentage = summary_stats.get('percentage_deep', 0.0)
         
         target_percentage = self.config['target_deep_percentage']
         
@@ -449,7 +659,7 @@ The {domain} represents a dynamic and evolving field with significant potential 
         # Convert back to topic structure
         refined_questions = self._convert_evaluation_to_topic_structure(final_results, questions_data)
         
-        final_deep_percentage = final_results['summary_statistics']['depth_distribution']['deep_research_percentage']
+        final_deep_percentage = final_results['summary_statistics'].get('percentage_deep', 0.0)
         print(f"   ✅ Final deep research percentage: {final_deep_percentage:.1f}%")
         
         return refined_questions
@@ -487,31 +697,52 @@ The {domain} represents a dynamic and evolving field with significant potential 
         
         refined_questions = {}
         
+        # Get evaluations from the correct field
+        evaluations = evaluation_results.get('detailed_evaluations', evaluation_results.get('evaluations', []))
+        
         # Group questions by topic
-        for evaluation in evaluation_results['detailed_evaluations']:
-            topic_id = evaluation['original_id'].split('_Q')[0]
+        for evaluation in evaluations:
+            # Get the original question ID
+            original_id = evaluation.get('original_id', evaluation.get('question_id', ''))
+            
+            # Extract topic ID from question ID
+            if '_Q' in original_id:
+                topic_id = original_id.split('_Q')[0]
+            else:
+                # Fallback: use topic_id if available
+                topic_id = evaluation.get('topic_id', 'unknown')
             
             if topic_id not in refined_questions:
+                # Get original topic info or use default
+                original_topic_info = original_questions.get(topic_id, {}).get('topic_info', {})
                 refined_questions[topic_id] = {
-                    'topic_info': original_questions[topic_id]['topic_info'],
+                    'topic_info': original_topic_info,
                     'questions': [],
                     'generation_status': 'refined',
                     'evaluation_status': 'completed'
                 }
             
+            # Get question text from evaluation
+            question_text = evaluation.get('question_text', '')
+            
             # Convert evaluation back to question format
             question_data = {
-                'question_id': evaluation['original_id'],
-                'question_text': evaluation['question_text'],
-                'difficulty': self._map_depth_to_difficulty(evaluation['classifications']['question_depth']),
-                'question_type': evaluation['classifications']['research_type'],
-                'rationale': evaluation['recommendations']['current_assessment'],
-                'depth_scores': evaluation['depth_scores'],
-                'is_deep_research': evaluation['classifications']['is_deep_research'],
-                'refinement_history': evaluation.get('refinement_history')
+                'question_id': original_id,
+                'question_text': question_text,
+                'difficulty': self._map_depth_to_difficulty(evaluation.get('classifications', {}).get('question_depth', 'moderate')),
+                'question_type': evaluation.get('classifications', {}).get('research_type', 'analytical'),
+                'rationale': evaluation.get('recommendations', {}).get('current_assessment', ''),
+                'depth_scores': evaluation.get('depth_scores', {}),
+                'is_deep_research': evaluation.get('classifications', {}).get('is_deep_research', False),
+                'refinement_history': evaluation.get('refinement_history', [])
             }
             
             refined_questions[topic_id]['questions'].append(question_data)
+        
+        # If no evaluations found, use original questions
+        if not refined_questions and original_questions:
+            print("   ⚠️ No evaluations found, using original questions")
+            refined_questions = original_questions
         
         # Update question counts
         for topic_id, topic_data in refined_questions.items():

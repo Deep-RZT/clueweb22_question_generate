@@ -1,0 +1,62 @@
+[
+  {
+    "topic_id": "clueweb22-en0000-00-00000",
+    "domain": "History of Telescopes and Astronomy",
+    "document_count": 100,
+    "language": "en"
+  },
+  {
+    "topic_id": "clueweb22-en0028-68-06349",
+    "domain": "Mixed Web Content - Technology",
+    "document_count": 100,
+    "language": "en"
+  },
+  {
+    "topic_id": "clueweb22-en0037-99-02648",
+    "domain": "Mixed Web Content - Science",
+    "document_count": 100,
+    "language": "en"
+  },
+  {
+    "topic_id": "clueweb22-ja0001-17-28828",
+    "domain": "Port Scheduling and Logistics",
+    "document_count": 100,
+    "language": "ja"
+  },
+  {
+    "topic_id": "clueweb22-en0044-53-10967",
+    "domain": "Mixed Web Content - Business",
+    "document_count": 100,
+    "language": "en"
+  },
+  {
+    "topic_id": "clueweb22-en0005-84-07694",
+    "domain": "Mixed Web Content - Health",
+    "document_count": 100,
+    "language": "en"
+  },
+  {
+    "topic_id": "clueweb22-ja0009-18-07874",
+    "domain": "Watercolor Art and Techniques",
+    "document_count": 100,
+    "language": "ja"
+  },
+  {
+    "topic_id": "clueweb22-en0026-20-03284",
+    "domain": "Mixed Web Content - Education",
+    "document_count": 10,
+    "language": "en"
+  },
+  {
+    "topic_id": "clueweb22-en0023-77-17052",
+    "domain": "Mixed Web Content - Environment",
+    "document_count": 10,
+    "language": "en"
+  },
+  {
+    "topic_id": "clueweb22-en0012-34-05678",
+    "domain": "Mixed Web Content - Sports",
+    "document_count": 50,
+    "language": "en"
+  }
+]

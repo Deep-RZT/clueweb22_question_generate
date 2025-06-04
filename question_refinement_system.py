@@ -48,7 +48,7 @@ class QuestionRefinementSystem:
             print(f"\n🔄 Refinement Iteration {iteration}")
             
             # Get current statistics
-            current_deep_percentage = current_results['summary_statistics']['depth_distribution']['deep_research_percentage']
+            current_deep_percentage = current_results['summary_statistics'].get('percentage_deep', 0.0)
             print(f"   Current deep research percentage: {current_deep_percentage:.1f}%")
             
             if current_deep_percentage >= target_deep_percentage:
@@ -56,7 +56,16 @@ class QuestionRefinementSystem:
                 break
             
             # Identify questions that need refinement
-            questions_to_refine = current_results['recommendations']['questions_to_refine']
+            questions_to_refine = current_results.get('recommended_actions', [])
+            
+            # If no recommended_actions, identify low-scoring questions
+            if not questions_to_refine or not isinstance(questions_to_refine, list):
+                evaluations = current_results.get('evaluations', [])
+                questions_to_refine = [
+                    e for e in evaluations 
+                    if e.get('depth_scores', {}).get('overall_depth', 0) < 0.4
+                ]
+            
             print(f"   Questions to refine: {len(questions_to_refine)}")
             
             if not questions_to_refine:
@@ -87,10 +96,10 @@ class QuestionRefinementSystem:
             current_results = self._re_evaluate_dataset(current_results)
         
         # Final statistics
-        final_deep_percentage = current_results['summary_statistics']['depth_distribution']['deep_research_percentage']
+        final_deep_percentage = current_results['summary_statistics'].get('percentage_deep', 0.0)
         print(f"\n🎯 Refinement Complete!")
-        print(f"   Final deep research percentage: {final_deep_percentage:.1f}%")
-        print(f"   Improvement: {final_deep_percentage - evaluation_results['summary_statistics']['depth_distribution']['deep_research_percentage']:.1f} percentage points")
+        print(f"   🎯 Final deep research percentage: {final_deep_percentage:.1f}%")
+        print(f"   Improvement: {final_deep_percentage - evaluation_results['summary_statistics'].get('percentage_deep', 0.0):.1f} percentage points")
         
         return current_results
     
@@ -285,8 +294,8 @@ REFINED QUESTION:"""
                 'deep_research_questions': deep_count,
                 'moderate_questions': moderate_count,
                 'simple_questions': simple_count,
-                'deep_research_percentage': (deep_count / total_questions * 100) if total_questions > 0 else 0
             },
+            'percentage_deep': (deep_count / total_questions * 100) if total_questions > 0 else 0,
             'average_scores': avg_scores,
             'quality_threshold_met': avg_scores['overall_depth'] >= 0.5
         }
@@ -450,8 +459,8 @@ def main():
         print(f"✅ Refined results saved to: {output_path}")
     
     print("\n🎯 Refinement Summary:")
-    original_deep = evaluation_results['summary_statistics']['depth_distribution']['deep_research_percentage']
-    refined_deep = refined_results['summary_statistics']['depth_distribution']['deep_research_percentage']
+    original_deep = evaluation_results['summary_statistics'].get('percentage_deep', 0.0)
+    refined_deep = refined_results['summary_statistics'].get('percentage_deep', 0.0)
     print(f"  Original deep research questions: {original_deep:.1f}%")
     print(f"  Refined deep research questions: {refined_deep:.1f}%")
     print(f"  Improvement: {refined_deep - original_deep:.1f} percentage points")
