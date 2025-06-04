@@ -12,11 +12,12 @@ import re
 import time
 import random
 from pathlib import Path
-from typing import List, Dict, Any, Tuple
+from typing import List, Dict, Any, Tuple, Optional
 from datetime import datetime
 from collections import defaultdict, Counter
 import requests
 import pandas as pd
+from openai_api_client import OpenAIClient, call_openai_with_messages
 
 class ClueWeb22SimplifiedGenerator:
     """
@@ -24,22 +25,20 @@ class ClueWeb22SimplifiedGenerator:
     Generates domain reports and research questions without RAG
     """
     
-    def __init__(self, clueweb_data_dir: str, claude_api_key: str):
+    def __init__(self, api_key: str, model: str = "gpt-4o"):
         """
         Initialize the generator
         
         Args:
-            clueweb_data_dir: Path to ClueWeb22 query results directory
-            claude_api_key: Claude API key for generation
+            api_key: OpenAI API key for generation
+            model: OpenAI model to use (default: gpt-4o)
         """
-        self.clueweb_data_dir = Path(clueweb_data_dir)
-        self.claude_api_key = claude_api_key
-        self.claude_api_url = "https://api.anthropic.com/v1/messages"
-        self.headers = {
-            "Content-Type": "application/json",
-            "x-api-key": claude_api_key,
-            "anthropic-version": "2023-06-01"
-        }
+        self.api_key = api_key
+        self.model = model
+        self.openai_client = OpenAIClient(api_key, model)
+        
+        # ClueWeb22 data directory
+        self.clueweb_data_dir = Path("task_file/clueweb22_query_results")
         
         # Output directory
         self.output_dir = Path("clueweb22_simplified_output")
@@ -201,32 +200,15 @@ class ClueWeb22SimplifiedGenerator:
         print("⚠️ Energy papers not found")
         return []
     
-    def call_claude_api(self, messages: List[Dict], max_tokens: int = 4000) -> str:
-        """Call Claude API with error handling"""
-        payload = {
-            "model": "claude-sonnet-4-20250514",
-            "max_tokens": max_tokens,
-            "messages": messages
-        }
+    def _call_openai_api(self, prompt: str, system_prompt: str = None, max_tokens: int = 6000) -> Optional[str]:
+        """Call OpenAI API for content generation with optimized parameters"""
         
-        try:
-            response = requests.post(
-                self.claude_api_url,
-                headers=self.headers,
-                json=payload,
-                timeout=120
-            )
-            
-            if response.status_code == 200:
-                result = response.json()
-                return result['content'][0]['text']
-            else:
-                print(f"❌ API Error {response.status_code}: {response.text}")
-                return None
-                
-        except Exception as e:
-            print(f"❌ API Call failed: {e}")
-            return None
+        return self.openai_client.generate_content(
+            prompt=prompt,
+            system_prompt=system_prompt,
+            max_tokens=max_tokens,
+            temperature=0.7
+        )
     
     def load_topic_documents(self, topic_id: str, topic_data: Dict) -> List[Dict[str, str]]:
         """Load documents for a specific topic"""
@@ -276,27 +258,26 @@ class ClueWeb22SimplifiedGenerator:
         return documents
     
     def identify_topic_domain(self, topic_id: str, topic_data: Dict, sample_docs: List[Dict]) -> Dict[str, Any]:
-        """Identify domain characteristics using PROMPT approach"""
+        """Identify domain characteristics using OpenAI"""
         
-        # Prepare sample content
-        sample_content = []
-        for doc in sample_docs[:5]:
-            content_preview = doc['content'][:500] + "..." if len(doc['content']) > 500 else doc['content']
-            sample_content.append(f"Document {doc['doc_id']}:\n{content_preview}\n")
+        # Sample documents for analysis
+        if len(sample_docs) > 5:
+            sample_docs = sample_docs[:5]
         
-        combined_sample = "\n".join(sample_content)
+        # Create content summary
+        combined_sample = ""
+        topic_context = f"Topic: {topic_id}"
         
-        # Add topic type context
-        topic_context = ""
-        if topic_data['type'] == 'clueweb22':
-            topic_context = f"This is a ClueWeb22 web document collection (Topic ID: {topic_id})"
-        elif topic_data['type'] == 'energy_literature':
-            topic_context = f"This is an energy research literature collection (Subdomain: {topic_data['subdomain']})"
+        for i, doc in enumerate(sample_docs):
+            if topic_data['type'] == 'energy_literature':
+                doc_text = f"Paper {i+1}: {doc.get('paper_title', 'Unknown')}\n{doc.get('content', '')[:300]}...\n"
+            else:
+                doc_text = f"Document {i+1}: {doc.get('content', '')[:300]}...\n"
+            combined_sample += doc_text
         
-        messages = [
-            {
-                "role": "user",
-                "content": f"""Analyze the following document collection and identify its domain characteristics:
+        system_prompt = """You are a domain analysis expert. Analyze document collections to identify their characteristics and research potential."""
+        
+        prompt = f"""Analyze the following document collection and identify its domain characteristics:
 
 **Topic Context**: {topic_context}
 **Sample Documents**:
@@ -322,10 +303,8 @@ Provide a structured analysis in JSON format:
     "domain_keywords": ["keyword1", "keyword2", "keyword3"],
     "complexity_level": "basic/intermediate/advanced"
 }}"""
-            }
-        ]
-        
-        response = self.call_claude_api(messages, max_tokens=1000)
+
+        response = self._call_openai_api(prompt, system_prompt, max_tokens=1000)
         
         if response:
             try:
@@ -360,241 +339,218 @@ Provide a structured analysis in JSON format:
                 "complexity_level": "intermediate"
             }
     
-    def generate_domain_report(self, topic_id: str, topic_data: Dict, documents: List[Dict], domain_info: Dict) -> str:
-        """Generate domain report using PROMPT approach"""
+    def select_clueweb22_topics(self, count: int = 10) -> List[str]:
+        """Select diverse ClueWeb22 topics for processing"""
         
-        # Prepare document summaries
-        doc_summaries = []
-        total_words = sum(doc['word_count'] for doc in documents)
+        system_prompt = "You are a topic selection expert. Select diverse, well-distributed topics."
         
-        # Use more documents for energy topics (they're shorter)
-        max_docs_for_report = 30 if topic_data['type'] == 'energy_literature' else 20
+        prompt = f"""Select {count} diverse ClueWeb22 topic IDs that would provide good coverage across different domains.
+
+Choose topics that span various fields like:
+- Science and technology
+- Business and economics  
+- Health and medicine
+- Social sciences
+- Arts and culture
+- News and current events
+
+Format: Return exactly {count} topic IDs, one per line, in format: clueweb22-en####-##-#####
+
+Example format:
+clueweb22-en0000-00-00000
+clueweb22-en0001-01-00001"""
+
+        response = self._call_openai_api(prompt, system_prompt, max_tokens=1000)
         
-        for i, doc in enumerate(documents[:max_docs_for_report]):
-            if topic_data['type'] == 'energy_literature':
-                # For papers, use title and abstract
-                summary = f"Paper {i+1}: {doc.get('paper_title', 'Unknown Title')}\n{doc['content'][:400]}..."
-            else:
-                # For web documents, use content preview
-                summary = f"Doc {i+1}: {doc['content'][:300]}..."
+        if response:
+            # Extract topic IDs from response
+            lines = response.strip().split('\n')
+            topics = []
+            for line in lines:
+                line = line.strip()
+                if line.startswith('clueweb22-en') and len(line) >= 20:
+                    topics.append(line)
             
-            doc_summaries.append(summary)
+            return topics[:count]
         
-        combined_summaries = "\n\n".join(doc_summaries)
+        # Fallback: return default topics if API fails
+        print("⚠️ Using fallback topic selection")
+        return [
+            "clueweb22-en0000-00-00000",
+            "clueweb22-en0028-68-06349", 
+            "clueweb22-en0037-99-02648",
+            "clueweb22-en0044-53-10967",
+            "clueweb22-en0005-84-07694"
+        ][:count]
+
+    def generate_domain_report(self, topic_id: str, documents: List[Dict[str, Any]]) -> str:
+        """Generate comprehensive domain report using OpenAI"""
         
-        # Add topic-specific context
-        topic_context = ""
-        if topic_data['type'] == 'energy_literature':
-            topic_context = f"This collection focuses on {topic_data['subdomain'].replace('_', ' ')} research literature."
-        else:
-            topic_context = f"This is a ClueWeb22 web document collection."
+        # Create document summaries for analysis
+        doc_content = []
+        for doc in documents[:10]:  # Use sample of documents
+            content = f"Title: {doc.get('title', 'No title')}\nContent: {doc.get('content', '')[:500]}..."
+            doc_content.append(content)
         
-        messages = [
-            {
-                "role": "user",
-                "content": f"""Generate a comprehensive expert-level domain report based on the following document collection:
-
-**Topic Information**:
-- Topic ID: {topic_id}
-- Topic Type: {topic_data['type']}
-- Primary Domain: {domain_info.get('primary_domain', 'Unknown')}
-- Key Themes: {', '.join(domain_info.get('key_themes', []))}
-- Total Documents: {len(documents)}
-- Total Words: {total_words:,}
-- Content Type: {domain_info.get('content_type', 'Unknown')}
-- Complexity Level: {domain_info.get('complexity_level', 'Unknown')}
-
-**Context**: {topic_context}
-
-**Document Collection Summary**:
-{combined_summaries}
-
-**Report Requirements**:
-Generate a comprehensive expert-level report (1500-2000 words) that includes:
-
-1. **Executive Summary** (200 words)
-   - Overview of the domain and key findings
-   - Main themes and trends identified
-
-2. **Domain Analysis** (400-500 words)
-   - Detailed analysis of the primary domain
-   - Key concepts and terminology
-   - Current state and developments
-
-3. **Thematic Breakdown** (400-500 words)
-   - Analysis of major themes identified
-   - Relationships between different topics
-   - Emerging patterns and trends
-
-4. **Technical Insights** (300-400 words)
-   - Technical aspects and methodologies
-   - Tools, technologies, or approaches mentioned
-   - Innovation and development areas
-
-5. **Research Implications** (200-300 words)
-   - Potential research directions
-   - Knowledge gaps identified
-   - Future research opportunities
-
-6. **Conclusion** (100-200 words)
-   - Summary of key insights
-   - Overall assessment of the domain
-
-**Writing Style**:
-- Expert-level academic/professional tone
-- Use domain-specific terminology appropriately
-- Include specific examples from the documents
-- Maintain objectivity and analytical depth
-- Structure with clear headings and subheadings"""
-            }
-        ]
+        system_prompt = """You are a domain analysis expert. Generate comprehensive domain reports based on document collections."""
         
-        report = self.call_claude_api(messages, max_tokens=3000)
+        prompt = f"""Generate a comprehensive domain report for topic: {topic_id}
+
+Based on these sample documents:
+{chr(10).join(doc_content)}
+
+Create a 1500-2000 word domain report with:
+
+## Overview
+Brief description of the domain and its significance
+
+## Key Themes  
+Major themes and concepts in this domain
+
+## Methodological Approaches
+Research methods and analytical techniques used
+
+## Current Research
+Contemporary trends and ongoing research
+
+## Applications
+Practical applications and implications
+
+## Future Directions
+Emerging trends and future possibilities
+
+## Conclusion
+Summary of the domain's potential and importance
+
+Make the report comprehensive, well-structured, and informative."""
+
+        report = self._call_openai_api(prompt, system_prompt, max_tokens=3000)
         
         if not report:
-            # Fallback report generation
-            report = f"""# Domain Report: {domain_info.get('primary_domain', 'Unknown Domain')}
-
-## Executive Summary
-This report analyzes {len(documents)} documents from the {topic_id} collection, covering {domain_info.get('primary_domain', 'various topics')}. The collection represents {domain_info.get('content_type', 'content')} with a focus on {', '.join(domain_info.get('key_themes', ['general topics']))}.
-
-## Key Findings
-- Primary domain: {domain_info.get('primary_domain', 'Unknown')}
-- Content complexity: {domain_info.get('complexity_level', 'Unknown')}
-- Total documents analyzed: {len(documents)}
-- Research potential: {domain_info.get('research_potential', 'General research opportunities')}
-
-## Domain Characteristics
-The document collection shows characteristics of {domain_info.get('scope', 'medium')} scope coverage with potential for {domain_info.get('research_potential', 'various research directions')}.
-
-## Research Opportunities
-Based on the document analysis, this domain offers opportunities for research in areas related to {', '.join(domain_info.get('key_themes', ['the identified themes']))}.
-"""
-        
+            return f"# Test Domain Report: {topic_id}\n\nDomain analysis in progress..."
+            
         return report
-    
-    def generate_research_questions(self, topic_id: str, topic_data: Dict, domain_report: str, domain_info: Dict, num_questions: int = 50) -> List[Dict]:
-        """Generate research questions using PROMPT approach"""
+
+    def generate_research_questions(self, topic_id: str, domain_report: str, 
+                                  target_count: int = 50) -> List[Dict[str, Any]]:
+        """Generate research questions for a topic using OpenAI"""
         
-        # Adjust question count based on document availability
-        if topic_data['document_count'] < 20:
-            num_questions = min(25, num_questions)
+        questions_per_batch = 10
+        all_questions = []
+        
+        # Define difficulty distribution
+        easy_count = int(target_count * 0.2)
+        medium_count = int(target_count * 0.4) 
+        hard_count = target_count - easy_count - medium_count
+        
+        difficulty_batches = (
+            [('Easy', easy_count)] + 
+            [('Medium', medium_count)] + 
+            [('Hard', hard_count)]
+        )
+        
+        question_id = 1
+        
+        for difficulty, count in difficulty_batches:
+            remaining = count
+            
+            while remaining > 0:
+                batch_size = min(questions_per_batch, remaining)
+                
+                system_prompt = f"""You are a research question expert specializing in {difficulty.lower()} level questions. Generate high-quality research questions that require deep analytical thinking."""
+                
+                prompt = f"""Based on this domain report, generate {batch_size} research questions of {difficulty} difficulty:
+
+DOMAIN REPORT:
+{domain_report}
+
+Generate exactly {batch_size} questions with the following requirements:
+
+DIFFICULTY: {difficulty}
+- Easy: Straightforward analysis, 400-600 word answers
+- Medium: Multi-step thinking, 800-1200 word answers  
+- Hard: Complex synthesis, 1500-2000 word answers
+
+For each question, provide:
+1. Question text (clear and specific)
+2. Question type (Analytical, Comparative, Predictive, Applied, etc.)
+3. Rationale (why this question is valuable)
+
+Format each question as:
+Q{question_id}: [Question text]
+Type: [Question type]
+Rationale: [Brief explanation]
+
+Questions should encourage deep research thinking and require evidence-based analysis using the domain report."""
+
+                response = self._call_openai_api(prompt, system_prompt, max_tokens=2000)
+                
+                if response:
+                    # Parse questions from response
+                    batch_questions = self._parse_questions_from_response(
+                        response, difficulty, question_id, batch_size
+                    )
+                    all_questions.extend(batch_questions)
+                    question_id += len(batch_questions)
+                    remaining -= len(batch_questions)
+                else:
+                    print(f"⚠️ Failed to generate {difficulty} questions batch")
+                    remaining = 0
+                
+                time.sleep(1)  # Rate limiting
+        
+        return all_questions[:target_count]
+    
+    def _parse_questions_from_response(self, response: str, difficulty: str, 
+                                     start_id: int, expected_count: int) -> List[Dict[str, Any]]:
+        """Parse questions from OpenAI response"""
         
         questions = []
-        batch_size = 10
-        num_batches = (num_questions + batch_size - 1) // batch_size
+        lines = response.strip().split('\n')
         
-        difficulty_levels = ['Easy', 'Medium', 'Hard']
-        question_types = [
-            'Analytical', 'Comparative', 'Evaluative', 'Synthetic', 
-            'Predictive', 'Critical', 'Exploratory', 'Applied'
-        ]
+        current_question = {}
+        question_num = start_id
         
-        for batch_num in range(num_batches):
-            batch_start = batch_num * batch_size
-            batch_end = min(batch_start + batch_size, num_questions)
-            current_batch_size = batch_end - batch_start
+        for line in lines:
+            line = line.strip()
             
-            # Distribute difficulty levels (30% Easy, 45% Medium, 25% Hard)
-            difficulties = []
-            for i in range(current_batch_size):
-                if i < current_batch_size * 0.3:
-                    difficulties.append('Easy')
-                elif i < current_batch_size * 0.7:
-                    difficulties.append('Medium')
-                else:
-                    difficulties.append('Hard')
-            random.shuffle(difficulties)
-            
-            # Distribute question types
-            types = random.choices(question_types, k=current_batch_size)
-            
-            messages = [
-                {
-                    "role": "user",
-                    "content": f"""Based on the following domain report, generate {current_batch_size} high-quality deep research questions:
-
-**Topic Information**:
-- Topic ID: {topic_id}
-- Topic Type: {topic_data['type']}
-- Primary Domain: {domain_info.get('primary_domain', 'Unknown')}
-- Key Themes: {', '.join(domain_info.get('key_themes', []))}
-
-**Domain Report**:
-{domain_report[:2000]}...
-
-**Question Generation Requirements**:
-Generate {current_batch_size} research questions with the following specifications:
-
-**Difficulty Distribution**:
-{dict(zip(range(current_batch_size), difficulties))}
-
-**Question Type Distribution**:
-{dict(zip(range(current_batch_size), types))}
-
-**Quality Criteria**:
-- **Deep Research Focus**: Questions should require substantial research and analysis
-- **Domain Specificity**: Questions should be specific to the identified domain
-- **Research Value**: Questions should address meaningful research gaps or challenges
-- **Complexity Matching**: Questions should match their assigned difficulty level
-- **Clarity**: Questions should be clear and well-formulated
-
-**Difficulty Guidelines**:
-- **Easy**: Fundamental concepts, basic comparisons, straightforward analysis
-- **Medium**: Multi-factor analysis, moderate synthesis, comparative evaluation
-- **Hard**: Complex system thinking, comprehensive frameworks, novel approaches
-
-**Question Type Guidelines**:
-- **Analytical**: Break down complex topics into components
-- **Comparative**: Compare different approaches, methods, or systems
-- **Evaluative**: Assess effectiveness, impact, or value
-- **Synthetic**: Combine multiple concepts or create new frameworks
-- **Predictive**: Forecast trends, outcomes, or developments
-- **Critical**: Challenge assumptions or evaluate limitations
-- **Exploratory**: Investigate new areas or emerging topics
-- **Applied**: Focus on practical implementation or real-world application
-
-**Output Format**:
-Format as JSON array:
-[
-  {{
-    "question_id": "Q{batch_start+1:03d}",
-    "question_text": "question text here",
-    "difficulty": "difficulty level",
-    "question_type": "question type",
-    "rationale": "brief explanation of research value"
-  }},
-  ...
-]"""
+            if line.startswith('Q') and ':' in line:
+                # Save previous question if exists
+                if current_question.get('question_text'):
+                    current_question['question_id'] = f'Q{question_num:03d}'
+                    questions.append(current_question.copy())
+                    question_num += 1
+                
+                # Start new question
+                current_question = {
+                    'question_text': line.split(':', 1)[1].strip(),
+                    'difficulty': difficulty,
+                    'question_type': 'General',
+                    'rationale': 'Generated research question'
                 }
-            ]
             
-            response = self.call_claude_api(messages, max_tokens=2000)
+            elif line.startswith('Type:'):
+                current_question['question_type'] = line.split(':', 1)[1].strip()
             
-            if response:
-                try:
-                    json_match = re.search(r'\[.*\]', response, re.DOTALL)
-                    if json_match:
-                        batch_questions = json.loads(json_match.group())
-                        # Fix question IDs to be sequential across batches
-                        for i, question in enumerate(batch_questions):
-                            question['question_id'] = f'Q{len(questions)+i+1:03d}'
-                        questions.extend(batch_questions)
-                except json.JSONDecodeError:
-                    # Fallback: create questions manually
-                    for i in range(current_batch_size):
-                        questions.append({
-                            'question_id': f'Q{len(questions)+1:03d}',
-                            'question_text': f"What are the key research challenges in {domain_info.get('primary_domain', 'this domain')}?",
-                            'difficulty': difficulties[i],
-                            'question_type': types[i],
-                            'rationale': 'Generated research question for domain analysis'
-                        })
-            
-            # Rate limiting
-            time.sleep(2)
+            elif line.startswith('Rationale:'):
+                current_question['rationale'] = line.split(':', 1)[1].strip()
         
-        return questions[:num_questions]
+        # Add last question
+        if current_question.get('question_text'):
+            current_question['question_id'] = f'Q{question_num:03d}'
+            questions.append(current_question)
+        
+        # Ensure we have the expected count (fill with fallback if needed)
+        while len(questions) < expected_count:
+            questions.append({
+                'question_id': f'Q{start_id + len(questions):03d}',
+                'question_text': f'What are the key research implications in this domain?',
+                'difficulty': difficulty,
+                'question_type': 'Exploratory',
+                'rationale': 'Fallback research question for comprehensive analysis'
+            })
+        
+        return questions[:expected_count]
     
     def process_single_topic(self, topic_id: str) -> Dict[str, Any]:
         """Process a single topic: generate report and questions"""
@@ -627,12 +583,12 @@ Format as JSON array:
         
         # PROMPT Phase 2: Generate domain report
         print("📝 Generating domain report...")
-        domain_report = self.generate_domain_report(topic_id, topic_data, documents, domain_info)
+        domain_report = self.generate_domain_report(topic_id, documents)
         print(f"   Report generated ({len(domain_report.split())} words)")
         
         # PROMPT Phase 3: Generate research questions
         print("❓ Generating research questions...")
-        questions = self.generate_research_questions(topic_id, topic_data, domain_report, domain_info, num_questions)
+        questions = self.generate_research_questions(topic_id, domain_report, num_questions)
         print(f"   Generated {len(questions)} questions")
         
         # Compile results
@@ -650,7 +606,7 @@ Format as JSON array:
             'research_questions': questions,
             'generation_metadata': {
                 'timestamp': datetime.now().isoformat(),
-                'api_model': 'claude-sonnet-4-20250514',
+                'api_model': self.model,
                 'method': 'PROMPT_only',
                 'num_questions_requested': num_questions,
                 'num_questions_generated': len(questions)
@@ -703,7 +659,7 @@ Format as JSON array:
                 'total_topics': len(self.all_topics),
                 'successful_topics': len(all_results),
                 'failed_topics': failed_topics,
-                'api_model': 'claude-sonnet-4-20250514',
+                'api_model': self.model,
                 'methodology': 'PROMPT_only_simplified',
                 'clueweb22_topics': len(self.clueweb_topics),
                 'energy_topics': len(self.energy_topics)
@@ -831,12 +787,12 @@ def main():
     print("=" * 70)
     
     # Configuration
-    clueweb_data_dir = "task_file/clueweb22_query_results"
-    claude_api_key = "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"
+    api_key = "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"
+    model = "gpt-4o"
     
     try:
         # Initialize generator
-        generator = ClueWeb22SimplifiedGenerator(clueweb_data_dir, claude_api_key)
+        generator = ClueWeb22SimplifiedGenerator(api_key, model)
         
         # Process all topics
         results = generator.process_all_topics()
