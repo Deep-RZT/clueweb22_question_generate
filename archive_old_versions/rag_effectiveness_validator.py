@@ -533,7 +533,7 @@ def main():
     print("🔬 RAG有效性验证系统")
     print("=" * 70)
     
-    api_key = "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"
+    api_key = "xxxxx"
     
     try:
         validator = RAGEffectivenessValidator(api_key)

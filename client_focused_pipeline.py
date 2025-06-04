@@ -412,7 +412,17 @@ The {domain} represents a dynamic and evolving field with significant potential 
         os.remove(temp_dataset_path)
         
         # Check if refinement is needed
-        current_deep_percentage = evaluation_results['summary_statistics']['depth_distribution']['deep_research_percentage']
+        summary_stats = evaluation_results.get('summary_statistics', {})
+        depth_dist = summary_stats.get('depth_distribution', {})
+        
+        # Handle different possible field names
+        current_deep_percentage = (
+            depth_dist.get('deep_research_percentage') or
+            depth_dist.get('percentage_deep') or
+            (depth_dist.get('Deep', 0) / summary_stats.get('total_questions', 1) * 100) or
+            0.0
+        )
+        
         target_percentage = self.config['target_deep_percentage']
         
         print(f"     Current deep research percentage: {current_deep_percentage:.1f}%")

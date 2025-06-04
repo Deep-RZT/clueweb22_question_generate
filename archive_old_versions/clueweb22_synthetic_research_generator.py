@@ -812,7 +812,7 @@ def main():
     
     # Configuration
     data_dir = "task_file/clueweb22_query_results"
-    claude_api_key = "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"
+    claude_api_key = "xxxxx"
     
     try:
         # Initialize generator

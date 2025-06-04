@@ -303,7 +303,7 @@ Provide a structured analysis in JSON format:
     "domain_keywords": ["keyword1", "keyword2", "keyword3"],
     "complexity_level": "basic/intermediate/advanced"
 }}"""
-
+        
         response = self._call_openai_api(prompt, system_prompt, max_tokens=1000)
         
         if response:
@@ -428,9 +428,9 @@ Make the report comprehensive, well-structured, and informative."""
         
         if not report:
             return f"# Test Domain Report: {topic_id}\n\nDomain analysis in progress..."
-            
+        
         return report
-
+    
     def generate_research_questions(self, topic_id: str, domain_report: str, 
                                   target_count: int = 50) -> List[Dict[str, Any]]:
         """Generate research questions for a topic using OpenAI"""
@@ -542,13 +542,13 @@ Questions should encourage deep research thinking and require evidence-based ana
         
         # Ensure we have the expected count (fill with fallback if needed)
         while len(questions) < expected_count:
-            questions.append({
+                        questions.append({
                 'question_id': f'Q{start_id + len(questions):03d}',
                 'question_text': f'What are the key research implications in this domain?',
                 'difficulty': difficulty,
                 'question_type': 'Exploratory',
                 'rationale': 'Fallback research question for comprehensive analysis'
-            })
+                        })
         
         return questions[:expected_count]
     
@@ -787,7 +787,7 @@ def main():
     print("=" * 70)
     
     # Configuration
-    api_key = "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"
+    api_key = "xxxxx"
     model = "gpt-4o"
     
     try:
