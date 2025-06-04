@@ -1,2 +1,12 @@
 RAG/models/*.bin
 *.bin
+# 模型文件
+*.bin
+*.pkl
+*.model
+*.h5
+RAG/models/
+
+# 其他大文件
+*.zip
+*.tar.gz
