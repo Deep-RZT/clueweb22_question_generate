@@ -1,0 +1,56 @@
+{
+  "total_documents": 100,
+  "by_source": {
+    "jstage": 37,
+    "arxiv": 21,
+    "acm": 7,
+    "pubmed": 23,
+    "springer": 5,
+    "ieee": 7
+  },
+  "by_language": {
+    "ja": 22,
+    "en": 54,
+    "en-ja": 24
+  },
+  "by_domain": {
+    "communication_studies": 3,
+    "machine_learning": 3,
+    "materials_science": 1,
+    "computer_vision": 5,
+    "medicine": 25,
+    "software_engineering": 5,
+    "cognitive_science": 1,
+    "environmental_science": 3,
+    "artificial_intelligence": 3,
+    "natural_language_processing": 4,
+    "marketing_research": 3,
+    "business_analytics": 1,
+    "digital_sociology": 1,
+    "digital_health": 1,
+    "robotics": 2,
+    "data_science": 1,
+    "psychology": 1,
+    "economics": 8,
+    "engineering": 3,
+    "computer_science": 5,
+    "computational_biology": 2,
+    "online_learning": 3,
+    "climate_change": 1,
+    "physics": 3,
+    "medical_informatics": 1,
+    "quantum_computing": 2,
+    "behavioral_economics": 1,
+    "biology": 2,
+    "human_computer_interaction": 1,
+    "green_technology": 1,
+    "social_media_analysis": 1,
+    "neuroscience": 1,
+    "finance": 1,
+    "education_technology": 1
+  },
+  "by_generation": {
+    "crawled": 57,
+    "generated": 43
+  }
+}

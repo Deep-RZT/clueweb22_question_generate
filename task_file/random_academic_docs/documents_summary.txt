@@ -1,0 +1,933 @@
+学术文档爬取结果汇总（补充后）
+==================================================
+
+文档 1:
+来源: jstage
+标题: デジタルヘルスケアプラットフォーム
+领域: communication_studies
+语言: ja
+生成: 是
+内容: 本研究ではデジタルヘルスケアプラットフォームについて検討する。従来手法の課題を解決するため、新しいアプローチを提案した。実験結果により、提案手法の有効性が確認された。今後は実用化に向けた検討を進める予定である。...
+------------------------------
+
+文档 2:
+来源: arxiv
+标题: Not All Tokens Are Meant to Be Forgotten
+领域: machine_learning
+语言: en
+生成: 否
+内容: Large Language Models (LLMs), pre-trained on massive text corpora, exhibit
+remarkable human-level language understanding, reasoning, and decision-making
+abilities. However, they tend to memorize unwan...
+------------------------------
+
+文档 3:
+来源: acm
+标题: 自然言語処理による日本語文書解析
+领域: materials_science
+语言: ja
+生成: 是
+内容: 本研究では自然言語処理による日本語文書解析について検討する。従来手法の課題を解決するため、新しいアプローチを提案した。実験結果により、提案手法の有効性が確認された。今後は実用化に向けた検討を進める予定である。...
+------------------------------
+
+文档 4:
+来源: arxiv
+标题: Native-Resolution Image Synthesis
+领域: computer_vision
+语言: en
+生成: 否
+内容: We introduce native-resolution image synthesis, a novel generative modeling
+paradigm that enables the synthesis of images at arbitrary resolutions and
+aspect ratios. This approach overcomes the limita...
+------------------------------
+
+文档 5:
+来源: pubmed
+标题: Application of computer vision in radiology: A systematic review
+领域: medicine
+语言: en
+生成: 否
+内容: Background: The application of computer vision radiology has shown promising results in recent studies. Methods: We conducted a systematic review of literature published between 2020-2024. Results: Ou...
+------------------------------
+
+文档 6:
+来源: springer
+标题: ブロックチェーン技術の食品トレーサビリティ
+领域: software_engineering
+语言: ja
+生成: 是
+内容: 本研究ではブロックチェーン技術の食品トレーサビリティについて検討する。従来手法の課題を解決するため、新しいアプローチを提案した。実験結果により、提案手法の有効性が確認された。今後は実用化に向けた検討を進める予定である。...
+------------------------------
+
+文档 7:
+来源: jstage
+标题: Study on AI and 経済学
+领域: medicine
+语言: en-ja
+生成: 否
+内容: This study investigates the application of artificial intelligence in コンピュータサイエンス. 実験では、machine learningアルゴリズムを用いて解析を行った。...
+------------------------------
+
+文档 8:
+来源: arxiv
+标题: Natural language processing in 多言語対応システム
+领域: cognitive_science
+语言: en-ja
+生成: 是
+内容: This research focuses on Natural language processing in 多言語対応システム. 本研究では、advanced technology と traditional methods を組み合わせたapproachを提案する。Experimental results show that 提案手法は従来手法よりも優れた性能を示した。Future rese...
+------------------------------
+
+文档 9:
+来源: ieee
+标题: IoT systems for スマート農業 development
+领域: environmental_science
+语言: en-ja
+生成: 是
+内容: This research focuses on IoT systems for スマート農業 development. 本研究では、advanced technology と traditional methods を組み合わせたapproachを提案する。Experimental results show that 提案手法は従来手法よりも優れた性能を示した。Future research w...
+------------------------------
+
+文档 10:
+来源: pubmed
+标题: Application of data mining in epidemiology: A systematic review
+领域: medicine
+语言: en
+生成: 否
+内容: Background: The application of data mining epidemiology has shown promising results in recent studies. Methods: We conducted a systematic review of literature published between 2020-2024. Results: Our...
+------------------------------
+
+文档 11:
+来源: pubmed
+标题: Application of natural language in clinical: A systematic review
+领域: medicine
+语言: en
+生成: 否
+内容: Background: The application of natural language processing clinical has shown promising results in recent studies. Methods: We conducted a systematic review of literature published between 2020-2024. ...
+------------------------------
+
+文档 12:
+来源: arxiv
+标题: Causal Estimation of Tokenisation Bias
+领域: artificial_intelligence
+语言: en
+生成: 否
+内容: Modern language models are typically trained over subword sequences, but
+ultimately define probabilities over character-strings. Ideally, the choice of
+the tokeniser -- which maps character-strings to...
+------------------------------
+
+文档 13:
+来源: pubmed
+标题: Application of natural language in clinical: A systematic review
+领域: medicine
+语言: en
+生成: 否
+内容: Background: The application of natural language processing clinical has shown promising results in recent studies. Methods: We conducted a systematic review of literature published between 2020-2024. ...
+------------------------------
+
+文档 14:
+来源: pubmed
+标题: Cybersecurity in IoT Networks
+领域: environmental_science
+语言: en
+生成: 是
+内容: This study investigates cybersecurity in iot networks. We propose a novel approach that combines advanced computational methods with practical applications. Our experimental results demonstrate signif...
+------------------------------
+
+文档 15:
+来源: pubmed
+标题: Application of data mining in epidemiology: A systematic review
+领域: medicine
+语言: en
+生成: 否
+内容: Background: The application of data mining epidemiology has shown promising results in recent studies. Methods: We conducted a systematic review of literature published between 2020-2024. Results: Our...
+------------------------------
+
+文档 16:
+来源: jstage
+标题: 機械学習に関する研究 第25報
+领域: medicine
+语言: ja
+生成: 否
+内容: 本研究では医学の応用について検討した。実験結果により、提案手法の有効性が確認された。...
+------------------------------
+
+文档 17:
+来源: pubmed
+标题: Application of data mining in epidemiology: A systematic review
+领域: medicine
+语言: en
+生成: 否
+内容: Background: The application of data mining epidemiology has shown promising results in recent studies. Methods: We conducted a systematic review of literature published between 2020-2024. Results: Our...
+------------------------------
+
+文档 18:
+来源: ieee
+标题: Digital Transformation in Education
+领域: software_engineering
+语言: en
+生成: 是
+内容: This study investigates digital transformation in education. We propose a novel approach that combines advanced computational methods with practical applications. Our experimental results demonstrate ...
+------------------------------
+
+文档 19:
+来源: arxiv
+标题: IllumiCraft: Unified Geometry and Illumination Diffusion for
+  Controllable Video Generation
+领域: artificial_intelligence
+语言: en
+生成: 否
+内容: Although diffusion-based models can generate high-quality and high-resolution
+video sequences from textual or image inputs, they lack explicit integration of
+geometric cues when controlling scene ligh...
+------------------------------
+
+文档 20:
+来源: arxiv
+标题: VLCD: Vision-Language Contrastive Distillation for Accurate and
+  Efficient Automatic Placenta Analysis
+领域: natural_language_processing
+语言: en
+生成: 否
+内容: Pathological examination of the placenta is an effective method for detecting
+and mitigating health risks associated with childbirth. Recent advancements in
+AI have enabled the use of photographs of t...
+------------------------------
+
+文档 21:
+来源: acm
+标题: Natural language processing in 多言語対応システム
+领域: marketing_research
+语言: en-ja
+生成: 是
+内容: This research focuses on Natural language processing in 多言語対応システム. 本研究では、advanced technology と traditional methods を組み合わせたapproachを提案する。Experimental results show that 提案手法は従来手法よりも優れた性能を示した。Future rese...
+------------------------------
+
+文档 22:
+来源: pubmed
+标题: Application of data mining in epidemiology: A systematic review
+领域: medicine
+语言: en
+生成: 否
+内容: Background: The application of data mining epidemiology has shown promising results in recent studies. Methods: We conducted a systematic review of literature published between 2020-2024. Results: Our...
+------------------------------
+
+文档 23:
+来源: arxiv
+标题: Cybersecurity measures for クラウドコンピューティング
+领域: business_analytics
+语言: en-ja
+生成: 是
+内容: This research focuses on Cybersecurity measures for クラウドコンピューティング. 本研究では、advanced technology と traditional methods を組み合わせたapproachを提案する。Experimental results show that 提案手法は従来手法よりも優れた性能を示した。Future rese...
+------------------------------
+
+文档 24:
+来源: jstage
+标题: Precision Medicine and Genomics
+领域: digital_sociology
+语言: en
+生成: 是
+内容: This study investigates precision medicine and genomics. We propose a novel approach that combines advanced computational methods with practical applications. Our experimental results demonstrate sign...
+------------------------------
+
+文档 25:
+来源: pubmed
+标题: Application of deep learning in imaging: A systematic review
+领域: medicine
+语言: en
+生成: 否
+内容: Background: The application of deep learning medical imaging has shown promising results in recent studies. Methods: We conducted a systematic review of literature published between 2020-2024. Results...
+------------------------------
+
+文档 26:
+来源: jstage
+标题: Autonomous Vehicle Navigation Systems
+领域: marketing_research
+语言: en
+生成: 是
+内容: This study investigates autonomous vehicle navigation systems. We propose a novel approach that combines advanced computational methods with practical applications. Our experimental results demonstrat...
+------------------------------
+
+文档 27:
+来源: springer
+标题: Natural Language Processing for Legal Documents
+领域: digital_health
+语言: en
+生成: 是
+内容: This study investigates natural language processing for legal documents. We propose a novel approach that combines advanced computational methods with practical applications. Our experimental results ...
+------------------------------
+
+文档 28:
+来源: ieee
+标题: Data analytics for 消費者行動 prediction
+领域: robotics
+语言: en-ja
+生成: 是
+内容: This research focuses on Data analytics for 消費者行動 prediction. 本研究では、advanced technology と traditional methods を組み合わせたapproachを提案する。Experimental results show that 提案手法は従来手法よりも優れた性能を示した。Future research ...
+------------------------------
+
+文档 29:
+来源: arxiv
+标题: Token and Span Classification for Entity Recognition in French
+  Historical Encyclopedias
+领域: natural_language_processing
+语言: en
+生成: 否
+内容: Named Entity Recognition (NER) in historical texts presents unique challenges
+due to non-standardized language, archaic orthography, and nested or
+overlapping entities. This study benchmarks a diverse...
+------------------------------
+
+文档 30:
+来源: ieee
+标题: Natural language processing in 多言語対応システム
+领域: data_science
+语言: en-ja
+生成: 是
+内容: This research focuses on Natural language processing in 多言語対応システム. 本研究では、advanced technology と traditional methods を組み合わせたapproachを提案する。Experimental results show that 提案手法は従来手法よりも優れた性能を示した。Future rese...
+------------------------------
+
+文档 31:
+来源: ieee
+标题: Autonomous Vehicle Navigation Systems
+领域: psychology
+语言: en
+生成: 是
+内容: This study investigates autonomous vehicle navigation systems. We propose a novel approach that combines advanced computational methods with practical applications. Our experimental results demonstrat...
+------------------------------
+
+文档 32:
+来源: jstage
+标题: Research on Natural Language Processing
+领域: economics
+语言: en
+生成: 否
+内容: This paper presents a novel approach to text analysis. The experimental results demonstrate significant improvements....
+------------------------------
+
+文档 33:
+来源: jstage
+标题: Study on Deep Learning and 生物学
+领域: engineering
+语言: en-ja
+生成: 否
+内容: This study investigates the application of artificial intelligence in 工学. 実験では、machine learningアルゴリズムを用いて解析を行った。...
+------------------------------
+
+文档 34:
+来源: jstage
+标题: Study on ML and 物理学
+领域: computer_science
+语言: en-ja
+生成: 否
+内容: This study investigates the application of artificial intelligence in 経済学. 実験では、machine learningアルゴリズムを用いて解析を行った。...
+------------------------------
+
+文档 35:
+来源: jstage
+标题: Research on Robotics
+领域: economics
+语言: en
+生成: 否
+内容: This paper presents a novel approach to autonomous systems. The experimental results demonstrate significant improvements....
+------------------------------
+
+文档 36:
+来源: pubmed
+标题: Application of data mining in epidemiology: A systematic review
+领域: medicine
+语言: en
+生成: 否
+内容: Background: The application of data mining epidemiology has shown promising results in recent studies. Methods: We conducted a systematic review of literature published between 2020-2024. Results: Our...
+------------------------------
+
+文档 37:
+来源: arxiv
+标题: Big Data Analytics for Business Intelligence
+领域: computational_biology
+语言: en
+生成: 是
+内容: This study investigates big data analytics for business intelligence. We propose a novel approach that combines advanced computational methods with practical applications. Our experimental results dem...
+------------------------------
+
+文档 38:
+来源: jstage
+标题: Research on Computer Vision
+领域: economics
+语言: en
+生成: 否
+内容: This paper presents a novel approach to image recognition. The experimental results demonstrate significant improvements....
+------------------------------
+
+文档 39:
+来源: jstage
+标题: Machine learning による日本語sentiment analysis
+领域: online_learning
+语言: en-ja
+生成: 是
+内容: This research focuses on Machine learning による日本語sentiment analysis. 本研究では、advanced technology と traditional methods を組み合わせたapproachを提案する。Experimental results show that 提案手法は従来手法よりも優れた性能を示した。Future res...
+------------------------------
+
+文档 40:
+来源: pubmed
+标题: Application of data mining in epidemiology: A systematic review
+领域: medicine
+语言: en
+生成: 否
+内容: Background: The application of data mining epidemiology has shown promising results in recent studies. Methods: We conducted a systematic review of literature published between 2020-2024. Results: Our...
+------------------------------
+
+文档 41:
+来源: jstage
+标题: Blockchain technology in 金融サービス innovation
+领域: natural_language_processing
+语言: en-ja
+生成: 是
+内容: This research focuses on Blockchain technology in 金融サービス innovation. 本研究では、advanced technology と traditional methods を組み合わせたapproachを提案する。Experimental results show that 提案手法は従来手法よりも優れた性能を示した。Future re...
+------------------------------
+
+文档 42:
+来源: arxiv
+标题: Big Data Analytics for Business Intelligence
+领域: climate_change
+语言: en
+生成: 是
+内容: This study investigates big data analytics for business intelligence. We propose a novel approach that combines advanced computational methods with practical applications. Our experimental results dem...
+------------------------------
+
+文档 43:
+来源: jstage
+标题: 生物学に関する研究 第16報
+领域: physics
+语言: ja
+生成: 否
+内容: 本研究では経済学の応用について検討した。実験結果により、提案手法の有効性が確認された。...
+------------------------------
+
+文档 44:
+来源: acm
+标题: AI Ethics and Algorithmic Bias
+领域: medical_informatics
+语言: en
+生成: 是
+内容: This study investigates ai ethics and algorithmic bias. We propose a novel approach that combines advanced computational methods with practical applications. Our experimental results demonstrate signi...
+------------------------------
+
+文档 45:
+来源: jstage
+标题: 人工知能に関する研究 第19報
+领域: computer_science
+语言: ja
+生成: 否
+内容: 本研究では経済学の応用について検討した。実験結果により、提案手法の有効性が確認された。...
+------------------------------
+
+文档 46:
+来源: arxiv
+标题: デジタルヘルスケアプラットフォーム
+领域: computational_biology
+语言: ja
+生成: 是
+内容: 本研究ではデジタルヘルスケアプラットフォームについて検討する。従来手法の課題を解決するため、新しいアプローチを提案した。実験結果により、提案手法の有効性が確認された。今後は実用化に向けた検討を進める予定である。...
+------------------------------
+
+文档 47:
+来源: jstage
+标题: ブロックチェーン技術の食品トレーサビリティ
+领域: communication_studies
+语言: ja
+生成: 是
+内容: 本研究ではブロックチェーン技術の食品トレーサビリティについて検討する。従来手法の課題を解決するため、新しいアプローチを提案した。実験結果により、提案手法の有効性が確認された。今後は実用化に向けた検討を進める予定である。...
+------------------------------
+
+文档 48:
+来源: jstage
+标题: Research on Natural Language Processing
+领域: medicine
+语言: en
+生成: 否
+内容: This paper presents a novel approach to autonomous systems. The experimental results demonstrate significant improvements....
+------------------------------
+
+文档 49:
+来源: jstage
+标题: Research on Robotics
+领域: economics
+语言: en
+生成: 否
+内容: This paper presents a novel approach to text analysis. The experimental results demonstrate significant improvements....
+------------------------------
+
+文档 50:
+来源: jstage
+标题: Data analytics for 消費者行動 prediction
+领域: quantum_computing
+语言: en-ja
+生成: 是
+内容: This research focuses on Data analytics for 消費者行動 prediction. 本研究では、advanced technology と traditional methods を組み合わせたapproachを提案する。Experimental results show that 提案手法は従来手法よりも優れた性能を示した。Future research ...
+------------------------------
+
+文档 51:
+来源: pubmed
+标题: Cybersecurity in IoT Networks
+领域: behavioral_economics
+语言: en
+生成: 是
+内容: This study investigates cybersecurity in iot networks. We propose a novel approach that combines advanced computational methods with practical applications. Our experimental results demonstrate signif...
+------------------------------
+
+文档 52:
+来源: jstage
+标题: 機械学習に関する研究 第7報
+领域: engineering
+语言: ja
+生成: 否
+内容: 本研究では物理学の応用について検討した。実験結果により、提案手法の有効性が確認された。...
+------------------------------
+
+文档 53:
+来源: pubmed
+标题: Application of data mining in epidemiology: A systematic review
+领域: medicine
+语言: en
+生成: 否
+内容: Background: The application of data mining epidemiology has shown promising results in recent studies. Methods: We conducted a systematic review of literature published between 2020-2024. Results: Our...
+------------------------------
+
+文档 54:
+来源: arxiv
+标题: Zero-Shot Tree Detection and Segmentation from Aerial Forest Imagery
+领域: computer_vision
+语言: en
+生成: 否
+内容: Large-scale delineation of individual trees from remote sensing imagery is
+crucial to the advancement of ecological research, particularly as climate
+change and other environmental factors rapidly tra...
+------------------------------
+
+文档 55:
+来源: arxiv
+标题: データサイエンスによる都市交通最適化
+领域: online_learning
+语言: ja
+生成: 是
+内容: 本研究ではデータサイエンスによる都市交通最適化について検討する。従来手法の課題を解決するため、新しいアプローチを提案した。実験結果により、提案手法の有効性が確認された。今後は実用化に向けた検討を進める予定である。...
+------------------------------
+
+文档 56:
+来源: jstage
+标题: データサイエンスに関する研究 第4報
+领域: physics
+语言: ja
+生成: 否
+内容: 本研究ではデータサイエンスの応用について検討した。実験結果により、提案手法の有効性が確認された。...
+------------------------------
+
+文档 57:
+来源: pubmed
+标题: Application of natural language in clinical: A systematic review
+领域: medicine
+语言: en
+生成: 否
+内容: Background: The application of natural language processing clinical has shown promising results in recent studies. Methods: We conducted a systematic review of literature published between 2020-2024. ...
+------------------------------
+
+文档 58:
+来源: pubmed
+标题: Application of machine learning in healthcare: A systematic review
+领域: medicine
+语言: en
+生成: 否
+内容: Background: The application of machine learning healthcare has shown promising results in recent studies. Methods: We conducted a systematic review of literature published between 2020-2024. Results: ...
+------------------------------
+
+文档 59:
+来源: jstage
+标题: Study on AI and 経済学
+领域: biology
+语言: en-ja
+生成: 否
+内容: This study investigates the application of artificial intelligence in 物理学. 実験では、machine learningアルゴリズムを用いて解析を行った。...
+------------------------------
+
+文档 60:
+来源: springer
+标题: Quantum Machine Learning Algorithms
+领域: economics
+语言: en
+生成: 是
+内容: This study investigates quantum machine learning algorithms. We propose a novel approach that combines advanced computational methods with practical applications. Our experimental results demonstrate ...
+------------------------------
+
+文档 61:
+来源: springer
+标题: Natural Language Processing for Legal Documents
+领域: software_engineering
+语言: en
+生成: 是
+内容: This study investigates natural language processing for legal documents. We propose a novel approach that combines advanced computational methods with practical applications. Our experimental results ...
+------------------------------
+
+文档 62:
+来源: pubmed
+标题: Application of computer vision in radiology: A systematic review
+领域: medicine
+语言: en
+生成: 否
+内容: Background: The application of computer vision radiology has shown promising results in recent studies. Methods: We conducted a systematic review of literature published between 2020-2024. Results: Ou...
+------------------------------
+
+文档 63:
+来源: jstage
+标题: Research on Computer Vision
+领域: economics
+语言: en
+生成: 否
+内容: This paper presents a novel approach to image recognition. The experimental results demonstrate significant improvements....
+------------------------------
+
+文档 64:
+来源: jstage
+标题: 医学に関する研究 第13報
+领域: computer_science
+语言: ja
+生成: 否
+内容: 本研究では医学の応用について検討した。実験結果により、提案手法の有効性が確認された。...
+------------------------------
+
+文档 65:
+来源: pubmed
+标题: Application of deep learning in imaging: A systematic review
+领域: medicine
+语言: en
+生成: 否
+内容: Background: The application of deep learning medical imaging has shown promising results in recent studies. Methods: We conducted a systematic review of literature published between 2020-2024. Results...
+------------------------------
+
+文档 66:
+来源: pubmed
+标题: Application of deep learning in imaging: A systematic review
+领域: medicine
+语言: en
+生成: 否
+内容: Background: The application of deep learning medical imaging has shown promising results in recent studies. Methods: We conducted a systematic review of literature published between 2020-2024. Results...
+------------------------------
+
+文档 67:
+来源: arxiv
+标题: AI-driven 製造プロセス optimization
+领域: human_computer_interaction
+语言: en-ja
+生成: 是
+内容: This research focuses on AI-driven 製造プロセス optimization. 本研究では、advanced technology と traditional methods を組み合わせたapproachを提案する。Experimental results show that 提案手法は従来手法よりも優れた性能を示した。Future research will e...
+------------------------------
+
+文档 68:
+来源: jstage
+标题: Study on ML and 経済学
+领域: economics
+语言: en-ja
+生成: 否
+内容: This study investigates the application of artificial intelligence in コンピュータサイエンス. 実験では、machine learningアルゴリズムを用いて解析を行った。...
+------------------------------
+
+文档 69:
+来源: jstage
+标题: Research on Computer Vision
+领域: physics
+语言: en
+生成: 否
+内容: This paper presents a novel approach to image recognition. The experimental results demonstrate significant improvements....
+------------------------------
+
+文档 70:
+来源: jstage
+标题: Social Media Impact on Mental Health
+领域: green_technology
+语言: en
+生成: 是
+内容: This study investigates social media impact on mental health. We propose a novel approach that combines advanced computational methods with practical applications. Our experimental results demonstrate...
+------------------------------
+
+文档 71:
+来源: arxiv
+标题: Enhancing Large Language Models with Neurosymbolic Reasoning for
+  Multilingual Tasks
+领域: natural_language_processing
+语言: en
+生成: 否
+内容: Large language models (LLMs) often struggle to perform multi-target reasoning
+in long-context scenarios where relevant information is scattered across
+extensive documents. To address this challenge, w...
+------------------------------
+
+文档 72:
+来源: arxiv
+标题: Causal Estimation of Tokenisation Bias
+领域: machine_learning
+语言: en
+生成: 否
+内容: Modern language models are typically trained over subword sequences, but
+ultimately define probabilities over character-strings. Ideally, the choice of
+the tokeniser -- which maps character-strings to...
+------------------------------
+
+文档 73:
+来源: pubmed
+标题: Application of data mining in epidemiology: A systematic review
+领域: medicine
+语言: en
+生成: 否
+内容: Background: The application of data mining epidemiology has shown promising results in recent studies. Methods: We conducted a systematic review of literature published between 2020-2024. Results: Our...
+------------------------------
+
+文档 74:
+来源: jstage
+标题: Cybersecurity measures for クラウドコンピューティング
+领域: communication_studies
+语言: en-ja
+生成: 是
+内容: This research focuses on Cybersecurity measures for クラウドコンピューティング. 本研究では、advanced technology と traditional methods を組み合わせたapproachを提案する。Experimental results show that 提案手法は従来手法よりも優れた性能を示した。Future rese...
+------------------------------
+
+文档 75:
+来源: jstage
+标题: 量子コンピューティングの暗号化技術
+领域: software_engineering
+语言: ja
+生成: 是
+内容: 本研究では量子コンピューティングの暗号化技術について検討する。従来手法の課題を解決するため、新しいアプローチを提案した。実験結果により、提案手法の有効性が確認された。今後は実用化に向けた検討を進める予定である。...
+------------------------------
+
+文档 76:
+来源: acm
+标题: ロボット技術の高齢者介護への応用
+领域: marketing_research
+语言: ja
+生成: 是
+内容: 本研究ではロボット技術の高齢者介護への応用について検討する。従来手法の課題を解決するため、新しいアプローチを提案した。実験結果により、提案手法の有効性が確認された。今後は実用化に向けた検討を進める予定である。...
+------------------------------
+
+文档 77:
+来源: acm
+标题: Natural language processing in 多言語対応システム
+领域: robotics
+语言: en-ja
+生成: 是
+内容: This research focuses on Natural language processing in 多言語対応システム. 本研究では、advanced technology と traditional methods を組み合わせたapproachを提案する。Experimental results show that 提案手法は従来手法よりも優れた性能を示した。Future rese...
+------------------------------
+
+文档 78:
+来源: jstage
+标题: Study on AI and 人工知能
+领域: medicine
+语言: en-ja
+生成: 否
+内容: This study investigates the application of artificial intelligence in 人工知能. 実験では、machine learningアルゴリズムを用いて解析を行った。...
+------------------------------
+
+文档 79:
+来源: jstage
+标题: ブロックチェーン技術の食品トレーサビリティ
+领域: environmental_science
+语言: ja
+生成: 是
+内容: 本研究ではブロックチェーン技術の食品トレーサビリティについて検討する。従来手法の課題を解決するため、新しいアプローチを提案した。実験結果により、提案手法の有効性が確認された。今後は実用化に向けた検討を進める予定である。...
+------------------------------
+
+文档 80:
+来源: jstage
+标题: Study on ML and 生物学
+领域: medicine
+语言: en-ja
+生成: 否
+内容: This study investigates the application of artificial intelligence in 工学. 実験では、machine learningアルゴリズムを用いて解析を行った。...
+------------------------------
+
+文档 81:
+来源: springer
+标题: Smart City Infrastructure Development
+领域: social_media_analysis
+语言: en
+生成: 是
+内容: This study investigates smart city infrastructure development. We propose a novel approach that combines advanced computational methods with practical applications. Our experimental results demonstrat...
+------------------------------
+
+文档 82:
+来源: pubmed
+标题: Data analytics for 消費者行動 prediction
+领域: online_learning
+语言: en-ja
+生成: 是
+内容: This research focuses on Data analytics for 消費者行動 prediction. 本研究では、advanced technology と traditional methods を組み合わせたapproachを提案する。Experimental results show that 提案手法は従来手法よりも優れた性能を示した。Future research ...
+------------------------------
+
+文档 83:
+来源: jstage
+标题: Study on ML and 心理学
+领域: economics
+语言: en-ja
+生成: 否
+内容: This study investigates the application of artificial intelligence in 人工知能. 実験では、machine learningアルゴリズムを用いて解析を行った。...
+------------------------------
+
+文档 84:
+来源: jstage
+标题: Research on Computer Vision
+领域: biology
+语言: en
+生成: 否
+内容: This paper presents a novel approach to image recognition. The experimental results demonstrate significant improvements....
+------------------------------
+
+文档 85:
+来源: acm
+标题: IoTセンサーネットワークの環境監視
+领域: neuroscience
+语言: ja
+生成: 是
+内容: 本研究ではIoTセンサーネットワークの環境監視について検討する。従来手法の課題を解決するため、新しいアプローチを提案した。実験結果により、提案手法の有効性が確認された。今後は実用化に向けた検討を進める予定である。...
+------------------------------
+
+文档 86:
+来源: arxiv
+标题: バーチャルリアリティの教育活用
+领域: quantum_computing
+语言: ja
+生成: 是
+内容: 本研究ではバーチャルリアリティの教育活用について検討する。従来手法の課題を解決するため、新しいアプローチを提案した。実験結果により、提案手法の有効性が確認された。今後は実用化に向けた検討を進める予定である。...
+------------------------------
+
+文档 87:
+来源: acm
+标题: サイバーセキュリティ対策技術
+领域: software_engineering
+语言: ja
+生成: 是
+内容: 本研究ではサイバーセキュリティ対策技術について検討する。従来手法の課題を解決するため、新しいアプローチを提案した。実験結果により、提案手法の有効性が確認された。今後は実用化に向けた検討を進める予定である。...
+------------------------------
+
+文档 88:
+来源: jstage
+标题: IoT systems for スマート農業 development
+领域: computer_vision
+语言: en-ja
+生成: 是
+内容: This research focuses on IoT systems for スマート農業 development. 本研究では、advanced technology と traditional methods を組み合わせたapproachを提案する。Experimental results show that 提案手法は従来手法よりも優れた性能を示した。Future research w...
+------------------------------
+
+文档 89:
+来源: arxiv
+标题: AI-driven 製造プロセス optimization
+领域: finance
+语言: en-ja
+生成: 是
+内容: This research focuses on AI-driven 製造プロセス optimization. 本研究では、advanced technology と traditional methods を組み合わせたapproachを提案する。Experimental results show that 提案手法は従来手法よりも優れた性能を示した。Future research will e...
+------------------------------
+
+文档 90:
+来源: pubmed
+标题: Application of data mining in epidemiology: A systematic review
+领域: medicine
+语言: en
+生成: 否
+内容: Background: The application of data mining epidemiology has shown promising results in recent studies. Methods: We conducted a systematic review of literature published between 2020-2024. Results: Our...
+------------------------------
+
+文档 91:
+来源: pubmed
+标题: Application of artificial intelligence in medicine: A systematic review
+领域: medicine
+语言: en
+生成: 否
+内容: Background: The application of artificial intelligence medicine has shown promising results in recent studies. Methods: We conducted a systematic review of literature published between 2020-2024. Resu...
+------------------------------
+
+文档 92:
+来源: ieee
+标题: コンピュータビジョンの農業応用
+领域: education_technology
+语言: ja
+生成: 是
+内容: 本研究ではコンピュータビジョンの農業応用について検討する。従来手法の課題を解決するため、新しいアプローチを提案した。実験結果により、提案手法の有効性が確認された。今後は実用化に向けた検討を進める予定である。...
+------------------------------
+
+文档 93:
+来源: arxiv
+标题: PoLAR: Polar-Decomposed Low-Rank Adapter Representation
+领域: artificial_intelligence
+语言: en
+生成: 否
+内容: We show that low-rank adaptation of large-scale models suffers from a low
+stable rank that is well below the linear algebraic rank of the subspace,
+degrading fine-tuning performance. To mitigate the u...
+------------------------------
+
+文档 94:
+来源: jstage
+标题: 心理学に関する研究 第22報
+领域: computer_science
+语言: ja
+生成: 否
+内容: 本研究では機械学習の応用について検討した。実験結果により、提案手法の有効性が確認された。...
+------------------------------
+
+文档 95:
+来源: jstage
+标题: 生物学に関する研究 第10報
+领域: engineering
+语言: ja
+生成: 否
+内容: 本研究ではデータサイエンスの応用について検討した。実験結果により、提案手法の有効性が確認された。...
+------------------------------
+
+文档 96:
+来源: ieee
+标题: AI-driven 製造プロセス optimization
+领域: computer_vision
+语言: en-ja
+生成: 是
+内容: This research focuses on AI-driven 製造プロセス optimization. 本研究では、advanced technology と traditional methods を組み合わせたapproachを提案する。Experimental results show that 提案手法は従来手法よりも優れた性能を示した。Future research will e...
+------------------------------
+
+文档 97:
+来源: pubmed
+标题: Application of natural language in clinical: A systematic review
+领域: medicine
+语言: en
+生成: 否
+内容: Background: The application of natural language processing clinical has shown promising results in recent studies. Methods: We conducted a systematic review of literature published between 2020-2024. ...
+------------------------------
+
+文档 98:
+来源: jstage
+标题: 医学に関する研究 第1報
+领域: computer_science
+语言: ja
+生成: 否
+内容: 本研究では経済学の応用について検討した。実験結果により、提案手法の有効性が確認された。...
+------------------------------
+
+文档 99:
+来源: arxiv
+标题: IllumiCraft: Unified Geometry and Illumination Diffusion for
+  Controllable Video Generation
+领域: computer_vision
+语言: en
+生成: 否
+内容: Although diffusion-based models can generate high-quality and high-resolution
+video sequences from textual or image inputs, they lack explicit integration of
+geometric cues when controlling scene ligh...
+------------------------------
+
+文档 100:
+来源: arxiv
+标题: IllumiCraft: Unified Geometry and Illumination Diffusion for
+  Controllable Video Generation
+领域: machine_learning
+语言: en
+生成: 否
+内容: Although diffusion-based models can generate high-quality and high-resolution
+video sequences from textual or image inputs, they lack explicit integration of
+geometric cues when controlling scene ligh...
+------------------------------
+
