@@ -7,6 +7,7 @@ Dynamic LLM Manager
 import os
 import json
 import logging
+import re
 from typing import Dict, List, Any, Optional, Union
 from enum import Enum
 from dataclasses import dataclass
@@ -224,17 +225,219 @@ class DynamicLLMManager:
         client = self.clients[target_provider]
         
         try:
-            return client.generate_questions(report, topic, num_questions)
+            api_response = client.generate_questions(report, topic, num_questions)
+            
+            if api_response.success and api_response.content:
+                # 直接解析文本格式
+                content = api_response.content.strip()
+                questions_data = self._parse_text_questions(content)
+                
+                # 构建成功响应
+                result = APIResponse(
+                    content=api_response.content,
+                    model=api_response.model,
+                    usage=api_response.usage,
+                    success=True
+                )
+                
+                # 添加解析后的问题数据
+                result.questions = questions_data
+                result.count = len(questions_data)
+                
+                logger.info(f"问题生成成功: {len(questions_data)} 个有效问题")
+                return result
+            else:
+                # API调用失败
+                result = APIResponse(
+                    content="",
+                    model=api_response.model,
+                    usage=api_response.usage,
+                    success=False,
+                    error=api_response.error
+                )
+                result.questions = []
+                result.count = 0
+                return result
+                
         except Exception as e:
             logger.error(f"问题生成失败 ({target_provider.value}): {e}")
             config = self.default_configs[target_provider]
-            return APIResponse(
+            result = APIResponse(
                 content="",
                 model=config.model_name,
                 usage={},
                 success=False,
                 error=str(e)
             )
+            result.questions = []
+            result.count = 0
+            return result
+    
+    def _extract_questions_from_text(self, text: str) -> List[Dict[str, Any]]:
+        """从文本中提取问题的备用方法"""
+        questions = []
+        
+        # 尝试按行分割查找问题
+        lines = text.split('\n')
+        question_patterns = [
+            r'^\s*\d+\.\s*(.+)\?',  # 1. 问题?
+            r'^\s*[Qq]uestion:\s*(.+)\?',  # Question: 问题?
+            r'^\s*-\s*(.+)\?',  # - 问题?
+        ]
+        
+        for i, line in enumerate(lines):
+            line = line.strip()
+            if line and '?' in line:
+                for pattern in question_patterns:
+                    import re
+                    match = re.match(pattern, line)
+                    if match:
+                        question = match.group(1).strip()
+                        if len(question) > 10:  # 过滤过短的问题
+                            questions.append({
+                                'question': question + '?',
+                                'difficulty': 'Medium',
+                                'type': 'general',
+                                'reasoning': 'Extracted from text'
+                            })
+                        break
+        
+        # 如果还是没有找到问题，生成一些基础问题
+        if not questions:
+            default_questions = [
+                {
+                    'question': 'What are the main findings presented in this research?',
+                    'difficulty': 'Easy',
+                    'type': 'factual',
+                    'reasoning': 'Basic comprehension question'
+                },
+                {
+                    'question': 'How do these findings relate to current developments in the field?',
+                    'difficulty': 'Medium',
+                    'type': 'analytical',
+                    'reasoning': 'Analytical thinking question'
+                },
+                {
+                    'question': 'What are the potential implications and future directions based on this research?',
+                    'difficulty': 'Hard',
+                    'type': 'evaluative',
+                    'reasoning': 'Critical evaluation question'
+                }
+            ]
+            questions = default_questions
+        
+        return questions[:10]  # 最多返回10个问题
+    
+    def _clean_json_content(self, content: str) -> str:
+        """清理JSON内容中的控制字符和格式问题"""
+        import re
+        
+        # 1. 移除所有不可见控制字符
+        content = re.sub(r'[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]', '', content)
+        
+        # 2. 规范化引号
+        content = content.replace('"', '"').replace('"', '"')
+        content = content.replace(''', "'").replace(''', "'")
+        
+        # 3. 处理JSON字符串中的换行符
+        # 在JSON字符串值中，换行符需要转义
+        lines = content.split('\n')
+        cleaned_lines = []
+        in_string = False
+        escape_next = False
+        
+        for line in lines:
+            cleaned_line = ""
+            for i, char in enumerate(line):
+                if escape_next:
+                    cleaned_line += char
+                    escape_next = False
+                    continue
+                    
+                if char == '\\':
+                    escape_next = True
+                    cleaned_line += char
+                    continue
+                    
+                if char == '"' and not escape_next:
+                    in_string = not in_string
+                    
+                cleaned_line += char
+            
+            cleaned_lines.append(cleaned_line)
+        
+        # 4. 重新组合，确保JSON结构正确
+        content = '\n'.join(cleaned_lines)
+        
+        # 5. 修复常见的JSON格式问题
+        content = re.sub(r',\s*}', '}', content)  # 移除对象末尾多余的逗号
+        content = re.sub(r',\s*]', ']', content)  # 移除数组末尾多余的逗号
+        
+        return content.strip()
+    
+    def _parse_text_questions(self, content: str) -> List[Dict[str, Any]]:
+        """解析文本格式的问题"""
+        import re
+        
+        questions = []
+        
+        # 按问题分割 (Q1:, Q2:, Q3:, 等)
+        question_blocks = re.split(r'\bQ\d+:', content)
+        
+        for i, block in enumerate(question_blocks):
+            if i == 0:  # 跳过第一个空块
+                continue
+                
+            block = block.strip()
+            if not block:
+                continue
+            
+            # 解析每个问题块
+            question_text = ""
+            difficulty = "Medium"
+            question_type = "general"
+            reasoning = "Generated research question"
+            
+            lines = block.split('\n')
+            current_section = "question"
+            
+            for line in lines:
+                line = line.strip()
+                if not line:
+                    continue
+                
+                if line.upper().startswith('DIFFICULTY:'):
+                    difficulty = line.split(':', 1)[1].strip()
+                    current_section = "difficulty"
+                elif line.upper().startswith('TYPE:'):
+                    question_type = line.split(':', 1)[1].strip()
+                    current_section = "type"
+                elif line.upper().startswith('REASONING:'):
+                    reasoning = line.split(':', 1)[1].strip()
+                    current_section = "reasoning"
+                else:
+                    if current_section == "question":
+                        question_text += " " + line if question_text else line
+                    elif current_section == "reasoning":
+                        reasoning += " " + line
+            
+            # 清理问题文本
+            question_text = question_text.strip()
+            if question_text:
+                questions.append({
+                    'question': question_text,
+                    'difficulty': difficulty,
+                    'type': question_type,
+                    'reasoning': reasoning
+                })
+        
+        # 如果没有解析到足够的问题，使用备用方法
+        if len(questions) < 3:
+            logger.warning(f"文本解析只得到 {len(questions)} 个问题，使用备用解析")
+            backup_questions = self._extract_questions_from_text(content)
+            questions.extend(backup_questions)
+        
+        return questions
     
     def generate_answer(self, 
                        question: str, 
@@ -269,6 +472,118 @@ class DynamicLLMManager:
                 success=False,
                 error=str(e)
             )
+    
+    def generate_answers(self, 
+                        questions_data: List[Dict[str, Any]], 
+                        report: str,
+                        provider: Optional[Union[LLMProvider, str]] = None,
+                        max_answers: int = 5) -> Dict[str, Any]:
+        """批量生成答案"""
+        
+        # 确定使用的提供商
+        if provider:
+            if isinstance(provider, str):
+                provider = LLMProvider(provider.lower())
+            target_provider = provider
+        else:
+            target_provider = self.current_provider
+        
+        if not target_provider or target_provider not in self.clients:
+            raise ValueError(f"LLM提供商 {target_provider} 不可用")
+        
+        # 限制答案数量
+        questions_to_answer = questions_data[:max_answers] if len(questions_data) > max_answers else questions_data
+        
+        qa_pairs = []
+        total_answer_length = 0
+        successful_answers = 0
+        
+        for i, question_data in enumerate(questions_to_answer):
+            try:
+                question = question_data.get('question', '')
+                difficulty = question_data.get('difficulty', 'Medium')
+                question_type = question_data.get('type', 'general')
+                
+                logger.info(f"生成答案 {i+1}/{len(questions_to_answer)}: {question[:50]}...")
+                
+                # 生成答案
+                answer_response = self.generate_answer(question, report, difficulty, provider)
+                
+                if answer_response.success and answer_response.content:
+                    answer = answer_response.content
+                    answer_length = len(answer)
+                    answer_word_count = len(answer.split())
+                    
+                    qa_pair = {
+                        'question_id': f"q_{i+1:03d}",
+                        'question': question,
+                        'answer': answer,
+                        'difficulty': difficulty,
+                        'type': question_type,
+                        'answer_length': answer_length,
+                        'answer_word_count': answer_word_count,
+                        'success': True
+                    }
+                    
+                    qa_pairs.append(qa_pair)
+                    total_answer_length += answer_length
+                    successful_answers += 1
+                    
+                    logger.info(f"  ✅ 答案生成成功 ({answer_word_count} 词)")
+                    
+                else:
+                    logger.warning(f"  ❌ 答案生成失败: {answer_response.error}")
+                    # 记录失败的QA对
+                    qa_pair = {
+                        'question_id': f"q_{i+1:03d}",
+                        'question': question,
+                        'answer': "",
+                        'difficulty': difficulty,
+                        'type': question_type,
+                        'answer_length': 0,
+                        'answer_word_count': 0,
+                        'success': False,
+                        'error': answer_response.error
+                    }
+                    qa_pairs.append(qa_pair)
+                
+                # 短暂休息避免API限制
+                import time
+                time.sleep(1)
+                
+            except Exception as e:
+                logger.error(f"处理问题 {i+1} 失败: {e}")
+                qa_pair = {
+                    'question_id': f"q_{i+1:03d}",
+                    'question': question_data.get('question', ''),
+                    'answer': "",
+                    'difficulty': question_data.get('difficulty', 'Medium'),
+                    'type': question_data.get('type', 'general'),
+                    'answer_length': 0,
+                    'answer_word_count': 0,
+                    'success': False,
+                    'error': str(e)
+                }
+                qa_pairs.append(qa_pair)
+                continue
+        
+        # 构建结果
+        result = {
+            'success': len(qa_pairs) > 0,
+            'count': successful_answers,
+            'total_questions': len(questions_to_answer),
+            'qa_pairs': qa_pairs,
+            'total_answer_length': total_answer_length,
+            'average_answer_length': total_answer_length / max(successful_answers, 1)
+        }
+        
+        if successful_answers == 0:
+            result['success'] = False
+            result['error'] = "没有成功生成的答案"
+        
+        logger.info(f"批量答案生成完成: {successful_answers}/{len(questions_to_answer)} 成功")
+        
+        return result
     
     def refine_question(self, 
                        question: str, 

@@ -1,0 +1,35 @@
+Title: CARL: Camera-Agnostic Representation Learning for Spectral Image
+  Analysis
+
+Authors: Alexander Baumann, Leonardo Ayala, Silvia Seidlitz, Jan Sellner, Alexander Studier-Fischer
+
+Abstract: Spectral imaging offers promising applications across diverse domains,
+including medicine and urban scene understanding, and is already established as
+a critical modality in remote sensing. However, variability in channel
+dimensionality and captured wavelengths among spectral cameras impede the
+development of AI-driven methodologies, leading to camera-specific models with
+limited generalizability and inadequate cross-camera applicability. To address
+this bottleneck, we introduce $\textbf{CARL}$, a model for
+$\textbf{C}$amera-$\textbf{A}$gnostic $\textbf{R}$epresentation
+$\textbf{L}$earning across RGB, multispectral, and hyperspectral imaging
+modalities. To enable the conversion of a spectral image with any channel
+dimensionality to a camera-agnostic embedding, we introduce wavelength
+positional encoding and a self-attention-cross-attention mechanism to compress
+spectral information into learned query representations. Spectral-spatial
+pre-training is achieved with a novel spectral self-supervised JEPA-inspired
+strategy tailored to CARL. Large-scale experiments across the domains of
+medical imaging, autonomous driving, and satellite imaging demonstrate our
+model's unique robustness to spectral heterogeneity, outperforming on datasets
+with simulated and real-world cross-camera spectral variations. The scalability
+and versatility of the proposed approach position our model as a backbone for
+future spectral foundation models.
+
+Introduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.
+
+Methodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.
+
+Results: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.
+
+Discussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.
+
+Conclusion: This work presents a significant advancement in the field with practical implications for real-world applications.

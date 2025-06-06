@@ -1,0 +1,25 @@
+Title: Tailoring the resonant spin response of a stirred polariton condensate
+
+Authors: Ivan Gnusov, Alexey Yulin, Stepan Baryshev, Sergey Alyatkin, Pavlos G. Lagoudakis
+
+Abstract: We report on the enhancement of the spin coherence time (T2) by almost an
+order-of-magnitude in exciton-polariton condensates through driven spin
+precession resonance. Using a rotating optical trap formed by a bichromatic
+laser excitation, we synchronize the trap stirring frequency with the
+condensate intrinsic Larmor precession, achieving an order of magnitude
+increase in spin coherence. By tuning the optical trap profile via excitation
+lasers intensity, we precisely control the resonance width. Here we present a
+theoretical model that explains our experimental findings in terms of the
+mutual synchronization of the condensate circular polarization components. Our
+findings underpin the potential of polariton condensates for spinoptronic
+devices and quantum technologies.
+
+Introduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.
+
+Methodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.
+
+Results: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.
+
+Discussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.
+
+Conclusion: This work presents a significant advancement in the field with practical implications for real-world applications.

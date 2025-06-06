@@ -147,12 +147,57 @@ class OpenAIClient:
             )
     
     def generate_report(self, documents: List[Dict], topic: str, max_tokens: int = 4000) -> APIResponse:
-        """生成领域报告"""
+        """生成领域报告 - 支持分段处理和融合"""
         
-        # 构建文档内容
+        # 检查文档总长度
+        total_chars = sum(len(doc.get('content', '')) for doc in documents)
+        max_chars_per_segment = 80000  # OpenAI使用更保守的限制
+        
+        if total_chars > max_chars_per_segment:
+            print(f"📄 文档内容过长 ({total_chars} 字符)，启用分段处理...")
+            return self._generate_segmented_report(documents, topic, max_tokens)
+        else:
+            return self._generate_single_report(documents, topic, max_tokens)
+    
+    def _generate_single_report(self, documents: List[Dict], topic: str, max_tokens: int) -> APIResponse:
+        """生成单段报告"""
+        # 构建文档内容，并检查长度
         doc_content = ""
+        total_chars = 0
+        max_chars = 120000  # 约相当于120K tokens的安全限制，为OpenAI留更多余地
+        
         for i, doc in enumerate(documents, 1):
-            doc_content += f"\n文档 {i}:\n标题: {doc.get('title', 'N/A')}\n内容: {doc.get('content', 'N/A')}\n"
+            doc_text = f"\n文档 {i}:\n标题: {doc.get('title', 'N/A')}\n内容: {doc.get('content', 'N/A')}\n"
+            
+            # 检查是否会超出限制
+            if total_chars + len(doc_text) > max_chars:
+                # 如果是第一个文档就超限，截断该文档
+                if i == 1:
+                    remaining_chars = max_chars - total_chars - 200  # 留一些缓冲
+                    if remaining_chars > 1000:
+                        content = doc.get('content', 'N/A')[:remaining_chars]
+                        doc_text = f"\n文档 {i}:\n标题: {doc.get('title', 'N/A')}\n内容: {content}...[文档已截断]\n"
+                        doc_content += doc_text
+                    break
+                else:
+                    # 已经有其他文档，停止添加
+                    print(f"⚠️ 文档过多，只使用前 {i-1} 个文档生成报告")
+                    break
+            
+            doc_content += doc_text
+            total_chars += len(doc_text)
+        
+        if not doc_content.strip():
+            # 如果没有任何文档内容，创建错误响应
+            return APIResponse(
+                content="",
+                model=self.model,
+                usage={},
+                success=False,
+                error="No document content available after processing"
+            )
+        
+        print(f"📊 使用文档内容长度: {total_chars} 字符")
         
         system_prompt = """You are a professional research analyst. Please generate a high-quality domain report based on the provided documents.
 
@@ -178,10 +223,167 @@ Generate a comprehensive 1500-2000 word research report that deeply analyzes the
             system_prompt=system_prompt
         )
     
-    def generate_questions(self, report: str, topic: str, num_questions: int = 50) -> APIResponse:
-        """生成问题"""
+    def _generate_segmented_report(self, documents: List[Dict], topic: str, max_tokens: int) -> APIResponse:
+        """分段生成报告并融合"""
         
-        system_prompt = """You are a professional question design expert. Please generate high-quality research questions based on the research report.
+        # 将文档分段
+        segments = self._split_documents_into_segments(documents)
+        print(f"📚 文档分为 {len(segments)} 段进行处理")
+        
+        # 为每段生成子报告
+        segment_reports = []
+        for i, segment_docs in enumerate(segments, 1):
+            print(f"  🔍 处理第 {i}/{len(segments)} 段...")
+            
+            try:
+                segment_result = self._generate_single_report(segment_docs, f"{topic} (第{i}段)", max_tokens // 2)
+                if segment_result.success:
+                    segment_reports.append({
+                        'segment': i,
+                        'content': segment_result.content,
+                        'doc_count': len(segment_docs),
+                        'usage': segment_result.usage
+                    })
+                    print(f"    ✅ 第{i}段完成 ({len(segment_result.content.split())} 词)")
+                else:
+                    print(f"    ❌ 第{i}段失败: {segment_result.error}")
+                    
+                # 段间休息
+                import time
+                time.sleep(2)
+                
+            except Exception as e:
+                print(f"    ❌ 第{i}段处理异常: {e}")
+                continue
+        
+        if not segment_reports:
+            return APIResponse(
+                content="",
+                model=self.model,
+                usage={},
+                success=False,
+                error="所有文档段处理失败"
+            )
+        
+        # 融合所有段报告
+        print("  🔄 融合各段报告...")
+        return self._merge_segment_reports(segment_reports, topic, max_tokens)
+    
+    def _split_documents_into_segments(self, documents: List[Dict], max_chars_per_segment: int = 80000) -> List[List[Dict]]:
+        """将文档分割成段"""
+        segments = []
+        current_segment = []
+        current_chars = 0
+        
+        for doc in documents:
+            doc_chars = len(doc.get('content', ''))
+            
+            # 如果单个文档就超过限制，单独成段
+            if doc_chars > max_chars_per_segment:
+                if current_segment:
+                    segments.append(current_segment)
+                    current_segment = []
+                    current_chars = 0
+                
+                # 分割超长文档
+                content = doc.get('content', '')
+                chunk_size = max_chars_per_segment
+                for j in range(0, len(content), chunk_size):
+                    chunk_content = content[j:j + chunk_size]
+                    chunk_doc = doc.copy()
+                    chunk_doc['content'] = chunk_content
+                    chunk_doc['title'] = f"{doc.get('title', 'N/A')} (部分{j//chunk_size + 1})"
+                    segments.append([chunk_doc])
+                continue
+            
+            # 检查是否需要开始新段
+            if current_chars + doc_chars > max_chars_per_segment and current_segment:
+                segments.append(current_segment)
+                current_segment = []
+                current_chars = 0
+            
+            current_segment.append(doc)
+            current_chars += doc_chars
+        
+        # 添加最后一段
+        if current_segment:
+            segments.append(current_segment)
+        
+        return segments
+    
+    def _merge_segment_reports(self, segment_reports: List[Dict], topic: str, max_tokens: int) -> APIResponse:
+        """融合各段报告"""
+        
+        # 构建融合提示
+        reports_content = ""
+        for report in segment_reports:
+            reports_content += f"\n=== 第{report['segment']}段报告 (基于{report['doc_count']}个文档) ===\n"
+            reports_content += report['content']
+            reports_content += "\n"
+        
+        system_prompt = """You are a professional research analyst. Please merge and synthesize multiple segment reports into a single comprehensive report.
+
+Merge requirements:
+1. Length: 2000-2500 words (comprehensive synthesis)
+2. Eliminate redundancy while preserving key insights
+3. Create coherent flow and logical structure
+4. Synthesize findings across all segments
+5. Maintain academic writing style
+6. Write ENTIRELY in English
+7. Ensure the final report is well-structured with clear sections"""
+
+        prompt = f"""Please merge the following segment reports about "{topic}" into a single comprehensive research report:
+
+{reports_content}
+
+Requirements:
+- Create a unified, comprehensive report that synthesizes insights from all segments
+- Eliminate redundancy while preserving unique insights from each segment
+- Maintain logical flow and academic structure
+- Target length: 2000-2500 words
+- Write entirely in English with professional academic tone"""
+
+        try:
+            merge_result = self.generate_text(
+                prompt=prompt,
+                max_tokens=max_tokens,
+                temperature=0.7,
+                system_prompt=system_prompt
+            )
+            
+            if merge_result.success:
+                print(f"    ✅ 报告融合完成 ({len(merge_result.content.split())} 词)")
+                
+                # 合并usage统计
+                total_usage = {
+                    'prompt_tokens': sum(r.get('usage', {}).get('prompt_tokens', 0) for r in segment_reports) + merge_result.usage.get('prompt_tokens', 0),
+                    'completion_tokens': sum(r.get('usage', {}).get('completion_tokens', 0) for r in segment_reports) + merge_result.usage.get('completion_tokens', 0),
+                    'total_tokens': 0
+                }
+                total_usage['total_tokens'] = total_usage['prompt_tokens'] + total_usage['completion_tokens']
+                
+                # 更新usage信息
+                merge_result.usage = total_usage
+                
+                return merge_result
+            else:
+                print(f"    ❌ 报告融合失败: {merge_result.error}")
+                return merge_result
+                
+        except Exception as e:
+            print(f"    ❌ 报告融合异常: {e}")
+            return APIResponse(
+                content="",
+                model=self.model,
+                usage={},
+                success=False,
+                error=f"报告融合失败: {str(e)}"
+            )
+    
+    def generate_questions(self, report: str, topic: str, num_questions: int = 50) -> APIResponse:
+        """生成问题 - 使用简单文本格式"""
+        
+        system_prompt = """You are a professional question design expert. Generate high-quality research questions based on the research report.
 
 Question requirements:
 1. Cover different difficulty levels: Easy (30%), Medium (40%), Hard (30%)
@@ -190,22 +392,40 @@ Question requirements:
 4. Questions should evaluate deep research capabilities
 5. Generate ALL questions in English for consistency in comparative analysis
 
-Output format: JSON array, each question contains:
-- question: Question content (in English only)
-- difficulty: Easy/Medium/Hard
-- type: Question type
-- reasoning: Question design rationale (in English)"""
+IMPORTANT: Use simple text format, not JSON. Format each question as:
+Q1: [Question text here]
+DIFFICULTY: Easy/Medium/Hard
+TYPE: Question type
+REASONING: Why this question is valuable
+
+Q2: [Next question]
+DIFFICULTY: Easy/Medium/Hard
+TYPE: Question type  
+REASONING: Why this question is valuable"""
 
         prompt = f"""Based on the following research report about "{topic}", generate {num_questions} high-quality research questions:
 
 Report content:
-{report}
+{report[:3000]}...
 
-Please generate {num_questions} questions with reasonable difficulty distribution and diverse types. Generate ALL questions in English only for consistency in comparative analysis."""
+CRITICAL REQUIREMENTS:
+1. Generate EXACTLY {num_questions} questions - THIS IS MANDATORY
+2. Use the simple text format shown above
+3. Difficulty distribution: ~{int(num_questions*0.3)} Easy, ~{int(num_questions*0.4)} Medium, ~{int(num_questions*0.3)} Hard
+4. All content in English
+5. Each question should be numbered Q1, Q2, Q3, ..., Q{num_questions}
 
+DO NOT STOP until you have generated all {num_questions} questions. Count them to ensure you have exactly {num_questions}.
+
+Generate the questions now:"""
+
+        # 计算需要的token数量: 每个问题大约80-100 tokens
+        estimated_tokens = num_questions * 100 + 500  # 加上缓冲
+        max_tokens = min(max(estimated_tokens, 6000), 8000)  # 最少6000，最多8000
+        
         return self.generate_text(
             prompt=prompt,
-            max_tokens=4000,
+            max_tokens=max_tokens,
             temperature=0.8,
             system_prompt=system_prompt
         )

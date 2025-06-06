@@ -1,0 +1,41 @@
+Title: What Makes Treatment Effects Identifiable? Characterizations and
+  Estimators Beyond Unconfoundedness
+
+Authors: Yang Cai, Alkis Kalavasis, Katerina Mamali, Anay Mehrotra, Manolis Zampetakis
+
+Abstract: Most of the widely used estimators of the average treatment effect (ATE) in
+causal inference rely on the assumptions of unconfoundedness and overlap.
+Unconfoundedness requires that the observed covariates account for all
+correlations between the outcome and treatment. Overlap requires the existence
+of randomness in treatment decisions for all individuals. Nevertheless, many
+types of studies frequently violate unconfoundedness or overlap, for instance,
+observational studies with deterministic treatment decisions -- popularly known
+as Regression Discontinuity designs -- violate overlap.
+  In this paper, we initiate the study of general conditions that enable the
+identification of the average treatment effect, extending beyond
+unconfoundedness and overlap. In particular, following the paradigm of
+statistical learning theory, we provide an interpretable condition that is
+sufficient and nearly necessary for the identification of ATE. Moreover, this
+condition characterizes the identification of the average treatment effect on
+the treated (ATT) and can be used to characterize other treatment effects as
+well. To illustrate the utility of our condition, we present several
+well-studied scenarios where our condition is satisfied and, hence, we prove
+that ATE can be identified in regimes that prior works could not capture. For
+example, under mild assumptions on the data distributions, this holds for the
+models proposed by Tan (2006) and Rosenbaum (2002), and the Regression
+Discontinuity design model introduced by Thistlethwaite and Campbell (1960).
+For each of these scenarios, we also show that, under natural additional
+assumptions, ATE can be estimated from finite samples.
+  We believe these findings open new avenues for bridging learning-theoretic
+insights and causal inference methodologies, particularly in observational
+studies with complex treatment mechanisms.
+
+Introduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.
+
+Methodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.
+
+Results: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.
+
+Discussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.
+
+Conclusion: This work presents a significant advancement in the field with practical implications for real-world applications.

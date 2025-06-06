@@ -1,0 +1,33 @@
+Title: Mechanical Degradation of Unentangled Polymer Melts under Uniaxial
+  Extensional Flow
+
+Authors: Mingchao Wang, Stephen Sanderson, Debra J. Searles
+
+Abstract: Complex flow fields govern the deformation of polymers in various
+manufacturing processes. However, high flow rates may trigger reaction events
+(i.e., bond breaking or undesirable reaction of mechanophores) in raw polymeric
+materials, leading to the mechanical or functional debasement of manufactured
+structures. Additionally, it is difficult to fully characterize such
+molecular-level flow in the laboratory due to time- and length-scale limits. In
+this study, we perform non-equilibrium molecular dynamics (NEMD) simulations to
+explore the rheological and mechanical degradation of unentangled polymer melts
+under uniaxial extensional flow (UEF), allowing for chain breaking. Our
+simulations demonstrate shear thickening-thinning-thickening stages with the
+increase of UEF extension rates, resulting from flow-induced changes of chain
+conformation. With further increasing UEF extension rates, a bond-breaking
+potential leads to another flow thinning stage. Interestingly, fracture
+kinetics is originally first-order owing to the need for highly stretched
+polymer chains before bond fracture. It is no longer first-order when bond
+fracture is instigated before chains are stretched. Our computational work
+provides insight into the optimal design of the manufacturing process for
+polymeric materials.
+
+Introduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.
+
+Methodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.
+
+Results: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.
+
+Discussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.
+
+Conclusion: This work presents a significant advancement in the field with practical implications for real-world applications.

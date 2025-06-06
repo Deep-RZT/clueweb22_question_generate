@@ -1,0 +1,35 @@
+Title: An integrated method for clustering and association network inference
+
+Authors: Jeanne Tous, Julien Chiquet
+
+Abstract: We consider high dimensional Gaussian graphical models inference. These
+models provide a rigorous framework to describe a network of statistical
+dependencies between entities, such as genes in genomic regulation studies or
+species in ecology. Penalized methods, including the standard Graphical-Lasso,
+are well-known approaches to infer the parameters of these models. As the
+number of variables in the model (of entities in the network) grow, the network
+inference and interpretation become more complex. We propose Normal-Block, a
+new model that clusters variables and consider a network at the cluster level.
+Normal-Block both adds structure to the network and reduces its size. We build
+on Graphical-Lasso to add a penalty on the network's edges and limit the
+detection of spurious dependencies, we also propose a zero-inflated version of
+the model to account for real-world data properties. For the inference
+procedure, we propose a direct heuristic method and another more rigorous one
+that simultaneously infers the clustering of variables and the association
+network between clusters, using a penalized variational
+Expectation-Maximization approach. An implementation of the model in R, in a
+package called normalblockr, is available on github
+(https://github.com/jeannetous/normalblockr). We present the results in terms
+of clustering and network inference using both simulated data and various types
+of real-world data (proteomics, words occurrences on webpages, and microbiota
+distribution).
+
+Introduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.
+
+Methodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.
+
+Results: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.
+
+Discussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.
+
+Conclusion: This work presents a significant advancement in the field with practical implications for real-world applications.

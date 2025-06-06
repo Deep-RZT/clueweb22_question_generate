@@ -1,0 +1,40 @@
+Title: Impact of friction force and retrieval speed on in silico mechanical
+  thrombectomies: a sensitivity analysis
+
+Authors: Mahesh S. Nagargoje, Virginia Fregona, Giulia Luraghi, Francesco Migliavacca, Demitria A Poulos
+
+Abstract: Background: Mechanical Thrombectomy (MT) is a widely accepted first-line
+treatment for Acute Ischemic Stroke (AIS) and it has been studied using in
+vitro and in silico models. Thrombectomy outcomes have been performed for
+patient-specific cases using in silico models. However, until now, in vivo
+friction coefficients for stent-vessel, stent-clot, and clot-vessel
+interactions are unknown, but in vitro experiments have been attempted with
+significant standard deviations. These interactions and friction coefficients
+have been considered an important aspect of thrombectomy success. Objectives:
+In the current study, we explored the influence of variation in friction forces
+for stent-vessel, stent-clot, and clot-vessel interactions using virtual
+mechanical thrombectomy (VMT). We have performed three simulations for each
+interaction and varied friction coefficients around the standard deviation
+observed in the past in vitro studies. Results: (i) clot-vessel friction:
+higher friction leads to clot fragmentation and VMT failure. (ii) stent-clot
+friction: it is susceptible to VMT outcomes, with lower values showing the
+slippage of the clot while higher values lead to fragmentation. (iii)
+stent-vessel friction: higher friction shows compression of the stent in curved
+vessels and dislodgment of clot from stent retriever (SR) due to its
+compression, which leads to VMT failure. (iv) retrieval speed (RS): higher RS
+(>30 mm/s) leads to significant stent compression and unrealistic behavior of
+the SR. Conclusions: Analysis of results proposes the necessity for calculating
+accurate friction factor values and their implementation into in silico models,
+due to their sensitivity towards thrombectomy outcomes. Such in silico models
+mimic in vivo thrombectomy more closely and can be used in mechanical
+thrombectomy planning, management, and decision-making.
+
+Introduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.
+
+Methodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.
+
+Results: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.
+
+Discussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.
+
+Conclusion: This work presents a significant advancement in the field with practical implications for real-world applications.

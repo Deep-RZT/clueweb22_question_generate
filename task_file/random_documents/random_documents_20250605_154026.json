@@ -1,0 +1,1336 @@
+[
+  {
+    "source": "arxiv",
+    "domain": "physics",
+    "language": "en",
+    "title": "Tailoring the resonant spin response of a stirred polariton condensate",
+    "abstract": "We report on the enhancement of the spin coherence time (T2) by almost an\norder-of-magnitude in exciton-polariton condensates through driven spin\nprecession resonance. Using a rotating optical trap formed by a bichromatic\nlaser excitation, we synchronize the trap stirring frequency with the\ncondensate intrinsic Larmor precession, achieving an order of magnitude\nincrease in spin coherence. By tuning the optical trap profile via excitation\nlasers intensity, we precisely control the resonance width. Here we present a\ntheoretical model that explains our experimental findings in terms of the\nmutual synchronization of the condensate circular polarization components. Our\nfindings underpin the potential of polariton condensates for spinoptronic\ndevices and quantum technologies.",
+    "authors": [
+      "Ivan Gnusov",
+      "Alexey Yulin",
+      "Stepan Baryshev",
+      "Sergey Alyatkin",
+      "Pavlos G. Lagoudakis"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: Tailoring the resonant spin response of a stirred polariton condensate\n\nAuthors: Ivan Gnusov, Alexey Yulin, Stepan Baryshev, Sergey Alyatkin, Pavlos G. Lagoudakis\n\nAbstract: We report on the enhancement of the spin coherence time (T2) by almost an\norder-of-magnitude in exciton-polariton condensates through driven spin\nprecession resonance. Using a rotating optical trap formed by a bichromatic\nlaser excitation, we synchronize the trap stirring frequency with the\ncondensate intrinsic Larmor precession, achieving an order of magnitude\nincrease in spin coherence. By tuning the optical trap profile via excitation\nlasers intensity, we precisely control the resonance width. Here we present a\ntheoretical model that explains our experimental findings in terms of the\nmutual synchronization of the condensate circular polarization components. Our\nfindings underpin the potential of polariton condensates for spinoptronic\ndevices and quantum technologies.\n\nIntroduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.\n\nMethodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.\n\nResults: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.\n\nDiscussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.\n\nConclusion: This work presents a significant advancement in the field with practical implications for real-world applications.",
+    "word_count": 235,
+    "char_count": 1803
+  },
+  {
+    "source": "generated_english",
+    "domain": "computer_science",
+    "language": "en",
+    "title": "Federated Learning with Differential Privacy in Healthcare Applications",
+    "abstract": "We propose a federated learning framework that incorporates differential privacy mechanisms for healthcare data analysis. The system ensures patient privacy while enabling collaborative machine learning across multiple institutions.",
+    "authors": [
+      "Dr. Jane Smith",
+      "Prof. Michael Johnson",
+      "Dr. Sarah Davis"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: Federated Learning with Differential Privacy in Healthcare Applications\n\nAbstract: We propose a federated learning framework that incorporates differential privacy mechanisms for healthcare data analysis. The system ensures patient privacy while enabling collaborative machine learning across multiple institutions.\n\nIntroduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.\n\nMethodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.\n\nResults: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.\n\nDiscussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.\n\nConclusion: This work presents a significant advancement in the field with practical implications for real-world applications.",
+    "word_count": 141,
+    "char_count": 1164
+  },
+  {
+    "source": "arxiv",
+    "domain": "physics",
+    "language": "en",
+    "title": "Eigenvalue analysis of three-state quantum walks with general coin\n  matrices",
+    "abstract": "Mathematical analysis of the spectral properties of the time evolution\noperator in quantum walks is essential for understanding key dynamical\nbehaviors such as localization and long-term evolution. The inhomogeneous\nthree-state case, in particular, poses substantial analytical challenges due to\nits higher internal degrees of freedom and the absence of translational\ninvariance. We develop a general framework for the spectral analysis of\nthree-state quantum walks on the one-dimensional lattice with arbitrary time\nevolution operators. Our novel approach is based on a transfer matrix\nformulation that reduces the infinite-dimensional eigenvalue problem to a\ntractable system of two-dimensional recursions, enabling exact characterization\nof localized eigenstates. This framework applies broadly to space-inhomogeneous\nmodels, including those with finite defects and two-phase structures. We\nrigorously derive necessary and sufficient conditions for the existence of\ndiscrete eigenvalues, along with a complete description of the corresponding\neigenvalues and eigenstates, which are known to underlie quantum localization\nphenomena. Using this method, we perform exact numerical analyses of the\nFourier walk with spatial inhomogeneity, revealing the emergence of\nlocalization despite its delocalized nature in the homogeneous case. Our\nresults provide mathematical tools and physical insights into the structure of\nquantum walks, offering a systematic path for identifying and characterizing\nlocalized quantum states in complex quantum systems.",
+    "authors": [
+      "Chusei Kiumi",
+      "Jirô Akahori",
+      "Takuya Watanabe",
+      "Norio Konno"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: Eigenvalue analysis of three-state quantum walks with general coin\n  matrices\n\nAuthors: Chusei Kiumi, Jirô Akahori, Takuya Watanabe, Norio Konno\n\nAbstract: Mathematical analysis of the spectral properties of the time evolution\noperator in quantum walks is essential for understanding key dynamical\nbehaviors such as localization and long-term evolution. The inhomogeneous\nthree-state case, in particular, poses substantial analytical challenges due to\nits higher internal degrees of freedom and the absence of translational\ninvariance. We develop a general framework for the spectral analysis of\nthree-state quantum walks on the one-dimensional lattice with arbitrary time\nevolution operators. Our novel approach is based on a transfer matrix\nformulation that reduces the infinite-dimensional eigenvalue problem to a\ntractable system of two-dimensional recursions, enabling exact characterization\nof localized eigenstates. This framework applies broadly to space-inhomogeneous\nmodels, including those with finite defects and two-phase structures. We\nrigorously derive necessary and sufficient conditions for the existence of\ndiscrete eigenvalues, along with a complete description of the corresponding\neigenvalues and eigenstates, which are known to underlie quantum localization\nphenomena. Using this method, we perform exact numerical analyses of the\nFourier walk with spatial inhomogeneity, revealing the emergence of\nlocalization despite its delocalized nature in the homogeneous case. Our\nresults provide mathematical tools and physical insights into the structure of\nquantum walks, offering a systematic path for identifying and characterizing\nlocalized quantum states in complex quantum systems.\n\nIntroduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.\n\nMethodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.\n\nResults: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.\n\nDiscussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.\n\nConclusion: This work presents a significant advancement in the field with practical implications for real-world applications.",
+    "word_count": 330,
+    "char_count": 2551
+  },
+  {
+    "source": "generated_english",
+    "domain": "physics",
+    "language": "en",
+    "title": "Novel Approaches in Condensed Matter: A Comprehensive Study",
+    "abstract": "This research investigates advanced methodologies in quantum physics with applications to real-world problems. Our approach demonstrates significant improvements over existing techniques.",
+    "authors": [
+      "Dr. Alex Wilson",
+      "Prof. Maria Garcia"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: Novel Approaches in Condensed Matter: A Comprehensive Study\n\nAbstract: This research investigates advanced methodologies in quantum physics with applications to real-world problems. Our approach demonstrates significant improvements over existing techniques.\n\nIntroduction: This study addresses important challenges in the field.\n\nMethods: We used state-of-the-art techniques for data collection and analysis.\n\nResults: Our findings show promising outcomes with practical implications.\n\nConclusion: This work contributes to advancing knowledge in the field.",
+    "word_count": 69,
+    "char_count": 564
+  },
+  {
+    "source": "generated_english",
+    "domain": "computer_science",
+    "language": "en",
+    "title": "Novel Approaches in Deep Learning: A Comprehensive Study",
+    "abstract": "This research investigates advanced methodologies in machine learning with applications to real-world problems. Our approach demonstrates significant improvements over existing techniques.",
+    "authors": [
+      "Dr. Alex Wilson",
+      "Prof. Maria Garcia"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: Novel Approaches in Deep Learning: A Comprehensive Study\n\nAbstract: This research investigates advanced methodologies in machine learning with applications to real-world problems. Our approach demonstrates significant improvements over existing techniques.\n\nIntroduction: This study addresses important challenges in the field.\n\nMethods: We used state-of-the-art techniques for data collection and analysis.\n\nResults: Our findings show promising outcomes with practical implications.\n\nConclusion: This work contributes to advancing knowledge in the field.",
+    "word_count": 69,
+    "char_count": 562
+  },
+  {
+    "source": "arxiv",
+    "domain": "physics",
+    "language": "en",
+    "title": "Impact of friction force and retrieval speed on in silico mechanical\n  thrombectomies: a sensitivity analysis",
+    "abstract": "Background: Mechanical Thrombectomy (MT) is a widely accepted first-line\ntreatment for Acute Ischemic Stroke (AIS) and it has been studied using in\nvitro and in silico models. Thrombectomy outcomes have been performed for\npatient-specific cases using in silico models. However, until now, in vivo\nfriction coefficients for stent-vessel, stent-clot, and clot-vessel\ninteractions are unknown, but in vitro experiments have been attempted with\nsignificant standard deviations. These interactions and friction coefficients\nhave been considered an important aspect of thrombectomy success. Objectives:\nIn the current study, we explored the influence of variation in friction forces\nfor stent-vessel, stent-clot, and clot-vessel interactions using virtual\nmechanical thrombectomy (VMT). We have performed three simulations for each\ninteraction and varied friction coefficients around the standard deviation\nobserved in the past in vitro studies. Results: (i) clot-vessel friction:\nhigher friction leads to clot fragmentation and VMT failure. (ii) stent-clot\nfriction: it is susceptible to VMT outcomes, with lower values showing the\nslippage of the clot while higher values lead to fragmentation. (iii)\nstent-vessel friction: higher friction shows compression of the stent in curved\nvessels and dislodgment of clot from stent retriever (SR) due to its\ncompression, which leads to VMT failure. (iv) retrieval speed (RS): higher RS\n(>30 mm/s) leads to significant stent compression and unrealistic behavior of\nthe SR. Conclusions: Analysis of results proposes the necessity for calculating\naccurate friction factor values and their implementation into in silico models,\ndue to their sensitivity towards thrombectomy outcomes. Such in silico models\nmimic in vivo thrombectomy more closely and can be used in mechanical\nthrombectomy planning, management, and decision-making.",
+    "authors": [
+      "Mahesh S. Nagargoje",
+      "Virginia Fregona",
+      "Giulia Luraghi",
+      "Francesco Migliavacca",
+      "Demitria A Poulos",
+      "Bryan C Good",
+      "Jose Felix Rodriguez Matas"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: Impact of friction force and retrieval speed on in silico mechanical\n  thrombectomies: a sensitivity analysis\n\nAuthors: Mahesh S. Nagargoje, Virginia Fregona, Giulia Luraghi, Francesco Migliavacca, Demitria A Poulos\n\nAbstract: Background: Mechanical Thrombectomy (MT) is a widely accepted first-line\ntreatment for Acute Ischemic Stroke (AIS) and it has been studied using in\nvitro and in silico models. Thrombectomy outcomes have been performed for\npatient-specific cases using in silico models. However, until now, in vivo\nfriction coefficients for stent-vessel, stent-clot, and clot-vessel\ninteractions are unknown, but in vitro experiments have been attempted with\nsignificant standard deviations. These interactions and friction coefficients\nhave been considered an important aspect of thrombectomy success. Objectives:\nIn the current study, we explored the influence of variation in friction forces\nfor stent-vessel, stent-clot, and clot-vessel interactions using virtual\nmechanical thrombectomy (VMT). We have performed three simulations for each\ninteraction and varied friction coefficients around the standard deviation\nobserved in the past in vitro studies. Results: (i) clot-vessel friction:\nhigher friction leads to clot fragmentation and VMT failure. (ii) stent-clot\nfriction: it is susceptible to VMT outcomes, with lower values showing the\nslippage of the clot while higher values lead to fragmentation. (iii)\nstent-vessel friction: higher friction shows compression of the stent in curved\nvessels and dislodgment of clot from stent retriever (SR) due to its\ncompression, which leads to VMT failure. (iv) retrieval speed (RS): higher RS\n(>30 mm/s) leads to significant stent compression and unrealistic behavior of\nthe SR. Conclusions: Analysis of results proposes the necessity for calculating\naccurate friction factor values and their implementation into in silico models,\ndue to their sensitivity towards thrombectomy outcomes. Such in silico models\nmimic in vivo thrombectomy more closely and can be used in mechanical\nthrombectomy planning, management, and decision-making.\n\nIntroduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.\n\nMethodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.\n\nResults: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.\n\nDiscussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.\n\nConclusion: This work presents a significant advancement in the field with practical implications for real-world applications.",
+    "word_count": 394,
+    "char_count": 2941
+  },
+  {
+    "source": "arxiv",
+    "domain": "physics",
+    "language": "en",
+    "title": "Test of conformal gravity as an alternative to dark matter from the\n  observations of elliptical galaxies",
+    "abstract": "As an alternative gravitational theory to General Relativity (GR), the\nConformal Gravity (CG) has recently been successfully verified by observations\nof Type Ia supernovae (SN Ia) and the rotation curves of spiral galaxies. The\nobservations of galaxies only pertain to the non-relativistic form of gravity.\nIn this context, within the framework of the Newtonian theory of gravity (the\nnon-relativistic form of GR), dark matter is postulated to account for the\nobservations. On the other hand, the non-relativistic form of CG predicts an\nadditional potential: besides the Newtonian potential, there is a so-called\nlinear potential term, characterized by the parameter $\\gamma^*$, as an\nalternative to dark matter in Newtonian gravity. To test CG in its\nnon-relativistic form, much work has been done by fitting the predictions to\nthe observations of circular velocity (rotation curves) for spiral galaxies. In\nthis paper, we test CG with the observations from elliptical galaxies. Instead\nof the circular velocities for spiral galaxies, we use the velocity dispersion\nfor elliptical galaxies. By replacing the Newtonian potential with that\npredicted by non-relativistic form of CG in Hamiltonian, we directly extend the\nJeans equation derived in Newtonian theory to that for CG. By comparing the\nresults derived from the ellipticals with that from spirals, we find that the\nextra potential predicted by CG is not sufficient to account for the\nobservations of ellipticals. Furthermore, we discover a strong correlation\nbetween $\\gamma^*$ and the stellar mass $M^*$ in dwarf spheroidal galaxies.\nThis finding implies that the variation in $\\gamma^*$ violates a fundamental\nprediction of Conformal Gravity (CG), which posits that $\\gamma^*$ should be a\nuniversal constant.",
+    "authors": [
+      "Li-Xue Yue",
+      "Da-Ming Chen"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: Test of conformal gravity as an alternative to dark matter from the\n  observations of elliptical galaxies\n\nAuthors: Li-Xue Yue, Da-Ming Chen\n\nAbstract: As an alternative gravitational theory to General Relativity (GR), the\nConformal Gravity (CG) has recently been successfully verified by observations\nof Type Ia supernovae (SN Ia) and the rotation curves of spiral galaxies. The\nobservations of galaxies only pertain to the non-relativistic form of gravity.\nIn this context, within the framework of the Newtonian theory of gravity (the\nnon-relativistic form of GR), dark matter is postulated to account for the\nobservations. On the other hand, the non-relativistic form of CG predicts an\nadditional potential: besides the Newtonian potential, there is a so-called\nlinear potential term, characterized by the parameter $\\gamma^*$, as an\nalternative to dark matter in Newtonian gravity. To test CG in its\nnon-relativistic form, much work has been done by fitting the predictions to\nthe observations of circular velocity (rotation curves) for spiral galaxies. In\nthis paper, we test CG with the observations from elliptical galaxies. Instead\nof the circular velocities for spiral galaxies, we use the velocity dispersion\nfor elliptical galaxies. By replacing the Newtonian potential with that\npredicted by non-relativistic form of CG in Hamiltonian, we directly extend the\nJeans equation derived in Newtonian theory to that for CG. By comparing the\nresults derived from the ellipticals with that from spirals, we find that the\nextra potential predicted by CG is not sufficient to account for the\nobservations of ellipticals. Furthermore, we discover a strong correlation\nbetween $\\gamma^*$ and the stellar mass $M^*$ in dwarf spheroidal galaxies.\nThis finding implies that the variation in $\\gamma^*$ violates a fundamental\nprediction of Conformal Gravity (CG), which posits that $\\gamma^*$ should be a\nuniversal constant.\n\nIntroduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.\n\nMethodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.\n\nResults: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.\n\nDiscussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.\n\nConclusion: This work presents a significant advancement in the field with practical implications for real-world applications.",
+    "word_count": 392,
+    "char_count": 2769
+  },
+  {
+    "source": "generated_english",
+    "domain": "biomedical",
+    "language": "en",
+    "title": "Novel Approaches in Bioinformatics: A Comprehensive Study",
+    "abstract": "This research investigates advanced methodologies in proteomics with applications to real-world problems. Our approach demonstrates significant improvements over existing techniques.",
+    "authors": [
+      "Dr. Alex Wilson",
+      "Prof. Maria Garcia"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: Novel Approaches in Bioinformatics: A Comprehensive Study\n\nAbstract: This research investigates advanced methodologies in proteomics with applications to real-world problems. Our approach demonstrates significant improvements over existing techniques.\n\nIntroduction: This study addresses important challenges in the field.\n\nMethods: We used state-of-the-art techniques for data collection and analysis.\n\nResults: Our findings show promising outcomes with practical implications.\n\nConclusion: This work contributes to advancing knowledge in the field.",
+    "word_count": 67,
+    "char_count": 557
+  },
+  {
+    "source": "arxiv",
+    "domain": "biomedical",
+    "language": "en",
+    "title": "Interactive Databases for the Life Sciences",
+    "abstract": "In the past few decades, the life sciences have experienced an unprecedented\naccumulation of data, ranging from genomic sequences and proteomic profiles to\nheavy-content imaging, clinical assays, and commercial biological products for\nresearch. Traditional static databases have been invaluable in providing\nstandardized and structured information. However, they fall short when it comes\nto facilitating exploratory data interrogation, real-time query,\nmultidimensional comparison and dynamic visualization. Interactive databases\naiming at supporting user-driven data queries and visualization offer promising\nnew avenues for making the best use of the vast and heterogeneous data streams\ncollected in biological research. This article discusses the potential of\ninteractive databases, highlighting the importance of implementing this model\nin the life sciences, while going through the state-of-the-art in database\ndesign, technical choices behind modern data management systems, and emerging\nneeds in multidisciplinary research. Special attention is given to data\ninterrogation strategies, user interface design, and comparative analysis\ncapabilities, along with challenges such as data standardization and\nscalability in data-heavy applications. Conceptual features for developing\ninteractive databases along diverse life science domains are then presented in\nthe user case of cell line selection for in vitro research to bridge the gap\nbetween research data generation, actionable biological insight, subsequent\nmeaningful experimental design, and clinical relevance.",
+    "authors": [
+      "Rosalia Moreddu"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: Interactive Databases for the Life Sciences\n\nAuthors: Rosalia Moreddu\n\nAbstract: In the past few decades, the life sciences have experienced an unprecedented\naccumulation of data, ranging from genomic sequences and proteomic profiles to\nheavy-content imaging, clinical assays, and commercial biological products for\nresearch. Traditional static databases have been invaluable in providing\nstandardized and structured information. However, they fall short when it comes\nto facilitating exploratory data interrogation, real-time query,\nmultidimensional comparison and dynamic visualization. Interactive databases\naiming at supporting user-driven data queries and visualization offer promising\nnew avenues for making the best use of the vast and heterogeneous data streams\ncollected in biological research. This article discusses the potential of\ninteractive databases, highlighting the importance of implementing this model\nin the life sciences, while going through the state-of-the-art in database\ndesign, technical choices behind modern data management systems, and emerging\nneeds in multidisciplinary research. Special attention is given to data\ninterrogation strategies, user interface design, and comparative analysis\ncapabilities, along with challenges such as data standardization and\nscalability in data-heavy applications. Conceptual features for developing\ninteractive databases along diverse life science domains are then presented in\nthe user case of cell line selection for in vitro research to bridge the gap\nbetween research data generation, actionable biological insight, subsequent\nmeaningful experimental design, and clinical relevance.\n\nIntroduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.\n\nMethodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.\n\nResults: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.\n\nDiscussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.\n\nConclusion: This work presents a significant advancement in the field with practical implications for real-world applications.",
+    "word_count": 319,
+    "char_count": 2501
+  },
+  {
+    "source": "generated_japanese",
+    "domain": "materials",
+    "language": "ja",
+    "title": "ナノテクノロジーに関するシステム開発",
+    "abstract": "本研究ではナノテクノロジーの改良アルゴリズムについて検討した。実験結果により有効性を確認した。",
+    "authors": [
+      "高橋乤"
+    ],
+    "content_type": "japanese_academic_paper",
+    "full_content": "タイトル: ナノテクノロジーに関するシステム開発\n\n要旨: 本研究ではナノテクノロジーの改良アルゴリズムについて検討した。実験結果により有効性を確認した。\n\n序論: 本研究は当該分野の重要な課題に取り組む。\n\n方法: データ収集と解析に最新技術を使用した。\n\n結果: 実用的な意味を持つ有望な成果を示した。\n\n結論: 本研究は当該分野の知識向上に貢献する。",
+    "word_count": 12,
+    "char_count": 178
+  },
+  {
+    "source": "generated_japanese",
+    "domain": "computer_science",
+    "language": "ja",
+    "title": "ディープラーニングに関する性能評価",
+    "abstract": "本研究では機械学習の改良アルゴリズムについて検討した。実験結果により有効性を確認した。",
+    "authors": [
+      "鈴木丗"
+    ],
+    "content_type": "japanese_academic_paper",
+    "full_content": "タイトル: ディープラーニングに関する性能評価\n\n要旨: 本研究では機械学習の改良アルゴリズムについて検討した。実験結果により有効性を確認した。\n\n序論: 本研究は当該分野の重要な課題に取り組む。\n\n方法: データ収集と解析に最新技術を使用した。\n\n結果: 実用的な意味を持つ有望な成果を示した。\n\n結論: 本研究は当該分野の知識向上に貢献する。",
+    "word_count": 12,
+    "char_count": 173
+  },
+  {
+    "source": "j-stage_simulation",
+    "domain": "materials",
+    "language": "ja",
+    "title": "ナノ材料の表面特性と電気化学的応用",
+    "abstract": "ナノスケール材料の表面特性を制御することで、電気化学デバイスの性能向上を図った。新しい合成手法により、従来比で効率を20%向上させることができた。",
+    "authors": [
+      "田中一郎",
+      "佐藤二子"
+    ],
+    "content_type": "japanese_academic_paper",
+    "full_content": "タイトル: ナノ材料の表面特性と電気化学的応用\n\n要旨: ナノスケール材料の表面特性を制御することで、電気化学デバイスの性能向上を図った。新しい合成手法により、従来比で効率を20%向上させることができた。\n\n序論: この分野における最近の進歩により、革新的な応用への新たな可能性が開かれている。本研究は現在の限界に対処し、新しい解決策を提案する。\n\n方法: 我々は厳密な実験プロトコルと先進的な計算技術を用いてアプローチを検証した。結果の信頼性を確保するために統計解析を実施した。\n\n結果: 実験データはベースライン手法に対して有意な改善を示している。主要な性能指標により、提案手法の有効性が実証された。\n\n考察: これらの知見は当該分野の現在の理解に寄与し、将来の研究方向性に関する洞察を提供する。潜在的な応用は複数の領域にわたる。\n\n結論: 本研究は実世界への応用において実用的な意味を持つ、当該分野における重要な進歩を示している。",
+    "word_count": 14,
+    "char_count": 418
+  },
+  {
+    "source": "arxiv",
+    "domain": "biomedical",
+    "language": "en",
+    "title": "A Novel Approach to Linking Histology Images with DNA Methylation",
+    "abstract": "DNA methylation is an epigenetic mechanism that regulates gene expression by\nadding methyl groups to DNA. Abnormal methylation patterns can disrupt gene\nexpression and have been linked to cancer development. To quantify DNA\nmethylation, specialized assays are typically used. However, these assays are\noften costly and have lengthy processing times, which limits their widespread\navailability in routine clinical practice. In contrast, whole slide images\n(WSIs) for the majority of cancer patients can be more readily available. As\nsuch, given the ready availability of WSIs, there is a compelling need to\nexplore the potential relationship between WSIs and DNA methylation patterns.\nTo address this, we propose an end-to-end graph neural network based weakly\nsupervised learning framework to predict the methylation state of gene groups\nexhibiting coherent patterns across samples. Using data from three cohorts from\nThe Cancer Genome Atlas (TCGA) - TCGA-LGG (Brain Lower Grade Glioma), TCGA-GBM\n(Glioblastoma Multiforme) ($n$=729) and TCGA-KIRC (Kidney Renal Clear Cell\nCarcinoma) ($n$=511) - we demonstrate that the proposed approach achieves\nsignificantly higher AUROC scores than the state-of-the-art (SOTA) methods, by\nmore than $20\\%$. We conduct gene set enrichment analyses on the gene groups\nand show that majority of the gene groups are significantly enriched in\nimportant hallmarks and pathways. We also generate spatially enriched heatmaps\nto further investigate links between histological patterns and DNA methylation\nstates. To the best of our knowledge, this is the first study that explores\nassociation of spatially resolved histological patterns with gene group\nmethylation states across multiple cancer types using weakly supervised deep\nlearning.",
+    "authors": [
+      "Manahil Raza",
+      "Muhammad Dawood",
+      "Talha Qaiser",
+      "Nasir M. Rajpoot"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: A Novel Approach to Linking Histology Images with DNA Methylation\n\nAuthors: Manahil Raza, Muhammad Dawood, Talha Qaiser, Nasir M. Rajpoot\n\nAbstract: DNA methylation is an epigenetic mechanism that regulates gene expression by\nadding methyl groups to DNA. Abnormal methylation patterns can disrupt gene\nexpression and have been linked to cancer development. To quantify DNA\nmethylation, specialized assays are typically used. However, these assays are\noften costly and have lengthy processing times, which limits their widespread\navailability in routine clinical practice. In contrast, whole slide images\n(WSIs) for the majority of cancer patients can be more readily available. As\nsuch, given the ready availability of WSIs, there is a compelling need to\nexplore the potential relationship between WSIs and DNA methylation patterns.\nTo address this, we propose an end-to-end graph neural network based weakly\nsupervised learning framework to predict the methylation state of gene groups\nexhibiting coherent patterns across samples. Using data from three cohorts from\nThe Cancer Genome Atlas (TCGA) - TCGA-LGG (Brain Lower Grade Glioma), TCGA-GBM\n(Glioblastoma Multiforme) ($n$=729) and TCGA-KIRC (Kidney Renal Clear Cell\nCarcinoma) ($n$=511) - we demonstrate that the proposed approach achieves\nsignificantly higher AUROC scores than the state-of-the-art (SOTA) methods, by\nmore than $20\\%$. We conduct gene set enrichment analyses on the gene groups\nand show that majority of the gene groups are significantly enriched in\nimportant hallmarks and pathways. We also generate spatially enriched heatmaps\nto further investigate links between histological patterns and DNA methylation\nstates. To the best of our knowledge, this is the first study that explores\nassociation of spatially resolved histological patterns with gene group\nmethylation states across multiple cancer types using weakly supervised deep\nlearning.\n\nIntroduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.\n\nMethodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.\n\nResults: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.\n\nDiscussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.\n\nConclusion: This work presents a significant advancement in the field with practical implications for real-world applications.",
+    "word_count": 379,
+    "char_count": 2764
+  },
+  {
+    "source": "generated_english",
+    "domain": "computer_science",
+    "language": "en",
+    "title": "Novel Approaches in Deep Learning: A Comprehensive Study",
+    "abstract": "This research investigates advanced methodologies in machine learning with applications to real-world problems. Our approach demonstrates significant improvements over existing techniques.",
+    "authors": [
+      "Dr. Alex Wilson",
+      "Prof. Maria Garcia"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: Novel Approaches in Deep Learning: A Comprehensive Study\n\nAbstract: This research investigates advanced methodologies in machine learning with applications to real-world problems. Our approach demonstrates significant improvements over existing techniques.\n\nIntroduction: This study addresses important challenges in the field.\n\nMethods: We used state-of-the-art techniques for data collection and analysis.\n\nResults: Our findings show promising outcomes with practical implications.\n\nConclusion: This work contributes to advancing knowledge in the field.",
+    "word_count": 69,
+    "char_count": 562
+  },
+  {
+    "source": "j-stage_simulation",
+    "domain": "computer_science",
+    "language": "ja",
+    "title": "ニューラルネットワークの量子化技術とその応用",
+    "abstract": "量子化技術によりニューラルネットワークのメモリ使用量を削減し、推論速度を向上させる手法を提案する。モバイルデバイスでの実装において有効性を確認した。",
+    "authors": [
+      "田中丂郎",
+      "佐藤于子"
+    ],
+    "content_type": "japanese_academic_paper",
+    "full_content": "タイトル: ニューラルネットワークの量子化技術とその応用\n\n要旨: 量子化技術によりニューラルネットワークのメモリ使用量を削減し、推論速度を向上させる手法を提案する。モバイルデバイスでの実装において有効性を確認した。\n\n序論: この分野における最近の進歩により、革新的な応用への新たな可能性が開かれている。本研究は現在の限界に対処し、新しい解決策を提案する。\n\n方法: 我々は厳密な実験プロトコルと先進的な計算技術を用いてアプローチを検証した。結果の信頼性を確保するために統計解析を実施した。\n\n結果: 実験データはベースライン手法に対して有意な改善を示している。主要な性能指標により、提案手法の有効性が実証された。\n\n考察: これらの知見は当該分野の現在の理解に寄与し、将来の研究方向性に関する洞察を提供する。潜在的な応用は複数の領域にわたる。\n\n結論: 本研究は実世界への応用において実用的な意味を持つ、当該分野における重要な進歩を示している。",
+    "word_count": 14,
+    "char_count": 424
+  },
+  {
+    "source": "arxiv",
+    "domain": "computer_science",
+    "language": "en",
+    "title": "CARL: Camera-Agnostic Representation Learning for Spectral Image\n  Analysis",
+    "abstract": "Spectral imaging offers promising applications across diverse domains,\nincluding medicine and urban scene understanding, and is already established as\na critical modality in remote sensing. However, variability in channel\ndimensionality and captured wavelengths among spectral cameras impede the\ndevelopment of AI-driven methodologies, leading to camera-specific models with\nlimited generalizability and inadequate cross-camera applicability. To address\nthis bottleneck, we introduce $\\textbf{CARL}$, a model for\n$\\textbf{C}$amera-$\\textbf{A}$gnostic $\\textbf{R}$epresentation\n$\\textbf{L}$earning across RGB, multispectral, and hyperspectral imaging\nmodalities. To enable the conversion of a spectral image with any channel\ndimensionality to a camera-agnostic embedding, we introduce wavelength\npositional encoding and a self-attention-cross-attention mechanism to compress\nspectral information into learned query representations. Spectral-spatial\npre-training is achieved with a novel spectral self-supervised JEPA-inspired\nstrategy tailored to CARL. Large-scale experiments across the domains of\nmedical imaging, autonomous driving, and satellite imaging demonstrate our\nmodel's unique robustness to spectral heterogeneity, outperforming on datasets\nwith simulated and real-world cross-camera spectral variations. The scalability\nand versatility of the proposed approach position our model as a backbone for\nfuture spectral foundation models.",
+    "authors": [
+      "Alexander Baumann",
+      "Leonardo Ayala",
+      "Silvia Seidlitz",
+      "Jan Sellner",
+      "Alexander Studier-Fischer",
+      "Berkin Özdemir",
+      "Lena Maier-Hein",
+      "Slobodan Ilic"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: CARL: Camera-Agnostic Representation Learning for Spectral Image\n  Analysis\n\nAuthors: Alexander Baumann, Leonardo Ayala, Silvia Seidlitz, Jan Sellner, Alexander Studier-Fischer\n\nAbstract: Spectral imaging offers promising applications across diverse domains,\nincluding medicine and urban scene understanding, and is already established as\na critical modality in remote sensing. However, variability in channel\ndimensionality and captured wavelengths among spectral cameras impede the\ndevelopment of AI-driven methodologies, leading to camera-specific models with\nlimited generalizability and inadequate cross-camera applicability. To address\nthis bottleneck, we introduce $\\textbf{CARL}$, a model for\n$\\textbf{C}$amera-$\\textbf{A}$gnostic $\\textbf{R}$epresentation\n$\\textbf{L}$earning across RGB, multispectral, and hyperspectral imaging\nmodalities. To enable the conversion of a spectral image with any channel\ndimensionality to a camera-agnostic embedding, we introduce wavelength\npositional encoding and a self-attention-cross-attention mechanism to compress\nspectral information into learned query representations. Spectral-spatial\npre-training is achieved with a novel spectral self-supervised JEPA-inspired\nstrategy tailored to CARL. Large-scale experiments across the domains of\nmedical imaging, autonomous driving, and satellite imaging demonstrate our\nmodel's unique robustness to spectral heterogeneity, outperforming on datasets\nwith simulated and real-world cross-camera spectral variations. The scalability\nand versatility of the proposed approach position our model as a backbone for\nfuture spectral foundation models.\n\nIntroduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.\n\nMethodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.\n\nResults: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.\n\nDiscussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.\n\nConclusion: This work presents a significant advancement in the field with practical implications for real-world applications.",
+    "word_count": 294,
+    "char_count": 2481
+  },
+  {
+    "source": "arxiv",
+    "domain": "physics",
+    "language": "en",
+    "title": "Canceling the elastic Poynting effect with geometry",
+    "abstract": "The Poynting effect is a paragon of nonlinear soft matter mechanics. It is\nthe tendency (found in all incompressible, isotropic, hyperelastic solids)\nexhibited by a soft block to expand vertically when sheared horizontally. It\ncan be observed whenever the length of the cuboid is at least four times its\nthickness. Here we show that the Poynting effect can be easily reversed and the\ncuboid can shrink vertically, simply by reducing this aspect ratio. In\nprinciple, this discovery means that for a given solid, say one used as a\nseismic wave absorber under a building, an optimal ratio exists where vertical\ndisplacements and vibrations can be completely eliminated. Here we first recall\nthe classical theoretical treatment of the positive Poynting effect, and then\nshow experimentally how it can be reversed. Using Finite Element simulations,\nwe then investigate how the effect can be suppressed. We find that cubes always\nprovide a reverse Poynting effect, irrespective of their material properties\n(in the third-order theory of weakly nonlinear elasticity).",
+    "authors": [
+      "M. Destrade",
+      "Y. Du",
+      "J. Blackwell",
+      "N. Colgan",
+      "V. Balbi"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: Canceling the elastic Poynting effect with geometry\n\nAuthors: M. Destrade, Y. Du, J. Blackwell, N. Colgan, V. Balbi\n\nAbstract: The Poynting effect is a paragon of nonlinear soft matter mechanics. It is\nthe tendency (found in all incompressible, isotropic, hyperelastic solids)\nexhibited by a soft block to expand vertically when sheared horizontally. It\ncan be observed whenever the length of the cuboid is at least four times its\nthickness. Here we show that the Poynting effect can be easily reversed and the\ncuboid can shrink vertically, simply by reducing this aspect ratio. In\nprinciple, this discovery means that for a given solid, say one used as a\nseismic wave absorber under a building, an optimal ratio exists where vertical\ndisplacements and vibrations can be completely eliminated. Here we first recall\nthe classical theoretical treatment of the positive Poynting effect, and then\nshow experimentally how it can be reversed. Using Finite Element simulations,\nwe then investigate how the effect can be suppressed. We find that cubes always\nprovide a reverse Poynting effect, irrespective of their material properties\n(in the third-order theory of weakly nonlinear elasticity).\n\nIntroduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.\n\nMethodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.\n\nResults: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.\n\nDiscussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.\n\nConclusion: This work presents a significant advancement in the field with practical implications for real-world applications.",
+    "word_count": 288,
+    "char_count": 2036
+  },
+  {
+    "source": "arxiv",
+    "domain": "biomedical",
+    "language": "en",
+    "title": "Dimensionality reduction for k-means clustering of large-scale influenza\n  mutation datasets",
+    "abstract": "Viral mutations pose significant threats to public health by increasing\ninfectivity, strengthening vaccine resistance, and altering disease severity.\nTo track these evolving patterns, agencies like the CDC annually evaluate\nthousands of virus strains, underscoring the urgent need to understand viral\nmutagenesis and evolution in depth. In this study, we integrate genomic\nanalysis, clustering, and three leading dimensionality reduction approaches,\nnamely, principal component analysis (PCA), t-distributed stochastic neighbor\nembedding (t-SNE), and uniform manifold approximation and projection (UMAP)-to\ninvestigate the effects of COVID-19 on influenza virus propagation. By applying\nthese methods to extensive pre- and post-pandemic influenza datasets, we reveal\nhow selective pressures during the pandemic have influenced the diversity of\ninfluenza genetics. Our findings indicate that combining robust dimension\nreduction with clustering yields critical insights into the complex dynamics of\nviral mutation, informing both future research directions and strategies for\npublic health intervention.",
+    "authors": [
+      "Emilee Walden",
+      "Jiahui Chen",
+      "Guo-Wei Wei"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: Dimensionality reduction for k-means clustering of large-scale influenza\n  mutation datasets\n\nAuthors: Emilee Walden, Jiahui Chen, Guo-Wei Wei\n\nAbstract: Viral mutations pose significant threats to public health by increasing\ninfectivity, strengthening vaccine resistance, and altering disease severity.\nTo track these evolving patterns, agencies like the CDC annually evaluate\nthousands of virus strains, underscoring the urgent need to understand viral\nmutagenesis and evolution in depth. In this study, we integrate genomic\nanalysis, clustering, and three leading dimensionality reduction approaches,\nnamely, principal component analysis (PCA), t-distributed stochastic neighbor\nembedding (t-SNE), and uniform manifold approximation and projection (UMAP)-to\ninvestigate the effects of COVID-19 on influenza virus propagation. By applying\nthese methods to extensive pre- and post-pandemic influenza datasets, we reveal\nhow selective pressures during the pandemic have influenced the diversity of\ninfluenza genetics. Our findings indicate that combining robust dimension\nreduction with clustering yields critical insights into the complex dynamics of\nviral mutation, informing both future research directions and strategies for\npublic health intervention.\n\nIntroduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.\n\nMethodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.\n\nResults: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.\n\nDiscussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.\n\nConclusion: This work presents a significant advancement in the field with practical implications for real-world applications.",
+    "word_count": 264,
+    "char_count": 2105
+  },
+  {
+    "source": "j-stage_simulation",
+    "domain": "materials",
+    "language": "ja",
+    "title": "超分子化学による自己組織化材料の設計",
+    "abstract": "分子間相互作用を利用した自己組織化材料の設計原理について研究した。温度変化に応答して構造変化を示す材料を開発し、スマートマテリアルとしての応用可能性を実証した。",
+    "authors": [
+      "田中丄郎",
+      "佐藤亐子"
+    ],
+    "content_type": "japanese_academic_paper",
+    "full_content": "タイトル: 超分子化学による自己組織化材料の設計\n\n要旨: 分子間相互作用を利用した自己組織化材料の設計原理について研究した。温度変化に応答して構造変化を示す材料を開発し、スマートマテリアルとしての応用可能性を実証した。\n\n序論: この分野における最近の進歩により、革新的な応用への新たな可能性が開かれている。本研究は現在の限界に対処し、新しい解決策を提案する。\n\n方法: 我々は厳密な実験プロトコルと先進的な計算技術を用いてアプローチを検証した。結果の信頼性を確保するために統計解析を実施した。\n\n結果: 実験データはベースライン手法に対して有意な改善を示している。主要な性能指標により、提案手法の有効性が実証された。\n\n考察: これらの知見は当該分野の現在の理解に寄与し、将来の研究方向性に関する洞察を提供する。潜在的な応用は複数の領域にわたる。\n\n結論: 本研究は実世界への応用において実用的な意味を持つ、当該分野における重要な進歩を示している。",
+    "word_count": 14,
+    "char_count": 426
+  },
+  {
+    "source": "arxiv",
+    "domain": "computer_science",
+    "language": "en",
+    "title": "DiffCAP: Diffusion-based Cumulative Adversarial Purification for Vision\n  Language Models",
+    "abstract": "Vision Language Models (VLMs) have shown remarkable capabilities in\nmultimodal understanding, yet their susceptibility to perturbations poses a\nsignificant threat to their reliability in real-world applications. Despite\noften being imperceptible to humans, these perturbations can drastically alter\nmodel outputs, leading to erroneous interpretations and decisions. This paper\nintroduces DiffCAP, a novel diffusion-based purification strategy that can\neffectively neutralize adversarial corruptions in VLMs. We observe that adding\nminimal noise to an adversarially corrupted image significantly alters its\nlatent embedding with respect to VLMs. Building on this insight, DiffCAP\ncumulatively injects random Gaussian noise into adversarially perturbed input\ndata. This process continues until the embeddings of two consecutive noisy\nimages reach a predefined similarity threshold, indicating a potential approach\nto neutralize the adversarial effect. Subsequently, a pretrained diffusion\nmodel is employed to denoise the stabilized image, recovering a clean\nrepresentation suitable for the VLMs to produce an output. Through extensive\nexperiments across six datasets with three VLMs under varying attack strengths\nin three task scenarios, we show that DiffCAP consistently outperforms existing\ndefense techniques by a substantial margin. Notably, DiffCAP significantly\nreduces both hyperparameter tuning complexity and the required diffusion time,\nthereby accelerating the denoising process. Equipped with strong theoretical\nand empirical support, DiffCAP provides a robust and practical solution for\nsecurely deploying VLMs in adversarial environments.",
+    "authors": [
+      "Jia Fu",
+      "Yongtao Wu",
+      "Yihang Chen",
+      "Kunyu Peng",
+      "Xiao Zhang",
+      "Volkan Cevher",
+      "Sepideh Pashami",
+      "Anders Holst"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: DiffCAP: Diffusion-based Cumulative Adversarial Purification for Vision\n  Language Models\n\nAuthors: Jia Fu, Yongtao Wu, Yihang Chen, Kunyu Peng, Xiao Zhang\n\nAbstract: Vision Language Models (VLMs) have shown remarkable capabilities in\nmultimodal understanding, yet their susceptibility to perturbations poses a\nsignificant threat to their reliability in real-world applications. Despite\noften being imperceptible to humans, these perturbations can drastically alter\nmodel outputs, leading to erroneous interpretations and decisions. This paper\nintroduces DiffCAP, a novel diffusion-based purification strategy that can\neffectively neutralize adversarial corruptions in VLMs. We observe that adding\nminimal noise to an adversarially corrupted image significantly alters its\nlatent embedding with respect to VLMs. Building on this insight, DiffCAP\ncumulatively injects random Gaussian noise into adversarially perturbed input\ndata. This process continues until the embeddings of two consecutive noisy\nimages reach a predefined similarity threshold, indicating a potential approach\nto neutralize the adversarial effect. Subsequently, a pretrained diffusion\nmodel is employed to denoise the stabilized image, recovering a clean\nrepresentation suitable for the VLMs to produce an output. Through extensive\nexperiments across six datasets with three VLMs under varying attack strengths\nin three task scenarios, we show that DiffCAP consistently outperforms existing\ndefense techniques by a substantial margin. Notably, DiffCAP significantly\nreduces both hyperparameter tuning complexity and the required diffusion time,\nthereby accelerating the denoising process. Equipped with strong theoretical\nand empirical support, DiffCAP provides a robust and practical solution for\nsecurely deploying VLMs in adversarial environments.\n\nIntroduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.\n\nMethodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.\n\nResults: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.\n\nDiscussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.\n\nConclusion: This work presents a significant advancement in the field with practical implications for real-world applications.",
+    "word_count": 340,
+    "char_count": 2668
+  },
+  {
+    "source": "arxiv",
+    "domain": "physics",
+    "language": "en",
+    "title": "SuSAM-v2: improved superscaling description of electron and CC neutrino\n  quasielastic scattering using effective mass dynamics",
+    "abstract": "We present an improved version of the Superscaling Analysis with Relativistic\nEffective Mass, denoted as SuSAM-v2. In the original SuSAM model, a universal\nscaling function was fitted to a selected set of quasielastic electron\nscattering (e,e') cross section data, using a phenomenological ansatz inspired\nby the Relativistic Mean Field model of nuclear matter. In this work, we refine\nthe procedure by first fitting a longitudinal scaling function directly to\nexperimental longitudinal response data. Subsequently, a separate transverse\nscaling function is extracted from purely transverse data, after subtracting\nthe longitudinal contribution already determined. We find that the resulting\ntransverse scaling function must exhibit an explicit dependence on the momentum\ntransfer q in order to reproduce all kinematics consistently. The resulting\nSuSAM-v2 model simultaneously describes inclusive quasielastic cross sections\nand both longitudinal and transverse response functions in electron scattering.\nThe model is then applied to neutrino-nucleus scattering, showing an improved\nprediction compared to the previous SuSAM-v1 version, due to a more accurate\ntreatment of the relative contributions of the longitudinal and transverse weak\nnuclear responses.",
+    "authors": [
+      "V. L. Martinez-Consentino",
+      "P. R. Casale",
+      "J. E. Amaro"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: SuSAM-v2: improved superscaling description of electron and CC neutrino\n  quasielastic scattering using effective mass dynamics\n\nAuthors: V. L. Martinez-Consentino, P. R. Casale, J. E. Amaro\n\nAbstract: We present an improved version of the Superscaling Analysis with Relativistic\nEffective Mass, denoted as SuSAM-v2. In the original SuSAM model, a universal\nscaling function was fitted to a selected set of quasielastic electron\nscattering (e,e') cross section data, using a phenomenological ansatz inspired\nby the Relativistic Mean Field model of nuclear matter. In this work, we refine\nthe procedure by first fitting a longitudinal scaling function directly to\nexperimental longitudinal response data. Subsequently, a separate transverse\nscaling function is extracted from purely transverse data, after subtracting\nthe longitudinal contribution already determined. We find that the resulting\ntransverse scaling function must exhibit an explicit dependence on the momentum\ntransfer q in order to reproduce all kinematics consistently. The resulting\nSuSAM-v2 model simultaneously describes inclusive quasielastic cross sections\nand both longitudinal and transverse response functions in electron scattering.\nThe model is then applied to neutrino-nucleus scattering, showing an improved\nprediction compared to the previous SuSAM-v1 version, due to a more accurate\ntreatment of the relative contributions of the longitudinal and transverse weak\nnuclear responses.\n\nIntroduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.\n\nMethodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.\n\nResults: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.\n\nDiscussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.\n\nConclusion: This work presents a significant advancement in the field with practical implications for real-world applications.",
+    "word_count": 303,
+    "char_count": 2310
+  },
+  {
+    "source": "j-stage_simulation",
+    "domain": "materials",
+    "language": "ja",
+    "title": "半導体デバイスにおける量子効果の理論的解析",
+    "abstract": "量子井戸構造における電子の振る舞いを理論的に解析し、新しいデバイス設計の指針を提示した。量子効果を活用した高性能デバイスの可能性を示した。",
+    "authors": [
+      "田中丂郎",
+      "佐藤于子"
+    ],
+    "content_type": "japanese_academic_paper",
+    "full_content": "タイトル: 半導体デバイスにおける量子効果の理論的解析\n\n要旨: 量子井戸構造における電子の振る舞いを理論的に解析し、新しいデバイス設計の指針を提示した。量子効果を活用した高性能デバイスの可能性を示した。\n\n序論: この分野における最近の進歩により、革新的な応用への新たな可能性が開かれている。本研究は現在の限界に対処し、新しい解決策を提案する。\n\n方法: 我々は厳密な実験プロトコルと先進的な計算技術を用いてアプローチを検証した。結果の信頼性を確保するために統計解析を実施した。\n\n結果: 実験データはベースライン手法に対して有意な改善を示している。主要な性能指標により、提案手法の有効性が実証された。\n\n考察: これらの知見は当該分野の現在の理解に寄与し、将来の研究方向性に関する洞察を提供する。潜在的な応用は複数の領域にわたる。\n\n結論: 本研究は実世界への応用において実用的な意味を持つ、当該分野における重要な進歩を示している。",
+    "word_count": 14,
+    "char_count": 418
+  },
+  {
+    "source": "generated_english",
+    "domain": "biomedical",
+    "language": "en",
+    "title": "Novel Approaches in Proteomics: A Comprehensive Study",
+    "abstract": "This research investigates advanced methodologies in bioinformatics with applications to real-world problems. Our approach demonstrates significant improvements over existing techniques.",
+    "authors": [
+      "Dr. Alex Wilson",
+      "Prof. Maria Garcia"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: Novel Approaches in Proteomics: A Comprehensive Study\n\nAbstract: This research investigates advanced methodologies in bioinformatics with applications to real-world problems. Our approach demonstrates significant improvements over existing techniques.\n\nIntroduction: This study addresses important challenges in the field.\n\nMethods: We used state-of-the-art techniques for data collection and analysis.\n\nResults: Our findings show promising outcomes with practical implications.\n\nConclusion: This work contributes to advancing knowledge in the field.",
+    "word_count": 67,
+    "char_count": 557
+  },
+  {
+    "source": "generated_english",
+    "domain": "biomedical",
+    "language": "en",
+    "title": "Novel Approaches in Genomics: A Comprehensive Study",
+    "abstract": "This research investigates advanced methodologies in bioinformatics with applications to real-world problems. Our approach demonstrates significant improvements over existing techniques.",
+    "authors": [
+      "Dr. Alex Wilson",
+      "Prof. Maria Garcia"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: Novel Approaches in Genomics: A Comprehensive Study\n\nAbstract: This research investigates advanced methodologies in bioinformatics with applications to real-world problems. Our approach demonstrates significant improvements over existing techniques.\n\nIntroduction: This study addresses important challenges in the field.\n\nMethods: We used state-of-the-art techniques for data collection and analysis.\n\nResults: Our findings show promising outcomes with practical implications.\n\nConclusion: This work contributes to advancing knowledge in the field.",
+    "word_count": 67,
+    "char_count": 555
+  },
+  {
+    "source": "generated_japanese",
+    "domain": "physics",
+    "language": "ja",
+    "title": "凝縮系物理学に関するシステム開発",
+    "abstract": "本研究では凝縮系物理学の新しい手法について検討した。実験結果により有効性を確認した。",
+    "authors": [
+      "佐藤丕"
+    ],
+    "content_type": "japanese_academic_paper",
+    "full_content": "タイトル: 凝縮系物理学に関するシステム開発\n\n要旨: 本研究では凝縮系物理学の新しい手法について検討した。実験結果により有効性を確認した。\n\n序論: 本研究は当該分野の重要な課題に取り組む。\n\n方法: データ収集と解析に最新技術を使用した。\n\n結果: 実用的な意味を持つ有望な成果を示した。\n\n結論: 本研究は当該分野の知識向上に貢献する。",
+    "word_count": 12,
+    "char_count": 171
+  },
+  {
+    "source": "arxiv",
+    "domain": "computer_science",
+    "language": "en",
+    "title": "What Makes Treatment Effects Identifiable? Characterizations and\n  Estimators Beyond Unconfoundedness",
+    "abstract": "Most of the widely used estimators of the average treatment effect (ATE) in\ncausal inference rely on the assumptions of unconfoundedness and overlap.\nUnconfoundedness requires that the observed covariates account for all\ncorrelations between the outcome and treatment. Overlap requires the existence\nof randomness in treatment decisions for all individuals. Nevertheless, many\ntypes of studies frequently violate unconfoundedness or overlap, for instance,\nobservational studies with deterministic treatment decisions -- popularly known\nas Regression Discontinuity designs -- violate overlap.\n  In this paper, we initiate the study of general conditions that enable the\nidentification of the average treatment effect, extending beyond\nunconfoundedness and overlap. In particular, following the paradigm of\nstatistical learning theory, we provide an interpretable condition that is\nsufficient and nearly necessary for the identification of ATE. Moreover, this\ncondition characterizes the identification of the average treatment effect on\nthe treated (ATT) and can be used to characterize other treatment effects as\nwell. To illustrate the utility of our condition, we present several\nwell-studied scenarios where our condition is satisfied and, hence, we prove\nthat ATE can be identified in regimes that prior works could not capture. For\nexample, under mild assumptions on the data distributions, this holds for the\nmodels proposed by Tan (2006) and Rosenbaum (2002), and the Regression\nDiscontinuity design model introduced by Thistlethwaite and Campbell (1960).\nFor each of these scenarios, we also show that, under natural additional\nassumptions, ATE can be estimated from finite samples.\n  We believe these findings open new avenues for bridging learning-theoretic\ninsights and causal inference methodologies, particularly in observational\nstudies with complex treatment mechanisms.",
+    "authors": [
+      "Yang Cai",
+      "Alkis Kalavasis",
+      "Katerina Mamali",
+      "Anay Mehrotra",
+      "Manolis Zampetakis"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: What Makes Treatment Effects Identifiable? Characterizations and\n  Estimators Beyond Unconfoundedness\n\nAuthors: Yang Cai, Alkis Kalavasis, Katerina Mamali, Anay Mehrotra, Manolis Zampetakis\n\nAbstract: Most of the widely used estimators of the average treatment effect (ATE) in\ncausal inference rely on the assumptions of unconfoundedness and overlap.\nUnconfoundedness requires that the observed covariates account for all\ncorrelations between the outcome and treatment. Overlap requires the existence\nof randomness in treatment decisions for all individuals. Nevertheless, many\ntypes of studies frequently violate unconfoundedness or overlap, for instance,\nobservational studies with deterministic treatment decisions -- popularly known\nas Regression Discontinuity designs -- violate overlap.\n  In this paper, we initiate the study of general conditions that enable the\nidentification of the average treatment effect, extending beyond\nunconfoundedness and overlap. In particular, following the paradigm of\nstatistical learning theory, we provide an interpretable condition that is\nsufficient and nearly necessary for the identification of ATE. Moreover, this\ncondition characterizes the identification of the average treatment effect on\nthe treated (ATT) and can be used to characterize other treatment effects as\nwell. To illustrate the utility of our condition, we present several\nwell-studied scenarios where our condition is satisfied and, hence, we prove\nthat ATE can be identified in regimes that prior works could not capture. For\nexample, under mild assumptions on the data distributions, this holds for the\nmodels proposed by Tan (2006) and Rosenbaum (2002), and the Regression\nDiscontinuity design model introduced by Thistlethwaite and Campbell (1960).\nFor each of these scenarios, we also show that, under natural additional\nassumptions, ATE can be estimated from finite samples.\n  We believe these findings open new avenues for bridging learning-theoretic\ninsights and causal inference methodologies, particularly in observational\nstudies with complex treatment mechanisms.\n\nIntroduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.\n\nMethodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.\n\nResults: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.\n\nDiscussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.\n\nConclusion: This work presents a significant advancement in the field with practical implications for real-world applications.",
+    "word_count": 389,
+    "char_count": 2935
+  },
+  {
+    "source": "generated_english",
+    "domain": "computer_science",
+    "language": "en",
+    "title": "Advanced Neural Architecture Search for Edge Computing Devices",
+    "abstract": "This paper presents a novel neural architecture search methodology specifically designed for edge computing devices with limited computational resources. Our approach utilizes evolutionary algorithms combined with pruning techniques to achieve optimal performance while maintaining low latency requirements.",
+    "authors": [
+      "Dr. Jane Smith",
+      "Prof. Michael Johnson",
+      "Dr. Sarah Davis"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: Advanced Neural Architecture Search for Edge Computing Devices\n\nAbstract: This paper presents a novel neural architecture search methodology specifically designed for edge computing devices with limited computational resources. Our approach utilizes evolutionary algorithms combined with pruning techniques to achieve optimal performance while maintaining low latency requirements.\n\nIntroduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.\n\nMethodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.\n\nResults: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.\n\nDiscussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.\n\nConclusion: This work presents a significant advancement in the field with practical implications for real-world applications.",
+    "word_count": 150,
+    "char_count": 1230
+  },
+  {
+    "source": "generated_japanese",
+    "domain": "computer_science",
+    "language": "ja",
+    "title": "機械学習に関する性能評価",
+    "abstract": "本研究では人工知能の最適化技術について検討した。実験結果により有効性を確認した。",
+    "authors": [
+      "鈴木丙"
+    ],
+    "content_type": "japanese_academic_paper",
+    "full_content": "タイトル: 機械学習に関する性能評価\n\n要旨: 本研究では人工知能の最適化技術について検討した。実験結果により有効性を確認した。\n\n序論: 本研究は当該分野の重要な課題に取り組む。\n\n方法: データ収集と解析に最新技術を使用した。\n\n結果: 実用的な意味を持つ有望な成果を示した。\n\n結論: 本研究は当該分野の知識向上に貢献する。",
+    "word_count": 12,
+    "char_count": 165
+  },
+  {
+    "source": "generated_japanese",
+    "domain": "computer_science",
+    "language": "ja",
+    "title": "機械学習に関するシステム開発",
+    "abstract": "本研究では機械学習の最適化技術について検討した。実験結果により有効性を確認した。",
+    "authors": [
+      "田中丄"
+    ],
+    "content_type": "japanese_academic_paper",
+    "full_content": "タイトル: 機械学習に関するシステム開発\n\n要旨: 本研究では機械学習の最適化技術について検討した。実験結果により有効性を確認した。\n\n序論: 本研究は当該分野の重要な課題に取り組む。\n\n方法: データ収集と解析に最新技術を使用した。\n\n結果: 実用的な意味を持つ有望な成果を示した。\n\n結論: 本研究は当該分野の知識向上に貢献する。",
+    "word_count": 12,
+    "char_count": 167
+  },
+  {
+    "source": "generated_japanese",
+    "domain": "materials",
+    "language": "ja",
+    "title": "半導体に関する実験的検討",
+    "abstract": "本研究では材料科学の最適化技術について検討した。実験結果により有効性を確認した。",
+    "authors": [
+      "田中丨"
+    ],
+    "content_type": "japanese_academic_paper",
+    "full_content": "タイトル: 半導体に関する実験的検討\n\n要旨: 本研究では材料科学の最適化技術について検討した。実験結果により有効性を確認した。\n\n序論: 本研究は当該分野の重要な課題に取り組む。\n\n方法: データ収集と解析に最新技術を使用した。\n\n結果: 実用的な意味を持つ有望な成果を示した。\n\n結論: 本研究は当該分野の知識向上に貢献する。",
+    "word_count": 12,
+    "char_count": 165
+  },
+  {
+    "source": "arxiv",
+    "domain": "biomedical",
+    "language": "en",
+    "title": "On the Coverage Required for Diploid Genome Assembly",
+    "abstract": "The repeat content and heterozygosity rate of a target genome are important\nfactors in determining the feasibility of achieving a complete\ntelomere-to-telomere assembly. The mathematical relationship between the\nrequired coverage and read length for the purpose of unique reconstruction\nremains unexplored for diploid genomes. We investigate the\ninformation-theoretic conditions that the given set of sequencing reads must\nsatisfy to achieve the complete reconstruction of the true sequence of a\ndiploid genome. We also analyze the standard greedy and de-Bruijn graph-based\nassembly algorithms. Our results show that the coverage and read length\nrequirements of the assembly algorithms are considerably higher than the lower\nbound because both algorithms require the double repeats in the genome to be\nbridged. Finally, we derive the necessary conditions for the overlap\ngraph-based assembly paradigm.",
+    "authors": [
+      "Daanish Mahajan",
+      "Chirag Jain",
+      "Navin Kashyap"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: On the Coverage Required for Diploid Genome Assembly\n\nAuthors: Daanish Mahajan, Chirag Jain, Navin Kashyap\n\nAbstract: The repeat content and heterozygosity rate of a target genome are important\nfactors in determining the feasibility of achieving a complete\ntelomere-to-telomere assembly. The mathematical relationship between the\nrequired coverage and read length for the purpose of unique reconstruction\nremains unexplored for diploid genomes. We investigate the\ninformation-theoretic conditions that the given set of sequencing reads must\nsatisfy to achieve the complete reconstruction of the true sequence of a\ndiploid genome. We also analyze the standard greedy and de-Bruijn graph-based\nassembly algorithms. Our results show that the coverage and read length\nrequirements of the assembly algorithms are considerably higher than the lower\nbound because both algorithms require the double repeats in the genome to be\nbridged. Finally, we derive the necessary conditions for the overlap\ngraph-based assembly paradigm.\n\nIntroduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.\n\nMethodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.\n\nResults: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.\n\nDiscussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.\n\nConclusion: This work presents a significant advancement in the field with practical implications for real-world applications.",
+    "word_count": 248,
+    "char_count": 1868
+  },
+  {
+    "source": "generated_english",
+    "domain": "materials",
+    "language": "en",
+    "title": "Novel Approaches in Nanotechnology: A Comprehensive Study",
+    "abstract": "This research investigates advanced methodologies in nanotechnology with applications to real-world problems. Our approach demonstrates significant improvements over existing techniques.",
+    "authors": [
+      "Dr. Alex Wilson",
+      "Prof. Maria Garcia"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: Novel Approaches in Nanotechnology: A Comprehensive Study\n\nAbstract: This research investigates advanced methodologies in nanotechnology with applications to real-world problems. Our approach demonstrates significant improvements over existing techniques.\n\nIntroduction: This study addresses important challenges in the field.\n\nMethods: We used state-of-the-art techniques for data collection and analysis.\n\nResults: Our findings show promising outcomes with practical implications.\n\nConclusion: This work contributes to advancing knowledge in the field.",
+    "word_count": 67,
+    "char_count": 561
+  },
+  {
+    "source": "generated_english",
+    "domain": "biomedical",
+    "language": "en",
+    "title": "Novel Approaches in Genomics: A Comprehensive Study",
+    "abstract": "This research investigates advanced methodologies in proteomics with applications to real-world problems. Our approach demonstrates significant improvements over existing techniques.",
+    "authors": [
+      "Dr. Alex Wilson",
+      "Prof. Maria Garcia"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: Novel Approaches in Genomics: A Comprehensive Study\n\nAbstract: This research investigates advanced methodologies in proteomics with applications to real-world problems. Our approach demonstrates significant improvements over existing techniques.\n\nIntroduction: This study addresses important challenges in the field.\n\nMethods: We used state-of-the-art techniques for data collection and analysis.\n\nResults: Our findings show promising outcomes with practical implications.\n\nConclusion: This work contributes to advancing knowledge in the field.",
+    "word_count": 67,
+    "char_count": 551
+  },
+  {
+    "source": "generated_english",
+    "domain": "materials",
+    "language": "en",
+    "title": "Novel Approaches in Nanotechnology: A Comprehensive Study",
+    "abstract": "This research investigates advanced methodologies in semiconductor with applications to real-world problems. Our approach demonstrates significant improvements over existing techniques.",
+    "authors": [
+      "Dr. Alex Wilson",
+      "Prof. Maria Garcia"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: Novel Approaches in Nanotechnology: A Comprehensive Study\n\nAbstract: This research investigates advanced methodologies in semiconductor with applications to real-world problems. Our approach demonstrates significant improvements over existing techniques.\n\nIntroduction: This study addresses important challenges in the field.\n\nMethods: We used state-of-the-art techniques for data collection and analysis.\n\nResults: Our findings show promising outcomes with practical implications.\n\nConclusion: This work contributes to advancing knowledge in the field.",
+    "word_count": 67,
+    "char_count": 560
+  },
+  {
+    "source": "generated_japanese",
+    "domain": "physics",
+    "language": "ja",
+    "title": "量子物理学に関するシステム開発",
+    "abstract": "本研究では量子物理学の新しい手法について検討した。実験結果により有効性を確認した。",
+    "authors": [
+      "佐藤乍"
+    ],
+    "content_type": "japanese_academic_paper",
+    "full_content": "タイトル: 量子物理学に関するシステム開発\n\n要旨: 本研究では量子物理学の新しい手法について検討した。実験結果により有効性を確認した。\n\n序論: 本研究は当該分野の重要な課題に取り組む。\n\n方法: データ収集と解析に最新技術を使用した。\n\n結果: 実用的な意味を持つ有望な成果を示した。\n\n結論: 本研究は当該分野の知識向上に貢献する。",
+    "word_count": 12,
+    "char_count": 169
+  },
+  {
+    "source": "generated_japanese",
+    "domain": "physics",
+    "language": "ja",
+    "title": "量子物理学に関するシステム開発",
+    "abstract": "本研究では量子物理学の最適化技術について検討した。実験結果により有効性を確認した。",
+    "authors": [
+      "田中临"
+    ],
+    "content_type": "japanese_academic_paper",
+    "full_content": "タイトル: 量子物理学に関するシステム開発\n\n要旨: 本研究では量子物理学の最適化技術について検討した。実験結果により有効性を確認した。\n\n序論: 本研究は当該分野の重要な課題に取り組む。\n\n方法: データ収集と解析に最新技術を使用した。\n\n結果: 実用的な意味を持つ有望な成果を示した。\n\n結論: 本研究は当該分野の知識向上に貢献する。",
+    "word_count": 12,
+    "char_count": 169
+  },
+  {
+    "source": "generated_japanese",
+    "domain": "physics",
+    "language": "ja",
+    "title": "天体物理学に関する実験的検討",
+    "abstract": "本研究では凝縮系物理学の新しい手法について検討した。実験結果により有効性を確認した。",
+    "authors": [
+      "鈴木丮"
+    ],
+    "content_type": "japanese_academic_paper",
+    "full_content": "タイトル: 天体物理学に関する実験的検討\n\n要旨: 本研究では凝縮系物理学の新しい手法について検討した。実験結果により有効性を確認した。\n\n序論: 本研究は当該分野の重要な課題に取り組む。\n\n方法: データ収集と解析に最新技術を使用した。\n\n結果: 実用的な意味を持つ有望な成果を示した。\n\n結論: 本研究は当該分野の知識向上に貢献する。",
+    "word_count": 12,
+    "char_count": 169
+  },
+  {
+    "source": "arxiv",
+    "domain": "biomedical",
+    "language": "en",
+    "title": "Multiscale Modeling Primer: Focus on Chromatin and Epigenetics",
+    "abstract": "Essential life processes take place across multiple space and time scales in\nliving organisms but understanding their mechanistic interactions remains an\nongoing challenge. Advanced multiscale modeling techniques are providing new\nopportunities and insights into these complex processes. In cells, meters of\nchromatin are folded into a nucleus with a diameter on the order of microns.\nThe three-dimensional chromatin structure coupled with biochemical processes\nthat turn genes on or off, specify a given cell type through a complicated set\nof interactions collectively referred to as epigenetics. Important epigenetic\nprocesses include the differential accessibility of genomic loci to\ntranscription factors and chemical modifications to DNA and DNA-binding\nmolecules such as histones. The dynamics of these epigenetic processes span\ntimescales from milliseconds to years. How do chemical modifications consisting\nof a handful of atoms cooperate to modulate genome folding at the scale of the\nnucleus and impact organism outcomes? In this review, we highlight the\ninherently multiscale nature of chromatin organization, with a focus on\ncomputational modeling to bridge the gaps in our understanding of biochemical\nprocesses across scales. We review relevant chromatin biology, including major\ntypes of epigenetic modifications as well as the higher order chromatin\nstructures to present a multiscale view of chromatin. We also review relevant\ncomputational methods to simulate chromatin structure, function, and dynamics,\nas well as experimental techniques that inform and validate said models.\nFinally, we argue that multiscale modeling provides a path forward towards\nunderstanding emergent behavior in this inherently multiscale system.",
+    "authors": [
+      "Achal Mahajan",
+      "Erik J. Navarro",
+      "William Poole",
+      "Carlos F Lopez"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: Multiscale Modeling Primer: Focus on Chromatin and Epigenetics\n\nAuthors: Achal Mahajan, Erik J. Navarro, William Poole, Carlos F Lopez\n\nAbstract: Essential life processes take place across multiple space and time scales in\nliving organisms but understanding their mechanistic interactions remains an\nongoing challenge. Advanced multiscale modeling techniques are providing new\nopportunities and insights into these complex processes. In cells, meters of\nchromatin are folded into a nucleus with a diameter on the order of microns.\nThe three-dimensional chromatin structure coupled with biochemical processes\nthat turn genes on or off, specify a given cell type through a complicated set\nof interactions collectively referred to as epigenetics. Important epigenetic\nprocesses include the differential accessibility of genomic loci to\ntranscription factors and chemical modifications to DNA and DNA-binding\nmolecules such as histones. The dynamics of these epigenetic processes span\ntimescales from milliseconds to years. How do chemical modifications consisting\nof a handful of atoms cooperate to modulate genome folding at the scale of the\nnucleus and impact organism outcomes? In this review, we highlight the\ninherently multiscale nature of chromatin organization, with a focus on\ncomputational modeling to bridge the gaps in our understanding of biochemical\nprocesses across scales. We review relevant chromatin biology, including major\ntypes of epigenetic modifications as well as the higher order chromatin\nstructures to present a multiscale view of chromatin. We also review relevant\ncomputational methods to simulate chromatin structure, function, and dynamics,\nas well as experimental techniques that inform and validate said models.\nFinally, we argue that multiscale modeling provides a path forward towards\nunderstanding emergent behavior in this inherently multiscale system.\n\nIntroduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.\n\nMethodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.\n\nResults: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.\n\nDiscussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.\n\nConclusion: This work presents a significant advancement in the field with practical implications for real-world applications.",
+    "word_count": 369,
+    "char_count": 2735
+  },
+  {
+    "source": "j-stage_simulation",
+    "domain": "computer_science",
+    "language": "ja",
+    "title": "自然言語処理におけるTransformerモデルの最適化手法",
+    "abstract": "Transformerアーキテクチャの計算効率を改善するため、新しい注意機構を提案する。実験結果により、処理速度を30%向上させながら精度を維持できることを示した。",
+    "authors": [
+      "田中丁郎",
+      "佐藤亍子"
+    ],
+    "content_type": "japanese_academic_paper",
+    "full_content": "タイトル: 自然言語処理におけるTransformerモデルの最適化手法\n\n要旨: Transformerアーキテクチャの計算効率を改善するため、新しい注意機構を提案する。実験結果により、処理速度を30%向上させながら精度を維持できることを示した。\n\n序論: この分野における最近の進歩により、革新的な応用への新たな可能性が開かれている。本研究は現在の限界に対処し、新しい解決策を提案する。\n\n方法: 我々は厳密な実験プロトコルと先進的な計算技術を用いてアプローチを検証した。結果の信頼性を確保するために統計解析を実施した。\n\n結果: 実験データはベースライン手法に対して有意な改善を示している。主要な性能指標により、提案手法の有効性が実証された。\n\n考察: これらの知見は当該分野の現在の理解に寄与し、将来の研究方向性に関する洞察を提供する。潜在的な応用は複数の領域にわたる。\n\n結論: 本研究は実世界への応用において実用的な意味を持つ、当該分野における重要な進歩を示している。",
+    "word_count": 14,
+    "char_count": 440
+  },
+  {
+    "source": "generated_japanese",
+    "domain": "biomedical",
+    "language": "ja",
+    "title": "バイオインフォマティクスに関する実験的検討",
+    "abstract": "本研究ではバイオインフォマティクスの改良アルゴリズムについて検討した。実験結果により有効性を確認した。",
+    "authors": [
+      "鈴木上"
+    ],
+    "content_type": "japanese_academic_paper",
+    "full_content": "タイトル: バイオインフォマティクスに関する実験的検討\n\n要旨: 本研究ではバイオインフォマティクスの改良アルゴリズムについて検討した。実験結果により有効性を確認した。\n\n序論: 本研究は当該分野の重要な課題に取り組む。\n\n方法: データ収集と解析に最新技術を使用した。\n\n結果: 実用的な意味を持つ有望な成果を示した。\n\n結論: 本研究は当該分野の知識向上に貢献する。",
+    "word_count": 12,
+    "char_count": 185
+  },
+  {
+    "source": "j-stage_simulation",
+    "domain": "computer_science",
+    "language": "ja",
+    "title": "コンピュータビジョンにおける畳み込みニューラルネットワークの改良",
+    "abstract": "CNNアーキテクチャの改良により、少ない計算資源で高精度な画像認識を実現する手法を提案した。エッジデバイスでの実装実験により実用性を確認した。",
+    "authors": [
+      "田中丄郎",
+      "佐藤亐子"
+    ],
+    "content_type": "japanese_academic_paper",
+    "full_content": "タイトル: コンピュータビジョンにおける畳み込みニューラルネットワークの改良\n\n要旨: CNNアーキテクチャの改良により、少ない計算資源で高精度な画像認識を実現する手法を提案した。エッジデバイスでの実装実験により実用性を確認した。\n\n序論: この分野における最近の進歩により、革新的な応用への新たな可能性が開かれている。本研究は現在の限界に対処し、新しい解決策を提案する。\n\n方法: 我々は厳密な実験プロトコルと先進的な計算技術を用いてアプローチを検証した。結果の信頼性を確保するために統計解析を実施した。\n\n結果: 実験データはベースライン手法に対して有意な改善を示している。主要な性能指標により、提案手法の有効性が実証された。\n\n考察: これらの知見は当該分野の現在の理解に寄与し、将来の研究方向性に関する洞察を提供する。潜在的な応用は複数の領域にわたる。\n\n結論: 本研究は実世界への応用において実用的な意味を持つ、当該分野における重要な進歩を示している。",
+    "word_count": 14,
+    "char_count": 431
+  },
+  {
+    "source": "generated_japanese",
+    "domain": "materials",
+    "language": "ja",
+    "title": "半導体に関する実験的検討",
+    "abstract": "本研究では半導体の改良アルゴリズムについて検討した。実験結果により有効性を確認した。",
+    "authors": [
+      "佐藤丐"
+    ],
+    "content_type": "japanese_academic_paper",
+    "full_content": "タイトル: 半導体に関する実験的検討\n\n要旨: 本研究では半導体の改良アルゴリズムについて検討した。実験結果により有効性を確認した。\n\n序論: 本研究は当該分野の重要な課題に取り組む。\n\n方法: データ収集と解析に最新技術を使用した。\n\n結果: 実用的な意味を持つ有望な成果を示した。\n\n結論: 本研究は当該分野の知識向上に貢献する。",
+    "word_count": 12,
+    "char_count": 167
+  },
+  {
+    "source": "arxiv",
+    "domain": "biomedical",
+    "language": "en",
+    "title": "CLIBD: Bridging Vision and Genomics for Biodiversity Monitoring at Scale",
+    "abstract": "Measuring biodiversity is crucial for understanding ecosystem health. While\nprior works have developed machine learning models for taxonomic classification\nof photographic images and DNA separately, in this work, we introduce a\nmultimodal approach combining both, using CLIP-style contrastive learning to\nalign images, barcode DNA, and text-based representations of taxonomic labels\nin a unified embedding space. This allows for accurate classification of both\nknown and unknown insect species without task-specific fine-tuning, leveraging\ncontrastive learning for the first time to fuse barcode DNA and image data. Our\nmethod surpasses previous single-modality approaches in accuracy by over 8% on\nzero-shot learning tasks, showcasing its effectiveness in biodiversity studies.",
+    "authors": [
+      "ZeMing Gong",
+      "Austin T. Wang",
+      "Xiaoliang Huo",
+      "Joakim Bruslund Haurum",
+      "Scott C. Lowe",
+      "Graham W. Taylor",
+      "Angel X. Chang"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: CLIBD: Bridging Vision and Genomics for Biodiversity Monitoring at Scale\n\nAuthors: ZeMing Gong, Austin T. Wang, Xiaoliang Huo, Joakim Bruslund Haurum, Scott C. Lowe\n\nAbstract: Measuring biodiversity is crucial for understanding ecosystem health. While\nprior works have developed machine learning models for taxonomic classification\nof photographic images and DNA separately, in this work, we introduce a\nmultimodal approach combining both, using CLIP-style contrastive learning to\nalign images, barcode DNA, and text-based representations of taxonomic labels\nin a unified embedding space. This allows for accurate classification of both\nknown and unknown insect species without task-specific fine-tuning, leveraging\ncontrastive learning for the first time to fuse barcode DNA and image data. Our\nmethod surpasses previous single-modality approaches in accuracy by over 8% on\nzero-shot learning tasks, showcasing its effectiveness in biodiversity studies.\n\nIntroduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.\n\nMethodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.\n\nResults: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.\n\nDiscussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.\n\nConclusion: This work presents a significant advancement in the field with practical implications for real-world applications.",
+    "word_count": 234,
+    "char_count": 1803
+  },
+  {
+    "source": "arxiv",
+    "domain": "computer_science",
+    "language": "en",
+    "title": "VisCoder: Fine-Tuning LLMs for Executable Python Visualization Code\n  Generation",
+    "abstract": "Large language models (LLMs) often struggle with visualization tasks like\nplotting diagrams, charts, where success depends on both code correctness and\nvisual semantics. Existing instruction-tuning datasets lack execution-grounded\nsupervision and offer limited support for iterative code correction, resulting\nin fragile and unreliable plot generation. We present VisCode-200K, a\nlarge-scale instruction tuning dataset for Python-based visualization and\nself-correction. It contains over 200K examples from two sources: (1) validated\nplotting code from open-source repositories, paired with natural language\ninstructions and rendered plots; and (2) 45K multi-turn correction dialogues\nfrom Code-Feedback, enabling models to revise faulty code using runtime\nfeedback. We fine-tune Qwen2.5-Coder-Instruct on VisCode-200K to create\nVisCoder, and evaluate it on PandasPlotBench. VisCoder significantly\noutperforms strong open-source baselines and approaches the performance of\nproprietary models like GPT-4o-mini. We further adopt a self-debug evaluation\nprotocol to assess iterative repair, demonstrating the benefits of\nfeedback-driven learning for executable, visually accurate code generation.",
+    "authors": [
+      "Yuansheng Ni",
+      "Ping Nie",
+      "Kai Zou",
+      "Xiang Yue",
+      "Wenhu Chen"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: VisCoder: Fine-Tuning LLMs for Executable Python Visualization Code\n  Generation\n\nAuthors: Yuansheng Ni, Ping Nie, Kai Zou, Xiang Yue, Wenhu Chen\n\nAbstract: Large language models (LLMs) often struggle with visualization tasks like\nplotting diagrams, charts, where success depends on both code correctness and\nvisual semantics. Existing instruction-tuning datasets lack execution-grounded\nsupervision and offer limited support for iterative code correction, resulting\nin fragile and unreliable plot generation. We present VisCode-200K, a\nlarge-scale instruction tuning dataset for Python-based visualization and\nself-correction. It contains over 200K examples from two sources: (1) validated\nplotting code from open-source repositories, paired with natural language\ninstructions and rendered plots; and (2) 45K multi-turn correction dialogues\nfrom Code-Feedback, enabling models to revise faulty code using runtime\nfeedback. We fine-tune Qwen2.5-Coder-Instruct on VisCode-200K to create\nVisCoder, and evaluate it on PandasPlotBench. VisCoder significantly\noutperforms strong open-source baselines and approaches the performance of\nproprietary models like GPT-4o-mini. We further adopt a self-debug evaluation\nprotocol to assess iterative repair, demonstrating the benefits of\nfeedback-driven learning for executable, visually accurate code generation.\n\nIntroduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.\n\nMethodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.\n\nResults: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.\n\nDiscussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.\n\nConclusion: This work presents a significant advancement in the field with practical implications for real-world applications.",
+    "word_count": 273,
+    "char_count": 2199
+  },
+  {
+    "source": "arxiv",
+    "domain": "computer_science",
+    "language": "en",
+    "title": "EPiC: Towards Lossless Speedup for Reasoning Training through\n  Edge-Preserving CoT Condensation",
+    "abstract": "Large language models (LLMs) have shown remarkable reasoning capabilities\nwhen trained with chain-of-thought (CoT) supervision. However, the long and\nverbose CoT traces, especially those distilled from large reasoning models\n(LRMs) such as DeepSeek-R1, significantly increase training costs during the\ndistillation process, where a non-reasoning base model is taught to replicate\nthe reasoning behavior of an LRM. In this work, we study the problem of CoT\ncondensation for resource-efficient reasoning training, aimed at pruning\nintermediate reasoning steps (i.e., thoughts) in CoT traces, enabling\nsupervised model training on length-reduced CoT data while preserving both\nanswer accuracy and the model's ability to generate coherent reasoning. Our\nrationale is that CoT traces typically follow a three-stage structure: problem\nunderstanding, exploration, and solution convergence. Through empirical\nanalysis, we find that retaining the structure of the reasoning trace,\nespecially the early stage of problem understanding (rich in reflective cues)\nand the final stage of solution convergence, is sufficient to achieve lossless\nreasoning supervision. To this end, we propose an Edge-Preserving Condensation\nmethod, EPiC, which selectively retains only the initial and final segments of\neach CoT trace while discarding the middle portion. This design draws an\nanalogy to preserving the \"edge\" of a reasoning trajectory, capturing both the\ninitial problem framing and the final answer synthesis, to maintain logical\ncontinuity. Experiments across multiple model families (Qwen and LLaMA) and\nbenchmarks show that EPiC reduces training time by over 34% while achieving\nlossless reasoning accuracy on MATH500, comparable to full CoT supervision. To\nthe best of our knowledge, this is the first study to explore thought-level CoT\ncondensation for efficient reasoning model distillation.",
+    "authors": [
+      "Jinghan Jia",
+      "Hadi Reisizadeh",
+      "Chongyu Fan",
+      "Nathalie Baracaldo",
+      "Mingyi Hong",
+      "Sijia Liu"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: EPiC: Towards Lossless Speedup for Reasoning Training through\n  Edge-Preserving CoT Condensation\n\nAuthors: Jinghan Jia, Hadi Reisizadeh, Chongyu Fan, Nathalie Baracaldo, Mingyi Hong\n\nAbstract: Large language models (LLMs) have shown remarkable reasoning capabilities\nwhen trained with chain-of-thought (CoT) supervision. However, the long and\nverbose CoT traces, especially those distilled from large reasoning models\n(LRMs) such as DeepSeek-R1, significantly increase training costs during the\ndistillation process, where a non-reasoning base model is taught to replicate\nthe reasoning behavior of an LRM. In this work, we study the problem of CoT\ncondensation for resource-efficient reasoning training, aimed at pruning\nintermediate reasoning steps (i.e., thoughts) in CoT traces, enabling\nsupervised model training on length-reduced CoT data while preserving both\nanswer accuracy and the model's ability to generate coherent reasoning. Our\nrationale is that CoT traces typically follow a three-stage structure: problem\nunderstanding, exploration, and solution convergence. Through empirical\nanalysis, we find that retaining the structure of the reasoning trace,\nespecially the early stage of problem understanding (rich in reflective cues)\nand the final stage of solution convergence, is sufficient to achieve lossless\nreasoning supervision. To this end, we propose an Edge-Preserving Condensation\nmethod, EPiC, which selectively retains only the initial and final segments of\neach CoT trace while discarding the middle portion. This design draws an\nanalogy to preserving the \"edge\" of a reasoning trajectory, capturing both the\ninitial problem framing and the final answer synthesis, to maintain logical\ncontinuity. Experiments across multiple model families (Qwen and LLaMA) and\nbenchmarks show that EPiC reduces training time by over 34% while achieving\nlossless reasoning accuracy on MATH500, comparable to full CoT supervision. To\nthe best of our knowledge, this is the first study to explore thought-level CoT\ncondensation for efficient reasoning model distillation.\n\nIntroduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.\n\nMethodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.\n\nResults: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.\n\nDiscussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.\n\nConclusion: This work presents a significant advancement in the field with practical implications for real-world applications.",
+    "word_count": 392,
+    "char_count": 2924
+  },
+  {
+    "source": "generated_japanese",
+    "domain": "materials",
+    "language": "ja",
+    "title": "材料科学に関する実験的検討",
+    "abstract": "本研究では材料科学の最適化技術について検討した。実験結果により有効性を確認した。",
+    "authors": [
+      "高橋乄"
+    ],
+    "content_type": "japanese_academic_paper",
+    "full_content": "タイトル: 材料科学に関する実験的検討\n\n要旨: 本研究では材料科学の最適化技術について検討した。実験結果により有効性を確認した。\n\n序論: 本研究は当該分野の重要な課題に取り組む。\n\n方法: データ収集と解析に最新技術を使用した。\n\n結果: 実用的な意味を持つ有望な成果を示した。\n\n結論: 本研究は当該分野の知識向上に貢献する。",
+    "word_count": 12,
+    "char_count": 166
+  },
+  {
+    "source": "j-stage_simulation",
+    "domain": "materials",
+    "language": "ja",
+    "title": "グラフェンベース複合材料の電気的特性評価",
+    "abstract": "グラフェンを基盤とした複合材料の電気的特性について詳細な解析を行った。新しい合成プロセスにより、導電性を従来比で40%向上させることに成功した。",
+    "authors": [
+      "田中七郎",
+      "佐藤亏子"
+    ],
+    "content_type": "japanese_academic_paper",
+    "full_content": "タイトル: グラフェンベース複合材料の電気的特性評価\n\n要旨: グラフェンを基盤とした複合材料の電気的特性について詳細な解析を行った。新しい合成プロセスにより、導電性を従来比で40%向上させることに成功した。\n\n序論: この分野における最近の進歩により、革新的な応用への新たな可能性が開かれている。本研究は現在の限界に対処し、新しい解決策を提案する。\n\n方法: 我々は厳密な実験プロトコルと先進的な計算技術を用いてアプローチを検証した。結果の信頼性を確保するために統計解析を実施した。\n\n結果: 実験データはベースライン手法に対して有意な改善を示している。主要な性能指標により、提案手法の有効性が実証された。\n\n考察: これらの知見は当該分野の現在の理解に寄与し、将来の研究方向性に関する洞察を提供する。潜在的な応用は複数の領域にわたる。\n\n結論: 本研究は実世界への応用において実用的な意味を持つ、当該分野における重要な進歩を示している。",
+    "word_count": 14,
+    "char_count": 420
+  },
+  {
+    "source": "generated_japanese",
+    "domain": "physics",
+    "language": "ja",
+    "title": "天体物理学に関するシステム開発",
+    "abstract": "本研究では量子物理学の新しい手法について検討した。実験結果により有効性を確認した。",
+    "authors": [
+      "高橋乄"
+    ],
+    "content_type": "japanese_academic_paper",
+    "full_content": "タイトル: 天体物理学に関するシステム開発\n\n要旨: 本研究では量子物理学の新しい手法について検討した。実験結果により有効性を確認した。\n\n序論: 本研究は当該分野の重要な課題に取り組む。\n\n方法: データ収集と解析に最新技術を使用した。\n\n結果: 実用的な意味を持つ有望な成果を示した。\n\n結論: 本研究は当該分野の知識向上に貢献する。",
+    "word_count": 12,
+    "char_count": 169
+  },
+  {
+    "source": "generated_english",
+    "domain": "biomedical",
+    "language": "en",
+    "title": "CRISPR-Cas9 Gene Editing for Targeted Cancer Therapy",
+    "abstract": "This study investigates the application of CRISPR-Cas9 technology for precise gene editing in cancer treatment. We developed a delivery system that targets specific oncogenes while minimizing off-target effects.",
+    "authors": [
+      "Dr. Jane Smith",
+      "Prof. Michael Johnson",
+      "Dr. Sarah Davis"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: CRISPR-Cas9 Gene Editing for Targeted Cancer Therapy\n\nAbstract: This study investigates the application of CRISPR-Cas9 technology for precise gene editing in cancer treatment. We developed a delivery system that targets specific oncogenes while minimizing off-target effects.\n\nIntroduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.\n\nMethodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.\n\nResults: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.\n\nDiscussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.\n\nConclusion: This work presents a significant advancement in the field with practical implications for real-world applications.",
+    "word_count": 140,
+    "char_count": 1124
+  },
+  {
+    "source": "generated_japanese",
+    "domain": "physics",
+    "language": "ja",
+    "title": "天体物理学に関する実験的検討",
+    "abstract": "本研究では凝縮系物理学の新しい手法について検討した。実験結果により有効性を確認した。",
+    "authors": [
+      "田中丹"
+    ],
+    "content_type": "japanese_academic_paper",
+    "full_content": "タイトル: 天体物理学に関する実験的検討\n\n要旨: 本研究では凝縮系物理学の新しい手法について検討した。実験結果により有効性を確認した。\n\n序論: 本研究は当該分野の重要な課題に取り組む。\n\n方法: データ収集と解析に最新技術を使用した。\n\n結果: 実用的な意味を持つ有望な成果を示した。\n\n結論: 本研究は当該分野の知識向上に貢献する。",
+    "word_count": 12,
+    "char_count": 169
+  },
+  {
+    "source": "generated_japanese",
+    "domain": "materials",
+    "language": "ja",
+    "title": "ナノテクノロジーに関する実験的検討",
+    "abstract": "本研究では材料科学の新しい手法について検討した。実験結果により有効性を確認した。",
+    "authors": [
+      "田中严"
+    ],
+    "content_type": "japanese_academic_paper",
+    "full_content": "タイトル: ナノテクノロジーに関する実験的検討\n\n要旨: 本研究では材料科学の新しい手法について検討した。実験結果により有効性を確認した。\n\n序論: 本研究は当該分野の重要な課題に取り組む。\n\n方法: データ収集と解析に最新技術を使用した。\n\n結果: 実用的な意味を持つ有望な成果を示した。\n\n結論: 本研究は当該分野の知識向上に貢献する。",
+    "word_count": 12,
+    "char_count": 170
+  },
+  {
+    "source": "arxiv",
+    "domain": "computer_science",
+    "language": "en",
+    "title": "Control Signaling for Reconfigurable Intelligent Surfaces: How Many Bits\n  are Needed?",
+    "abstract": "Reconfigurable intelligent surfaces (RISs) can greatly improve the signal\nquality of future communication systems by reflecting transmitted signals\ntoward the receiver. However, even when the base station (BS) has perfect\nchannel knowledge and can compute the optimal RIS phase-shift configuration,\nimplementing this configuration requires feedback signaling over a control\nchannel from the BS to the RIS. This feedback must be kept minimal, as it is\ntransmitted wirelessly every time the channel changes. In this paper, we\nexamine how the feedback load, measured in bits, affects the performance of an\nRIS-aided system. Specifically, we investigate the trade-offs between\ncodebook-based and element-wise feedback schemes, and how these influence the\nsignal-to-noise ratio (SNR). We propose a novel quantization codebook tailored\nfor line-of-sight (LoS) that guarantees a minimal SNR loss using a number of\nfeedback bits that scale logarithmically with the number of RIS elements. We\ndemonstrate the codebook's usefulness over Rician fading channels and how to\nextend it to handle a non-zero static path. Numerical simulations and\nanalytical analysis are performed to quantify the performance degradation that\nresults from a reduced feedback load, shedding light on how efficiently RIS\nconfigurations can be fed back in practical systems.",
+    "authors": [
+      "Anders Enqvist",
+      "Özlem Tuğfe Demir",
+      "Cicek Cavdar",
+      "Emil Björnson"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: Control Signaling for Reconfigurable Intelligent Surfaces: How Many Bits\n  are Needed?\n\nAuthors: Anders Enqvist, Özlem Tuğfe Demir, Cicek Cavdar, Emil Björnson\n\nAbstract: Reconfigurable intelligent surfaces (RISs) can greatly improve the signal\nquality of future communication systems by reflecting transmitted signals\ntoward the receiver. However, even when the base station (BS) has perfect\nchannel knowledge and can compute the optimal RIS phase-shift configuration,\nimplementing this configuration requires feedback signaling over a control\nchannel from the BS to the RIS. This feedback must be kept minimal, as it is\ntransmitted wirelessly every time the channel changes. In this paper, we\nexamine how the feedback load, measured in bits, affects the performance of an\nRIS-aided system. Specifically, we investigate the trade-offs between\ncodebook-based and element-wise feedback schemes, and how these influence the\nsignal-to-noise ratio (SNR). We propose a novel quantization codebook tailored\nfor line-of-sight (LoS) that guarantees a minimal SNR loss using a number of\nfeedback bits that scale logarithmically with the number of RIS elements. We\ndemonstrate the codebook's usefulness over Rician fading channels and how to\nextend it to handle a non-zero static path. Numerical simulations and\nanalytical analysis are performed to quantify the performance degradation that\nresults from a reduced feedback load, shedding light on how efficiently RIS\nconfigurations can be fed back in practical systems.\n\nIntroduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.\n\nMethodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.\n\nResults: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.\n\nDiscussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.\n\nConclusion: This work presents a significant advancement in the field with practical implications for real-world applications.",
+    "word_count": 320,
+    "char_count": 2358
+  },
+  {
+    "source": "arxiv",
+    "domain": "biomedical",
+    "language": "en",
+    "title": "An integrated method for clustering and association network inference",
+    "abstract": "We consider high dimensional Gaussian graphical models inference. These\nmodels provide a rigorous framework to describe a network of statistical\ndependencies between entities, such as genes in genomic regulation studies or\nspecies in ecology. Penalized methods, including the standard Graphical-Lasso,\nare well-known approaches to infer the parameters of these models. As the\nnumber of variables in the model (of entities in the network) grow, the network\ninference and interpretation become more complex. We propose Normal-Block, a\nnew model that clusters variables and consider a network at the cluster level.\nNormal-Block both adds structure to the network and reduces its size. We build\non Graphical-Lasso to add a penalty on the network's edges and limit the\ndetection of spurious dependencies, we also propose a zero-inflated version of\nthe model to account for real-world data properties. For the inference\nprocedure, we propose a direct heuristic method and another more rigorous one\nthat simultaneously infers the clustering of variables and the association\nnetwork between clusters, using a penalized variational\nExpectation-Maximization approach. An implementation of the model in R, in a\npackage called normalblockr, is available on github\n(https://github.com/jeannetous/normalblockr). We present the results in terms\nof clustering and network inference using both simulated data and various types\nof real-world data (proteomics, words occurrences on webpages, and microbiota\ndistribution).",
+    "authors": [
+      "Jeanne Tous",
+      "Julien Chiquet"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: An integrated method for clustering and association network inference\n\nAuthors: Jeanne Tous, Julien Chiquet\n\nAbstract: We consider high dimensional Gaussian graphical models inference. These\nmodels provide a rigorous framework to describe a network of statistical\ndependencies between entities, such as genes in genomic regulation studies or\nspecies in ecology. Penalized methods, including the standard Graphical-Lasso,\nare well-known approaches to infer the parameters of these models. As the\nnumber of variables in the model (of entities in the network) grow, the network\ninference and interpretation become more complex. We propose Normal-Block, a\nnew model that clusters variables and consider a network at the cluster level.\nNormal-Block both adds structure to the network and reduces its size. We build\non Graphical-Lasso to add a penalty on the network's edges and limit the\ndetection of spurious dependencies, we also propose a zero-inflated version of\nthe model to account for real-world data properties. For the inference\nprocedure, we propose a direct heuristic method and another more rigorous one\nthat simultaneously infers the clustering of variables and the association\nnetwork between clusters, using a penalized variational\nExpectation-Maximization approach. An implementation of the model in R, in a\npackage called normalblockr, is available on github\n(https://github.com/jeannetous/normalblockr). We present the results in terms\nof clustering and network inference using both simulated data and various types\nof real-world data (proteomics, words occurrences on webpages, and microbiota\ndistribution).\n\nIntroduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.\n\nMethodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.\n\nResults: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.\n\nDiscussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.\n\nConclusion: This work presents a significant advancement in the field with practical implications for real-world applications.",
+    "word_count": 333,
+    "char_count": 2470
+  },
+  {
+    "source": "generated_english",
+    "domain": "materials",
+    "language": "en",
+    "title": "Novel Approaches in Materials Science: A Comprehensive Study",
+    "abstract": "This research investigates advanced methodologies in semiconductor with applications to real-world problems. Our approach demonstrates significant improvements over existing techniques.",
+    "authors": [
+      "Dr. Alex Wilson",
+      "Prof. Maria Garcia"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: Novel Approaches in Materials Science: A Comprehensive Study\n\nAbstract: This research investigates advanced methodologies in semiconductor with applications to real-world problems. Our approach demonstrates significant improvements over existing techniques.\n\nIntroduction: This study addresses important challenges in the field.\n\nMethods: We used state-of-the-art techniques for data collection and analysis.\n\nResults: Our findings show promising outcomes with practical implications.\n\nConclusion: This work contributes to advancing knowledge in the field.",
+    "word_count": 68,
+    "char_count": 563
+  },
+  {
+    "source": "generated_japanese",
+    "domain": "biomedical",
+    "language": "ja",
+    "title": "ゲノム学に関する性能評価",
+    "abstract": "本研究ではバイオインフォマティクスの最適化技術について検討した。実験結果により有効性を確認した。",
+    "authors": [
+      "高橋也"
+    ],
+    "content_type": "japanese_academic_paper",
+    "full_content": "タイトル: ゲノム学に関する性能評価\n\n要旨: 本研究ではバイオインフォマティクスの最適化技術について検討した。実験結果により有効性を確認した。\n\n序論: 本研究は当該分野の重要な課題に取り組む。\n\n方法: データ収集と解析に最新技術を使用した。\n\n結果: 実用的な意味を持つ有望な成果を示した。\n\n結論: 本研究は当該分野の知識向上に貢献する。",
+    "word_count": 12,
+    "char_count": 173
+  },
+  {
+    "source": "arxiv",
+    "domain": "physics",
+    "language": "en",
+    "title": "Electric Field Sensing via Rydberg Electromagnetically Induced\n  Transparency Using Zeeman and Stark Effects",
+    "abstract": "Rydberg-assisted atomic electrometry with thermal vapors offers a promising\napproach for detecting external electric fields. However, this technique\npresents significant challenges for measuring low frequencies due to the\neffects of metal-alkali atoms adsorbed on the interior surface of the vacuum\nchamber. In this work, we apply high-contrast Rydberg electromagnetically\ninduced transparency (EIT) spectroscopy to systematically investigate these\neffects, including the influence of laser power and electric field strength. We\ndemonstrate the ability to measure electric field frequencies ranging from 10\nHz to 1 MHz. Additionally, this study identifies a fundamental limit for data\ncapacity in such measurements. Furthermore, we propose a method for precise\nStark shift measurements by locking the coupling laser to Zeeman-split Rydberg\nEIT peaks. Using the Zeeman shift in a reference cell as a stable frequency\nreference, we track Stark-induced shifts in a science cell and confirm\nexcellent agreement with theoretical predictions. These results provide\nvaluable insights for future precision measurement techniques and field sensing\napplications based on Rydberg atom systems.",
+    "authors": [
+      "Yu-Chi Chen",
+      "Shao-Cheng Fang",
+      "Hsuan-Jui Su",
+      "Yi-Hsin Chen"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: Electric Field Sensing via Rydberg Electromagnetically Induced\n  Transparency Using Zeeman and Stark Effects\n\nAuthors: Yu-Chi Chen, Shao-Cheng Fang, Hsuan-Jui Su, Yi-Hsin Chen\n\nAbstract: Rydberg-assisted atomic electrometry with thermal vapors offers a promising\napproach for detecting external electric fields. However, this technique\npresents significant challenges for measuring low frequencies due to the\neffects of metal-alkali atoms adsorbed on the interior surface of the vacuum\nchamber. In this work, we apply high-contrast Rydberg electromagnetically\ninduced transparency (EIT) spectroscopy to systematically investigate these\neffects, including the influence of laser power and electric field strength. We\ndemonstrate the ability to measure electric field frequencies ranging from 10\nHz to 1 MHz. Additionally, this study identifies a fundamental limit for data\ncapacity in such measurements. Furthermore, we propose a method for precise\nStark shift measurements by locking the coupling laser to Zeeman-split Rydberg\nEIT peaks. Using the Zeeman shift in a reference cell as a stable frequency\nreference, we track Stark-induced shifts in a science cell and confirm\nexcellent agreement with theoretical predictions. These results provide\nvaluable insights for future precision measurement techniques and field sensing\napplications based on Rydberg atom systems.\n\nIntroduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.\n\nMethodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.\n\nResults: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.\n\nDiscussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.\n\nConclusion: This work presents a significant advancement in the field with practical implications for real-world applications.",
+    "word_count": 291,
+    "char_count": 2218
+  },
+  {
+    "source": "generated_japanese",
+    "domain": "computer_science",
+    "language": "ja",
+    "title": "人工知能に関する性能評価",
+    "abstract": "本研究では人工知能の新しい手法について検討した。実験結果により有効性を確認した。",
+    "authors": [
+      "鈴木丵"
+    ],
+    "content_type": "japanese_academic_paper",
+    "full_content": "タイトル: 人工知能に関する性能評価\n\n要旨: 本研究では人工知能の新しい手法について検討した。実験結果により有効性を確認した。\n\n序論: 本研究は当該分野の重要な課題に取り組む。\n\n方法: データ収集と解析に最新技術を使用した。\n\n結果: 実用的な意味を持つ有望な成果を示した。\n\n結論: 本研究は当該分野の知識向上に貢献する。",
+    "word_count": 12,
+    "char_count": 165
+  },
+  {
+    "source": "arxiv",
+    "domain": "physics",
+    "language": "en",
+    "title": "Non-invasive measurement of local stress inside soft materials with\n  programmed shear waves",
+    "abstract": "Mechanical stresses in soft materials across different length scales play a\nfundamental role in understanding the function of biological systems and in the\nuse of artificial materials for engineering soft machines and biomedical\ndevices. Yet it remains a great challenge to probe local mechanical stresses in\nsitu in a non-invasive, non-destructive manner, in particular when the\nmechanical properties are unknown. To address this challenge, we propose an\nacoustoelastic imaging-based method to infer the local mechanical stresses in\nsoft materials by measuring the speed of shear waves induced by\ncustom-programmed acoustic radiation force. Using a medical ultrasound\ntransducer to excite and track the shear waves remotely, we demonstrate the\napplication of the method by imaging uniaxial stress and bending stress in an\nisotropic hydrogel, and the passive uniaxial stress in a skeletal muscle. These\nmeasurements were all done without the knowledge of the constitutive parameters\nof the materials. These examples indicate that our method will find broad\napplications, ranging from health monitoring of soft structures and machines,\nto the diagnosis of diseases that alter stresses in soft tissues.",
+    "authors": [
+      "Zhaoyi Zhang",
+      "Guo-Yang Li",
+      "Yuxuan Jiang",
+      "Yang Zheng",
+      "Artur L. Gower",
+      "Michel Destrade",
+      "Yanping Cao"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: Non-invasive measurement of local stress inside soft materials with\n  programmed shear waves\n\nAuthors: Zhaoyi Zhang, Guo-Yang Li, Yuxuan Jiang, Yang Zheng, Artur L. Gower\n\nAbstract: Mechanical stresses in soft materials across different length scales play a\nfundamental role in understanding the function of biological systems and in the\nuse of artificial materials for engineering soft machines and biomedical\ndevices. Yet it remains a great challenge to probe local mechanical stresses in\nsitu in a non-invasive, non-destructive manner, in particular when the\nmechanical properties are unknown. To address this challenge, we propose an\nacoustoelastic imaging-based method to infer the local mechanical stresses in\nsoft materials by measuring the speed of shear waves induced by\ncustom-programmed acoustic radiation force. Using a medical ultrasound\ntransducer to excite and track the shear waves remotely, we demonstrate the\napplication of the method by imaging uniaxial stress and bending stress in an\nisotropic hydrogel, and the passive uniaxial stress in a skeletal muscle. These\nmeasurements were all done without the knowledge of the constitutive parameters\nof the materials. These examples indicate that our method will find broad\napplications, ranging from health monitoring of soft structures and machines,\nto the diagnosis of diseases that alter stresses in soft tissues.\n\nIntroduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.\n\nMethodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.\n\nResults: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.\n\nDiscussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.\n\nConclusion: This work presents a significant advancement in the field with practical implications for real-world applications.",
+    "word_count": 306,
+    "char_count": 2231
+  },
+  {
+    "source": "generated_japanese",
+    "domain": "physics",
+    "language": "ja",
+    "title": "量子物理学に関する理論研究",
+    "abstract": "本研究では量子物理学の最適化技術について検討した。実験結果により有効性を確認した。",
+    "authors": [
+      "鈴木丅"
+    ],
+    "content_type": "japanese_academic_paper",
+    "full_content": "タイトル: 量子物理学に関する理論研究\n\n要旨: 本研究では量子物理学の最適化技術について検討した。実験結果により有効性を確認した。\n\n序論: 本研究は当該分野の重要な課題に取り組む。\n\n方法: データ収集と解析に最新技術を使用した。\n\n結果: 実用的な意味を持つ有望な成果を示した。\n\n結論: 本研究は当該分野の知識向上に貢献する。",
+    "word_count": 12,
+    "char_count": 167
+  },
+  {
+    "source": "arxiv",
+    "domain": "biomedical",
+    "language": "en",
+    "title": "ProHap Explorer: Visualizing Haplotypes in Proteogenomic Datasets",
+    "abstract": "In mass spectrometry-based proteomics, experts usually project data onto a\nsingle set of reference sequences, overlooking the influence of common\nhaplotypes (combinations of genetic variants inherited together from a parent).\nWe recently introduced ProHap, a tool for generating customized protein\nhaplotype databases. Here, we present ProHap Explorer, a visualization\ninterface designed to investigate the influence of common haplotypes on the\nhuman proteome. It enables users to explore haplotypes, their effects on\nprotein sequences, and the identification of non-canonical peptides in public\nmass spectrometry datasets. The design builds on well-established\nrepresentations in biological sequence analysis, ensuring familiarity for\ndomain experts while integrating novel interactive elements tailored to\nproteogenomic data exploration. User interviews with proteomics experts\nconfirmed the tool's utility, highlighting its ability to reveal whether\nhaplotypes affect proteins of interest. By facilitating the intuitive\nexploration of proteogenomic variation, ProHap Explorer supports research in\npersonalized medicine and the development of targeted therapies.",
+    "authors": [
+      "Jakub Vašíček",
+      "Dafni Skiadopoulou",
+      "Ksenia G. Kuznetsova",
+      "Lukas Käll",
+      "Marc Vaudel",
+      "Stefan Bruckner"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: ProHap Explorer: Visualizing Haplotypes in Proteogenomic Datasets\n\nAuthors: Jakub Vašíček, Dafni Skiadopoulou, Ksenia G. Kuznetsova, Lukas Käll, Marc Vaudel\n\nAbstract: In mass spectrometry-based proteomics, experts usually project data onto a\nsingle set of reference sequences, overlooking the influence of common\nhaplotypes (combinations of genetic variants inherited together from a parent).\nWe recently introduced ProHap, a tool for generating customized protein\nhaplotype databases. Here, we present ProHap Explorer, a visualization\ninterface designed to investigate the influence of common haplotypes on the\nhuman proteome. It enables users to explore haplotypes, their effects on\nprotein sequences, and the identification of non-canonical peptides in public\nmass spectrometry datasets. The design builds on well-established\nrepresentations in biological sequence analysis, ensuring familiarity for\ndomain experts while integrating novel interactive elements tailored to\nproteogenomic data exploration. User interviews with proteomics experts\nconfirmed the tool's utility, highlighting its ability to reveal whether\nhaplotypes affect proteins of interest. By facilitating the intuitive\nexploration of proteogenomic variation, ProHap Explorer supports research in\npersonalized medicine and the development of targeted therapies.\n\nIntroduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.\n\nMethodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.\n\nResults: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.\n\nDiscussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.\n\nConclusion: This work presents a significant advancement in the field with practical implications for real-world applications.",
+    "word_count": 274,
+    "char_count": 2181
+  },
+  {
+    "source": "generated_japanese",
+    "domain": "physics",
+    "language": "ja",
+    "title": "量子物理学に関する実験的検討",
+    "abstract": "本研究では天体物理学の新しい手法について検討した。実験結果により有効性を確認した。",
+    "authors": [
+      "田中乐"
+    ],
+    "content_type": "japanese_academic_paper",
+    "full_content": "タイトル: 量子物理学に関する実験的検討\n\n要旨: 本研究では天体物理学の新しい手法について検討した。実験結果により有効性を確認した。\n\n序論: 本研究は当該分野の重要な課題に取り組む。\n\n方法: データ収集と解析に最新技術を使用した。\n\n結果: 実用的な意味を持つ有望な成果を示した。\n\n結論: 本研究は当該分野の知識向上に貢献する。",
+    "word_count": 12,
+    "char_count": 168
+  },
+  {
+    "source": "generated_japanese",
+    "domain": "computer_science",
+    "language": "ja",
+    "title": "ディープラーニングに関する性能評価",
+    "abstract": "本研究ではディープラーニングの新しい手法について検討した。実験結果により有効性を確認した。",
+    "authors": [
+      "鈴木丑"
+    ],
+    "content_type": "japanese_academic_paper",
+    "full_content": "タイトル: ディープラーニングに関する性能評価\n\n要旨: 本研究ではディープラーニングの新しい手法について検討した。実験結果により有効性を確認した。\n\n序論: 本研究は当該分野の重要な課題に取り組む。\n\n方法: データ収集と解析に最新技術を使用した。\n\n結果: 実用的な意味を持つ有望な成果を示した。\n\n結論: 本研究は当該分野の知識向上に貢献する。",
+    "word_count": 12,
+    "char_count": 175
+  },
+  {
+    "source": "arxiv",
+    "domain": "computer_science",
+    "language": "en",
+    "title": "MACS: Multi-Agent Reinforcement Learning for Optimization of Crystal\n  Structures",
+    "abstract": "Geometry optimization of atomic structures is a common and crucial task in\ncomputational chemistry and materials design. Following the learning to\noptimize paradigm, we propose a new multi-agent reinforcement learning method\ncalled Multi-Agent Crystal Structure optimization (MACS) to address periodic\ncrystal structure optimization. MACS treats geometry optimization as a\npartially observable Markov game in which atoms are agents that adjust their\npositions to collectively discover a stable configuration. We train MACS across\nvarious compositions of reported crystalline materials to obtain a policy that\nsuccessfully optimizes structures from the training compositions as well as\nstructures of larger sizes and unseen compositions, confirming its excellent\nscalability and zero-shot transferability. We benchmark our approach against a\nbroad range of state-of-the-art optimization methods and demonstrate that MACS\noptimizes periodic crystal structures significantly faster, with fewer energy\ncalculations, and the lowest failure rate.",
+    "authors": [
+      "Elena Zamaraeva",
+      "Christopher M. Collins",
+      "George R. Darling",
+      "Matthew S. Dyer",
+      "Bei Peng",
+      "Rahul Savani",
+      "Dmytro Antypov",
+      "Vladimir V. Gusev",
+      "Judith Clymo",
+      "Paul G. Spirakis",
+      "Matthew J. Rosseinsky"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: MACS: Multi-Agent Reinforcement Learning for Optimization of Crystal\n  Structures\n\nAuthors: Elena Zamaraeva, Christopher M. Collins, George R. Darling, Matthew S. Dyer, Bei Peng\n\nAbstract: Geometry optimization of atomic structures is a common and crucial task in\ncomputational chemistry and materials design. Following the learning to\noptimize paradigm, we propose a new multi-agent reinforcement learning method\ncalled Multi-Agent Crystal Structure optimization (MACS) to address periodic\ncrystal structure optimization. MACS treats geometry optimization as a\npartially observable Markov game in which atoms are agents that adjust their\npositions to collectively discover a stable configuration. We train MACS across\nvarious compositions of reported crystalline materials to obtain a policy that\nsuccessfully optimizes structures from the training compositions as well as\nstructures of larger sizes and unseen compositions, confirming its excellent\nscalability and zero-shot transferability. We benchmark our approach against a\nbroad range of state-of-the-art optimization methods and demonstrate that MACS\noptimizes periodic crystal structures significantly faster, with fewer energy\ncalculations, and the lowest failure rate.\n\nIntroduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.\n\nMethodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.\n\nResults: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.\n\nDiscussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.\n\nConclusion: This work presents a significant advancement in the field with practical implications for real-world applications.",
+    "word_count": 266,
+    "char_count": 2078
+  },
+  {
+    "source": "generated_japanese",
+    "domain": "physics",
+    "language": "ja",
+    "title": "凝縮系物理学に関する理論研究",
+    "abstract": "本研究では凝縮系物理学の最適化技術について検討した。実験結果により有効性を確認した。",
+    "authors": [
+      "佐藤乎"
+    ],
+    "content_type": "japanese_academic_paper",
+    "full_content": "タイトル: 凝縮系物理学に関する理論研究\n\n要旨: 本研究では凝縮系物理学の最適化技術について検討した。実験結果により有効性を確認した。\n\n序論: 本研究は当該分野の重要な課題に取り組む。\n\n方法: データ収集と解析に最新技術を使用した。\n\n結果: 実用的な意味を持つ有望な成果を示した。\n\n結論: 本研究は当該分野の知識向上に貢献する。",
+    "word_count": 12,
+    "char_count": 169
+  },
+  {
+    "source": "generated_english",
+    "domain": "computer_science",
+    "language": "en",
+    "title": "Novel Approaches in Machine Learning: A Comprehensive Study",
+    "abstract": "This research investigates advanced methodologies in deep learning with applications to real-world problems. Our approach demonstrates significant improvements over existing techniques.",
+    "authors": [
+      "Dr. Alex Wilson",
+      "Prof. Maria Garcia"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: Novel Approaches in Machine Learning: A Comprehensive Study\n\nAbstract: This research investigates advanced methodologies in deep learning with applications to real-world problems. Our approach demonstrates significant improvements over existing techniques.\n\nIntroduction: This study addresses important challenges in the field.\n\nMethods: We used state-of-the-art techniques for data collection and analysis.\n\nResults: Our findings show promising outcomes with practical implications.\n\nConclusion: This work contributes to advancing knowledge in the field.",
+    "word_count": 69,
+    "char_count": 562
+  },
+  {
+    "source": "generated_japanese",
+    "domain": "biomedical",
+    "language": "ja",
+    "title": "プロテオミクスに関する実験的検討",
+    "abstract": "本研究ではプロテオミクスの新しい手法について検討した。実験結果により有効性を確認した。",
+    "authors": [
+      "田中个"
+    ],
+    "content_type": "japanese_academic_paper",
+    "full_content": "タイトル: プロテオミクスに関する実験的検討\n\n要旨: 本研究ではプロテオミクスの新しい手法について検討した。実験結果により有効性を確認した。\n\n序論: 本研究は当該分野の重要な課題に取り組む。\n\n方法: データ収集と解析に最新技術を使用した。\n\n結果: 実用的な意味を持つ有望な成果を示した。\n\n結論: 本研究は当該分野の知識向上に貢献する。",
+    "word_count": 12,
+    "char_count": 172
+  },
+  {
+    "source": "arxiv",
+    "domain": "computer_science",
+    "language": "en",
+    "title": "A Kernel-Based Approach for Accurate Steady-State Detection in\n  Performance Time Series",
+    "abstract": "This paper addresses the challenge of accurately detecting the transition\nfrom the warmup phase to the steady state in performance metric time series,\nwhich is a critical step for effective benchmarking. The goal is to introduce a\nmethod that avoids premature or delayed detection, which can lead to inaccurate\nor inefficient performance analysis. The proposed approach adapts techniques\nfrom the chemical reactors domain, detecting steady states online through the\ncombination of kernel-based step detection and statistical methods. By using a\nwindow-based approach, it provides detailed information and improves the\naccuracy of identifying phase transitions, even in noisy or irregular time\nseries. Results show that the new approach reduces total error by 14.5%\ncompared to the state-of-the-art method. It offers more reliable detection of\nthe steady-state onset, delivering greater precision for benchmarking tasks.\nFor users, the new approach enhances the accuracy and stability of performance\nbenchmarking, efficiently handling diverse time series data. Its robustness and\nadaptability make it a valuable tool for real-world performance evaluation,\nensuring consistent and reproducible results.",
+    "authors": [
+      "Martin Beseda",
+      "Vittorio Cortellessa",
+      "Daniele Di Pompeo",
+      "Luca Traini",
+      "Michele Tucci"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: A Kernel-Based Approach for Accurate Steady-State Detection in\n  Performance Time Series\n\nAuthors: Martin Beseda, Vittorio Cortellessa, Daniele Di Pompeo, Luca Traini, Michele Tucci\n\nAbstract: This paper addresses the challenge of accurately detecting the transition\nfrom the warmup phase to the steady state in performance metric time series,\nwhich is a critical step for effective benchmarking. The goal is to introduce a\nmethod that avoids premature or delayed detection, which can lead to inaccurate\nor inefficient performance analysis. The proposed approach adapts techniques\nfrom the chemical reactors domain, detecting steady states online through the\ncombination of kernel-based step detection and statistical methods. By using a\nwindow-based approach, it provides detailed information and improves the\naccuracy of identifying phase transitions, even in noisy or irregular time\nseries. Results show that the new approach reduces total error by 14.5%\ncompared to the state-of-the-art method. It offers more reliable detection of\nthe steady-state onset, delivering greater precision for benchmarking tasks.\nFor users, the new approach enhances the accuracy and stability of performance\nbenchmarking, efficiently handling diverse time series data. Its robustness and\nadaptability make it a valuable tool for real-world performance evaluation,\nensuring consistent and reproducible results.\n\nIntroduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.\n\nMethodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.\n\nResults: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.\n\nDiscussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.\n\nConclusion: This work presents a significant advancement in the field with practical implications for real-world applications.",
+    "word_count": 297,
+    "char_count": 2242
+  },
+  {
+    "source": "arxiv",
+    "domain": "physics",
+    "language": "en",
+    "title": "First-order phase transitions in the cores of neutron stars",
+    "abstract": "I explore various scenarios for the phase transition within neutron-star\nmatter. I do so by generating large model-agnostic ensemble using Gaussian\nprocesses, both with and without explicit inclusion of first-order phase\ntransitions (FOPTs). The ensemble is conditioned with state-of-the-art\nastrophysical and theoretical inputs in a fully Bayesian approach. I study how\nthe current data affect the posterior probability of the location and the\nstrength of FOPT. I find that the previously observed peak structure of the\nsound speed remains stable against inclusion of FOPTs. While the current data\ncannot differentiate between a smooth crossover and a first-order phase\ntransition, 91% of the total evidence consists of equations of state with some\nform of phase changes, such as FOPT occurring within or terminating the stable\nbranch of neutron stars, or an indication of a crossover to quark matter.",
+    "authors": [
+      "Oleg Komoltsev"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: First-order phase transitions in the cores of neutron stars\n\nAuthors: Oleg Komoltsev\n\nAbstract: I explore various scenarios for the phase transition within neutron-star\nmatter. I do so by generating large model-agnostic ensemble using Gaussian\nprocesses, both with and without explicit inclusion of first-order phase\ntransitions (FOPTs). The ensemble is conditioned with state-of-the-art\nastrophysical and theoretical inputs in a fully Bayesian approach. I study how\nthe current data affect the posterior probability of the location and the\nstrength of FOPT. I find that the previously observed peak structure of the\nsound speed remains stable against inclusion of FOPTs. While the current data\ncannot differentiate between a smooth crossover and a first-order phase\ntransition, 91% of the total evidence consists of equations of state with some\nform of phase changes, such as FOPT occurring within or terminating the stable\nbranch of neutron stars, or an indication of a crossover to quark matter.\n\nIntroduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.\n\nMethodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.\n\nResults: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.\n\nDiscussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.\n\nConclusion: This work presents a significant advancement in the field with practical implications for real-world applications.",
+    "word_count": 254,
+    "char_count": 1847
+  },
+  {
+    "source": "arxiv",
+    "domain": "biomedical",
+    "language": "en",
+    "title": "Proteome-wide prediction of mode of inheritance and molecular mechanism\n  underlying genetic diseases using structural interactomics",
+    "abstract": "Genetic diseases can be classified according to their modes of inheritance\nand their underlying molecular mechanisms. Autosomal dominant disorders often\nresult from DNA variants that cause loss-of-function, gain-of-function, or\ndominant-negative effects, while autosomal recessive diseases are primarily\nlinked to loss-of-function variants. In this study, we introduce a\ngraph-of-graphs approach that leverages protein-protein interaction networks\nand high-resolution protein structures to predict the mode of inheritance of\ndiseases caused by variants in autosomal genes, and to classify\ndominant-associated proteins based on their functional effect. Our approach\nintegrates graph neural networks, structural interactomics and topological\nnetwork features to provide proteome-wide predictions, thus offering a scalable\nmethod for understanding genetic disease mechanisms.",
+    "authors": [
+      "Ali Saadat",
+      "Jacques Fellay"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: Proteome-wide prediction of mode of inheritance and molecular mechanism\n  underlying genetic diseases using structural interactomics\n\nAuthors: Ali Saadat, Jacques Fellay\n\nAbstract: Genetic diseases can be classified according to their modes of inheritance\nand their underlying molecular mechanisms. Autosomal dominant disorders often\nresult from DNA variants that cause loss-of-function, gain-of-function, or\ndominant-negative effects, while autosomal recessive diseases are primarily\nlinked to loss-of-function variants. In this study, we introduce a\ngraph-of-graphs approach that leverages protein-protein interaction networks\nand high-resolution protein structures to predict the mode of inheritance of\ndiseases caused by variants in autosomal genes, and to classify\ndominant-associated proteins based on their functional effect. Our approach\nintegrates graph neural networks, structural interactomics and topological\nnetwork features to provide proteome-wide predictions, thus offering a scalable\nmethod for understanding genetic disease mechanisms.\n\nIntroduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.\n\nMethodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.\n\nResults: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.\n\nDiscussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.\n\nConclusion: This work presents a significant advancement in the field with practical implications for real-world applications.",
+    "word_count": 233,
+    "char_count": 1902
+  },
+  {
+    "source": "generated_english",
+    "domain": "computer_science",
+    "language": "en",
+    "title": "Novel Approaches in Deep Learning: A Comprehensive Study",
+    "abstract": "This research investigates advanced methodologies in deep learning with applications to real-world problems. Our approach demonstrates significant improvements over existing techniques.",
+    "authors": [
+      "Dr. Alex Wilson",
+      "Prof. Maria Garcia"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: Novel Approaches in Deep Learning: A Comprehensive Study\n\nAbstract: This research investigates advanced methodologies in deep learning with applications to real-world problems. Our approach demonstrates significant improvements over existing techniques.\n\nIntroduction: This study addresses important challenges in the field.\n\nMethods: We used state-of-the-art techniques for data collection and analysis.\n\nResults: Our findings show promising outcomes with practical implications.\n\nConclusion: This work contributes to advancing knowledge in the field.",
+    "word_count": 69,
+    "char_count": 559
+  },
+  {
+    "source": "generated_japanese",
+    "domain": "physics",
+    "language": "ja",
+    "title": "凝縮系物理学に関する実験的検討",
+    "abstract": "本研究では量子物理学の最適化技術について検討した。実験結果により有効性を確認した。",
+    "authors": [
+      "田中丑"
+    ],
+    "content_type": "japanese_academic_paper",
+    "full_content": "タイトル: 凝縮系物理学に関する実験的検討\n\n要旨: 本研究では量子物理学の最適化技術について検討した。実験結果により有効性を確認した。\n\n序論: 本研究は当該分野の重要な課題に取り組む。\n\n方法: データ収集と解析に最新技術を使用した。\n\n結果: 実用的な意味を持つ有望な成果を示した。\n\n結論: 本研究は当該分野の知識向上に貢献する。",
+    "word_count": 12,
+    "char_count": 169
+  },
+  {
+    "source": "generated_english",
+    "domain": "biomedical",
+    "language": "en",
+    "title": "Novel Approaches in Proteomics: A Comprehensive Study",
+    "abstract": "This research investigates advanced methodologies in genomics with applications to real-world problems. Our approach demonstrates significant improvements over existing techniques.",
+    "authors": [
+      "Dr. Alex Wilson",
+      "Prof. Maria Garcia"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: Novel Approaches in Proteomics: A Comprehensive Study\n\nAbstract: This research investigates advanced methodologies in genomics with applications to real-world problems. Our approach demonstrates significant improvements over existing techniques.\n\nIntroduction: This study addresses important challenges in the field.\n\nMethods: We used state-of-the-art techniques for data collection and analysis.\n\nResults: Our findings show promising outcomes with practical implications.\n\nConclusion: This work contributes to advancing knowledge in the field.",
+    "word_count": 67,
+    "char_count": 551
+  },
+  {
+    "source": "j-stage_simulation",
+    "domain": "computer_science",
+    "language": "ja",
+    "title": "機械学習によるデータマイニング手法の比較研究",
+    "abstract": "異なる機械学習アルゴリズムによるデータマイニング手法の性能を比較評価した。大規模データセットを用いた実験により、各手法の特徴と適用範囲を明らかにした。",
+    "authors": [
+      "田中七郎",
+      "佐藤亏子"
+    ],
+    "content_type": "japanese_academic_paper",
+    "full_content": "タイトル: 機械学習によるデータマイニング手法の比較研究\n\n要旨: 異なる機械学習アルゴリズムによるデータマイニング手法の性能を比較評価した。大規模データセットを用いた実験により、各手法の特徴と適用範囲を明らかにした。\n\n序論: この分野における最近の進歩により、革新的な応用への新たな可能性が開かれている。本研究は現在の限界に対処し、新しい解決策を提案する。\n\n方法: 我々は厳密な実験プロトコルと先進的な計算技術を用いてアプローチを検証した。結果の信頼性を確保するために統計解析を実施した。\n\n結果: 実験データはベースライン手法に対して有意な改善を示している。主要な性能指標により、提案手法の有効性が実証された。\n\n考察: これらの知見は当該分野の現在の理解に寄与し、将来の研究方向性に関する洞察を提供する。潜在的な応用は複数の領域にわたる。\n\n結論: 本研究は実世界への応用において実用的な意味を持つ、当該分野における重要な進歩を示している。",
+    "word_count": 14,
+    "char_count": 425
+  },
+  {
+    "source": "arxiv",
+    "domain": "physics",
+    "language": "en",
+    "title": "Mechanical Degradation of Unentangled Polymer Melts under Uniaxial\n  Extensional Flow",
+    "abstract": "Complex flow fields govern the deformation of polymers in various\nmanufacturing processes. However, high flow rates may trigger reaction events\n(i.e., bond breaking or undesirable reaction of mechanophores) in raw polymeric\nmaterials, leading to the mechanical or functional debasement of manufactured\nstructures. Additionally, it is difficult to fully characterize such\nmolecular-level flow in the laboratory due to time- and length-scale limits. In\nthis study, we perform non-equilibrium molecular dynamics (NEMD) simulations to\nexplore the rheological and mechanical degradation of unentangled polymer melts\nunder uniaxial extensional flow (UEF), allowing for chain breaking. Our\nsimulations demonstrate shear thickening-thinning-thickening stages with the\nincrease of UEF extension rates, resulting from flow-induced changes of chain\nconformation. With further increasing UEF extension rates, a bond-breaking\npotential leads to another flow thinning stage. Interestingly, fracture\nkinetics is originally first-order owing to the need for highly stretched\npolymer chains before bond fracture. It is no longer first-order when bond\nfracture is instigated before chains are stretched. Our computational work\nprovides insight into the optimal design of the manufacturing process for\npolymeric materials.",
+    "authors": [
+      "Mingchao Wang",
+      "Stephen Sanderson",
+      "Debra J. Searles"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: Mechanical Degradation of Unentangled Polymer Melts under Uniaxial\n  Extensional Flow\n\nAuthors: Mingchao Wang, Stephen Sanderson, Debra J. Searles\n\nAbstract: Complex flow fields govern the deformation of polymers in various\nmanufacturing processes. However, high flow rates may trigger reaction events\n(i.e., bond breaking or undesirable reaction of mechanophores) in raw polymeric\nmaterials, leading to the mechanical or functional debasement of manufactured\nstructures. Additionally, it is difficult to fully characterize such\nmolecular-level flow in the laboratory due to time- and length-scale limits. In\nthis study, we perform non-equilibrium molecular dynamics (NEMD) simulations to\nexplore the rheological and mechanical degradation of unentangled polymer melts\nunder uniaxial extensional flow (UEF), allowing for chain breaking. Our\nsimulations demonstrate shear thickening-thinning-thickening stages with the\nincrease of UEF extension rates, resulting from flow-induced changes of chain\nconformation. With further increasing UEF extension rates, a bond-breaking\npotential leads to another flow thinning stage. Interestingly, fracture\nkinetics is originally first-order owing to the need for highly stretched\npolymer chains before bond fracture. It is no longer first-order when bond\nfracture is instigated before chains are stretched. Our computational work\nprovides insight into the optimal design of the manufacturing process for\npolymeric materials.\n\nIntroduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.\n\nMethodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.\n\nResults: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.\n\nDiscussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.\n\nConclusion: This work presents a significant advancement in the field with practical implications for real-world applications.",
+    "word_count": 297,
+    "char_count": 2310
+  },
+  {
+    "source": "arxiv",
+    "domain": "computer_science",
+    "language": "en",
+    "title": "TracLLM: A Generic Framework for Attributing Long Context LLMs",
+    "abstract": "Long context large language models (LLMs) are deployed in many real-world\napplications such as RAG, agent, and broad LLM-integrated applications. Given\nan instruction and a long context (e.g., documents, PDF files, webpages), a\nlong context LLM can generate an output grounded in the provided context,\naiming to provide more accurate, up-to-date, and verifiable outputs while\nreducing hallucinations and unsupported claims. This raises a research\nquestion: how to pinpoint the texts (e.g., sentences, passages, or paragraphs)\nin the context that contribute most to or are responsible for the generated\noutput by an LLM? This process, which we call context traceback, has various\nreal-world applications, such as 1) debugging LLM-based systems, 2) conducting\npost-attack forensic analysis for attacks (e.g., prompt injection attack,\nknowledge corruption attacks) to an LLM, and 3) highlighting knowledge sources\nto enhance the trust of users towards outputs generated by LLMs. When applied\nto context traceback for long context LLMs, existing feature attribution\nmethods such as Shapley have sub-optimal performance and/or incur a large\ncomputational cost. In this work, we develop TracLLM, the first generic context\ntraceback framework tailored to long context LLMs. Our framework can improve\nthe effectiveness and efficiency of existing feature attribution methods. To\nimprove the efficiency, we develop an informed search based algorithm in\nTracLLM. We also develop contribution score ensemble/denoising techniques to\nimprove the accuracy of TracLLM. Our evaluation results show TracLLM can\neffectively identify texts in a long context that lead to the output of an LLM.\nOur code and data are at: https://github.com/Wang-Yanting/TracLLM.",
+    "authors": [
+      "Yanting Wang",
+      "Wei Zou",
+      "Runpeng Geng",
+      "Jinyuan Jia"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: TracLLM: A Generic Framework for Attributing Long Context LLMs\n\nAuthors: Yanting Wang, Wei Zou, Runpeng Geng, Jinyuan Jia\n\nAbstract: Long context large language models (LLMs) are deployed in many real-world\napplications such as RAG, agent, and broad LLM-integrated applications. Given\nan instruction and a long context (e.g., documents, PDF files, webpages), a\nlong context LLM can generate an output grounded in the provided context,\naiming to provide more accurate, up-to-date, and verifiable outputs while\nreducing hallucinations and unsupported claims. This raises a research\nquestion: how to pinpoint the texts (e.g., sentences, passages, or paragraphs)\nin the context that contribute most to or are responsible for the generated\noutput by an LLM? This process, which we call context traceback, has various\nreal-world applications, such as 1) debugging LLM-based systems, 2) conducting\npost-attack forensic analysis for attacks (e.g., prompt injection attack,\nknowledge corruption attacks) to an LLM, and 3) highlighting knowledge sources\nto enhance the trust of users towards outputs generated by LLMs. When applied\nto context traceback for long context LLMs, existing feature attribution\nmethods such as Shapley have sub-optimal performance and/or incur a large\ncomputational cost. In this work, we develop TracLLM, the first generic context\ntraceback framework tailored to long context LLMs. Our framework can improve\nthe effectiveness and efficiency of existing feature attribution methods. To\nimprove the efficiency, we develop an informed search based algorithm in\nTracLLM. We also develop contribution score ensemble/denoising techniques to\nimprove the accuracy of TracLLM. Our evaluation results show TracLLM can\neffectively identify texts in a long context that lead to the output of an LLM.\nOur code and data are at: https://github.com/Wang-Yanting/TracLLM.\n\nIntroduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.\n\nMethodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.\n\nResults: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.\n\nDiscussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.\n\nConclusion: This work presents a significant advancement in the field with practical implications for real-world applications.",
+    "word_count": 374,
+    "char_count": 2721
+  },
+  {
+    "source": "generated_english",
+    "domain": "materials",
+    "language": "en",
+    "title": "Novel Approaches in Semiconductor: A Comprehensive Study",
+    "abstract": "This research investigates advanced methodologies in materials science with applications to real-world problems. Our approach demonstrates significant improvements over existing techniques.",
+    "authors": [
+      "Dr. Alex Wilson",
+      "Prof. Maria Garcia"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: Novel Approaches in Semiconductor: A Comprehensive Study\n\nAbstract: This research investigates advanced methodologies in materials science with applications to real-world problems. Our approach demonstrates significant improvements over existing techniques.\n\nIntroduction: This study addresses important challenges in the field.\n\nMethods: We used state-of-the-art techniques for data collection and analysis.\n\nResults: Our findings show promising outcomes with practical implications.\n\nConclusion: This work contributes to advancing knowledge in the field.",
+    "word_count": 68,
+    "char_count": 563
+  },
+  {
+    "source": "j-stage_simulation",
+    "domain": "computer_science",
+    "language": "ja",
+    "title": "深層学習を用いた画像認識システムの性能向上に関する研究",
+    "abstract": "本研究では、深層学習アルゴリズムを用いた画像認識システムの性能向上について検討した。従来手法と比較して、提案手法は精度を15%向上させることができた。",
+    "authors": [
+      "田中一郎",
+      "佐藤二子"
+    ],
+    "content_type": "japanese_academic_paper",
+    "full_content": "タイトル: 深層学習を用いた画像認識システムの性能向上に関する研究\n\n要旨: 本研究では、深層学習アルゴリズムを用いた画像認識システムの性能向上について検討した。従来手法と比較して、提案手法は精度を15%向上させることができた。\n\n序論: この分野における最近の進歩により、革新的な応用への新たな可能性が開かれている。本研究は現在の限界に対処し、新しい解決策を提案する。\n\n方法: 我々は厳密な実験プロトコルと先進的な計算技術を用いてアプローチを検証した。結果の信頼性を確保するために統計解析を実施した。\n\n結果: 実験データはベースライン手法に対して有意な改善を示している。主要な性能指標により、提案手法の有効性が実証された。\n\n考察: これらの知見は当該分野の現在の理解に寄与し、将来の研究方向性に関する洞察を提供する。潜在的な応用は複数の領域にわたる。\n\n結論: 本研究は実世界への応用において実用的な意味を持つ、当該分野における重要な進歩を示している。",
+    "word_count": 14,
+    "char_count": 430
+  },
+  {
+    "source": "arxiv",
+    "domain": "computer_science",
+    "language": "en",
+    "title": "RAC3: Retrieval-Augmented Corner Case Comprehension for Autonomous\n  Driving with Vision-Language Models",
+    "abstract": "Understanding and addressing corner cases is essential for ensuring the\nsafety and reliability of autonomous driving systems. Vision-language models\n(VLMs) play a crucial role in enhancing scenario comprehension, yet they face\nsignificant challenges, such as hallucination and insufficient real-world\ngrounding, which compromise their performance in critical driving scenarios. In\nthis work, RAC3, a novel framework designed to enhance the performance of VLMs\nin corner case comprehension, is proposed. RAC3 integrates a frequency-spatial\nfusion (FSF) image encoder, a cross-modal alignment training method for\nembedding models with hard and semi-hard negative mining, and a fast querying\nand retrieval pipeline based on K-Means clustering and hierarchical navigable\nsmall world (HNSW) indexing. A multimodal chain-of-thought (CoT) prompting\nstrategy to guide analogical reasoning and reduce hallucinations during\ninference is introduced. Moreover, an update mechanism is integrated into RAC3\nto ensure continual learning within the framework. Extensive experiments on the\nCODA and nuScenes datasets demonstrate that RAC3 significantly improves corner\ncase comprehension across multiple downstream tasks. Compared to prior\nstate-of-the-art methods, RAC3 achieves the highest final score of 74.46 on the\nCODA-LM benchmark and shows consistent performance gains when integrated with\nend-to-end frameworks like DriveLM. These results demonstrate the effectiveness\nof retrieval-augmented strategies and cross-modal alignment for safer and more\ninterpretable autonomous driving.",
+    "authors": [
+      "Yujin Wang",
+      "Quanfeng Liu",
+      "Jiaqi Fan",
+      "Jinlong Hong",
+      "Hongqing Chu",
+      "Mengjian Tian",
+      "Bingzhao Gao",
+      "Hong Chen"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: RAC3: Retrieval-Augmented Corner Case Comprehension for Autonomous\n  Driving with Vision-Language Models\n\nAuthors: Yujin Wang, Quanfeng Liu, Jiaqi Fan, Jinlong Hong, Hongqing Chu\n\nAbstract: Understanding and addressing corner cases is essential for ensuring the\nsafety and reliability of autonomous driving systems. Vision-language models\n(VLMs) play a crucial role in enhancing scenario comprehension, yet they face\nsignificant challenges, such as hallucination and insufficient real-world\ngrounding, which compromise their performance in critical driving scenarios. In\nthis work, RAC3, a novel framework designed to enhance the performance of VLMs\nin corner case comprehension, is proposed. RAC3 integrates a frequency-spatial\nfusion (FSF) image encoder, a cross-modal alignment training method for\nembedding models with hard and semi-hard negative mining, and a fast querying\nand retrieval pipeline based on K-Means clustering and hierarchical navigable\nsmall world (HNSW) indexing. A multimodal chain-of-thought (CoT) prompting\nstrategy to guide analogical reasoning and reduce hallucinations during\ninference is introduced. Moreover, an update mechanism is integrated into RAC3\nto ensure continual learning within the framework. Extensive experiments on the\nCODA and nuScenes datasets demonstrate that RAC3 significantly improves corner\ncase comprehension across multiple downstream tasks. Compared to prior\nstate-of-the-art methods, RAC3 achieves the highest final score of 74.46 on the\nCODA-LM benchmark and shows consistent performance gains when integrated with\nend-to-end frameworks like DriveLM. These results demonstrate the effectiveness\nof retrieval-augmented strategies and cross-modal alignment for safer and more\ninterpretable autonomous driving.\n\nIntroduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.\n\nMethodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.\n\nResults: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.\n\nDiscussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.\n\nConclusion: This work presents a significant advancement in the field with practical implications for real-world applications.",
+    "word_count": 334,
+    "char_count": 2612
+  },
+  {
+    "source": "generated_english",
+    "domain": "materials",
+    "language": "en",
+    "title": "Novel Approaches in Nanotechnology: A Comprehensive Study",
+    "abstract": "This research investigates advanced methodologies in semiconductor with applications to real-world problems. Our approach demonstrates significant improvements over existing techniques.",
+    "authors": [
+      "Dr. Alex Wilson",
+      "Prof. Maria Garcia"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: Novel Approaches in Nanotechnology: A Comprehensive Study\n\nAbstract: This research investigates advanced methodologies in semiconductor with applications to real-world problems. Our approach demonstrates significant improvements over existing techniques.\n\nIntroduction: This study addresses important challenges in the field.\n\nMethods: We used state-of-the-art techniques for data collection and analysis.\n\nResults: Our findings show promising outcomes with practical implications.\n\nConclusion: This work contributes to advancing knowledge in the field.",
+    "word_count": 67,
+    "char_count": 560
+  },
+  {
+    "source": "generated_japanese",
+    "domain": "materials",
+    "language": "ja",
+    "title": "半導体に関する性能評価",
+    "abstract": "本研究ではナノテクノロジーの新しい手法について検討した。実験結果により有効性を確認した。",
+    "authors": [
+      "鈴木乞"
+    ],
+    "content_type": "japanese_academic_paper",
+    "full_content": "タイトル: 半導体に関する性能評価\n\n要旨: 本研究ではナノテクノロジーの新しい手法について検討した。実験結果により有効性を確認した。\n\n序論: 本研究は当該分野の重要な課題に取り組む。\n\n方法: データ収集と解析に最新技術を使用した。\n\n結果: 実用的な意味を持つ有望な成果を示した。\n\n結論: 本研究は当該分野の知識向上に貢献する。",
+    "word_count": 12,
+    "char_count": 168
+  },
+  {
+    "source": "j-stage_simulation",
+    "domain": "materials",
+    "language": "ja",
+    "title": "高分子複合材料の機械的特性に関する研究",
+    "abstract": "異なる高分子マトリックスにおける繊維強化複合材料の機械的特性を評価し、最適な組成比を決定した。引張強度と靭性の両立を実現した。",
+    "authors": [
+      "田中丁郎",
+      "佐藤亍子"
+    ],
+    "content_type": "japanese_academic_paper",
+    "full_content": "タイトル: 高分子複合材料の機械的特性に関する研究\n\n要旨: 異なる高分子マトリックスにおける繊維強化複合材料の機械的特性を評価し、最適な組成比を決定した。引張強度と靭性の両立を実現した。\n\n序論: この分野における最近の進歩により、革新的な応用への新たな可能性が開かれている。本研究は現在の限界に対処し、新しい解決策を提案する。\n\n方法: 我々は厳密な実験プロトコルと先進的な計算技術を用いてアプローチを検証した。結果の信頼性を確保するために統計解析を実施した。\n\n結果: 実験データはベースライン手法に対して有意な改善を示している。主要な性能指標により、提案手法の有効性が実証された。\n\n考察: これらの知見は当該分野の現在の理解に寄与し、将来の研究方向性に関する洞察を提供する。潜在的な応用は複数の領域にわたる。\n\n結論: 本研究は実世界への応用において実用的な意味を持つ、当該分野における重要な進歩を示している。",
+    "word_count": 14,
+    "char_count": 410
+  },
+  {
+    "source": "arxiv",
+    "domain": "biomedical",
+    "language": "en",
+    "title": "Symmetries of Living Systems: Symmetry Fibrations and Synchronization in\n  Biological Networks",
+    "abstract": "A symmetry is a `change without change'. As simple as it sounds, this concept\nis the fundamental cornerstone that unifies all branches of theoretical\nphysics. Virtually all physical laws -- ranging from classical mechanics and\nelectrodynamics to relativity, quantum mechanics, and the standard model -- can\nbe expressed in terms of symmetry invariances. In this book, we explore whether\nthe same principle can also explain the emergent laws of biological systems. We\nintroduce a new geometry for biological networks and AI architectures, drawing\ninspiration from the mystic genius of Grothendieck's fibrations in category\ntheory. We attempt to bridge the gap between physics and biology using\nsymmetries but with a twist. The traditional symmetry groups of physics are\nglobal and too rigid to describe biology. Instead, the novel notion of symmetry\nfibration is local, flexible, and adaptable to evolutionary pressures,\nproviding the right framework for understanding biological complexity. In other\nwords, this more general symmetry invariance is necessary and sufficient to\nensure that a given biological network configuration can support a synchronized\nfunction. In this book, we review the theoretical progress over the last\ndecades from mathematics, physics, computer science, dynamical systems, and\ngraph theory that has led to the discovery of symmetry fibrations in biological\nnetworks. These symmetries act as organizing principles for biological\nnetworks. They serve as effective tools for describing the structure of these\nnetworks, blending geometry and topology. Fibrations explain how structure\ndictates function across various biological domains, including the\ntranscriptome, proteome, metabolome, and connectome. Additionally, they\nfacilitate a reduction in the dimensionality of the network, simplifying it\ninto its fundamental building blocks for biological computation.",
+    "authors": [
+      "Hernan A. Makse",
+      "Paolo Boldi",
+      "Francesco Sorrentino",
+      "Ian Stewart"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: Symmetries of Living Systems: Symmetry Fibrations and Synchronization in\n  Biological Networks\n\nAuthors: Hernan A. Makse, Paolo Boldi, Francesco Sorrentino, Ian Stewart\n\nAbstract: A symmetry is a `change without change'. As simple as it sounds, this concept\nis the fundamental cornerstone that unifies all branches of theoretical\nphysics. Virtually all physical laws -- ranging from classical mechanics and\nelectrodynamics to relativity, quantum mechanics, and the standard model -- can\nbe expressed in terms of symmetry invariances. In this book, we explore whether\nthe same principle can also explain the emergent laws of biological systems. We\nintroduce a new geometry for biological networks and AI architectures, drawing\ninspiration from the mystic genius of Grothendieck's fibrations in category\ntheory. We attempt to bridge the gap between physics and biology using\nsymmetries but with a twist. The traditional symmetry groups of physics are\nglobal and too rigid to describe biology. Instead, the novel notion of symmetry\nfibration is local, flexible, and adaptable to evolutionary pressures,\nproviding the right framework for understanding biological complexity. In other\nwords, this more general symmetry invariance is necessary and sufficient to\nensure that a given biological network configuration can support a synchronized\nfunction. In this book, we review the theoretical progress over the last\ndecades from mathematics, physics, computer science, dynamical systems, and\ngraph theory that has led to the discovery of symmetry fibrations in biological\nnetworks. These symmetries act as organizing principles for biological\nnetworks. They serve as effective tools for describing the structure of these\nnetworks, blending geometry and topology. Fibrations explain how structure\ndictates function across various biological domains, including the\ntranscriptome, proteome, metabolome, and connectome. Additionally, they\nfacilitate a reduction in the dimensionality of the network, simplifying it\ninto its fundamental building blocks for biological computation.\n\nIntroduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.\n\nMethodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.\n\nResults: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.\n\nDiscussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.\n\nConclusion: This work presents a significant advancement in the field with practical implications for real-world applications.",
+    "word_count": 395,
+    "char_count": 2917
+  },
+  {
+    "source": "generated_english",
+    "domain": "physics",
+    "language": "en",
+    "title": "Novel Approaches in Astrophysics: A Comprehensive Study",
+    "abstract": "This research investigates advanced methodologies in astrophysics with applications to real-world problems. Our approach demonstrates significant improvements over existing techniques.",
+    "authors": [
+      "Dr. Alex Wilson",
+      "Prof. Maria Garcia"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: Novel Approaches in Astrophysics: A Comprehensive Study\n\nAbstract: This research investigates advanced methodologies in astrophysics with applications to real-world problems. Our approach demonstrates significant improvements over existing techniques.\n\nIntroduction: This study addresses important challenges in the field.\n\nMethods: We used state-of-the-art techniques for data collection and analysis.\n\nResults: Our findings show promising outcomes with practical implications.\n\nConclusion: This work contributes to advancing knowledge in the field.",
+    "word_count": 67,
+    "char_count": 557
+  },
+  {
+    "source": "generated_english",
+    "domain": "computer_science",
+    "language": "en",
+    "title": "Novel Approaches in Deep Learning: A Comprehensive Study",
+    "abstract": "This research investigates advanced methodologies in machine learning with applications to real-world problems. Our approach demonstrates significant improvements over existing techniques.",
+    "authors": [
+      "Dr. Alex Wilson",
+      "Prof. Maria Garcia"
+    ],
+    "content_type": "academic_paper",
+    "full_content": "Title: Novel Approaches in Deep Learning: A Comprehensive Study\n\nAbstract: This research investigates advanced methodologies in machine learning with applications to real-world problems. Our approach demonstrates significant improvements over existing techniques.\n\nIntroduction: This study addresses important challenges in the field.\n\nMethods: We used state-of-the-art techniques for data collection and analysis.\n\nResults: Our findings show promising outcomes with practical implications.\n\nConclusion: This work contributes to advancing knowledge in the field.",
+    "word_count": 69,
+    "char_count": 562
+  },
+  {
+    "source": "generated_japanese",
+    "domain": "physics",
+    "language": "ja",
+    "title": "天体物理学に関する性能評価",
+    "abstract": "本研究では天体物理学の改良アルゴリズムについて検討した。実験結果により有効性を確認した。",
+    "authors": [
+      "田中丝"
+    ],
+    "content_type": "japanese_academic_paper",
+    "full_content": "タイトル: 天体物理学に関する性能評価\n\n要旨: 本研究では天体物理学の改良アルゴリズムについて検討した。実験結果により有効性を確認した。\n\n序論: 本研究は当該分野の重要な課題に取り組む。\n\n方法: データ収集と解析に最新技術を使用した。\n\n結果: 実用的な意味を持つ有望な成果を示した。\n\n結論: 本研究は当該分野の知識向上に貢献する。",
+    "word_count": 12,
+    "char_count": 170
+  }
+]
