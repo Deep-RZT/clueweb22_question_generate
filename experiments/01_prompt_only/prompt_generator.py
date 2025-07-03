@@ -19,9 +19,9 @@ import requests
 import pandas as pd
 import sys
 import os
-sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..', 'core'))
+sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..'))
 
-from llm_clients.openai_api_client import OpenAIClient, call_openai_with_messages
+from core.llm_clients.openai_api_client import OpenAIClient, call_openai_with_messages
 
 class ClueWeb22SimplifiedGenerator:
     """
@@ -42,7 +42,7 @@ class ClueWeb22SimplifiedGenerator:
         self.openai_client = OpenAIClient(api_key, model)
         
         # ClueWeb22 data directory
-        self.clueweb_data_dir = Path("task_file/clueweb22_query_results")
+        self.clueweb_data_dir = Path("../../data/task_file/clueweb22_query_results")
         
         # Output directory
         self.output_dir = Path("clueweb22_simplified_output")

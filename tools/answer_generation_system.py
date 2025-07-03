@@ -11,9 +11,9 @@ from typing import Dict, List, Any, Optional
 from datetime import datetime
 import sys
 import os
-sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'core'))
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
-from llm_clients.openai_api_client import OpenAIClient, get_difficulty_specific_system_prompt
+from core.llm_clients.openai_api_client import OpenAIClient, get_difficulty_specific_system_prompt
 
 class AnswerGenerationSystem:
     """System for generating comprehensive answers to deep research questions"""

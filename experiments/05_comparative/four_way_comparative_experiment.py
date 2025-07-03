@@ -28,11 +28,11 @@ import re
 # 导入API客户端
 import sys
 import os
-sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..', 'core'))
+sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..'))
 
-from llm_clients.openai_api_client import OpenAIClient
-from llm_clients.claude_api_client import ClaudeAPIClient
-from llm_clients.llm_manager import DynamicLLMManager
+from core.llm_clients.openai_api_client import OpenAIClient
+from core.llm_clients.claude_api_client import ClaudeAPIClient
+from core.llm_clients.llm_manager import DynamicLLMManager
 
 class FourWayComparativeExperiment:
     """四方对比实验管理器"""
@@ -60,9 +60,9 @@ class FourWayComparativeExperiment:
         # 初始化LLM管理器
         self.llm_manager = DynamicLLMManager()
         
-        # 数据源配置
-        self.clueweb_data_dir = Path("task_file/clueweb22_query_results")
-        self.random_docs_dir = Path("task_file/random_documents") 
+        # 数据源配置 (相对于项目根目录)
+        self.clueweb_data_dir = Path("../../data/task_file/clueweb22_query_results")
+        self.random_docs_dir = Path("../../data/task_file/random_documents") 
         
         # 🔄 实验配置 - 全部重新执行
         self.experiments = {

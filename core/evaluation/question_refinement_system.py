@@ -9,7 +9,7 @@ import requests
 import time
 from typing import Dict, List, Any, Optional
 from datetime import datetime
-from deep_research_evaluation_framework import DeepResearchEvaluator, QuestionDepth
+from .deep_research_evaluation_framework import DeepResearchEvaluator, QuestionDepth
 from ..llm_clients.openai_api_client import OpenAIClient
 
 class QuestionRefinementSystem:
