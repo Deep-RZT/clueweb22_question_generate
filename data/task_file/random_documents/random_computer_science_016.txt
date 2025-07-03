@@ -1,0 +1,33 @@
+Title: Control Signaling for Reconfigurable Intelligent Surfaces: How Many Bits
+  are Needed?
+
+Authors: Anders Enqvist, Özlem Tuğfe Demir, Cicek Cavdar, Emil Björnson
+
+Abstract: Reconfigurable intelligent surfaces (RISs) can greatly improve the signal
+quality of future communication systems by reflecting transmitted signals
+toward the receiver. However, even when the base station (BS) has perfect
+channel knowledge and can compute the optimal RIS phase-shift configuration,
+implementing this configuration requires feedback signaling over a control
+channel from the BS to the RIS. This feedback must be kept minimal, as it is
+transmitted wirelessly every time the channel changes. In this paper, we
+examine how the feedback load, measured in bits, affects the performance of an
+RIS-aided system. Specifically, we investigate the trade-offs between
+codebook-based and element-wise feedback schemes, and how these influence the
+signal-to-noise ratio (SNR). We propose a novel quantization codebook tailored
+for line-of-sight (LoS) that guarantees a minimal SNR loss using a number of
+feedback bits that scale logarithmically with the number of RIS elements. We
+demonstrate the codebook's usefulness over Rician fading channels and how to
+extend it to handle a non-zero static path. Numerical simulations and
+analytical analysis are performed to quantify the performance degradation that
+results from a reduced feedback load, shedding light on how efficiently RIS
+configurations can be fed back in practical systems.
+
+Introduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.
+
+Methodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.
+
+Results: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.
+
+Discussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.
+
+Conclusion: This work presents a significant advancement in the field with practical implications for real-world applications.

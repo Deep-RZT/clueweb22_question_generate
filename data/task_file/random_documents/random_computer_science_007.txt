@@ -1,0 +1,37 @@
+Title: DiffCAP: Diffusion-based Cumulative Adversarial Purification for Vision
+  Language Models
+
+Authors: Jia Fu, Yongtao Wu, Yihang Chen, Kunyu Peng, Xiao Zhang
+
+Abstract: Vision Language Models (VLMs) have shown remarkable capabilities in
+multimodal understanding, yet their susceptibility to perturbations poses a
+significant threat to their reliability in real-world applications. Despite
+often being imperceptible to humans, these perturbations can drastically alter
+model outputs, leading to erroneous interpretations and decisions. This paper
+introduces DiffCAP, a novel diffusion-based purification strategy that can
+effectively neutralize adversarial corruptions in VLMs. We observe that adding
+minimal noise to an adversarially corrupted image significantly alters its
+latent embedding with respect to VLMs. Building on this insight, DiffCAP
+cumulatively injects random Gaussian noise into adversarially perturbed input
+data. This process continues until the embeddings of two consecutive noisy
+images reach a predefined similarity threshold, indicating a potential approach
+to neutralize the adversarial effect. Subsequently, a pretrained diffusion
+model is employed to denoise the stabilized image, recovering a clean
+representation suitable for the VLMs to produce an output. Through extensive
+experiments across six datasets with three VLMs under varying attack strengths
+in three task scenarios, we show that DiffCAP consistently outperforms existing
+defense techniques by a substantial margin. Notably, DiffCAP significantly
+reduces both hyperparameter tuning complexity and the required diffusion time,
+thereby accelerating the denoising process. Equipped with strong theoretical
+and empirical support, DiffCAP provides a robust and practical solution for
+securely deploying VLMs in adversarial environments.
+
+Introduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.
+
+Methodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.
+
+Results: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.
+
+Discussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.
+
+Conclusion: This work presents a significant advancement in the field with practical implications for real-world applications.

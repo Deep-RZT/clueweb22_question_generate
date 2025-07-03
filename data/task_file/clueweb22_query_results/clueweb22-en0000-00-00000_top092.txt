@@ -1,0 +1,869 @@
+Timeline of space exploration - Wikipedia
+Timeline of space exploration
+From Wikipedia, the free encyclopedia
+This is a timeline of space exploration including notable achievements and first accomplishments or major events in humanity's exploration of outer space .
+Contents
+1 Pre-20th century
+2 1900–1956
+3 1957–1959
+4 1960–1969
+5 1970–1980
+6 1981–1999
+7 2000–2021
+8 See also
+9 References
+10 External links
+Pre-20th century[edit]
+Date
+Event leading to space exploration
+Country
+Researcher(s)
+Ref(s)
+1610
+First telescopic observation of the night sky: discovery of Jupiter's moons, lunar craters and the phases of Venus.
+Republic of Venice
+Galileo Galilei
+1813
+First exposition of the rocket equation based on Newton's third law of motion: Treatise on the Motion of Rockets .
+UK
+William Moore
+1840
+First clear telescopic photograph of another world: the Moon .
+United States
+John William Draper
+1845
+First proper observation of other galaxies which are termed "whirlpool nebulae".
+UK
+William Parsons
+1861
+A Journey Through Space makes first proposal of using rockets for space flight.
+UK
+William Leitch
+1895
+First proposal of space elevator .
+Russia
+Konstantin Tsiolkovsky
+1900–1956[edit]
+Date
+Mission success
+Country
+Mission name
+Ref(s)
+1903
+Inspired by the writings of Jules Verne, first serious work published that showed physical space exploration was theoretically possible: Исследование мировых пространств реактивными приборами (Issledovanie mirovykh prostranst' reaktivnymi priborami;The Exploration of Cosmic Space by Means of Reaction Devices ).
+Russia
+Konstantin Tsiolkovsky
+1914
+Goddard files for and is subsequently awarded U.S. patents on multistage and liquid-fueled rockets.
+United States
+Robert H. Goddard
+1917
+First observation of an extrasolar planet (exoplanet) round Van Maanen 2 although it is not recognised as such at the time.
+Netherlands
+Adriaan van Maanen
+1919
+Goddard's widely influential paper "A Method of Reaching Extreme Altitudes" discussed solid- and liquid-fueled rocketry.
+United States
+Robert H. Goddard
+15 December 1923
+Die Rakete zu den Planetenräumen ("By Rocket into Planetary Space") self-published after its rejection as a doctoral thesis.
+Germany
+Hermann Oberth
+1924
+Society for Studies of Interplanetary Travel founded.
+USSR
+Members include Konstantin Tsiolkovsky, Friedrich Zander, Yuri Kondratyuk
+16 March 1926
+Goddard launches the first liquid-fueled rocket.
+United States
+Robert H. Goddard
+1927
+Verein für Raumschiffahrt (Society for Space Travel) formed; it includes many top European rocket scientists.
+Germany
+1927
+Завоевание межпланетных пространств (The Conquest of Interplanetary Space) discusses rocket mechanics and orbital effects including the gravitational slingshot .
+USSR
+Yuri Kondratyuk
+1928
+Das Problem der Befahrung des Weltraums – der Raketen-Motor (The Problem of Space Travel – The Rocket Motor) discusses space travel and its potential uses for scientific experiments.
+Germany
+Herman Potočnik
+11 June 1928
+Lippisch Ente, first successful rocket-powered full-size aircraft, as part of Opel-RAK program. [1]
+Germany
+Alexander Lippisch (designer), Fritz Stamer (pilot), Fritz von Opel and Max Valier (program heads)
+30 September 1929
+Opel RAK.1, first successful public flight of a rocket-powered aircraft, as part of Opel-RAK program.
+Germany
+Julius Hatry (designer), Fritz von Opel (pilot and program head), Max Valier (program head)
+January 1933
+British Interplanetary Society founded.
+UK
+Philip E. Cleator
+20 June 1944
+V-2 rocket (MW 18014 ): First artificial object to cross what would later be defined as the Kármán line and hence first spaceflight in history.
+Germany
+Wehrmacht
+October 1945
+Article in Wireless World, "Extra-Terrestrial Relays — Can Rocket Stations Give Worldwide Radio Coverage?" makes first discussion of geostationary satellites as a means of communication.
+UK
+Arthur C. Clarke
+10 May 1946
+First space research flight (cosmic radiation experiments).
+United States
+captured and improved V-2 rocket
+24 October 1946
+First pictures of Earth from 105 km (65 mi).
+United States
+V-2
+[2] [3]
+20 February 1947
+First animals in space (fruit flies).
+United States
+V-2
+[2] [4]
+24 February 1949
+WAC Corporal missile mounted onto a V-2 rocket, producing the first two-stage liquid-fueled rocket, that sets a record altitude of 244 miles (393 km).
+United States
+Bumper-5
+14 June 1949
+Albert II, a rhesus monkey, became the first primate in space, flying on a V-2 rocket.
+United States
+V-2
+20 September 1956
+The first rocket to pass the thermopause and enter the exosphere. At 682 miles (1,098 km) altitude and 3,335 miles range, the 3-stage Jupiter-C breaks both records and achieves MACH 18 velocity.
+United States
+Jupiter-C (first launch )
+1957–1959[edit]
+Date
+Mission achievements
+Country/organization
+Mission name
+Ref(s)
+21 August 1957
+First intercontinental ballistic missile (ICBM).
+USSR
+R-7 Semyorka/SS-6 Sapwood
+4 October 1957
+First artificial satellite.
+First man-made signals from space.
+USSR
+Sputnik 1
+3 November 1957
+First mammal in orbit, the dog Laika .
+USSR
+Sputnik 2
+31 January 1958
+Confirmed existence of the Van Allen radiation belt .
+USA (ABMA )
+Explorer 1
+4 January 1959
+First rocket to reach Earth escape velocity; attempt to impact the Moon's surface; missed by 5,995 kilometers (3,237 nmi).
+First artificial object in heliocentric orbit.
+First detection of solar wind .
+USSR
+Luna 1
+7 August 1959
+First photograph of Earth from orbit.
+USA (NASA )
+Explorer 6
+13 September 1959
+First impact into the Moon.
+First delivery of national pennants to a celestial body.
+USSR
+Luna 2
+4 October 1959
+First photos of another world from space: the far side of the Moon .
+USSR
+Luna 3
+1960–1969[edit]
+Date
+Mission success
+Country/organization
+Mission name
+Ref(s)
+March 1960
+First solar probe.
+USA (NASA)
+Pioneer 5
+19 August 1960
+First plants and animals to return alive from Earth orbit.
+USSR
+Sputnik 5
+10 October 1960
+First probe launched to Mars (failed to reach target).
+USSR
+Mars 1M
+31 January 1961
+First Hominidae or great ape in space, first tasks performed in space; Ham (chimpanzee) .
+USA (NASA)
+M-R 2
+12 February 1961
+First launch from Earth orbit of upper stage into a heliocentric orbit.
+First mid-course corrections.
+First spin-stabilisation .
+USSR
+Venera 1
+12 April 1961
+First human spaceflight (Yuri Gagarin ).
+First human-crewed orbital flight.
+USSR
+Vostok 1
+5 May 1961
+First human-piloted space flight (Alan Shepard ).
+First human-crewed suborbital flight.
+First human space mission that landed with pilot still in spacecraft, thus the first complete human spaceflight by then FAI definitions.
+USA
+Freedom 7
+[5]
+19 May 1961
+First planetary flyby (within 100,000 km of Venus – no data returned).
+USSR
+Venera 1
+6 August 1961
+First crewed space flight lasting over twenty four hours by Gherman Titov, who is also the first to suffer from space sickness .
+USSR
+Vostok 2
+7 March 1962
+First orbital solar observatory .
+USA (NASA)
+OSO-1
+26 April 1962
+First spacecraft to impact the far side of the Moon .
+USA (NASA)
+Ranger 4
+[6]
+11 August 1962
+First dual crewed spaceflight.
+First communication between two crewed space vehicles in orbit.
+USSR
+Vostok 3 & Vostok 4
+18 August 1962
+First auroral research rocket launched into the ionosphere.
+Norway
+Ferdinand 1
+November 1962
+First Mars flyby (11,000 km) but contact was lost.
+USSR
+Mars 1
+14 December 1962
+First successful planetary flyby (Venus closest approach 34,773 kilometers).
+USA (NASA)
+Mariner 2
+16 June 1963
+First woman in space (Valentina Tereshkova ).
+USSR
+Vostok 6
+19 July 1963
+First reusable crewed spacecraft (suborbital ).
+USA (NASA)
+X-15 Flight 90
+12 October 1964
+First multi-person crew (3) in orbit.
+USSR
+Voskhod 1
+18 March 1965
+First space walk/ extra-vehicular activity (Alexei Leonov ).
+USSR
+Voskhod 2
+March 1965
+First crewed spacecraft to change orbit.
+USA (NASA)
+Gemini 3
+14 July 1965
+First Mars flyby (closest approach 9,846 kilometers; returned pictures).
+USA (NASA)
+Mariner 4
+14 July 1965
+First close-up photographs of another planet: Mars .
+USA (NASA)
+Mariner 4
+15 December 1965
+First orbital rendezvous (parallel flight, no docking).
+USA (NASA)
+Gemini 6A/Gemini 7
+3 February 1966
+First soft landing on another world (the Moon).
+First photos from another world.
+USSR
+Luna 9
+1 March 1966
+First impact into another planet (Venus).
+USSR
+Venera 3
+16 March 1966
+First orbital docking between two spacecraft.
+USA (NASA)
+Gemini 8/Agena target vehicle
+3 April 1966
+First artificial satellite around another world (the Moon).
+USSR
+Luna 10
+August 1966
+First probe to map the Moon.
+USA
+Lunar Orbiter 1
+30 October 1967
+First automated (crewless) docking .
+USSR
+Cosmos 186/Cosmos 188
+September 1968
+First animals and plants to leave Earth orbit, to travel to and circle the Moon, and the first Moon mission with passengers to return safely to Earth.
+USSR
+Zond 5
+7 December 1968
+First orbital ultraviolet observatory.
+USA (NASA)
+OAO-2
+21 December 1968
+First piloted orbital mission of another celestial body (Moon).
+First Trans-Earth injection.
+First human space mission to enter the gravitational influence of another celestial body (25 December).
+USA (NASA)
+Apollo 8
+January 1969
+First docking between two crewed spacecraft in Earth orbit, also the first crew exchange in space.
+USSR
+Soyuz 4 and Soyuz 5
+January 1969
+First to parachute in Venus's atmosphere, lost contact before landing.
+USSR
+Venera 5
+23 May 1969
+First docking of two crewed spacecraft around another celestial body.
+USA (NASA)
+Apollo 10
+20 July 1969
+First human on the Moon, and first space launch from a celestial body other than the Earth.
+First sample return from the Moon.
+USA (NASA)
+Apollo 11
+August 4, 1969
+First photograph of Phobos from Space.
+USA (NASA)
+Mariner 7
+19 November 1969
+First rendezvous on the surface of a celestial body.
+USA (NASA)
+Apollo 12/Surveyor 3
+1970–1980[edit]
+Date
+Mission success
+Country/organization
+Mission name
+Ref(s)
+24 September 1970
+First automatic sample return from the Moon.
+USSR
+Luna 16
+17 November 1970
+First lunar rover .
+USSR
+Lunokhod 1
+12 December 1970
+First X-ray orbital observatory .
+USA (NASA)
+Uhuru (satellite)
+15 December 1970
+First soft landing on another planet (Venus).
+First signals from another planet.
+USSR
+Venera 7
+19 April 1971
+First space station .
+USSR
+Salyut 1
+June 1971
+First crewed orbital observatory .
+USSR
+Orion 1
+14 November 1971
+First to maintain orbit around another planet (Mars ).
+USA (NASA)
+Mariner 9
+27 November 1971
+First impact into Mars.
+USSR
+Mars 2
+2 December 1971
+First soft Mars landing.
+First signals from Mars surface.
+First photograph from Martian surface.
+USSR
+Mars 3
+3 March 1972
+First human made object sent on escape trajectory away from the Sun.
+USA (NASA)
+Pioneer 10
+15 July 1972
+First mission to enter the asteroid belt and leave inner Solar System.
+USA (NASA)
+Pioneer 10
+15 November 1972
+First orbital gamma ray observatory.
+USA (NASA)
+SAS 2
+14 May 1973
+Launch of Skylab -  first American space station.
+USA (NASA)
+Skylab
+[7]
+3 December 1973
+First Jupiter flyby (at 130,000 km).
+USA (NASA)
+Pioneer 10
+5 February 1974
+Venus flyby at 5768 kilometers, first gravitational assist manoeuvre.
+First photograph of Venus from Space.
+USA (NASA)
+Mariner 10
+29 March 1974
+First Mercury flyby at 703 kilometers.
+USA (NASA)
+Mariner 10
+30 May 1975
+Formation of European Space Agency, which pools the resources of several European countries.
+ESA
+15 July 1975
+First multinational crewed mission.
+USSR USA (NASA)
+Apollo-Soyuz Test Project
+20 October 1975
+First orbit around Venus.
+USSR
+Venera 9
+22 October 1975
+First successful photos from the surface of another planet (Venus).
+USSR
+Venera 9
+17 April 1976
+Closest flyby of the Sun (43.432 million kilometers).
+Maximum speed record among spacecraft (252,792 km/h).
+USA (NASA)
+West Germany (DFVLR )
+Helios 2
+20 July 1976
+First successful photos and soil samples from the surface of Mars.
+USA (NASA)
+Viking Lander
+26 January 1978
+First real time remotely operated ultraviolet orbital observatory.
+USA (NASA)
+ESA
+UK (SERC )
+International Ultraviolet Explorer
+4 December 1978
+First extended (multi-year) orbital exploration of Venus (from 1978 to 1992).
+USA (NASA)
+Pioneer Venus Orbiter
+5 March 1979
+Jupiter flyby (closest approach 349,000 km)
+Encounters with five Jovian moons
+Discovery of volcanism on Io .
+USA (NASA)
+Voyager 1
+1 September 1979
+First Saturn flyby at 21,000 km, first photographs of Titan from space.
+USA (NASA)
+Pioneer 11
+12 November 1980
+Saturn flyby (closest approach 124,000 km), close encounter of Titan and encounters with a dozen others.
+USA (NASA)
+Voyager 1
+1981–1999[edit]
+Date
+Mission success
+Country/organization
+Mission name
+Ref(s)
+12 April 1981
+First Reusable crewed orbital spacecraft .
+USA (NASA)
+STS-1
+1 March 1982
+First Venus soil samples and sound recording of another world.
+USSR
+Venera 13
+19 August 1982
+First mixed gender crew aboard space station, and first woman, Svetlana Savitskaya, on space station.
+USSR
+Salyut 7
+25 January 1983
+First Infrared orbital observatory .
+USA (NASA)
+UK (SERC)
+Netherlands (NIVR )
+IRAS
+13 June 1983
+First spacecraft beyond the orbit of Neptune (first spacecraft to pass beyond all Solar System planets).
+USA (NASA)
+Pioneer 10
+7 February 1984
+First untethered spacewalk, Bruce McCandless II .
+USA (NASA)
+STS-41-B
+25 July 1984
+First spacewalk by woman, Svetlana Savitskaya .
+USSR
+Salyut 7
+11 June 1985
+First balloon deployed on another planet (Venus).
+USSR
+Vega 1
+24 January 1986
+First Uranus flyby (closest approach 81,500 kilometers (44,000 nmi)).
+USA (NASA)
+Voyager 2
+28 January 1986
+First major American space loss, the Space Shuttle Challenger disaster, an explosion soon after liftoff which killed, among others, Christa McAuliffe, a high school teacher.
+USA (NASA)
+STS-51-L
+19 February 1986
+First consistently inhabited long-term research space station .
+USSR
+Mir
+4 March 1986
+First flyby of a comet (Halley's Comet, 8,889 kilometers).
+USSR
+Vega 1 & Vega 2
+13 March 1986
+First close up observations of a comet (Halley's Comet, 596 kilometers).
+ESA
+Giotto
+July 1988
+First suspected detection of an exoplanet Gamma Cephei Ab, although the discovery was retracted in 1994, and not confirmed until 2002.
+Team of astronomers, led by Bruce Campbell, Gordon Walker, and Stephenson Yang; existence announced by Anthony Lawton & P. Wright in 1989
+Canada
+8 August 1989
+First astrometric satellite
+ESA
+Hipparcos
+25 August 1989
+First Neptune flyby (closest approach at 29,240 km).
+USA (NASA)
+Voyager 2
+18 November 1989
+First orbital cosmic microwave observatory
+USA (NASA)
+COBE
+14 February 1990
+First photograph of the whole Solar System
+USA (NASA)
+Voyager 1
+[8]
+24 April 1990
+Optical orbital observatory
+USA (NASA)
+ESA
+Hubble Space Telescope
+2 July 1990
+First time a spacecraft coming from deep space uses the Earth for a gravity-assist manoeuvre
+ESA
+Giotto
+[9]
+15 September 1990
+Extended (multi-year) orbital exploration of Venus .
+USA (NASA)
+Magellan
+21 October 1991
+First asteroid flyby (951 Gaspra closest approach 1,600 km).
+USA (NASA)
+Galileo
+1992
+First confirmed observation of an exoplanet
+Canada
+Poland
+Aleksander Wolszczan & Dale Frail
+8 February 1992
+First polar orbit around the Sun
+USA (NASA)
+ESA
+Ulysses
+22 March 1995
+Record longest duration spaceflight (437.7 days) set by Valeri Polyakov .
+Russia (FKA )
+Mir
+7 December 1995
+First orbit of Jupiter
+USA (NASA)
+Galileo
+7 December 1995
+First mission into the atmosphere of a gas giant (Jupiter ).
+USA (NASA)
+Galileo's atmospheric entry probe
+12 February 1997
+First orbital radio observatory.
+Japan (ISAS )
+HALCA
+4 July 1997
+First operational rover on another planet (Mars).
+USA (NASA)
+Mars Pathfinder
+20 November 1998
+First multinational space station.
+Largest artificial object built in space to date.
+Russia (FKA)
+USA (NASA)
+Europe (ESA)
+Japan (JAXA)
+Canada (CSA )
+International Space Station
+2000–2021[edit]
+Date
+Mission success
+Country/organization
+Mission name
+Ref(s)
+14 February 2000
+First orbiting of an asteroid (433 Eros ).
+USA (NASA) ESA
+NEAR Shoemaker
+12 February 2001
+First landing on an asteroid (433 Eros ).
+USA (NASA)
+NEAR Shoemaker
+21 June 2004
+First human spaceflight launched by a private company (suborbital).
+First private astronaut (Mike Melvill ).
+USA (Mojave Aerospace Ventures )
+SpaceShipOne Flight 15P
+1 July 2004
+First orbit of Saturn .
+USA (NASA) ESA Italy (ASI )
+Cassini–Huygens
+8 September 2004
+First sample return beyond lunar orbit (solar wind).
+USA (NASA)
+Genesis
+14 January 2005
+First soft landing on Titan.
+First soft landing in the outer Solar System .
+ESA USA (NASA) Italy (ASI)
+Cassini–Huygens
+19 November 2005
+First asteroid ascent (25143 Itokawa ).
+First interplanetary escape without undercarriage cutoff.[clarification needed]
+Japan (JAXA )
+Hayabusa
+15 January 2006
+First sample return from comet (81P/Wild ).
+USA (NASA)
+Stardust
+8 November 2008
+Discovery of lunar water in the form of ice.
+INDIA (ISRO)
+Chandrayaan-1
+6 March 2009
+Kepler Mission is launched, first space telescope designated to search for Earth-like exoplanets.
+USA (NASA)
+Kepler Mission
+[10]
+13 June 2010
+First sample return from asteroid (25143 Itokawa ).
+Japan (JAXA)
+Hayabusa
+18 March 2011
+First orbit of Mercury .
+USA (NASA)
+MESSENGER
+16 July 2011
+First orbit of giant asteroid Vesta .
+USA (NASA)
+Dawn
+25 August 2012
+First manmade probe in interstellar space .
+USA (NASA)
+Voyager 1
+12 November 2014
+First artificial probe to make a planned and soft landing on a comet (67P/Churyumov–Gerasimenko ).
+ESA
+Rosetta
+[11]
+6 March 2015
+First orbit of dwarf planet (Ceres ).
+First spacecraft to orbit two separate celestial bodies.
+USA (NASA)
+Dawn
+July 2015
+First flyby of dwarf planet (Pluto ).
+Last original encounter with one of the nine major planets recognized in 1981.
+USA (NASA)
+New Horizons
+10 August 2015
+First food grown in space eaten (lettuce).
+USA (NASA) Japan (JAXA)
+International Space Station
+[12]
+23 November 2015
+First propulsive landing of a rocket after sending something into space (suborbital).
+USA (Blue Origin )
+New Shepard 2
+[13]
+21 December 2015
+First propulsive landing of an orbital rocket.
+USA (SpaceX )
+Falcon 9 first-stage landing tests
+19 October 2017
+First known interstellar object detected passing through the Solar System.
+USA Haleakalā Observatory
+Oumuamua
+21 September 2018
+First operational rover on asteroid (162173 Ryugu ).
+Japan (JAXA)
+Hayabusa2
+[14]
+1 January 2019
+First contact binary explored by spacecraft (486958 Arrokoth ).
+USA (NASA)
+New Horizons
+[15]
+3 January 2019
+First soft landing on the far side of the Moon; also first germination of seeds on another celestial body.
+China (CNSA )
+Chang'e 4
+[16]
+10 April 2019
+First direct photograph of a black hole and its vicinity.
+USA (NASA)
+Event Horizon Telescope
+[17]
+30 May 2020
+First orbital human spaceflight launched by a private company.
+USA (SpaceX )
+SpaceX Demo-2
+[18]
+19 April 2021
+First aerodynamically-powered flight on another celestial body (Mars).
+USA (NASA)
+Ingenuity
+[19]
+See also[edit]
+Discovery and exploration of the Solar System
+Timeline of Solar System exploration
+Timeline of artificial satellites and space probes
+Timeline of space travel by nationality
+References[edit]
+^"Das RAK-Protokoll", a 25 minutes documentary on the Opel RAK program https://opel-tv-footage.com/v/The%20RAK%20Protocoll?p=4&c=86&l=1
+^
+Jump up to:
+a b "Chronology: Cowboys to V-2s to the Space Shuttle to lasers". Wsmr.army.mil. Retrieved 4 August 2017.
+^"Archived copy". Archived from the original on 2014-02-21. Retrieved 2013-01-17.
+{{cite web}}:  CS1 maint: archived copy as title (link)
+^"Part 1". History.nasa.gov. Retrieved 4 August 2017.
+^"Geek Trivia: A leap of fakes". Techrepublic.com. Retrieved 18 August 2016.
+^"Discussion". Space Policy. 14 (1): 6. 1998-02-01. doi:10.1016/S0265-9646(97)00038-6.
+^Whiting, Melanie (2018-05-14). "Skylab: America's First Space Station". NASA. Retrieved 2021-02-03.
+^"Archived copy". Archived from the original on 2009-03-31. Retrieved 2009-07-21.
+{{cite web}}:  CS1 maint: archived copy as title (link)
+^"Giotto overview". European Space Agency. Retrieved 2019-07-11.
+^"NASA launches Kepler Mission: Search for Earth-like worlds". Spacechornology.com. Archived from the original on 22 January 2011. Retrieved 4 August 2017.
+^Chang, Kenneth (November 12, 2014). "European Space Agency's Spacecraft Lands on Comet's Surface". The New York Times. Retrieved November 12, 2014.
+^"Meals Ready to Eat: Expedition 44 Crew Members Sample Leafy Greens Grown on Space Station". Nasa. 7 July 2015.
+^Foust, Jeff (24 November 2015). "Blue Origin Flies — and Lands — New Shepard Suborbital Spacecraft". Space News. Retrieved 1 December 2015. We’re going to take that same exact architecture that was demonstrated and use it on our the booster stage of our orbital vehicle
+^"Hayabusa 2". NASA Science Solar System Exploration. Retrieved 2020-07-29.
+^"Ultima Thule: Clearest image yet of 'snowman' space rock released by NASA". Sky News. Retrieved 2019-01-02.
+^Lyons, Kate (2019-01-03). "Far side of the moon: China's Chang'e 4 probe makes historic touchdown". The Guardian. ISSN 0261-3077. Retrieved 2019-01-03.
+^Drake, Nadia (10 April 2019). "First-ever picture of a black hole unveiled". National Geographic. Retrieved 27 Jan 2021.
+^"SpaceX Speeding Astronauts to Space Station in Landmark Trip". www.bloomberg.com. 2020-05-30. Retrieved 2020-05-31.
+^"NASA's Ingenuity Mars Helicopter Succeeds in Historic First Flight". www.nasa.gov. 2021-04-19. Retrieved 2021-04-19.
+External links[edit]
+Chronology of Space Exploration archive of important space exploration missions and events, including future planned and proposed endeavors
+Crewed spaceflight 1961-1980
+Crewed spaceflight chronology
+History of crewed space missions Archived 2009-02-07 at the Wayback Machine
+Timeline of the Space Race/Moon Race
+Chronology: Moon Race at russianspaceweb.com
+Space Timeline in 3d
+On extra-terrestrial surfaces
+Moon
+Venus
+Mars
+Deep-space missions
+Heliocentric orbit
+Leaving the Solar System
+General
+Crewed spacecraft
+timeline
+by program
+Spaceflights
+1961–1970
+1971–1980
+1981–1990
+1991–2000
+2001–2010
+2011–2020
+2021–present
+Soviet
+Russian
+Vostok and Voskhod
+Soyuz
+Mercury
+Gemini
+Apollo
+Skylab
+Shenzhou
+Gaganyaan
+Spacelab
+Artemis
+Civilian spaceflight
+Orbital
+Suborbital
+Salyut
+Expeditions
+Spaceflights
+crewed
+uncrewed
+Spacewalks
+Visitors
+Mir
+Expeditions
+Spaceflights
+crewed
+uncrewed
+Spacewalks
+Visitors
+ISS
+Expeditions
+Spaceflights
+crewed
+uncrewed
+Spacewalks
+Visitors
+Deployed
+Tiangong
+Expeditions
+Crewed Spaceflights
+Shuttle
+Crews
+Missions
+Rollbacks
+People
+Astronauts
+by name
+by year of selection
+Apollo
+Gemini
+Chinese
+European
+Cosmonauts
+female
+Jewish
+Muslim
+Arab
+African American
+Ibero-America
+Space scientists
+Space travelers
+by name
+by first flight
+by nationality
+billionaires
+timeline by nationality
+Spaceflight-related human fatalities
+EVA
+1965–1999
+2000–2014
+2015–present
+Cumulative spacewalk records
+Longest spacewalks
+Spacewalkers

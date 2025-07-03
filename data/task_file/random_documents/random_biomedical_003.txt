@@ -1,0 +1,38 @@
+Title: A Novel Approach to Linking Histology Images with DNA Methylation
+
+Authors: Manahil Raza, Muhammad Dawood, Talha Qaiser, Nasir M. Rajpoot
+
+Abstract: DNA methylation is an epigenetic mechanism that regulates gene expression by
+adding methyl groups to DNA. Abnormal methylation patterns can disrupt gene
+expression and have been linked to cancer development. To quantify DNA
+methylation, specialized assays are typically used. However, these assays are
+often costly and have lengthy processing times, which limits their widespread
+availability in routine clinical practice. In contrast, whole slide images
+(WSIs) for the majority of cancer patients can be more readily available. As
+such, given the ready availability of WSIs, there is a compelling need to
+explore the potential relationship between WSIs and DNA methylation patterns.
+To address this, we propose an end-to-end graph neural network based weakly
+supervised learning framework to predict the methylation state of gene groups
+exhibiting coherent patterns across samples. Using data from three cohorts from
+The Cancer Genome Atlas (TCGA) - TCGA-LGG (Brain Lower Grade Glioma), TCGA-GBM
+(Glioblastoma Multiforme) ($n$=729) and TCGA-KIRC (Kidney Renal Clear Cell
+Carcinoma) ($n$=511) - we demonstrate that the proposed approach achieves
+significantly higher AUROC scores than the state-of-the-art (SOTA) methods, by
+more than $20\%$. We conduct gene set enrichment analyses on the gene groups
+and show that majority of the gene groups are significantly enriched in
+important hallmarks and pathways. We also generate spatially enriched heatmaps
+to further investigate links between histological patterns and DNA methylation
+states. To the best of our knowledge, this is the first study that explores
+association of spatially resolved histological patterns with gene group
+methylation states across multiple cancer types using weakly supervised deep
+learning.
+
+Introduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.
+
+Methodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.
+
+Results: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.
+
+Discussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.
+
+Conclusion: This work presents a significant advancement in the field with practical implications for real-world applications.

@@ -1,0 +1,29 @@
+Timeline of Telescopes - Significant Events for Telescopes
+Telescope Timeline - Significant Events in Telescope History
+470-390 BC – Chinese philosopher Mozi recorded the observations that concave mirrors can focus the rays from the sun.
+424 BC – Greek Playwright and theater director Aristophanes recorded that glasses of many shapes that are filled with water can bend rays of the sun.
+3rd century BC – Greek mathematician Euclid first wrote scientific overview of sun rays, reflection and refraction. His work was expanded 5 centuries later by
+        Ptolemy.
+10-12th century – several Arab scientists started examining the properties of light, mirrors, lenses and more. Ibn al-Haytham's “Book of Optics” arrives in Europe, and
+        after translation to Latin, it becames the foundation of modern European exploration of lenses.
+Late 13th century – First spectacles are invented.
+1570s – Several reports are made of the abilities of lenses to make “distant things look as they are near”.
+1608 – German-Dutch spectacle-maker Hans Lippershey applies his patent on what is today known as telescope. He managed to beat two other Dutch scientists
+        (Jacob Metius and Zacharias Janssen) who also tried to register their own inventions.
+1609 – Famous astronomer, physicist, engineer and mathematician Galileo Galilei managed to improve the basic telescope design of Hans Lippershey, calling it
+        “perspicillum”. He used his telescope to make many significant astronomical discoveries.
+1611 – The name “telescope” is created by Greek mathematician Giovanni Demisiani, during his visit at Italian science academy “Accademia dei Lincei” that
+        hosted one of the Galileo Galilei’s telescopes. This word was coined from the words “tele” (far) and “skopein” (to look, or to see).
+1611 – Johannes Kepler provided detailed scientific explanation about the inner workings of telescopes, optics and light rays. He created first telescope
+        that was focused only on astronomy (it had two convex lenses).
+1616 – 1684 – Large amount of scientific effort is focused on further development of telescopes, including the inventions that were provided by Christian Huygens,
+        James Gregory, Isaac Newton, Laurent Cassegrain and Robert Hooke.
+1720-1721 – English mathematician John Hadley managed to significantly improve telescopes by working on parabolic mirrors.
+1730-1783 – Telescopes are further more improved with the efforts of James Short, Chester Moore Hall, John Dollond and Jesse Ramsden.
+1897 – Yerkes Observatory builds largest telescope of its time – 101.6cm refractor telescope.
+1910 – One of the most famous telescope designs is created - Ritchey-Chrétien telescope.
+1970 – First telescope launched into space onboard probe Uhuru. This was also first gamma-ray telescope ever to be used.
+1990 – Hubble telescope launched into Earth’s orbit. It quickly became one of the most famous and most important telescopes ever to be built.
+2009 – Kepler telescope launched in space, with goal of locating planets that are orbiting our neighboring stars. It has 2.4m diameter mirror.
+2011 – NASA announces plans to launch in 2018 the most ambitious space telescope of all time. James Webb Space Telescope will operate in deep space and have
+        staggering 6.5m diameter mirror.

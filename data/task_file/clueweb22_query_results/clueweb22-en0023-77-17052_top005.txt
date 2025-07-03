@@ -1,0 +1,41 @@
+Usagi Sailor Moon  Cursor
+New And Hot
+Newest
+Most Comments
+Categories
+Fav Of The Month
+Being Viewed
+Usagi Sailor Moon
+Added: 24 Feb 2011 / Views: 41284
+Cursor Download And Information
+Created By:
+It-is-a-circle
+Cursorized By:
+It-is-a-circle
+Rating:
+4.1 out of 5 with 177 votes.
+Category(s):
+Sailor Moon, Cute
+Rate This Cursor
+1 - Sucky
+2 - Okay...
+3 - Good
+4 - Amazing
+5 - Perfect
+Universal
+Tumblr
+Blogger/Blogspot
+Option #1 - Universal CSS/HTML Code
+This CSS/HTML Code of Usagi Sailor Moon works on almost every website or web page on the internet that allows, CSS and 
+								HTML coding. Like forums, normal web page etc.
+<style type="text/css">* {cursor: url(https://cur.cursors-4u.net/anime/ani-11/ani1074.cur), auto !important;}</style><a href="https://www.cursors-4u.com/cursor/2011/02/24/usagi-sailor-moon-15.html" target="_blank" title="Usagi Sailor Moon"><img src="https://cur.cursors-4u.net/cursor.png" border="0" alt="Usagi Sailor Moon" style="position:absolute; top: 0px; right: 0px;" /></a>
+Option #2 - CSS Style Sheet Only Code
+Option #2 is for website owners who are allowed to edit their CSS style sheet.  Paste this at the bottom of your style sheet. 
+								If you don't know what CSS style sheet means, then use the above code.
+/* Start https://www.cursors-4u.com */ * {cursor: url(https://cur.cursors-4u.net/anime/ani-11/ani1074.cur), auto !important;} /* End https://www.cursors-4u.com */
+On 16 Oct 2016 - 16:58, Chloe Roy Wrote:
+cursor does not show :(
+On 3 Jul 2013 - 08:11, swaggie-butts Wrote:
+After the third option, the cursor showed up somewhat. It doesn't show up if you hover over the background or anything.
+On 16 May 2013 - 16:42, kelly wang Wrote:
+Hey. I can't seem to add it. Blogger changed the HTML Template AGAIN. So When I add the Code to the bottum, it says its error... Can you help please??

@@ -1,0 +1,37 @@
+Title: Multiscale Modeling Primer: Focus on Chromatin and Epigenetics
+
+Authors: Achal Mahajan, Erik J. Navarro, William Poole, Carlos F Lopez
+
+Abstract: Essential life processes take place across multiple space and time scales in
+living organisms but understanding their mechanistic interactions remains an
+ongoing challenge. Advanced multiscale modeling techniques are providing new
+opportunities and insights into these complex processes. In cells, meters of
+chromatin are folded into a nucleus with a diameter on the order of microns.
+The three-dimensional chromatin structure coupled with biochemical processes
+that turn genes on or off, specify a given cell type through a complicated set
+of interactions collectively referred to as epigenetics. Important epigenetic
+processes include the differential accessibility of genomic loci to
+transcription factors and chemical modifications to DNA and DNA-binding
+molecules such as histones. The dynamics of these epigenetic processes span
+timescales from milliseconds to years. How do chemical modifications consisting
+of a handful of atoms cooperate to modulate genome folding at the scale of the
+nucleus and impact organism outcomes? In this review, we highlight the
+inherently multiscale nature of chromatin organization, with a focus on
+computational modeling to bridge the gaps in our understanding of biochemical
+processes across scales. We review relevant chromatin biology, including major
+types of epigenetic modifications as well as the higher order chromatin
+structures to present a multiscale view of chromatin. We also review relevant
+computational methods to simulate chromatin structure, function, and dynamics,
+as well as experimental techniques that inform and validate said models.
+Finally, we argue that multiscale modeling provides a path forward towards
+understanding emergent behavior in this inherently multiscale system.
+
+Introduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.
+
+Methodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.
+
+Results: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.
+
+Discussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.
+
+Conclusion: This work presents a significant advancement in the field with practical implications for real-world applications.

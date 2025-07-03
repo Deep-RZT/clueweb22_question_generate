@@ -1,0 +1,40 @@
+Title: EPiC: Towards Lossless Speedup for Reasoning Training through
+  Edge-Preserving CoT Condensation
+
+Authors: Jinghan Jia, Hadi Reisizadeh, Chongyu Fan, Nathalie Baracaldo, Mingyi Hong
+
+Abstract: Large language models (LLMs) have shown remarkable reasoning capabilities
+when trained with chain-of-thought (CoT) supervision. However, the long and
+verbose CoT traces, especially those distilled from large reasoning models
+(LRMs) such as DeepSeek-R1, significantly increase training costs during the
+distillation process, where a non-reasoning base model is taught to replicate
+the reasoning behavior of an LRM. In this work, we study the problem of CoT
+condensation for resource-efficient reasoning training, aimed at pruning
+intermediate reasoning steps (i.e., thoughts) in CoT traces, enabling
+supervised model training on length-reduced CoT data while preserving both
+answer accuracy and the model's ability to generate coherent reasoning. Our
+rationale is that CoT traces typically follow a three-stage structure: problem
+understanding, exploration, and solution convergence. Through empirical
+analysis, we find that retaining the structure of the reasoning trace,
+especially the early stage of problem understanding (rich in reflective cues)
+and the final stage of solution convergence, is sufficient to achieve lossless
+reasoning supervision. To this end, we propose an Edge-Preserving Condensation
+method, EPiC, which selectively retains only the initial and final segments of
+each CoT trace while discarding the middle portion. This design draws an
+analogy to preserving the "edge" of a reasoning trajectory, capturing both the
+initial problem framing and the final answer synthesis, to maintain logical
+continuity. Experiments across multiple model families (Qwen and LLaMA) and
+benchmarks show that EPiC reduces training time by over 34% while achieving
+lossless reasoning accuracy on MATH500, comparable to full CoT supervision. To
+the best of our knowledge, this is the first study to explore thought-level CoT
+condensation for efficient reasoning model distillation.
+
+Introduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.
+
+Methodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.
+
+Results: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.
+
+Discussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.
+
+Conclusion: This work presents a significant advancement in the field with practical implications for real-world applications.

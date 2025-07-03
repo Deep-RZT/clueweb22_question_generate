@@ -1,0 +1,32 @@
+Title: SuSAM-v2: improved superscaling description of electron and CC neutrino
+  quasielastic scattering using effective mass dynamics
+
+Authors: V. L. Martinez-Consentino, P. R. Casale, J. E. Amaro
+
+Abstract: We present an improved version of the Superscaling Analysis with Relativistic
+Effective Mass, denoted as SuSAM-v2. In the original SuSAM model, a universal
+scaling function was fitted to a selected set of quasielastic electron
+scattering (e,e') cross section data, using a phenomenological ansatz inspired
+by the Relativistic Mean Field model of nuclear matter. In this work, we refine
+the procedure by first fitting a longitudinal scaling function directly to
+experimental longitudinal response data. Subsequently, a separate transverse
+scaling function is extracted from purely transverse data, after subtracting
+the longitudinal contribution already determined. We find that the resulting
+transverse scaling function must exhibit an explicit dependence on the momentum
+transfer q in order to reproduce all kinematics consistently. The resulting
+SuSAM-v2 model simultaneously describes inclusive quasielastic cross sections
+and both longitudinal and transverse response functions in electron scattering.
+The model is then applied to neutrino-nucleus scattering, showing an improved
+prediction compared to the previous SuSAM-v1 version, due to a more accurate
+treatment of the relative contributions of the longitudinal and transverse weak
+nuclear responses.
+
+Introduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.
+
+Methodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.
+
+Results: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.
+
+Discussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.
+
+Conclusion: This work presents a significant advancement in the field with practical implications for real-world applications.

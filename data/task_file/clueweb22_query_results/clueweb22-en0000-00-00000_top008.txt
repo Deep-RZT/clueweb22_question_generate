@@ -1,0 +1,41 @@
+NASA - 
+Telescope History
+Student Features
+Text Size
+Grow Text  Size Shrink Text Size
+Telescope History
+09.12.03
+Galileo's ink renderings of the moon: the first telescopic observations 
+      of a celestial object.
+In 1609 an Italian physicist and astronomer named Galileo became the first person to point a telescope skyward. Although that telescope was small and the images fuzzy, Galileo was able to make out mountains and craters on the moon, as well as a ribbon of diffuse light arching across the sky -- which would later be identified as our Milky Way galaxy.  
+After Galileo's and, later, Sir Isaac Newton's time, astronomy flourished as a result of larger and more complex telescopes. With advancing technology, astronomers discovered many faint stars and the calculation of stellar distances. In the 19th century, using a new instrument called a spectroscope, astronomers gathered information about the chemical composition and motions of celestial objects.
+Twentieth century astronomers developed bigger and bigger telescopes and, later, 
+  specialized instruments that could peer into the distant reaches of space and 
+  time. Eventually, enlarging telescopes no longer improved our view… all because 
+  of the Earth's atmosphere.
+A Telescope in the Sky? Why?
+The next time you gaze up at the night sky, you're likely to spot a twinkling star. But is it really twinkling? What looks like a twinkling star to our eyes is actually steady starlight that has been distorted, or bent, by the Earth's atmosphere. The visual effect of this distortion is like looking at an object through a glass of water.
+Telescopes here on the ground -- which also must peer through Earth's atmosphere -- are equally vulnerable to our atmosphere's visual tricks.
+That's why astronomers around the world dreamed of having an observatory in space -- a concept first proposed by astronomer Lyman Spitzer in the 1940s. From a position above Earth's atmosphere, a telescope would be able to detect light from stars, galaxies, and other objects in space before that light is absorbed or distorted. Therefore, the view would be a lot sharper than that from even the largest telescope on the ground.
+Vision Becomes Reality
+In the 1970s the European Space Agency and the National Aeronautics and Space Administration began working together to design and build what would become the Hubble Space Telescope. On April 25, 1990, five astronauts aboard the space shuttle Discovery deployed the eagerly anticipated telescope in an orbit roughly 380 miles (600 km) above the Earth's surface.  That deployment and, later, the unprecedented images that Hubble delivered represented the fulfillment of a 50-year dream and more than two decades of dedicated collaboration between scientists, engineers, contractors, and institutions from all over the world.
+The Hubble Space Telescope in Lockheed's Cleanroom.
+Hubble's Job Description
+Explore the solar system.
+Measure the age and size of the universe.
+Search for our cosmic roots.
+Chart the evolution of the universe.
+Unlock the mysteries of galaxies, stars, planets, and life itself.
+Beyond Hubble: The Next Generation Space Telescope
+Hubble's important mission will come to an end one day in the future. But the telescope's ultimate retirement will not signal the end of our unrivaled view of the universe. Rather, it will mark a new beginning -- and even more amazing discoveries and images from space. For Hubble has a successor.  
+The Next Generation Space Telescope (NGST), which is being designed right now, may be launched as early as 2008.
+When that day comes, scientists using NGST hope to discover and understand 
+  even more about our fascinating universe, such as
+The formation of the first stars and galaxies
+The evolution of galaxies and the production of elements by stars
+The process of star and planet formation.
+Bigger! Better! Colder?
+In order to peer back toward the beginning of the universe, NGST will make observations in the visible to the mid-infrared part of the electromagnetic spectrum. NGST is designed to operate in the infrared wavelengths, so it is important to keep the detectors and telescope optics as cold as possible (excess heat from the telescope itself would create unwanted "background noise"). 
+In addition, NGST's larger primary mirror will give it 10 times Hubble's light gathering capability.
+HubbleSite - STScI
+› Back To Top

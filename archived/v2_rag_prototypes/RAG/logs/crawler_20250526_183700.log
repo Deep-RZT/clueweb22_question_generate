@@ -1,0 +1,10 @@
+2025-05-26 18:37:00,739 - energy_trainer - INFO - 🚀 Starting FastText model training...
+2025-05-26 18:37:00,740 - energy_trainer - INFO - 📁 Training data: data/processed_text/energy_train_20250526_183431.txt
+2025-05-26 18:37:00,740 - energy_trainer - INFO - 📁 Validation data: data/processed_text/energy_val_20250526_183431.txt
+2025-05-26 18:37:00,740 - energy_trainer - INFO - 🔧 Training FastText model with parameters:
+2025-05-26 18:37:00,740 - energy_trainer - INFO -   - Epochs: 10
+2025-05-26 18:37:00,740 - energy_trainer - INFO -   - Learning rate: 0.5
+2025-05-26 18:37:00,740 - energy_trainer - INFO -   - Word n-grams: 2
+2025-05-26 18:37:00,740 - energy_trainer - INFO -   - Dimensions: 100
+2025-05-26 18:37:01,249 - energy_trainer - INFO - ✅ Training completed in 0.51 seconds
+2025-05-26 18:37:01,249 - energy_trainer - ERROR - ❌ Training failed: 'models'

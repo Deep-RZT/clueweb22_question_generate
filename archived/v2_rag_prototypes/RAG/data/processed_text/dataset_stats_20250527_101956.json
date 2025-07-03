@@ -1,0 +1,10 @@
+{
+  "total_samples": 1140,
+  "train_samples": 912,
+  "val_samples": 228,
+  "positive_samples": 570,
+  "negative_samples": 570,
+  "pdfs_processed": 570,
+  "avg_text_length": 8802.621052631579,
+  "timestamp": "20250527_101956"
+}

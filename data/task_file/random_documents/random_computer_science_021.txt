@@ -1,0 +1,31 @@
+Title: A Kernel-Based Approach for Accurate Steady-State Detection in
+  Performance Time Series
+
+Authors: Martin Beseda, Vittorio Cortellessa, Daniele Di Pompeo, Luca Traini, Michele Tucci
+
+Abstract: This paper addresses the challenge of accurately detecting the transition
+from the warmup phase to the steady state in performance metric time series,
+which is a critical step for effective benchmarking. The goal is to introduce a
+method that avoids premature or delayed detection, which can lead to inaccurate
+or inefficient performance analysis. The proposed approach adapts techniques
+from the chemical reactors domain, detecting steady states online through the
+combination of kernel-based step detection and statistical methods. By using a
+window-based approach, it provides detailed information and improves the
+accuracy of identifying phase transitions, even in noisy or irregular time
+series. Results show that the new approach reduces total error by 14.5%
+compared to the state-of-the-art method. It offers more reliable detection of
+the steady-state onset, delivering greater precision for benchmarking tasks.
+For users, the new approach enhances the accuracy and stability of performance
+benchmarking, efficiently handling diverse time series data. Its robustness and
+adaptability make it a valuable tool for real-world performance evaluation,
+ensuring consistent and reproducible results.
+
+Introduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.
+
+Methodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.
+
+Results: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.
+
+Discussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.
+
+Conclusion: This work presents a significant advancement in the field with practical implications for real-world applications.

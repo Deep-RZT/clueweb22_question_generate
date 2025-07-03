@@ -1,0 +1,34 @@
+Telescope History: Newton 1672
+Expanding Horizons
+First Light
+Gentleman Astronomers
+More Glass
+Sky High
+Take our site survey
+Telescope History
+1672
+Isaac Newton: Upon Further Reflection
+Isaac Newton reveals a new type of telescope, which uses polished mirrors instead of glass lenses.
+Isaac Newton
+Born
+December 25, 1642
+Woolsthorp, England
+Died
+March 20, 1727
+London
+Contributions
+• Invented the reflecting telescope
+• Calculated the color-distortion effects of refractive lenses
+Newton's Telescope
+While Newton’s reflecting telescope overcame the rainbow-like haloes around astronomical objects, it left the view somewhat distorted because of the mirror’s spherical curvature. Eventually, astronomers would adopt designs using mirrors with parabolic mirrors instead of spherical ones. (If you extend the curve of a parabolic surface into space it remains open, with the ends never joining.) James Gregory proposed this design in 1663, but there was no way to create parabolic mirrors at the time, so the design was not implemented for decades.
+Grinding glass to the right shape for refracting telescope lenses was a daunting task, and Galileo’s telescopes produced a slightly blurry view of the sky, with colored “haloes” around astronomical objects. And the glass contained chemical impurities that colored the lenses green.
+Isaac Newton, who is best known for devising his laws of motion and gravity, realized that part of the problem was with the glass itself. Any glass lens acts like a prism, splitting a beam of light into its individual wavelengths or colors, so there was no way to eliminate the colored haloes with lens-based telescopes.
+A replica of Isaac Newton's reflecting telescope. Newton's mirror was made not of glass, but of a metal alloy consisting of three parts copper and one part tin, mixed with a small amount of arsenic, which would make the metal easier to polish. [© Andrew Dunn]
+So Newton devised a new type of telescope, which he presented to his colleagues in England’s Royal Society in January 1672. Instead of glass lenses, Newton’s telescope used two polished metal mirrors.
+The primary mirror, at the bottom of the telescope tube, curved inward slightly, in a spherical shape. (In other words, if you extend the curve of the mirror into space, it will form a sphere.) Light from an astronomical object struck this mirror and reflected back up the telescope tube, where it hit a flat secondary mirror. This mirror, which was tilted at a 45-degree angle, in turn reflected the light to an eyepiece at the side of the tube, where the observer saw an image of the star, planet, or other astronomical object.
+Although it took a while to work out some problems and gain acceptance by most astronomers, Newton’s creation of the reflecting telescope ushered in a new era of astronomical study. By the early 18th century, most astronomers were using reflectors, and although refractors made a brief comeback a century later, all large modern-day research telescopes are reflectors, and Newtonian-style reflectors are popular among amateur astronomers.
+More Information
+Isaac Newton's Life
+Sir Isaac Newton
+The Life of Isaac Newton, Richard S. Westfall (Cambridge, 1993)
+More: First Light

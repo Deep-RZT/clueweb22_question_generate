@@ -1,0 +1,29 @@
+Title: MACS: Multi-Agent Reinforcement Learning for Optimization of Crystal
+  Structures
+
+Authors: Elena Zamaraeva, Christopher M. Collins, George R. Darling, Matthew S. Dyer, Bei Peng
+
+Abstract: Geometry optimization of atomic structures is a common and crucial task in
+computational chemistry and materials design. Following the learning to
+optimize paradigm, we propose a new multi-agent reinforcement learning method
+called Multi-Agent Crystal Structure optimization (MACS) to address periodic
+crystal structure optimization. MACS treats geometry optimization as a
+partially observable Markov game in which atoms are agents that adjust their
+positions to collectively discover a stable configuration. We train MACS across
+various compositions of reported crystalline materials to obtain a policy that
+successfully optimizes structures from the training compositions as well as
+structures of larger sizes and unseen compositions, confirming its excellent
+scalability and zero-shot transferability. We benchmark our approach against a
+broad range of state-of-the-art optimization methods and demonstrate that MACS
+optimizes periodic crystal structures significantly faster, with fewer energy
+calculations, and the lowest failure rate.
+
+Introduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.
+
+Methodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.
+
+Results: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.
+
+Discussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.
+
+Conclusion: This work presents a significant advancement in the field with practical implications for real-world applications.

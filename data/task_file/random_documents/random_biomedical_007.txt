@@ -1,0 +1,27 @@
+Title: On the Coverage Required for Diploid Genome Assembly
+
+Authors: Daanish Mahajan, Chirag Jain, Navin Kashyap
+
+Abstract: The repeat content and heterozygosity rate of a target genome are important
+factors in determining the feasibility of achieving a complete
+telomere-to-telomere assembly. The mathematical relationship between the
+required coverage and read length for the purpose of unique reconstruction
+remains unexplored for diploid genomes. We investigate the
+information-theoretic conditions that the given set of sequencing reads must
+satisfy to achieve the complete reconstruction of the true sequence of a
+diploid genome. We also analyze the standard greedy and de-Bruijn graph-based
+assembly algorithms. Our results show that the coverage and read length
+requirements of the assembly algorithms are considerably higher than the lower
+bound because both algorithms require the double repeats in the genome to be
+bridged. Finally, we derive the necessary conditions for the overlap
+graph-based assembly paradigm.
+
+Introduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.
+
+Methodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.
+
+Results: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.
+
+Discussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.
+
+Conclusion: This work presents a significant advancement in the field with practical implications for real-world applications.

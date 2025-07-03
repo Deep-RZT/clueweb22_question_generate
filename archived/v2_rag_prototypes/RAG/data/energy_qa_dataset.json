@@ -1,0 +1,2202 @@
+[
+  {
+    "id": "qa_001",
+    "question": "How does geothermal integrate with existing infrastructure?",
+    "answer": "In this work we investigated the earthquake data along with\nother observed facts like heat flow profiles etc. In our studies we found a high-quality correlation between the earthquake\nevents, seismic prone zones, heat flow regions and the geothermal hot springs.",
+    "source_paper": {
+      "title": "Earthquake and Geothermal Energy",
+      "id": "http://arxiv.org/abs/1309.7738v1",
+      "source": "arxiv"
+    },
+    "topic": "geothermal energy"
+  },
+  {
+    "id": "qa_002",
+    "question": "How does energy storage integrate with existing infrastructure?",
+    "answer": "Increased penetration of Distributed Energy Resources (DER) and Renewable\nEnergy Systems (RES) transforming the conventional distribution grid into a\ntransactive framework supervised by a distribution system operator (DSO). Although the emerging transactive energy management techniques improve the grid\nreliability, the inherent uncertainty of RES poses a challenge in meeting the\npower demand of the critical infrastructure in the microgrid unless sufficient\nbattery energy storage is maintained.",
+    "source_paper": {
+      "title": "Transactive Framework for Dynamic Energy Storage Allocation for Critical Load Management",
+      "id": "http://arxiv.org/abs/2101.05890v4",
+      "source": "arxiv"
+    },
+    "topic": "renewable energy systems"
+  },
+  {
+    "id": "qa_003",
+    "question": "How does energy systems integrate with existing infrastructure?",
+    "answer": "We consider\na source UE with a non-line-of-sight channel to an access point (AP), where\ndirect communication may be infeasible or may necessitate a substantial\ntransmit power. Our results demonstrate over 71% reduction in outage\nprobability with as few as 4 relay candidates, compared to the non-cooperative\nscenario, and as much as 70% source power savings compared to a baseline\napproach, highlighting the efficacy of our proposed methodology.",
+    "source_paper": {
+      "title": "Emergent Cooperation for Energy-efficient Connectivity via Wireless Power Transfer",
+      "id": "http://arxiv.org/abs/2404.14729v3",
+      "source": "arxiv"
+    },
+    "topic": "energy efficiency"
+  },
+  {
+    "id": "qa_004",
+    "question": "How can integration challenges be addressed in renewable energy systems?",
+    "answer": "The increased penetration of distributed energy\nresources (DERs) including renewable generation, flexible loads, and storage\nprovides extraordinary opportunities for improvements in efficiency and\nsustainability. However, they can introduce new vulnerabilities in the form of\ncyberattacks, which can cause significant challenges in ensuring grid\nresilience.",
+    "source_paper": {
+      "title": "Resilience of the Electric Grid through Trustable IoT-Coordinated Assets (Extended version)",
+      "id": "http://arxiv.org/abs/2406.14861v4",
+      "source": "arxiv"
+    },
+    "topic": "electric grid"
+  },
+  {
+    "id": "qa_005",
+    "question": "What factors affect the efficiency of energy systems?",
+    "answer": "Newly developed coupled-cluster (CC) methods enable simulations of ionization\npotentials and spectral functions of molecular systems in a wide range of\nenergy scales ranging from core-binding to valence. This paper discusses\nresults obtained with the real-time equation-of-motion CC cumulant approach\n(RT-EOM-CC), and CC Green's function (CCGF) approaches in applications to the\nwater and water dimer molecules.",
+    "source_paper": {
+      "title": "Real-time equation-of-motion CC cumulant and CC Green's function simulations of photoemission spectra of water and water dimer",
+      "id": "http://arxiv.org/abs/2205.14179v1",
+      "source": "arxiv"
+    },
+    "topic": "CCS"
+  },
+  {
+    "id": "qa_006",
+    "question": "How can energy systems be optimized for better performance?",
+    "answer": "The nucleation of gas hydrates is of great interest in flow assurance, global\nenergy demand, and carbon capture and storage. We characterize the interfacial tension for sII\nmethane/ethane hydrate and gas mixtures for different temperatures and\npressures.",
+    "source_paper": {
+      "title": "Molecular dynamics characterization of the interfacial structure and forces of the methane-ethane sII gas hydrate interface",
+      "id": "http://arxiv.org/abs/2405.05454v1",
+      "source": "arxiv"
+    },
+    "topic": "carbon capture and storage"
+  },
+  {
+    "id": "qa_007",
+    "question": "How does temperature influence performance?",
+    "answer": "Theoretical justification is provided for Archie's law.",
+    "source_paper": {
+      "title": "Random walker derivation of Archie's law",
+      "id": "http://arxiv.org/abs/2103.14099v2",
+      "source": "arxiv"
+    },
+    "topic": "oil and gas"
+  },
+  {
+    "id": "qa_008",
+    "question": "What are the future prospects for natural gas?",
+    "answer": "The focus is on the structural integrity of seam welds, as these are\noften the locations most susceptible to damage in gas transport infrastructure. Finite element analyses are conducted to showcase the ability of the model to\npredict cracking in pipeline steels exposed to hydrogen-containing\nenvironments.",
+    "source_paper": {
+      "title": "Computational predictions of weld structural integrity in hydrogen transport pipelines",
+      "id": "http://arxiv.org/abs/2401.11529v1",
+      "source": "arxiv"
+    },
+    "topic": "gas pipeline"
+  },
+  {
+    "id": "qa_009",
+    "question": "What are the advantages of power system over traditional methods?",
+    "answer": "Modern renewables-based power systems need to tap on the flexibility of\nDistributed Energy Resources (DERs) connected to distribution networks. It is\nimportant, however, that DER owners/users remain in control of their assets,\ndecisions, and objectives.",
+    "source_paper": {
+      "title": "Safe Bottom-Up Flexibility Provision from Distributed Energy Resources",
+      "id": "http://arxiv.org/abs/2504.20529v1",
+      "source": "arxiv"
+    },
+    "topic": "distributed energy resources"
+  },
+  {
+    "id": "qa_010",
+    "question": "What factors affect the efficiency of renewable energy?",
+    "answer": "The increasing integration of renewable energy resources in evolving bulk\npower system (BPS) is impacting the system inertia. Type-5 wind turbine\ngeneration has the potential to behave like a traditional synchronous generator\nand can help improve system inertia.",
+    "source_paper": {
+      "title": "Open Source High Fidelity Modeling of a Type 5 Wind Turbine Drivetrain for Grid Integration",
+      "id": "http://arxiv.org/abs/2305.15216v1",
+      "source": "arxiv"
+    },
+    "topic": "grid integration"
+  },
+  {
+    "id": "qa_011",
+    "question": "How does temperature influence performance?",
+    "answer": "Neuromorphic computing approaches become increasingly important as we address\nfuture needs for efficiently processing massive amounts of data.",
+    "source_paper": {
+      "title": "Quantum materials for energy-efficient neuromorphic computing",
+      "id": "http://arxiv.org/abs/2204.01832v1",
+      "source": "arxiv"
+    },
+    "topic": "energy efficiency"
+  },
+  {
+    "id": "qa_012",
+    "question": "How can integration challenges be addressed in renewable energy systems?",
+    "answer": "Aiming to be the first climate-neutral continent by 2050 under the\nEuropean Green Deal, Europe requires an in-depth understanding of the potential\nenergy transition pathways. In this paper, we develop four qualitative\nlong-term scenarios covering the European energy landscape, considering key\nuncertainty pillars -- categorized under social, technological, economic,\npolitical, and geopolitical aspects.",
+    "source_paper": {
+      "title": "European Energy Vision 2060: Charting Diverse Pathways for Europe's Energy Transition",
+      "id": "http://arxiv.org/abs/2501.12993v1",
+      "source": "arxiv"
+    },
+    "topic": "energy transition"
+  },
+  {
+    "id": "qa_013",
+    "question": "What research gaps exist in energy storage?",
+    "answer": "This research proposes a framework for modeling and comparing two electricity\nscenarios for Nigeria by 2050, focusing on the inclusion and exclusion of\nelectricity storage technologies. A Central Composite Design (CCD) was used to\ngenerate a design matrix for data collection, with EnergyPLAN software used to\ncreate energy system simulations on the CCD data for four outputs: total annual\ncost, CO2 emissions, critical excess electricity production (CEEP), and\nelectricity import.",
+    "source_paper": {
+      "title": "A Comparative Analysis of Nigeria's Power Sector with and without Grid-Scale Storage: Future Implications for Emission and Renewable Energy Integration",
+      "id": "http://arxiv.org/abs/2410.15151v1",
+      "source": "arxiv"
+    },
+    "topic": "pumped hydro storage"
+  },
+  {
+    "id": "qa_014",
+    "question": "What are the environmental impacts of energy systems?",
+    "answer": "Critical energy infrastructures are increasingly relying on advanced sensing\nand control technologies for efficient and optimal utilization of flexible\nenergy resources. Algorithmic procedures are needed to ensure that such systems\nare designed to be resilient to a wide range of cyber-physical adversarial\nevents.",
+    "source_paper": {
+      "title": "Optimization-Based Resiliency Verification in Microgrids via Maximal Adversarial Set Characterization",
+      "id": "http://arxiv.org/abs/2203.14918v1",
+      "source": "arxiv"
+    },
+    "topic": "energy infrastructure"
+  },
+  {
+    "id": "qa_015",
+    "question": "What are the key components of energy systems?",
+    "answer": "Syntactic foams are a promising candidate for applications in marine and oil\nand gas industries in underwater cables and pipelines due to their excellent\ninsulation properties. The effective transmission of electrical energy through\ncables requires insulation materials with a low loss factor and low dielectric\nconstant.",
+    "source_paper": {
+      "title": "Moisture-Driven Morphology Changes in the Thermal and Dielectric Properties of TPU-Based Syntactic Foams",
+      "id": "http://arxiv.org/abs/2310.11200v1",
+      "source": "arxiv"
+    },
+    "topic": "oil and gas"
+  },
+  {
+    "id": "qa_016",
+    "question": "What are the key components of energy systems?",
+    "answer": "Accurate modeling of human time-activity trajectory is essential to support\ncommunity resilience and emergency response strategies such as daily energy\nplanning and urban seismic vulnerability assessment. However, existing modeling\nof time-activity trajectory is only driven by socio-demographic information\nwith identical activity trajectories shared among the same group of people and\nneglects the influence of the environment.",
+    "source_paper": {
+      "title": "Community Time-Activity Trajectory Modelling based on Markov Chain Simulation and Dirichlet Regression",
+      "id": "http://arxiv.org/abs/2212.06366v1",
+      "source": "arxiv"
+    },
+    "topic": "energy planning"
+  },
+  {
+    "id": "qa_017",
+    "question": "What are the main challenges in renewable energy?",
+    "answer": "To meet the Net Zero Representative Concentration Pathways\n(RCP) $4. 5$ scenario in the DACH countries, increased renewable energy\nproduction, energy storage, and reduced commercial building consumption are\nneeded.",
+    "source_paper": {
+      "title": "Probabilistic energy forecasting through quantile regression in reproducing kernel Hilbert spaces",
+      "id": "http://arxiv.org/abs/2408.04405v3",
+      "source": "arxiv"
+    },
+    "topic": "hydroelectric"
+  },
+  {
+    "id": "qa_018",
+    "question": "How does renewable energy contribute to energy efficiency?",
+    "answer": "The increasing penetration of renewable energy poses significant challenges\nto power grid reliability. There have been increasing interests in utilizing\nfinancial tools, such as insurance, to help end-users hedge the potential risk\nof lost load due to renewable energy variability.",
+    "source_paper": {
+      "title": "Insurance Contract for High Renewable Energy Integration",
+      "id": "http://arxiv.org/abs/2209.10363v1",
+      "source": "arxiv"
+    },
+    "topic": "renewable energy"
+  },
+  {
+    "id": "qa_019",
+    "question": "How does renewable energy integrate with existing infrastructure?",
+    "answer": "Transitioning from coal to clean energy, such as nuclear and renewables, is\nessential for mitigating climate change, improving air quality, and ensuring\nsustainable energy security. Reducing reliance on coal lowers greenhouse gas\nemissions and pollution, which enhances public health and economic growth\nthrough renewable energy investments.",
+    "source_paper": {
+      "title": "Development of the Complex Nexus of Socio-Techno-Economic-Environmental Parametric (STEEP) Metrics for Evaluating Coal-to-Clean Energy Transitions",
+      "id": "http://arxiv.org/abs/2410.04212v1",
+      "source": "arxiv"
+    },
+    "topic": "energy security"
+  },
+  {
+    "id": "qa_020",
+    "question": "What are the economic considerations for power system?",
+    "answer": "The increasing penetration of variable renewable energy (VRE) has brought\nsignificant challenges for power systems planning and operation. These highly\nvariable sources are typically distributed in the grid; therefore, a detailed\nrepresentation of transmission bottlenecks is fundamental to approximate the\nimpact of the transmission network on the dispatch with VRE resources.",
+    "source_paper": {
+      "title": "Community Detection for Power Systems Network Aggregation Considering Renewable Variability",
+      "id": "http://arxiv.org/abs/1911.04279v1",
+      "source": "arxiv"
+    },
+    "topic": "power system"
+  },
+  {
+    "id": "qa_021",
+    "question": "What research gaps exist in energy systems?",
+    "answer": "In addition, monthly fuel consumption data that corrected for daily\nair temperature of 206 countries were used for estimating the emissions from\ncommercial and residential buildings. 8% decline of CO2 emission globally from Jan 1st to Apr 30th in 2020 when\ncompared with the same period in 2019, and detects a re-growth of CO2 emissions\nby late April which are mainly attributed to the recovery of economy activities\nin China and partial easing of lockdowns in other countries.",
+    "source_paper": {
+      "title": "Carbon Monitor: a near-real-time daily dataset of global CO2 emission from fossil fuel and cement production",
+      "id": "http://arxiv.org/abs/2006.07690v1",
+      "source": "arxiv"
+    },
+    "topic": "fossil fuel"
+  },
+  {
+    "id": "qa_022",
+    "question": "What are the advantages of energy systems over traditional methods?",
+    "answer": "Critical energy infrastructures are increasingly relying on advanced sensing\nand control technologies for efficient and optimal utilization of flexible\nenergy resources. Algorithmic procedures are needed to ensure that such systems\nare designed to be resilient to a wide range of cyber-physical adversarial\nevents.",
+    "source_paper": {
+      "title": "Optimization-Based Resiliency Verification in Microgrids via Maximal Adversarial Set Characterization",
+      "id": "http://arxiv.org/abs/2203.14918v1",
+      "source": "arxiv"
+    },
+    "topic": "energy infrastructure"
+  },
+  {
+    "id": "qa_023",
+    "question": "How can integration challenges be addressed in renewable energy systems?",
+    "answer": "The manufacturing sector has a substantial influence on worldwide energy\nconsumption. Therefore, improving manufacturing system energy efficiency is\nbecoming increasingly important as the world strives to move toward a more\nresilient and sustainable energy paradigm.",
+    "source_paper": {
+      "title": "A System-Level Energy-Efficient Digital Twin Framework for Runtime Control of Batch Manufacturing Processes",
+      "id": "http://arxiv.org/abs/2309.10151v1",
+      "source": "arxiv"
+    },
+    "topic": "sustainable energy"
+  },
+  {
+    "id": "qa_024",
+    "question": "How does power system integrate with existing infrastructure?",
+    "answer": "Battery energy storage systems (BESSs) can play a key role in mitigating the\nintermittency and uncertainty associated with adding large amounts of renewable\nenergy to the bulk power system (BPS). Studies carried out\non relatively large transmission networks demonstrate that benefits such as\nreduction in system operation cost, wind spillage, voltage fluctuations, and\ndiscounted payback period, can be realized by using the proposed scheme.",
+    "source_paper": {
+      "title": "A Fixed-Flexible BESS Allocation Scheme for Transmission Networks Considering Uncertainties",
+      "id": "http://arxiv.org/abs/1905.07536v3",
+      "source": "arxiv"
+    },
+    "topic": "transmission network"
+  },
+  {
+    "id": "qa_025",
+    "question": "What factors affect the efficiency of energy transition?",
+    "answer": "Disruptions in energy imports, backlash in social acceptance, and novel\ntechnologies failing to develop are unexpected events that are often overlooked\nin energy planning, despite their ability to jeopardize the energy transition. We propose a method to explore unexpected events and assess their impact on the\ntransition pathway of a large-scale whole-energy system.",
+    "source_paper": {
+      "title": "Identifying Dealbreakers and Robust Policies for the Energy Transition Amid Unexpected Events",
+      "id": "http://arxiv.org/abs/2503.05735v1",
+      "source": "arxiv"
+    },
+    "topic": "energy transition"
+  },
+  {
+    "id": "qa_026",
+    "question": "What are the advantages of carbon emission over traditional methods?",
+    "answer": "In the context of increasing global climate change, decarbonizing the\nresidential building sector is crucial for sustainable development. This study\naims to analyze the role of various influencing factors in carbon intensity\nchanges using the decomposing structural decomposition (DSD) to assess and\ncompare the potential and effectiveness of electrifying end-use activities\nduring the operational phase of residential buildings worldwide for\ndecarbonization.",
+    "source_paper": {
+      "title": "Paving the way to carbon neutrality: Evaluating the decarbonization of residential building electrification worldwide",
+      "id": "http://arxiv.org/abs/2503.12159v2",
+      "source": "arxiv"
+    },
+    "topic": "carbon neutrality"
+  },
+  {
+    "id": "qa_027",
+    "question": "What are the advantages of renewable energy over traditional methods?",
+    "answer": "Hydrogen electrolyzers, with their operational flexibility, can be configured\nas smart dynamic loads which can provide grid services and facilitate the\nintegration of more renewable energy sources into the electrical grid. However,\nto enable this ability, the electrolyzer system should be able to control both\nactive and reactive power in coordination with the low-level controller of the\nelectrolyzer via the power electronics system interface between the utility\ngrid and electrolyzer.",
+    "source_paper": {
+      "title": "Power Converter Topologies for Electrolyzer Applications to Enable Electric Grid Services",
+      "id": "http://arxiv.org/abs/2209.05967v1",
+      "source": "arxiv"
+    },
+    "topic": "electric grid"
+  },
+  {
+    "id": "qa_028",
+    "question": "How does energy security integrate with existing infrastructure?",
+    "answer": "Many developed\ncountries have already adopted the concept of Battery Electric Buses (BEBs),\nwhile the developing ones are just starting with it. However, BEB fleets have\nadvantages, such as lower fuel, higher efficiency, lower maintenance, and\nenergy security.",
+    "source_paper": {
+      "title": "Emission Reduction in Urban Environments by Replacing Conventional City Buses with Electric Bus Technology: A Case Study of Pakistan",
+      "id": "http://arxiv.org/abs/2407.20139v1",
+      "source": "arxiv"
+    },
+    "topic": "energy security"
+  },
+  {
+    "id": "qa_029",
+    "question": "What are the economic considerations for wind energy?",
+    "answer": "A fundamental concern in progressing Airborne Wind Energy (AWE) operations\ntowards commercial success, is guaranteeing that safety requirements placed on\nthe systems are met. Due to the high dimensional complexity of AWE systems,\nhowever, formal mathematical robustness guarantees become difficult to compute.",
+    "source_paper": {
+      "title": "Safety-Aware Hybrid Control of Airborne Wind Energy Systems",
+      "id": "http://arxiv.org/abs/2212.07199v1",
+      "source": "arxiv"
+    },
+    "topic": "wind energy"
+  },
+  {
+    "id": "qa_030",
+    "question": "What are the economic considerations for power system?",
+    "answer": "Offshore wind farms have emerged as a popular renewable energy source that\ncan generate substantial electric power with a low environmental impact. However, integrating these farms into the grid poses significant complexities.",
+    "source_paper": {
+      "title": "Multi-Objective Control Co-design Using Graph-Based Optimization for Offshore Wind Farm Grid Integration",
+      "id": "http://arxiv.org/abs/2406.10365v1",
+      "source": "arxiv"
+    },
+    "topic": "offshore wind"
+  },
+  {
+    "id": "qa_031",
+    "question": "What are the advantages of renewable energy over traditional methods?",
+    "answer": "To meet its commitments under the Paris Agreement and reduce its dependency\non energy imports, the pace, and scale of renewable energy deployment across\nEurope must increase dramatically over the next decade. Such a steep change in\nthe net-zero transition will inevitably necessitate trade-offs with other\nsocietal priorities.",
+    "source_paper": {
+      "title": "Balancing Act: The Cost of Wind Restrictions in Norway's Electricity Transition",
+      "id": "http://arxiv.org/abs/2501.00033v1",
+      "source": "arxiv"
+    },
+    "topic": "onshore wind"
+  },
+  {
+    "id": "qa_032",
+    "question": "What factors affect the efficiency of energy storage?",
+    "answer": "Porous metallic structures are regularly used in electrochemical energy\nstorage devices as supports, current collectors or active electrode materials. Bulk metal porosification, dealloying, welding or chemical synthesis routes\ninvolving crystal growth or self-assembly for example, can sometimes provide\nlimited control of porous length scale, ordering, periodicity, reproducibility,\nporosity and surface area.",
+    "source_paper": {
+      "title": "Architected Porous Metals in Electrochemical Energy Storage",
+      "id": "http://arxiv.org/abs/2001.05824v2",
+      "source": "arxiv"
+    },
+    "topic": "energy storage"
+  },
+  {
+    "id": "qa_033",
+    "question": "What are the key components of grid integration?",
+    "answer": "This paper proposes a hydraulic model based on the Euler turbine equations\nsuitable for the purpose of grid integration studies of variable speed\nhydropower (VSHP). The work was motivated by the need to assess how the dynamic\nperformance might change when a hydropower plant is operated at variable speed.",
+    "source_paper": {
+      "title": "Modelling of Variable Speed Hydropower for Grid Integration Studies",
+      "id": "http://arxiv.org/abs/2003.06298v1",
+      "source": "arxiv"
+    },
+    "topic": "grid integration"
+  },
+  {
+    "id": "qa_034",
+    "question": "How can power system be optimized for better performance?",
+    "answer": "In the realm of power systems, the increasing involvement of residential\nusers in load forecasting applications has heightened concerns about data\nprivacy. Specifically, the load data can inadvertently reveal the daily\nroutines of residential users, thereby posing a risk to their property\nsecurity.",
+    "source_paper": {
+      "title": "Privacy-Preserving Distributed Learning for Residential Short-Term Load Forecasting",
+      "id": "http://arxiv.org/abs/2402.01546v1",
+      "source": "arxiv"
+    },
+    "topic": "load forecasting"
+  },
+  {
+    "id": "qa_035",
+    "question": "What are the key components of energy security?",
+    "answer": "This paper presents new results which may constitute a breakthrough in the\neffort to develop fuel cells truly suitable for use in cars and trucks. For\ndecades, researchers have known that the alkaline fuel cell (AFC) is much\ncheaper to make, more efficient and more durable than the more popular PEM fuel\ncell; however, \"carbon poisoning\" (either from CO2 in air or from contaminants\nin reformed methanol) causes big problems in the kind of oxygen-hydrogen AFC\ncommonly used in space.",
+    "source_paper": {
+      "title": "Design and Test of a Carbon-Tolerant Alkaline Fuel Cell",
+      "id": "http://arxiv.org/abs/physics/0504130v1",
+      "source": "arxiv"
+    },
+    "topic": "energy security"
+  },
+  {
+    "id": "qa_036",
+    "question": "What are the future prospects for energy systems?",
+    "answer": "Recent studies conclude that the global coronavirus (COVID-19) pandemic\ndecreased power sector CO$_2$ emissions globally and in the United States. In\nthis paper, we analyze the statistical significance of CO2 emissions reductions\nin the U.",
+    "source_paper": {
+      "title": "No COVID-19 Climate Silver Lining in the US Power Sector",
+      "id": "http://arxiv.org/abs/2008.06660v2",
+      "source": "arxiv"
+    },
+    "topic": "coal power"
+  },
+  {
+    "id": "qa_037",
+    "question": "What are the technical barriers to widespread adoption?",
+    "answer": "Energy system models based on linear programming have been growing in size\nwith the increasing need to model renewables with high spatial and temporal\ndetail. Larger models lead to high computational requirements.",
+    "source_paper": {
+      "title": "Harder, better, faster, stronger: understanding and improving the tractability of large energy system models",
+      "id": "http://arxiv.org/abs/2211.12299v1",
+      "source": "arxiv"
+    },
+    "topic": "energy system"
+  },
+  {
+    "id": "qa_038",
+    "question": "What are the technical barriers to widespread adoption?",
+    "answer": "Smart energy networks provide for an effective means to accommodate high\npenetrations of variable renewable energy sources like solar and wind, which\nare key for deep decarbonisation of energy production. However, given the\nvariability of the renewables as well as the energy demand, it is imperative to\ndevelop effective control and energy storage schemes to manage the variable\nenergy generation and achieve desired system economics and environmental goals.",
+    "source_paper": {
+      "title": "Battery and Hydrogen Energy Storage Control in a Smart Energy Network with Flexible Energy Demand using Deep Reinforcement Learning",
+      "id": "http://arxiv.org/abs/2208.12779v1",
+      "source": "arxiv"
+    },
+    "topic": "smart energy"
+  },
+  {
+    "id": "qa_039",
+    "question": "What role does biomass play in energy transition?",
+    "answer": "This study\nproposes, tests and validates through pilot processing a highly efficient\nmethod for carbon recovery of PUR and in the form of an oil phase concentrated\nin carbon using hydrothermal liquefaction (HTL). Hot liquid water mixed with\nPUR residues and a lignocellulosic material (two species of Miscanthus) were\ntreated at subcritical water temperatures, generating an oil-phase rich in\nhydrocarbons.",
+    "source_paper": {
+      "title": "Combined Hydrothermal Liquefaction of Polyurethane and Lignocellulosic Biomass for improved carbon recovery",
+      "id": "http://arxiv.org/abs/2110.09325v1",
+      "source": "arxiv"
+    },
+    "topic": "biomass"
+  },
+  {
+    "id": "qa_040",
+    "question": "What are the environmental impacts of energy systems?",
+    "answer": "Envisioning a future 100% electrified transportation sector, this paper uses\nsocio-economic, demographic, and geographic data to assess electric energy\ndemand from commuter traffic. We explore the individual mode choices, which\nallows to create mode-mix scenarios for the entire population, and quantify the\nelectric energy demand for each scenario using technical specifications of\nbattery and electric drives technology in combination with different charging\nscenarios.",
+    "source_paper": {
+      "title": "Modeling 100% Electrified Transportation in NYC",
+      "id": "http://arxiv.org/abs/2211.11581v3",
+      "source": "arxiv"
+    },
+    "topic": "energy demand"
+  },
+  {
+    "id": "qa_041",
+    "question": "What are the future prospects for renewable energy?",
+    "answer": "Decentralized renewable energy systems can be low-carbon power sources, and\npromoters of local economies. It is often argued that decentralized generation\nalso helps reducing transmission costs, as generation is closer to the load,\nthus utilizing the transmission system less.",
+    "source_paper": {
+      "title": "Analysis of Avoided Transmission Through Decentralized Photovoltaic and Battery Storage Systems",
+      "id": "http://arxiv.org/abs/1908.10142v2",
+      "source": "arxiv"
+    },
+    "topic": "renewable energy systems"
+  },
+  {
+    "id": "qa_042",
+    "question": "How does energy systems integrate with existing infrastructure?",
+    "answer": "This paper\nprovides an in-depth overview of the causes and risks of hidden failures and\ndiscusses methods for identifying critical locations where hidden failures\ncould pose a risk of cascading failure, with the ultimate goal being to\nidentify efficient mitigation methods that can prevent their occurrence in\nprotective relays.",
+    "source_paper": {
+      "title": "The Risk of Hidden Failures to the United States Electrical Grid and Potential for Mitigation",
+      "id": "http://arxiv.org/abs/2107.03439v2",
+      "source": "arxiv"
+    },
+    "topic": "electric grid"
+  },
+  {
+    "id": "qa_043",
+    "question": "How can integration challenges be addressed in renewable energy systems?",
+    "answer": "Solution of multi-year, dynamic AC Transmission network expansion planning\n(TNEP) problem is gradually taking center stage of planning research owing to\nits potential accuracy.",
+    "source_paper": {
+      "title": "Efficient Multi-Year Security Constrained AC Transmission Network Expansion Planning",
+      "id": "http://arxiv.org/abs/1909.06139v1",
+      "source": "arxiv"
+    },
+    "topic": "transmission network"
+  },
+  {
+    "id": "qa_044",
+    "question": "What factors affect the efficiency of renewable energy?",
+    "answer": "The residential buildings sector is one of the largest electricity consumers\nworldwide and contributes disproportionally to peak electricity demand in many\nregions. However, most\nresidential building energy models applied by industry use homogeneous,\ndeterministic occupant activity schedules, which work well for predictions of\nannual energy consumption, but can result in unrealistic hourly or sub-hourly\nelectric load profiles, with exaggerated or muted peaks.",
+    "source_paper": {
+      "title": "Stochastic simulation of residential building occupant-driven energy use in a bottom-up model of the U.S. housing stock",
+      "id": "http://arxiv.org/abs/2111.01881v2",
+      "source": "arxiv"
+    },
+    "topic": "energy planning"
+  },
+  {
+    "id": "qa_045",
+    "question": "What are the advantages of renewable energy over traditional methods?",
+    "answer": "In the 21st century, our world is facing difficult conditions for serious\nenvironmental pollution and the problem of energy shortage. An innovative idea\nhas emerged to recycle wind energy from air conditioning condenser fans in\noutdoor buildings.",
+    "source_paper": {
+      "title": "Electricity generation from renewable energy based on abandoned wind fan",
+      "id": "http://arxiv.org/abs/2204.03390v1",
+      "source": "arxiv"
+    },
+    "topic": "renewable energy"
+  },
+  {
+    "id": "qa_046",
+    "question": "What are the technical barriers to widespread adoption?",
+    "answer": "We focus on the aggregation of distributed energy resources (DERs) through a\nprofit-maximizing intermediary that enables participation of DERs in wholesale\nelectricity markets. Particularly, we study the market efficiency brought in by\nthe large-scale deployment of DERs and explore to what extent such benefits are\noffset by the profit-maximizing nature of the aggregator.",
+    "source_paper": {
+      "title": "Quantifying Market Efficiency Impacts of Aggregated Distributed Energy Resources",
+      "id": "http://arxiv.org/abs/1911.02993v2",
+      "source": "arxiv"
+    },
+    "topic": "distributed energy resources"
+  },
+  {
+    "id": "qa_047",
+    "question": "What are the future prospects for energy systems?",
+    "answer": "The aim of distribution networks is to meet their local area power demand\nwith maximum reliability. As the electricity consumption tends to increase\nevery year, limited line thermal capacity can lead to network congestion.",
+    "source_paper": {
+      "title": "Optimal Dynamic Reconfiguration of Distribution Networks",
+      "id": "http://arxiv.org/abs/2308.01984v1",
+      "source": "arxiv"
+    },
+    "topic": "energy demand"
+  },
+  {
+    "id": "qa_048",
+    "question": "How does temperature influence performance?",
+    "answer": "Electricity markets currently fail to incorporate preferences of buyers,\ntreating polluting and renewable energy sources as having equal social benefit\nunder a system of uniform clearing prices.",
+    "source_paper": {
+      "title": "Dual Pricing to Prioritize Renewable Energy and Consumer Preferences in Electricity Markets",
+      "id": "http://arxiv.org/abs/2409.18766v1",
+      "source": "arxiv"
+    },
+    "topic": "renewable energy"
+  },
+  {
+    "id": "qa_049",
+    "question": "What are the technical barriers to widespread adoption?",
+    "answer": "Silicon microelectronics, consisting of complementary metal oxide\nsemiconductor (CMOS) technology, have changed nearly all aspects of human life\nfrom communication to transportation, entertainment, and healthcare. Despite\nthe widespread and mainstream use, current silicon-based devices suffer\nsignificant reliability issues at temperatures exceeding 125 C.",
+    "source_paper": {
+      "title": "Materials for High Temperature Digital Electronics",
+      "id": "http://arxiv.org/abs/2404.03510v2",
+      "source": "arxiv"
+    },
+    "topic": "geothermal energy"
+  },
+  {
+    "id": "qa_050",
+    "question": "What factors affect the efficiency of power system?",
+    "answer": "In this paper, we quantify voltage and current phasor-based measurement\nrequirements for the unique estimation of the electric grid topology and\nadmittance parameters. Our approach is underpinned by the concept of a rigidity\nmatrix that has been extensively studied in graph rigidity theory.",
+    "source_paper": {
+      "title": "Electric Grid Topology and Admittance Estimation: Quantifying Phasor-based Measurement Requirements",
+      "id": "http://arxiv.org/abs/2410.17553v2",
+      "source": "arxiv"
+    },
+    "topic": "electric grid"
+  },
+  {
+    "id": "qa_051",
+    "question": "What are the advantages of energy systems over traditional methods?",
+    "answer": "In this paper, five virtual inertia control structures are implemented and\ntested on a variable speed hydropower (VSHP) plant. The results show that all\nfive can deliver fast power reserves to maintain grid stability after\ndisturbances after a disturbance.",
+    "source_paper": {
+      "title": "Variable speed hydropower plant with virtual inertia control for provision of fast frequency reserves",
+      "id": "http://arxiv.org/abs/2003.07062v2",
+      "source": "arxiv"
+    },
+    "topic": "hydropower"
+  },
+  {
+    "id": "qa_052",
+    "question": "What are the main challenges in energy planning?",
+    "answer": "In remote or islanded communities, the use of microgrids (MGs) is necessary\nto ensure electrification and resilience of supply. However, even in\nsmall-scale systems, it is computationally and mathematically challenging to\ndesign low-cost, optimal, sustainable solutions taking into consideration all\nthe uncertainties of load demands and power generations from renewable energy\nsources (RESs).",
+    "source_paper": {
+      "title": "Towards a Sustainable Microgrid on Alderney Island Using a Python-based Energy Planning Tool",
+      "id": "http://arxiv.org/abs/2007.15165v1",
+      "source": "arxiv"
+    },
+    "topic": "energy planning"
+  },
+  {
+    "id": "qa_053",
+    "question": "How does temperature influence performance?",
+    "answer": "This paper proposes a decision-making approach for the control of\ndistribution systems with distributed energy resources (DERs) equipped with\nphotovoltaic (PV) units and battery energy storage systems (BESS).",
+    "source_paper": {
+      "title": "An MDP-Based Approach for Distribution System Control with PV Generation and Battery Storage",
+      "id": "http://arxiv.org/abs/2407.17257v2",
+      "source": "arxiv"
+    },
+    "topic": "battery storage"
+  },
+  {
+    "id": "qa_054",
+    "question": "How can power system be optimized for better performance?",
+    "answer": "This document presents an introduction of two commonly used power system\ndifferential algebraic equations for studying electromechanical oscillation and\ntransient stability. Two types of generator models are used to formulate the\npower system model, respectively: the second-order classical model and the\nfourth-order generator model.",
+    "source_paper": {
+      "title": "Power System Differential-Algebraic Equations",
+      "id": "http://arxiv.org/abs/1512.05185v3",
+      "source": "arxiv"
+    },
+    "topic": "power system"
+  },
+  {
+    "id": "qa_055",
+    "question": "How does energy systems contribute to energy efficiency?",
+    "answer": "Given the importance of crude oil shipping by rail to the energy\nsecurity of the US, it is important to consider various methods that will\ndecrease the likelihood of crude oil catching fire in case of a crude oil\nderailment. Polymeric additives also\nchange the soot deposit structure and particle size compared to the base fuel.",
+    "source_paper": {
+      "title": "Effect of polymeric additives on ignition, combustion and flame characteristics and soot deposits of crude oil droplets",
+      "id": "http://arxiv.org/abs/1911.00392v1",
+      "source": "arxiv"
+    },
+    "topic": "energy security"
+  },
+  {
+    "id": "qa_056",
+    "question": "What are the future prospects for energy systems?",
+    "answer": "Massively parallel architectures offer the potential to significantly\naccelerate an application relative to their serial counterparts. Furthermore, the power consumption associated with\nthese forms of computation renders \"scaling out\" for exascale levels of\nperformance incompatible with modern sustainable energy policies.",
+    "source_paper": {
+      "title": "Field-Programmable Gate Arrays and Quantum Monte Carlo: Power Efficient Co-processing for Scalable High-Performance Computing",
+      "id": "http://arxiv.org/abs/1808.02402v1",
+      "source": "arxiv"
+    },
+    "topic": "energy policy"
+  },
+  {
+    "id": "qa_057",
+    "question": "What are the economic considerations for energy systems?",
+    "answer": "This paper considers the operation of offshore oil and gas platform energy\nsystems with energy supply from wind turbines to reduce local CO2 emissions. A\nnew integrated energy system model for operational planning and simulation has\nbeen developed and implemented in an open-source software tool (Oogeso).",
+    "source_paper": {
+      "title": "Optimised operation of low-emission offshore oil and gas platform integrated energy systems",
+      "id": "http://arxiv.org/abs/2202.05072v1",
+      "source": "arxiv"
+    },
+    "topic": "oil and gas"
+  },
+  {
+    "id": "qa_058",
+    "question": "How does carbon emission integrate with existing infrastructure?",
+    "answer": "Assessing carbon negative and carbon neutrality is critical for mitigating\nand adapting global climate change. Here we proposed a new framework to account\nfor carbon-negative and carbon-neutral actions by introducing the definition of\nCarbon Negative (C0),Carbon Neutrality Stock (C1), Carbon Supply (C2) and\ncarbon-neutral emissions or Scope 4 emissions, which refers to the avoided\nemission due to use of non-fossil energy or C1 products.",
+    "source_paper": {
+      "title": "The Scope 4 Emission: Neutralized Carbon Emissions",
+      "id": "http://arxiv.org/abs/2410.10891v1",
+      "source": "arxiv"
+    },
+    "topic": "carbon neutrality"
+  },
+  {
+    "id": "qa_059",
+    "question": "How does carbon emission integrate with existing infrastructure?",
+    "answer": "Carbon emission markets can play a significant role in this transition by\nputting a price on carbon and giving electricity producers an incentive to\nreduce their emissions. In this paper, we study the operational equilibrium of\nan integrated regional/jurisdictional energy system that comprises an\nelectricity market, a natural gas market, and a carbon emission market.",
+    "source_paper": {
+      "title": "Identifying Operation Equilibrium in Integrated Electricity, Natural Gas, and Carbon-Emission Markets",
+      "id": "http://arxiv.org/abs/2210.09813v1",
+      "source": "arxiv"
+    },
+    "topic": "natural gas"
+  },
+  {
+    "id": "qa_060",
+    "question": "How does temperature influence performance?",
+    "answer": "The present work investigates the long-term thermal effects\nof deviated geothermal wellbores and studies how the cooling of the borehole\nwall results in thermally induced tensile fractures. The results show that\ninduced fractures are created by a combination of in situ and thermal stresses,\nand that the extent to which thermally induced tensile wall fractures are\ncreated largely depends on how the wellbores are oriented with respect to the\npre-existing stresses of the reservoir.",
+    "source_paper": {
+      "title": "Thermal Fracturing of Geothermal Wells and the Effects of Borehole Orientation",
+      "id": "http://arxiv.org/abs/1212.2763v1",
+      "source": "arxiv"
+    },
+    "topic": "geothermal energy"
+  },
+  {
+    "id": "qa_061",
+    "question": "What are the advantages of energy planning over traditional methods?",
+    "answer": "Uncrewed aerial systems have tightly coupled energy and motion dynamics which\nmust be accounted for by onboard planning algorithms. This work proposes a\nstrategy for coupled motion and energy planning using model predictive control\n(MPC).",
+    "source_paper": {
+      "title": "Energy-Aware Predictive Motion Planning for Autonomous Vehicles Using a Hybrid Zonotope Constraint Representation",
+      "id": "http://arxiv.org/abs/2411.03189v2",
+      "source": "arxiv"
+    },
+    "topic": "energy planning"
+  },
+  {
+    "id": "qa_062",
+    "question": "What are the technical barriers to widespread adoption?",
+    "answer": "Despite symmetrical polarization, the magnitude of a light-induced voltage is\nknown to be asymmetric with respect to poling sign in many photovoltaic (PV)\nferroelectrics (FEs). This asymmetry remains unclear and is often attributed to\nextrinsic effects.",
+    "source_paper": {
+      "title": "On the photovoltaic effect asymmetry in ferroelectrics",
+      "id": "http://arxiv.org/abs/2305.19771v1",
+      "source": "arxiv"
+    },
+    "topic": "photovoltaic"
+  },
+  {
+    "id": "qa_063",
+    "question": "What are the environmental impacts of power system?",
+    "answer": "This document presents an introduction of two commonly used power system\ndifferential algebraic equations for studying electromechanical oscillation and\ntransient stability. Two types of generator models are used to formulate the\npower system model, respectively: the second-order classical model and the\nfourth-order generator model.",
+    "source_paper": {
+      "title": "Power System Differential-Algebraic Equations",
+      "id": "http://arxiv.org/abs/1512.05185v3",
+      "source": "arxiv"
+    },
+    "topic": "power system"
+  },
+  {
+    "id": "qa_064",
+    "question": "What are the main challenges in smart grid?",
+    "answer": "Smart grid (SG) systems enhance grid resilience and efficient operation,\nleveraging the bidirectional flow of energy and information between generation\nfacilities and prosumers. For energy demand management (EDM), the SG network\nrequires computing a large amount of data generated by massive\nInternet-of-things sensors and advanced metering infrastructure (AMI) with\nminimal latency.",
+    "source_paper": {
+      "title": "A Resource Allocation Scheme for Energy Demand Management in 6G-enabled Smart Grid",
+      "id": "http://arxiv.org/abs/2207.00154v2",
+      "source": "arxiv"
+    },
+    "topic": "energy demand"
+  },
+  {
+    "id": "qa_065",
+    "question": "How can energy systems be optimized for better performance?",
+    "answer": "In this article we develop a general framework for\nderiving pressure-explicit EoS for impure CO2. We use our method to generalise a recent EoS for\npure CO2 [Demetriades et al.",
+    "source_paper": {
+      "title": "A New Equation of State for CCS Pipeline Transport: Calibration of Mixing Rules for Binary Mixtures of CO2 with N2, O2 and H2",
+      "id": "http://arxiv.org/abs/1507.01545v1",
+      "source": "arxiv"
+    },
+    "topic": "CCS"
+  },
+  {
+    "id": "qa_066",
+    "question": "What are the key components of energy systems?",
+    "answer": "Digital Twins promise to deliver a step-change in distribution system\noperations and planning, but there are few real-world examples that explore the\nchallenges of combining imperfect model and measurement data, and then use\nthese as the basis for subsequent analysis. In this work we propose a Digital\nTwin framework for electrical distribution systems and implement that framework\non the Smart Energy Network Demonstrator microgrid in the UK.",
+    "source_paper": {
+      "title": "Smart Energy Network Digital Twins: Findings from a UK-Based Demonstrator Project",
+      "id": "http://arxiv.org/abs/2311.11997v1",
+      "source": "arxiv"
+    },
+    "topic": "smart energy"
+  },
+  {
+    "id": "qa_067",
+    "question": "How does temperature influence performance?",
+    "answer": "These lecture notes provide a comprehensive guide on Grid Modeling of\nRenewable Energy, offering a foundational overview of power system network\nmodeling, power flow, and load flow algorithms critical for electrical and\nrenewable energy engineering.",
+    "source_paper": {
+      "title": "Lecture Notes on Grid Modeling of Renewable Energy",
+      "id": "http://arxiv.org/abs/2410.22361v1",
+      "source": "arxiv"
+    },
+    "topic": "renewable energy"
+  },
+  {
+    "id": "qa_068",
+    "question": "What are the technical barriers to widespread adoption?",
+    "answer": "Our focus is on investigating the predictability of the energy demand of\nthe heating system and of the thermal response when varying the heating system\nsettings. Being able to form such predictions is crucial for most flexible\ndemand algorithms.",
+    "source_paper": {
+      "title": "Data-Driven Domestic Flexible Demand: Observations from experiments in cold climate",
+      "id": "http://arxiv.org/abs/2407.16475v1",
+      "source": "arxiv"
+    },
+    "topic": "energy demand"
+  },
+  {
+    "id": "qa_069",
+    "question": "What are the technical barriers to widespread adoption?",
+    "answer": "In an\nelementary WAMS, two identical phasors measured at two different locations have\ndifference in the phase angles measured since their reference waveforms are not\nsynchronized with each other. Phasor measurement units (PMUs) measure input\nphasors with respect to a common reference wave based on the atomic clock\npulses received from global positioning system (GPS) satellites, eliminating\nvariation in the measured phase angles due to distant locations of the\nmeasurement nodes.",
+    "source_paper": {
+      "title": "Modelling & Steady State Compliance Testing of an Improved Time Synchronized Phasor Measurement Unit Based on IEEE Standard C37.118.1",
+      "id": "http://arxiv.org/abs/2504.09883v1",
+      "source": "arxiv"
+    },
+    "topic": "grid integration"
+  },
+  {
+    "id": "qa_070",
+    "question": "How does power system contribute to energy efficiency?",
+    "answer": "Accurate probabilistic load forecasting is crucial for maintaining the safety\nand stability of power systems. To overcome these challenges, we introduce DALNet, a novel denoising diffusion\nmodel designed to generate load curves rather than relying on direct\nprediction.",
+    "source_paper": {
+      "title": "Diffusion Model Based Probabilistic Day-ahead Load Forecasting",
+      "id": "http://arxiv.org/abs/2503.06697v1",
+      "source": "arxiv"
+    },
+    "topic": "load forecasting"
+  },
+  {
+    "id": "qa_071",
+    "question": "What factors affect the efficiency of energy storage?",
+    "answer": "Increased penetration of Distributed Energy Resources (DER) and Renewable\nEnergy Systems (RES) transforming the conventional distribution grid into a\ntransactive framework supervised by a distribution system operator (DSO). Although the emerging transactive energy management techniques improve the grid\nreliability, the inherent uncertainty of RES poses a challenge in meeting the\npower demand of the critical infrastructure in the microgrid unless sufficient\nbattery energy storage is maintained.",
+    "source_paper": {
+      "title": "Transactive Framework for Dynamic Energy Storage Allocation for Critical Load Management",
+      "id": "http://arxiv.org/abs/2101.05890v4",
+      "source": "arxiv"
+    },
+    "topic": "renewable energy systems"
+  },
+  {
+    "id": "qa_072",
+    "question": "How can natural gas be optimized for better performance?",
+    "answer": "We demonstrate from molecular dynamics simulations that windowed carbon\nnanotubes can efficiently separate CO2 from the CO2/CH4 mixture, resembling\npolymeric hollow fibers for gas separation. The estimated time-dependent CO2 permeance ranges from 107\nto 105 GPU (gas permeation unit), compared with ~100 GPU for typical polymeric\nmembranes.",
+    "source_paper": {
+      "title": "Windowed Carbon Nanotubes for Efficient CO2 Removal from Natural Gas",
+      "id": "http://arxiv.org/abs/1212.1612v1",
+      "source": "arxiv"
+    },
+    "topic": "natural gas"
+  },
+  {
+    "id": "qa_073",
+    "question": "What are the key components of smart grid?",
+    "answer": "The advancements in smart power grid and the advocation of ``green\ncommunications'' have inspired the wireless communication networks to harness\nenergy from ambient environments and operate in an energy-efficient manner for\neconomic and ecological benefits. This article presents a contemporary review\nof recent breakthroughs on the utilization, redistribution, trading and\nplanning of energy harvested in future wireless networks interoperating with\nsmart grids.",
+    "source_paper": {
+      "title": "Modeling and Analysis of Energy Harvesting and Smart Grid-Powered Wireless Communication Networks: A Contemporary Survey",
+      "id": "http://arxiv.org/abs/1912.13203v1",
+      "source": "arxiv"
+    },
+    "topic": "energy planning"
+  },
+  {
+    "id": "qa_074",
+    "question": "What research gaps exist in energy systems?",
+    "answer": "Accurate household short-term energy consumption forecasting (STECF) is\ncrucial for home energy management, but it is technically challenging, due to\nhighly random behaviors of individual residential users. To improve the\naccuracy of STECF on a day-ahead scale, this paper proposes an novel STECF\nmethodology that leverages association mining in electrical behaviors.",
+    "source_paper": {
+      "title": "Electrical Behavior Association Mining for Household ShortTerm Energy Consumption Forecasting",
+      "id": "http://arxiv.org/abs/2402.09433v1",
+      "source": "arxiv"
+    },
+    "topic": "energy consumption"
+  },
+  {
+    "id": "qa_075",
+    "question": "How does temperature influence performance?",
+    "answer": "In alignment with the Paris Agreement, the city of Oxford in the UK aims to\nbecome carbon neutral by 2040.",
+    "source_paper": {
+      "title": "Optimal sizing of solar photovoltaic and lithium battery storage to reduce grid electricity reliance in buildings",
+      "id": "http://arxiv.org/abs/2306.03581v1",
+      "source": "arxiv"
+    },
+    "topic": "battery storage"
+  },
+  {
+    "id": "qa_076",
+    "question": "What are the technical barriers to widespread adoption?",
+    "answer": "Pumping airborne wind energy (AWE) systems employ a kite to convert wind\nenergy into electricity, through a cyclic reeling motion of the tether. The\nproblem of computing the optimal reeling speed for the sake of maximizing the\naverage cycle power is considered.",
+    "source_paper": {
+      "title": "An optimal reeling control strategy for pumping airborne wind energy systems without wind speed feedback",
+      "id": "http://arxiv.org/abs/2109.15032v1",
+      "source": "arxiv"
+    },
+    "topic": "wind energy"
+  },
+  {
+    "id": "qa_077",
+    "question": "How can energy storage be optimized for better performance?",
+    "answer": "This research proposes a framework for modeling and comparing two electricity\nscenarios for Nigeria by 2050, focusing on the inclusion and exclusion of\nelectricity storage technologies. A Central Composite Design (CCD) was used to\ngenerate a design matrix for data collection, with EnergyPLAN software used to\ncreate energy system simulations on the CCD data for four outputs: total annual\ncost, CO2 emissions, critical excess electricity production (CEEP), and\nelectricity import.",
+    "source_paper": {
+      "title": "A Comparative Analysis of Nigeria's Power Sector with and without Grid-Scale Storage: Future Implications for Emission and Renewable Energy Integration",
+      "id": "http://arxiv.org/abs/2410.15151v1",
+      "source": "arxiv"
+    },
+    "topic": "pumped hydro storage"
+  },
+  {
+    "id": "qa_078",
+    "question": "How does power system contribute to energy efficiency?",
+    "answer": "Specifically, we show that the rank of the rigidity matrix is the same as that\nof a voltage coefficient matrix in a corresponding electric power system. Accordingly, we show that there is a minimum number of measurements required to\nuniquely estimate the admittance matrix and corresponding grid topology.",
+    "source_paper": {
+      "title": "Electric Grid Topology and Admittance Estimation: Quantifying Phasor-based Measurement Requirements",
+      "id": "http://arxiv.org/abs/2410.17553v2",
+      "source": "arxiv"
+    },
+    "topic": "electric grid"
+  },
+  {
+    "id": "qa_079",
+    "question": "How can integration challenges be addressed in renewable energy systems?",
+    "answer": "Recent massive failures in the power grid acted as a wake up call for all\nutilities and consumers. This leads to aggressive pursue a more intelligent\ngrid which addresses the concerns of reliability, efficiency, security, quality\nand sustainability for the energy consumers and producers alike.",
+    "source_paper": {
+      "title": "Cyberattack on the Microgrids Through Price Modification",
+      "id": "http://arxiv.org/abs/2005.08757v1",
+      "source": "arxiv"
+    },
+    "topic": "energy security"
+  },
+  {
+    "id": "qa_080",
+    "question": "What are the key components of power system?",
+    "answer": "Smart grid technology has been recognized as a promising solution for the\nnext-generation energy efficient electric power systems to mitigate energy\ncrisis. The smart power\ngrid introduces a sensing, monitoring, and control system that provides end\nusers with the cost of energy at any moment through real-time pricing.",
+    "source_paper": {
+      "title": "Development of Microcontroller Based Smart Grid Framework",
+      "id": "http://arxiv.org/abs/2111.10835v1",
+      "source": "arxiv"
+    },
+    "topic": "smart grid"
+  },
+  {
+    "id": "qa_081",
+    "question": "What are the key components of energy efficiency?",
+    "answer": "However, with growing demands for such technologies, the limited energy\ninfrastructure becomes the bottleneck for their future growth. It might be of\nhigh cost and low energy efficiency for all the operators to each have their\nown dedicated energy infrastructure, such as charging stations.",
+    "source_paper": {
+      "title": "Performance Analysis of Charging Infrastructure Sharing in UAV and EV-involved Networks",
+      "id": "http://arxiv.org/abs/2208.06782v1",
+      "source": "arxiv"
+    },
+    "topic": "energy infrastructure"
+  },
+  {
+    "id": "qa_082",
+    "question": "How does nuclear energy contribute to energy efficiency?",
+    "answer": "In the course of the energy transition, energy generation from nuclear power\n- through nuclear fission and perhaps in the future through nuclear fusion - is\noften proposed as an alternative or supplement to renewable energy sources. There are already good reasons why electricity generation from nuclear energy\nis significantly more expensive than other forms of generation, while\nincreasing dryness as a result of climate change is generally calling into\nquestion the reliability of thermal power plants.",
+    "source_paper": {
+      "title": "Can nuclear energy contribute to the energy transition?",
+      "id": "http://arxiv.org/abs/2407.13325v1",
+      "source": "arxiv"
+    },
+    "topic": "energy transition"
+  },
+  {
+    "id": "qa_083",
+    "question": "What are the economic considerations for solar energy?",
+    "answer": "Here\nwe focus on applications where surface transparency is desirable and propose\nmetasurfaces with embedded plasmonically enhanced light absorption heating,\nusing ultra-thin hybrid metal-dielectric coatings, as a passive, viable\napproach for de-icing and anti-icing, in which the sole heat source is\nrenewable solar energy. The balancing of transparency and absorption is\nachieved with rationally nano-engineered coatings consisting of gold\nnanoparticle inclusions in a dielectric (titanium dioxide), concentrating\nbroadband absorbed solar energy into a small volume.",
+    "source_paper": {
+      "title": "Metasurfaces Leveraging Solar Energy for Icephobicity",
+      "id": "http://arxiv.org/abs/1901.05528v1",
+      "source": "arxiv"
+    },
+    "topic": "solar energy"
+  },
+  {
+    "id": "qa_084",
+    "question": "What role does natural gas play in energy transition?",
+    "answer": "The coal industry contributes significantly to the social economy, but the\nemission of greenhouse gases puts huge pressure on the environment in the\nprocess of mining, transportation, and power generation. In the integrated\nenergy system (IES), the current research about the power-to-gas (P2G)\ntechnology mainly focuses on the injection of hydrogen generated from renewable\nenergy electrolyzed water into natural gas pipelines, which may cause hydrogen\nembrittlement of the pipeline and cannot be repaired.",
+    "source_paper": {
+      "title": "Electricity-gas integrated energy system optimal operation in typical scenario of coal district considering hydrogen heavy trucks",
+      "id": "http://arxiv.org/abs/2102.02620v2",
+      "source": "arxiv"
+    },
+    "topic": "gas pipeline"
+  },
+  {
+    "id": "qa_085",
+    "question": "What are the future prospects for energy storage?",
+    "answer": "Offshore wind farms (OWFs) are set to significantly contribute to global\ndecarbonization efforts. Developers often use a sequential approach to optimize\ndesign variables and market participation for grid-integrated offshore wind\nfarms.",
+    "source_paper": {
+      "title": "Control Co-Design Under Uncertainty for Offshore Wind Farms: Optimizing Grid Integration, Energy Storage, and Market Participation",
+      "id": "http://arxiv.org/abs/2504.08555v1",
+      "source": "arxiv"
+    },
+    "topic": "grid integration"
+  },
+  {
+    "id": "qa_086",
+    "question": "How does temperature influence performance?",
+    "answer": "In this\neducational article, we present a few examples to illustrate how the concept of\nphoton entropy, combined with the radiative transfer equation, can be used to\nanalyze the local entropy generation processes and the efficiency limits of\ndifferent solar energy conversion systems.",
+    "source_paper": {
+      "title": "Where and how is entropy generated in solar energy conversion systems?",
+      "id": "http://arxiv.org/abs/1802.07404v3",
+      "source": "arxiv"
+    },
+    "topic": "solar energy"
+  },
+  {
+    "id": "qa_087",
+    "question": "What role does renewable energy play in energy transition?",
+    "answer": "The transition to a renewable energy system poses challenges for power grid\noperation and stability. Secondary control is key in restoring the power system\nto its reference following a disturbance.",
+    "source_paper": {
+      "title": "Secondary control activation analysed and predicted with explainable AI",
+      "id": "http://arxiv.org/abs/2109.04802v1",
+      "source": "arxiv"
+    },
+    "topic": "renewable energy systems"
+  },
+  {
+    "id": "qa_088",
+    "question": "How does energy transition contribute to energy efficiency?",
+    "answer": "Purpose : Planning a transition towards sustainable carbon neutrality at the\norganization level raises several accounting challenges. This paper aims to\nshed light on key challenges, highlight answers from current accounting\nstandards and guidance, point out potential inconsistencies or limits, and\noutline potential solutions from the industrial ecology community through\nsystemic environmental assessment tools, such as life cycle assessment (LCA)\nand environmentally-extended input-output (EEIO) analysis.",
+    "source_paper": {
+      "title": "Planning sustainable carbon neutrality pathways: accounting challenges experienced by organizations and solutions from industrial ecology",
+      "id": "http://arxiv.org/abs/2501.10456v1",
+      "source": "arxiv"
+    },
+    "topic": "carbon neutrality"
+  },
+  {
+    "id": "qa_089",
+    "question": "How does energy systems contribute to energy efficiency?",
+    "answer": "Machine learning and optimisation techniques (MLOPT) hold significant\npotential to accelerate the decarbonisation of industrial systems by enabling\ndata-driven operational improvements. To address this challenge, we propose a novel\nhuman-in-the-loop (HITL) constraint-based optimisation framework that\nintegrates domain expertise with data-driven methods, ensuring solutions are\nboth technically sound and operationally feasible.",
+    "source_paper": {
+      "title": "Domain Consistent Industrial Decarbonisation of Global Coal Power Plants",
+      "id": "http://arxiv.org/abs/2503.03571v1",
+      "source": "arxiv"
+    },
+    "topic": "coal power"
+  },
+  {
+    "id": "qa_090",
+    "question": "What are the key components of energy systems?",
+    "answer": "In the light of the JEF(F) European project longstanding story according to\nthe determination of the most exact shape of the 239Pu(n, 2n)238Pu reaction\ncross section and a recent measurement by Meot et al. To achieve\nthis goal, the AVXSF-LNG computer program has been upgraded to model\nsecond-chance reactions using its decay-probability module and, then chained to\nthe TALYS-ECIS06 nuclear reaction system of codes.",
+    "source_paper": {
+      "title": "Questioning the 239Pu(n,2n)238Pu cross section shape above emission threshold",
+      "id": "http://arxiv.org/abs/2203.11073v1",
+      "source": "arxiv"
+    },
+    "topic": "LNG"
+  },
+  {
+    "id": "qa_091",
+    "question": "What are the key components of energy systems?",
+    "answer": "In the face of an increasingly broad cyberattack surface,\ncyberattack-resilient load forecasting for electric utilities is both more\nnecessary and more challenging than ever. In this paper, we propose an\nadversarial machine learning (AML) approach, which can respond to a wide range\nof attack behaviors without detecting outliers.",
+    "source_paper": {
+      "title": "Enabling Cyberattack-Resilient Load Forecasting through Adversarial Machine Learning",
+      "id": "http://arxiv.org/abs/2001.02289v1",
+      "source": "arxiv"
+    },
+    "topic": "load forecasting"
+  },
+  {
+    "id": "qa_092",
+    "question": "How does power system contribute to energy efficiency?",
+    "answer": "We introduce a temporal decomposition algorithm\nbased on partial Lagrangian relaxation to address long-term water contract\nconstraints. Our framework is evaluated with a case study using\nreal-world hydrology and power system data from Lake Mead and Lake Powell, on\nthe Colorado River, demonstrating competitive performance against commercial\nsolvers for both linearized and nonlinear reservoir models.",
+    "source_paper": {
+      "title": "A Lagrangian-Informed Long-Term Dispatch Policy for Coupled Hydropower and Photovoltaic Systems",
+      "id": "http://arxiv.org/abs/2503.01690v1",
+      "source": "arxiv"
+    },
+    "topic": "hydropower"
+  },
+  {
+    "id": "qa_093",
+    "question": "How does temperature influence performance?",
+    "answer": "The study specifically explores the\nimpact of moisture exposure duration and GMB volume fraction on microphase\nmorphological changes, their associated mechanisms, and their influence on\nthermal transport and dielectric properties.",
+    "source_paper": {
+      "title": "Moisture-Driven Morphology Changes in the Thermal and Dielectric Properties of TPU-Based Syntactic Foams",
+      "id": "http://arxiv.org/abs/2310.11200v1",
+      "source": "arxiv"
+    },
+    "topic": "oil and gas"
+  },
+  {
+    "id": "qa_094",
+    "question": "What are the environmental impacts of renewable energy?",
+    "answer": "Accurate modeling of lithium ion (li-ion) batteries is essential for\nenhancing the safety, and efficiency of electric vehicles and renewable energy\nsystems. This paper presents a data-inspired approach for improving the\nfidelity of reduced-order li-ion battery models.",
+    "source_paper": {
+      "title": "Improving Low-Fidelity Models of Li-ion Batteries via Hybrid Sparse Identification of Nonlinear Dynamics",
+      "id": "http://arxiv.org/abs/2411.12935v1",
+      "source": "arxiv"
+    },
+    "topic": "renewable energy systems"
+  },
+  {
+    "id": "qa_095",
+    "question": "What are the future prospects for energy systems?",
+    "answer": "Previous research has raised concerns about energy droughts in\nrenewables-based energy systems. This study explores the ability of reservoir\nhydropower to sustain a high output and, thereby, mitigate such energy\ndroughts.",
+    "source_paper": {
+      "title": "Through energy droughts: hydropower's ability to sustain a high output",
+      "id": "http://arxiv.org/abs/2405.13530v1",
+      "source": "arxiv"
+    },
+    "topic": "hydropower"
+  },
+  {
+    "id": "qa_096",
+    "question": "What are the key components of hydroelectric?",
+    "answer": "The constant increase in the amount and complexity of information obtained\nfrom IT data networkelements, for its correct monitoring and management, is a\nreality. The same happens to data net-works in electrical systems that provide\neffective supervision and control of substations and hydro-electric plants.",
+    "source_paper": {
+      "title": "Monitoring electrical systems data-network equipment by means of Fuzzy and Paraconsistent Annotated Logic",
+      "id": "http://arxiv.org/abs/2105.07579v2",
+      "source": "arxiv"
+    },
+    "topic": "hydroelectric"
+  },
+  {
+    "id": "qa_097",
+    "question": "How does energy transition integrate with existing infrastructure?",
+    "answer": "The energy transition is reshaping electricity systems, bringing new\nchallenges, and emphasizing the need for strategic planning. Energy policies\nplay a crucial role in guiding this transition.",
+    "source_paper": {
+      "title": "Policy-relevance of a Model Inter-comparison: Switzerland in the European Energy Transition",
+      "id": "http://arxiv.org/abs/2412.12964v1",
+      "source": "arxiv"
+    },
+    "topic": "energy transition"
+  },
+  {
+    "id": "qa_098",
+    "question": "What are the future prospects for biomass?",
+    "answer": "Due to the high versatility of Polyurethane (PUR), its share amongst\nsynthetic polymers to manufacture consumer goods is increasing. This study\nproposes, tests and validates through pilot processing a highly efficient\nmethod for carbon recovery of PUR and in the form of an oil phase concentrated\nin carbon using hydrothermal liquefaction (HTL).",
+    "source_paper": {
+      "title": "Combined Hydrothermal Liquefaction of Polyurethane and Lignocellulosic Biomass for improved carbon recovery",
+      "id": "http://arxiv.org/abs/2110.09325v1",
+      "source": "arxiv"
+    },
+    "topic": "biomass"
+  },
+  {
+    "id": "qa_099",
+    "question": "What are the advantages of energy systems over traditional methods?",
+    "answer": "One of the aspects currently holding back commercial scale deployment of\ncarbon capture and storage (CCS) is an accurate understanding of the\nthermodynamic behaviour of carbon dioxide and relevant impurities during the\npipeline transport stage. This flexible framework\nfacilitates ongoing development of custom EoS in response to new data and\ncomputational applications.",
+    "source_paper": {
+      "title": "A New Equation of State for CCS Pipeline Transport: Calibration of Mixing Rules for Binary Mixtures of CO2 with N2, O2 and H2",
+      "id": "http://arxiv.org/abs/1507.01545v1",
+      "source": "arxiv"
+    },
+    "topic": "CCS"
+  },
+  {
+    "id": "qa_100",
+    "question": "What are the economic considerations for power system?",
+    "answer": "Power system expansion models are a widely used tool for planning\npowersystems, especially considering the integration of large shares of\nrenewableresources. The backbone of these models is an optimization problem,\nwhichdepends on a number of economic and technical parameters.",
+    "source_paper": {
+      "title": "The Sensitivity of Power System Expansion Models",
+      "id": "http://arxiv.org/abs/2007.09956v1",
+      "source": "arxiv"
+    },
+    "topic": "power system"
+  },
+  {
+    "id": "qa_101",
+    "question": "What are the main challenges in energy systems?",
+    "answer": "The limited availability of accurate experimental data in wide ranges of\npressure, temperature, and composition is the main constraining factor for the\nproper development and assessment of thermodynamic models and equations of\nstate. In the particular case of carbon capture and storage (CCS) processes,\nthere is a clear need for data sets related to the (carbon dioxide + oxygen)\nmixtures that this work aims to address.",
+    "source_paper": {
+      "title": "Accurate experimental ($p$, $ρ$, $T$) data of the ($CO_{2}$ + $O_{2}$) binary system for the development of models for CCS processes",
+      "id": "http://arxiv.org/abs/2409.17164v1",
+      "source": "arxiv"
+    },
+    "topic": "CCS"
+  },
+  {
+    "id": "qa_102",
+    "question": "How does grid integration contribute to energy efficiency?",
+    "answer": "Partial resonance high frequency AC link converters are recognized to provide\nsoft-switching, single-stage power conversion. They are highly reliable due to\nelimination of DC capacitors.",
+    "source_paper": {
+      "title": "A Soft-Switching Single-Stage AC-DC Converter",
+      "id": "http://arxiv.org/abs/2202.09462v1",
+      "source": "arxiv"
+    },
+    "topic": "grid integration"
+  },
+  {
+    "id": "qa_103",
+    "question": "What are the future prospects for biomass?",
+    "answer": "The EU targets 10 Mt of green hydrogen production by 2030, but has not\ncommitted to targets for 2040. Green hydrogen competes with carbon capture and\nstorage, biomass and imports in reaching emissions reductions; earlier studies\nhave demonstrated the great uncertainty in future cost-optimal development of\ngreen hydrogen.",
+    "source_paper": {
+      "title": "Little to lose: the case for a robust European green hydrogen strategy",
+      "id": "http://arxiv.org/abs/2412.07464v1",
+      "source": "arxiv"
+    },
+    "topic": "carbon capture and storage"
+  },
+  {
+    "id": "qa_104",
+    "question": "How does temperature influence performance?",
+    "answer": "In the existing literatures for the risk evaluation of electricity-gas\nintegrated energy system (EGIES), the impacts of gas leakage in pipelines are\nignored.",
+    "source_paper": {
+      "title": "Incorporating Gas Pipeline Leakage Failure Modes in Risk Evaluation of Electricity-Gas Integrated Energy Systems",
+      "id": "http://arxiv.org/abs/2011.00776v1",
+      "source": "arxiv"
+    },
+    "topic": "gas pipeline"
+  },
+  {
+    "id": "qa_105",
+    "question": "What factors affect the efficiency of power system?",
+    "answer": "The residential buildings sector is one of the largest electricity consumers\nworldwide and contributes disproportionally to peak electricity demand in many\nregions. However, most\nresidential building energy models applied by industry use homogeneous,\ndeterministic occupant activity schedules, which work well for predictions of\nannual energy consumption, but can result in unrealistic hourly or sub-hourly\nelectric load profiles, with exaggerated or muted peaks.",
+    "source_paper": {
+      "title": "Stochastic simulation of residential building occupant-driven energy use in a bottom-up model of the U.S. housing stock",
+      "id": "http://arxiv.org/abs/2111.01881v2",
+      "source": "arxiv"
+    },
+    "topic": "energy planning"
+  },
+  {
+    "id": "qa_106",
+    "question": "What are the future prospects for renewable energy?",
+    "answer": "This paper presents models for renewable energy systems with storage, and\nconsiders its optimal operation. We model and simulate wind and solar power\nproduction using stochastic differential equations as well as storage of the\nproduced power using batteries, thermal storage, and water electrolysis.",
+    "source_paper": {
+      "title": "Modeling, scientific computing and optimal control for renewable energy systems with storage",
+      "id": "http://arxiv.org/abs/2212.08842v1",
+      "source": "arxiv"
+    },
+    "topic": "renewable energy systems"
+  },
+  {
+    "id": "qa_107",
+    "question": "How does temperature influence performance?",
+    "answer": "Fluids confined in nanopores are ubiquitous in nature and technology.",
+    "source_paper": {
+      "title": "Elastic Properties of Confined Fluids from Molecular Modeling to Ultrasonic Experiments on Porous Solids",
+      "id": "http://arxiv.org/abs/2111.06914v1",
+      "source": "arxiv"
+    },
+    "topic": "shale gas"
+  },
+  {
+    "id": "qa_108",
+    "question": "What role does hydroelectric play in energy transition?",
+    "answer": "Hydro-Quebec (HQ) is a vertically integrated utility that produces,\ntransmits, and distributes most of the electricity in the province of Quebec. The power grid it operates has a particular architecture created by large\nhydroelectric dams located far north and the extensive 735kV transmission grid\nthat allows the generated power to reach the majority of the load located\nthousands of kilometers away in the southern region of Quebec.",
+    "source_paper": {
+      "title": "Generation planning and operation under power stability constraints: A Hydro-Quebec use case",
+      "id": "http://arxiv.org/abs/2405.20199v2",
+      "source": "arxiv"
+    },
+    "topic": "hydroelectric"
+  },
+  {
+    "id": "qa_109",
+    "question": "What are the advantages of sustainability over traditional methods?",
+    "answer": "With recent developments in vehicle and battery technologies, electric\nvehicles (EVs) are rapidly getting established as a sustainable alternative to\ntraditional fossil-fuel vehicles. This has made the large-scale electrification\nof ride-sourcing operations a practical viability, providing an opportunity for\na leap toward urban sustainability goals.",
+    "source_paper": {
+      "title": "Electric Vehicle E-hailing Fleet Dispatching and Charge Scheduling",
+      "id": "http://arxiv.org/abs/2302.12650v1",
+      "source": "arxiv"
+    },
+    "topic": "fossil fuel"
+  },
+  {
+    "id": "qa_110",
+    "question": "What factors affect the efficiency of energy efficiency?",
+    "answer": "The manufacturing sector has a substantial influence on worldwide energy\nconsumption. Therefore, improving manufacturing system energy efficiency is\nbecoming increasingly important as the world strives to move toward a more\nresilient and sustainable energy paradigm.",
+    "source_paper": {
+      "title": "A System-Level Energy-Efficient Digital Twin Framework for Runtime Control of Batch Manufacturing Processes",
+      "id": "http://arxiv.org/abs/2309.10151v1",
+      "source": "arxiv"
+    },
+    "topic": "sustainable energy"
+  },
+  {
+    "id": "qa_111",
+    "question": "What are the environmental impacts of renewable energy?",
+    "answer": "Electricity markets currently fail to incorporate preferences of buyers,\ntreating polluting and renewable energy sources as having equal social benefit\nunder a system of uniform clearing prices. Meanwhile, renewable energy is prone\nto curtailment due to transmission constraints, forcing grid operators to\nreduce or shut down renewable energy production despite its availability and\nneed.",
+    "source_paper": {
+      "title": "Dual Pricing to Prioritize Renewable Energy and Consumer Preferences in Electricity Markets",
+      "id": "http://arxiv.org/abs/2409.18766v1",
+      "source": "arxiv"
+    },
+    "topic": "renewable energy"
+  },
+  {
+    "id": "qa_112",
+    "question": "What are the key components of energy systems?",
+    "answer": "The transmission system operators (TSOs) are responsible to provide secure\nand efficient access to the transmission system for all stakeholders. This task\nis gradually getting challenging due to the demand growth, demand uncertainty,\nrapid changes in generation mix, and market policies.",
+    "source_paper": {
+      "title": "Controllable Transmission Networks under Demand Uncertainty with Modular FACTS",
+      "id": "http://arxiv.org/abs/2105.10402v1",
+      "source": "arxiv"
+    },
+    "topic": "transmission network"
+  },
+  {
+    "id": "qa_113",
+    "question": "How does power system integrate with existing infrastructure?",
+    "answer": "Due to generation retirements and growth of renewable energy sources\nintegration, there will be widespread changes in the real and reactive power\nflow in nowadays power systems. These changes also bring about challenges on\nsystem operation and stability.",
+    "source_paper": {
+      "title": "Voltage Security Analysis of VSC-HVDC Transmission Lines",
+      "id": "http://arxiv.org/abs/1907.09589v1",
+      "source": "arxiv"
+    },
+    "topic": "energy planning"
+  },
+  {
+    "id": "qa_114",
+    "question": "How can integration challenges be addressed in renewable energy systems?",
+    "answer": "The digitalization of railway systems should increase the efficiency of the\ntrain operation to achieve future mobility challenges and climate goals. But\nthis digitalization also comes with several new challenges in providing a\nsecure and reliable train operation.",
+    "source_paper": {
+      "title": "From CCS-Planning to Testautomation: The Digital Testfield of Deutsche Bahn in Scheibenberg -- A Case Study",
+      "id": "http://arxiv.org/abs/2109.14378v1",
+      "source": "arxiv"
+    },
+    "topic": "CCS"
+  },
+  {
+    "id": "qa_115",
+    "question": "What are the main challenges in energy efficiency?",
+    "answer": "Electric vehicles (EVs) and unmanned aerial vehicles (UAVs) show great\npotential in modern transportation and communication networks, respectively. However, with growing demands for such technologies, the limited energy\ninfrastructure becomes the bottleneck for their future growth.",
+    "source_paper": {
+      "title": "Performance Analysis of Charging Infrastructure Sharing in UAV and EV-involved Networks",
+      "id": "http://arxiv.org/abs/2208.06782v1",
+      "source": "arxiv"
+    },
+    "topic": "energy infrastructure"
+  },
+  {
+    "id": "qa_116",
+    "question": "What are the advantages of biomass over traditional methods?",
+    "answer": "This study investigates the intricate relationship between the formation\nmechanisms and luminescent properties of lignin-derived carbon quantum dots\n(LG-CQDs) synthesized from spruce biomass by hydrothermal treatment. A\ncomprehensive understanding of LG-CQD structure and its photoluminescence\nrequires insights into the native architecture of lignin and the distribution\nof its acidolysis-derived fragments.",
+    "source_paper": {
+      "title": "Exploring the Interplay Between Formation Mechanisms and Luminescence of Lignin Carbon Quantum Dots from Spruce Biomass",
+      "id": "http://arxiv.org/abs/2505.10886v1",
+      "source": "arxiv"
+    },
+    "topic": "biomass"
+  },
+  {
+    "id": "qa_117",
+    "question": "What are the future prospects for energy systems?",
+    "answer": "Foremost a major health hazard, it also\naffects the passage of light through the lower atmosphere. In this paper, we\npresent a study addressing the impact of haze on the performance pf\nphotovoltaic installations in cities.",
+    "source_paper": {
+      "title": "Urban Haze and Photovoltaics",
+      "id": "http://arxiv.org/abs/1804.05249v1",
+      "source": "arxiv"
+    },
+    "topic": "photovoltaic"
+  },
+  {
+    "id": "qa_118",
+    "question": "How can integration challenges be addressed in renewable energy systems?",
+    "answer": "Solar photovoltaics which converts renewable solar energy into electricity\nhave become prominent as a measure to decarbonize electricity generation. The\noperationalization of photovoltaic electricity generation however results in\nsignificant emissions which are loaded upfront into the atmosphere.",
+    "source_paper": {
+      "title": "Environmental impact of terwatt scale Si-photovoltaics",
+      "id": "http://arxiv.org/abs/2105.13713v1",
+      "source": "arxiv"
+    },
+    "topic": "photovoltaic"
+  },
+  {
+    "id": "qa_119",
+    "question": "How can integration challenges be addressed in renewable energy systems?",
+    "answer": "Electrification can help to reduce the carbon footprint of aviation. In this paper, we first quantify the increase in energy demands at\nseveral airports across the United States (US), when commercial airline\ncarriers partially deploy hybrid electric aircraft (HEA).",
+    "source_paper": {
+      "title": "Impact of Aviation Electrification on Airports: Flight Scheduling and Charging",
+      "id": "http://arxiv.org/abs/2108.08963v2",
+      "source": "arxiv"
+    },
+    "topic": "energy demand"
+  },
+  {
+    "id": "qa_120",
+    "question": "What factors affect the efficiency of energy systems?",
+    "answer": "We constructed a near-real-time daily CO2 emission dataset, namely the Carbon\nMonitor, to monitor the variations of CO2 emissions from fossil fuel combustion\nand cement production since January 1st 2019 at national level with near-global\ncoverage on a daily basis, with the potential to be frequently updated. Daily\nCO2 emissions are estimated from a diverse range of activity data, including:\nhourly to daily electrical power generation data of 29 countries, monthly\nproduction data and production indices of industry processes of 62\ncountries/regions, daily mobility data and mobility indices of road\ntransportation of 416 cities worldwide.",
+    "source_paper": {
+      "title": "Carbon Monitor: a near-real-time daily dataset of global CO2 emission from fossil fuel and cement production",
+      "id": "http://arxiv.org/abs/2006.07690v1",
+      "source": "arxiv"
+    },
+    "topic": "fossil fuel"
+  },
+  {
+    "id": "qa_121",
+    "question": "What are the advantages of energy systems over traditional methods?",
+    "answer": "Future energy systems are subject to various uncertain influences. As\nresilient systems they should maintain a constantly high operational\nperformance whatever happens.",
+    "source_paper": {
+      "title": "Predictions and Decision Making for Resilient Intelligent Sustainable Energy Systems",
+      "id": "http://arxiv.org/abs/2407.03021v1",
+      "source": "arxiv"
+    },
+    "topic": "energy system"
+  },
+  {
+    "id": "qa_122",
+    "question": "What role does solar energy play in energy transition?",
+    "answer": "The challenge in solar energy today is not the cost of photovoltaic (PV)\nelectricity generation, already competing with fossil fuel prices, but rather\nutility-scale energy storage and flexibility in supply. Low-cost thermal energy\nstorage (TES) exists but relies on expensive heat engines.",
+    "source_paper": {
+      "title": "Luminescent solar power: PV/thermal hybrid electricity generation for cost effective dispatchable solar energy",
+      "id": "http://arxiv.org/abs/2012.08314v1",
+      "source": "arxiv"
+    },
+    "topic": "electricity generation"
+  },
+  {
+    "id": "qa_123",
+    "question": "What role does energy systems play in energy transition?",
+    "answer": "Energy has always been the driving force in the technological and economic\ndevelopment of societies. The consumption of a significant amount of energy is\nrequired to provide basic living conditions of developed countries (heating,\ntransportation, lighting, etc.",
+    "source_paper": {
+      "title": "Hydrogen storage and compression",
+      "id": "http://arxiv.org/abs/1702.06015v1",
+      "source": "arxiv"
+    },
+    "topic": "fossil fuel"
+  },
+  {
+    "id": "qa_124",
+    "question": "What are the economic considerations for energy systems?",
+    "answer": "Carbon\ndioxide (CO 2 ) concentration in the Earth's atmosphere is linked to the\naverage temperature on the surface of the planet. Carbon capture and storage is\nan important technological endeavor aiming to improve the ecology.",
+    "source_paper": {
+      "title": "On the Carbon Dioxide Capture by Quaternary Ammonium-Based and Phosphonium-Based Ionic Liquids. The Role of Steric Hindrances and Transition States",
+      "id": "http://arxiv.org/abs/2201.00218v1",
+      "source": "arxiv"
+    },
+    "topic": "carbon capture and storage"
+  },
+  {
+    "id": "qa_125",
+    "question": "What research gaps exist in carbon emission?",
+    "answer": "In this paper, we introduce a hybrid energy storage system composed of battery\nand hydrogen energy storage to handle the uncertainties related to electricity\nprices, renewable energy production and consumption. We aim to improve\nrenewable energy utilisation and minimise energy costs and carbon emissions\nwhile ensuring energy reliability and stability within the network.",
+    "source_paper": {
+      "title": "Battery and Hydrogen Energy Storage Control in a Smart Energy Network with Flexible Energy Demand using Deep Reinforcement Learning",
+      "id": "http://arxiv.org/abs/2208.12779v1",
+      "source": "arxiv"
+    },
+    "topic": "smart energy"
+  },
+  {
+    "id": "qa_126",
+    "question": "What are the key components of energy systems?",
+    "answer": "Facing economic challenges due to the diverse objectives of businesses, and\nconsumers, commercial greenhouses strive to minimize energy costs while\naddressing CO2 emissions. This scenario is intensified by rising energy costs\nand the global imperative to curtail CO2 emissions.",
+    "source_paper": {
+      "title": "A Modifiable Architectural Design for Commercial Greenhouses Energy Economic Dispatch Testbed",
+      "id": "http://arxiv.org/abs/2401.03888v1",
+      "source": "arxiv"
+    },
+    "topic": "energy economics"
+  },
+  {
+    "id": "qa_127",
+    "question": "What are the technical barriers to widespread adoption?",
+    "answer": "The digitization and decentralization of the electric power grid are key\nthrusts for an economically and environmentally sustainable future. , are becoming ubiquitous in power\nsystems.",
+    "source_paper": {
+      "title": "Distributed Energy Resources Cybersecurity Outlook: Vulnerabilities, Attacks, Impacts, and Mitigations",
+      "id": "http://arxiv.org/abs/2205.11171v4",
+      "source": "arxiv"
+    },
+    "topic": "distributed energy resources"
+  },
+  {
+    "id": "qa_128",
+    "question": "What role does power system play in energy transition?",
+    "answer": "The residential buildings sector is one of the largest electricity consumers\nworldwide and contributes disproportionally to peak electricity demand in many\nregions. Strongly driven by occupant activities at home, household energy\nconsumption is stochastic and heterogeneous in nature.",
+    "source_paper": {
+      "title": "Stochastic simulation of residential building occupant-driven energy use in a bottom-up model of the U.S. housing stock",
+      "id": "http://arxiv.org/abs/2111.01881v2",
+      "source": "arxiv"
+    },
+    "topic": "energy planning"
+  },
+  {
+    "id": "qa_129",
+    "question": "What are the advantages of wind energy over traditional methods?",
+    "answer": "Offshore wind energy leverages the high intensity and consistency of oceanic\nwinds, playing a key role in the transition to renewable energy. As energy\ndemands grow, larger turbines are required to optimize power generation and\nreduce the Levelized Cost of Energy (LCoE), which represents the average cost\nof electricity over a project's lifetime.",
+    "source_paper": {
+      "title": "Offshore Wind Turbine Tower Design and Optimization: A Review and AI-Driven Future Directions",
+      "id": "http://arxiv.org/abs/2502.02594v1",
+      "source": "arxiv"
+    },
+    "topic": "offshore wind"
+  },
+  {
+    "id": "qa_130",
+    "question": "What are the economic considerations for solar energy?",
+    "answer": "This paper presents a classical estimation problem for calculating the energy\ngenerated by photovoltaic solar energy systems in the Netherlands, on a daily,\nannual and regional basis. We identify two data sources to construct our\nmethodology: pvoutput, an online portal with solar energy yield measurements,\nand modelled irradiance data, from the Royal Netherlands Meteorological\nInstitute.",
+    "source_paper": {
+      "title": "Observational daily and regional photovoltaic solar energy production for the Netherlands",
+      "id": "http://arxiv.org/abs/2003.01728v2",
+      "source": "arxiv"
+    },
+    "topic": "solar energy"
+  },
+  {
+    "id": "qa_131",
+    "question": "What research gaps exist in energy systems?",
+    "answer": "In the existing literatures for the risk evaluation of electricity-gas\nintegrated energy system (EGIES), the impacts of gas leakage in pipelines are\nignored. This paper presents a method to incorporate the failure modes of gas\npipeline leakage in EGIES risk evaluation.",
+    "source_paper": {
+      "title": "Incorporating Gas Pipeline Leakage Failure Modes in Risk Evaluation of Electricity-Gas Integrated Energy Systems",
+      "id": "http://arxiv.org/abs/2011.00776v1",
+      "source": "arxiv"
+    },
+    "topic": "gas pipeline"
+  },
+  {
+    "id": "qa_132",
+    "question": "How does power system integrate with existing infrastructure?",
+    "answer": "Accurate electrical load forecasting is of great importance for the efficient\noperation and control of modern power systems. In this work, a hybrid long\nshort-term memory (LSTM)-based model with online correction is developed for\nday-ahead electrical load forecasting.",
+    "source_paper": {
+      "title": "Electrical Load Forecasting Model Using Hybrid LSTM Neural Networks with Online Correction",
+      "id": "http://arxiv.org/abs/2403.03898v1",
+      "source": "arxiv"
+    },
+    "topic": "load forecasting"
+  },
+  {
+    "id": "qa_133",
+    "question": "What research gaps exist in wind energy?",
+    "answer": "This study investigates deep offshore, pumping Airborne Wind Energy systems,\nfocusing on the kite-platform interaction. Wind power is converted into\nelectricity with a feedback controlled periodic trajectory of the kite and\ncorresponding reeling motion of the tether.",
+    "source_paper": {
+      "title": "On the Kite-Platform Interactions in Offshore Airborne Wind Energy Systems: Frequency Analysis and Control Approach",
+      "id": "http://arxiv.org/abs/2401.05950v1",
+      "source": "arxiv"
+    },
+    "topic": "wind energy"
+  },
+  {
+    "id": "qa_134",
+    "question": "How can biomass be optimized for better performance?",
+    "answer": "This study\nproposes, tests and validates through pilot processing a highly efficient\nmethod for carbon recovery of PUR and in the form of an oil phase concentrated\nin carbon using hydrothermal liquefaction (HTL). Pilot plant processing, using optimized process parameters,\nyielded a total process efficiency, accounting heating utilities, of 61%,\nresulting in a 3.",
+    "source_paper": {
+      "title": "Combined Hydrothermal Liquefaction of Polyurethane and Lignocellulosic Biomass for improved carbon recovery",
+      "id": "http://arxiv.org/abs/2110.09325v1",
+      "source": "arxiv"
+    },
+    "topic": "biomass"
+  },
+  {
+    "id": "qa_135",
+    "question": "How can integration challenges be addressed in renewable energy systems?",
+    "answer": "Despite the hardness\nof directly solving this non-convex problem, we solve a relaxation of the\noriginal problem by proposing the PXA algorithm where \"P\", \"X\", and \"A\" stand\nfor three variable matrices in the formed phase optimization problems. In addition, using the idea of model\npredictive control (MPC), we design the {PXA-MPC}, which is an online\nimplementation of the PXA.",
+    "source_paper": {
+      "title": "Towards Balanced Three-phase Charging: Phase Optimization in Adaptive Charging Networks",
+      "id": "http://arxiv.org/abs/2205.10499v1",
+      "source": "arxiv"
+    },
+    "topic": "energy planning"
+  },
+  {
+    "id": "qa_136",
+    "question": "How can energy systems be optimized for better performance?",
+    "answer": "To localize and identify them, we\nadditionally need the observation set to be absorbent. If this set is\ndominantly absorbent, then detection, localization and identification can be\ndone in \"quasi real-time\".",
+    "source_paper": {
+      "title": "Tracking disturbances in transmission networks",
+      "id": "http://arxiv.org/abs/2411.05462v1",
+      "source": "arxiv"
+    },
+    "topic": "transmission network"
+  },
+  {
+    "id": "qa_137",
+    "question": "What role does renewable energy play in energy transition?",
+    "answer": "Building on the carbon reduction targets agreed in the Paris Agreements, many\nnations have renewed their efforts toward achieving carbon neutrality by the\nyear 2050. In line with this ambitious goal, nations are seeking to understand\nthe appropriate combination of technologies which will enable the required\nreductions in such a way that they are appealing to investors.",
+    "source_paper": {
+      "title": "Assessing the optimal contributions of renewables and carbon capture and storage toward carbon neutrality by 2050",
+      "id": "http://arxiv.org/abs/2305.05165v1",
+      "source": "arxiv"
+    },
+    "topic": "carbon neutrality"
+  },
+  {
+    "id": "qa_138",
+    "question": "What are the key components of energy transition?",
+    "answer": "Macro-energy system modelling is used by decision-makers to steer the global\nenergy transition toward an affordable, sustainable and reliable future. Closed-source models are the current standard for most policy and industry\ndecisions.",
+    "source_paper": {
+      "title": "PyPSA-Earth. A New Global Open Energy System Optimization Model Demonstrated in Africa",
+      "id": "http://arxiv.org/abs/2209.04663v1",
+      "source": "arxiv"
+    },
+    "topic": "energy planning"
+  },
+  {
+    "id": "qa_139",
+    "question": "What are the main challenges in power system?",
+    "answer": "For this,\nwe investigate so-called near-optimal solutions to energy system optimisation\nmodels; solutions whose objective values deviate only marginally from the\noptimum. Using a refined method for obtaining explicit geometric descriptions\nof these near-optimal feasible spaces, we find designs that are as robust as\npossible to perturbations.",
+    "source_paper": {
+      "title": "Intersecting near-optimal spaces: European power systems with more resilience to weather variability",
+      "id": "http://arxiv.org/abs/2206.12242v2",
+      "source": "arxiv"
+    },
+    "topic": "onshore wind"
+  },
+  {
+    "id": "qa_140",
+    "question": "What are the economic considerations for energy systems?",
+    "answer": "This study sets out to analyze future synergies between the O&G and\nrenewables sectors and explore how exploiting these synergies could lead to\neconomic and environmental benefits. By firstly reviewing and highlighting\nrelevant technologies and related projects, this report synthesizes the state\nof the art in offshore energy system integration, by focusing on three key\ntechnologies in electrification/floating wind, electrolysis/hydrogen production\nand Carbon Capture and Storage (CCS).",
+    "source_paper": {
+      "title": "Synergies in offshore energy: a roadmap for the Danish sector",
+      "id": "http://arxiv.org/abs/2102.13581v1",
+      "source": "arxiv"
+    },
+    "topic": "energy policy"
+  },
+  {
+    "id": "qa_141",
+    "question": "What are the technical barriers to widespread adoption?",
+    "answer": "It represents the Northeast subsystem of\nthe Brazilian Interconnected Power System (BIPS). The test system supplies a\nload of 4.",
+    "source_paper": {
+      "title": "Proposal and Description of a Test System with Wind, Hydro and Fossil Fuel Power Plants for Static Analyses",
+      "id": "http://arxiv.org/abs/2207.08897v1",
+      "source": "arxiv"
+    },
+    "topic": "fossil fuel"
+  },
+  {
+    "id": "qa_142",
+    "question": "How does energy policy integrate with existing infrastructure?",
+    "answer": "In this environment,\nstate regulators can strategically exploit this techno-economic coupling to\nadvance their clean energy policy goals at the expense of neighboring\njurisdictions. We\nformulate a chance-constrained equilibrium problem with equilibrium constraints\n(CC-EPEC), which considers multiple state regulators, acting in coordination\nwith in-state power companies, to implement RPS goals in the least-cost manner.",
+    "source_paper": {
+      "title": "Computing a Strategic Decarbonization Pathway: A Chance-Constrained Equilibrium Problem",
+      "id": "http://arxiv.org/abs/2002.08298v1",
+      "source": "arxiv"
+    },
+    "topic": "energy policy"
+  },
+  {
+    "id": "qa_143",
+    "question": "How does temperature influence performance?",
+    "answer": "Deployment of shared energy storage systems (SESS) allows users to use the\nstored energy to meet their own energy demands while saving energy costs\nwithout installing private energy storage equipment.",
+    "source_paper": {
+      "title": "Learning a Multi-Agent Controller for Shared Energy Storage System",
+      "id": "http://arxiv.org/abs/2302.08328v1",
+      "source": "arxiv"
+    },
+    "topic": "energy demand"
+  },
+  {
+    "id": "qa_144",
+    "question": "How does renewable energy contribute to energy efficiency?",
+    "answer": "Decentralized renewable energy systems can be low-carbon power sources, and\npromoters of local economies. It is often argued that decentralized generation\nalso helps reducing transmission costs, as generation is closer to the load,\nthus utilizing the transmission system less.",
+    "source_paper": {
+      "title": "Analysis of Avoided Transmission Through Decentralized Photovoltaic and Battery Storage Systems",
+      "id": "http://arxiv.org/abs/1908.10142v2",
+      "source": "arxiv"
+    },
+    "topic": "renewable energy systems"
+  },
+  {
+    "id": "qa_145",
+    "question": "How does temperature influence performance?",
+    "answer": "Sector coordination between heat and electricity systems has been identified\nhas an energy-efficient and cost-effective way to transition towards a more\nsustainable energy system.",
+    "source_paper": {
+      "title": "Differentially-Private Heat and Electricity Markets Coordination",
+      "id": "http://arxiv.org/abs/2201.10634v1",
+      "source": "arxiv"
+    },
+    "topic": "sustainable energy"
+  },
+  {
+    "id": "qa_146",
+    "question": "What are the economic considerations for power system?",
+    "answer": "This article presents and describes a 229 bus test system that includes wind,\nhydro and fossil fuel power plants. It represents the Northeast subsystem of\nthe Brazilian Interconnected Power System (BIPS).",
+    "source_paper": {
+      "title": "Proposal and Description of a Test System with Wind, Hydro and Fossil Fuel Power Plants for Static Analyses",
+      "id": "http://arxiv.org/abs/2207.08897v1",
+      "source": "arxiv"
+    },
+    "topic": "fossil fuel"
+  },
+  {
+    "id": "qa_147",
+    "question": "What are the future prospects for sustainability?",
+    "answer": "While only a highly diverse energy portfolio and\nconservation can ultimately guarantee optimum sustainability, based on a\ncomparison of current primary energy generation methods, it is argued that\nfuture energy strategy has to rely heavily on expanded coal and nuclear energy\nsectors. A comparison of relative potentials, merits and risks associated with\nfossil-fuel, renewable, and nuclear technologies suggests that the balance of\ntechnologies should be shifted in favor of new-generation, safe nuclear methods\nto produce electricity, while clean-coal plants should be assigned to\ntransportation fuel.",
+    "source_paper": {
+      "title": "Energy Realpolitik: Towards a Sustainable Energy Strategy",
+      "id": "http://arxiv.org/abs/0804.2159v1",
+      "source": "arxiv"
+    },
+    "topic": "sustainable energy"
+  },
+  {
+    "id": "qa_148",
+    "question": "How can integration challenges be addressed in renewable energy systems?",
+    "answer": "With increasing availability of communication and control infrastructure at\nthe distribution systems, it is expected that the distributed energy resources\n(DERs) will take an active part in future power systems operations. One of the\nmain challenges associated with integration of DERs in grid planning and\ncontrol is in estimating the available flexibility in a collection of\n(heterogeneous) DERs, each of which may have local constraints that vary over\ntime.",
+    "source_paper": {
+      "title": "Approximating Flexibility in Distributed Energy Resources: A Geometric Approach",
+      "id": "http://arxiv.org/abs/1803.06921v1",
+      "source": "arxiv"
+    },
+    "topic": "distributed energy resources"
+  },
+  {
+    "id": "qa_149",
+    "question": "What are the technical barriers to widespread adoption?",
+    "answer": "This paper considers the problem of shaping agent utility functions in a\ntransactive energy system to ensure the optimal energy price at a competitive\nequilibrium is always socially acceptable, that is, below a prescribed\nthreshold. Agents in a distributed energy system aim to maximize their\nindividual payoffs, as a combination of the utility of energy consumption and\nthe income/expenditure from energy exchange.",
+    "source_paper": {
+      "title": "Social Shaping for Transactive Energy Systems",
+      "id": "http://arxiv.org/abs/2109.12967v1",
+      "source": "arxiv"
+    },
+    "topic": "energy system"
+  },
+  {
+    "id": "qa_150",
+    "question": "How can energy systems be optimized for better performance?",
+    "answer": "The antiferrodistortive (AFD) phase transition for a pseudotetragonal\ncomposition of Pb(Zr0. The true ground state is confirmed to be\nmonoclinic in the Cc space group in agreement with the predictions of the first\nprinciples calculations and earlier findings for pure PZT in the MPB region.",
+    "source_paper": {
+      "title": "Ground state of (Pb0.94Sr0.06)(Zr0.530Ti0.470)O3 in the morphotropic phase boundary region: Evidence for a monoclinic Cc space group",
+      "id": "http://arxiv.org/abs/1403.5375v1",
+      "source": "arxiv"
+    },
+    "topic": "CCS"
+  },
+  {
+    "id": "qa_151",
+    "question": "What are the future prospects for energy systems?",
+    "answer": "Many time series in smart energy systems exhibit two different timescales. On\nthe one hand there are patterns linked to daily human activities.",
+    "source_paper": {
+      "title": "SVD-based Visualisation and Approximation for Time Series Data in Smart Energy Systems",
+      "id": "http://arxiv.org/abs/1807.10120v1",
+      "source": "arxiv"
+    },
+    "topic": "smart energy"
+  },
+  {
+    "id": "qa_152",
+    "question": "What research gaps exist in energy systems?",
+    "answer": "Lithium-ion batteries are playing a key role in the sustainable energy\ntransition. Batteries are complex electrochemical\nsystems whose behavior drastically changes as a function of aging, temperature,\nC-rate, and state of charge, posing unique modeling and control research\nquestions.",
+    "source_paper": {
+      "title": "Combining physics-based and machine learning methods to accelerate innovation in sustainable transportation and beyond: a control perspective",
+      "id": "http://arxiv.org/abs/2305.04840v1",
+      "source": "arxiv"
+    },
+    "topic": "sustainable energy"
+  },
+  {
+    "id": "qa_153",
+    "question": "How does power system integrate with existing infrastructure?",
+    "answer": "For this,\nwe investigate so-called near-optimal solutions to energy system optimisation\nmodels; solutions whose objective values deviate only marginally from the\noptimum. This contributes to the ongoing debate on how to\ndefine and work with robustness in energy systems modelling.",
+    "source_paper": {
+      "title": "Intersecting near-optimal spaces: European power systems with more resilience to weather variability",
+      "id": "http://arxiv.org/abs/2206.12242v2",
+      "source": "arxiv"
+    },
+    "topic": "onshore wind"
+  },
+  {
+    "id": "qa_154",
+    "question": "How can integration challenges be addressed in renewable energy systems?",
+    "answer": "The transition of our energy system to renewable energies is necessary in\norder not to heat up the climate any further and to achieve climate neutrality. The use of wind energy plays an important role in this transition in Germany.",
+    "source_paper": {
+      "title": "Wind energy potential of Germany - Limits and consequences of large-scale wind energy use",
+      "id": "http://arxiv.org/abs/2304.14159v1",
+      "source": "arxiv"
+    },
+    "topic": "wind energy"
+  },
+  {
+    "id": "qa_155",
+    "question": "What factors affect the efficiency of solar energy?",
+    "answer": "The increasing demand for renewable energy is promoting technologies that\nintegrate solar energy harvesting materials with the human living environment,\nsuch as building-integrated photovoltaics (BIPVs). This places requirements on\ndeveloping colored covers with a trade-off between efficiency and aesthetics,\nproviding a new stage for the large-scale application of structural color\ntechnologies.",
+    "source_paper": {
+      "title": "Theoretic Guide for Using Photonic Glasses as Colored Covers for Solar Energy Harvesting",
+      "id": "http://arxiv.org/abs/2209.05026v1",
+      "source": "arxiv"
+    },
+    "topic": "solar energy"
+  },
+  {
+    "id": "qa_156",
+    "question": "How can wind energy be optimized for better performance?",
+    "answer": "A global trend in increasing wind turbine size and distances from shore is\nemerging within the rapidly growing offshore wind farm market. In the UK, the\noffshore wind sector produced its highest amount of electricity in the UK in\n2019, a 19.",
+    "source_paper": {
+      "title": "A Review: Challenges and Opportunities for Artificial Intelligence and Robotics in the Offshore Wind Sector",
+      "id": "http://arxiv.org/abs/2112.06620v1",
+      "source": "arxiv"
+    },
+    "topic": "offshore wind"
+  },
+  {
+    "id": "qa_157",
+    "question": "How does temperature influence performance?",
+    "answer": "In this paper, we present a data-driven secondary controller for regulating\nto some desired values several variables of interest in a power system, namely,\nelectrical frequency, voltage magnitudes at critical buses, and active power\nflows through critical lines.",
+    "source_paper": {
+      "title": "Data-Driven Secondary Control of Distributed Energy Resources",
+      "id": "http://arxiv.org/abs/2102.01797v1",
+      "source": "arxiv"
+    },
+    "topic": "distributed energy resources"
+  },
+  {
+    "id": "qa_158",
+    "question": "What are the main challenges in renewable energy?",
+    "answer": "In the transition to a renewable energy system, the occurrence of\nlow-wind-power events receives increasing attention. We analyze the frequency\nand duration of such events for onshore wind power in Germany, based on 40\nyears of reanalysis data and open software.",
+    "source_paper": {
+      "title": "Frequency and duration of low-wind-power events in Germany",
+      "id": "http://arxiv.org/abs/2003.04133v2",
+      "source": "arxiv"
+    },
+    "topic": "onshore wind"
+  },
+  {
+    "id": "qa_159",
+    "question": "What are the technical barriers to widespread adoption?",
+    "answer": "For a cost efficient design of a future renewable European electricity\nsystem, the placement of renewable generation capacity will seek to exploit\nlocations with good resource quality, that is for instance onshore wind in\ncountries bordering the North Sea and solar PV in South European countries. Regions with less favorable renewable generation conditions benefit from this\nremote capacity by importing the respective electricity as power flows through\nthe transmission grid.",
+    "source_paper": {
+      "title": "Flow-based nodal cost allocation in a heterogeneous highly renewable European electricity network",
+      "id": "http://arxiv.org/abs/1801.10451v2",
+      "source": "arxiv"
+    },
+    "topic": "onshore wind"
+  },
+  {
+    "id": "qa_160",
+    "question": "What are the key components of solar energy?",
+    "answer": "The hotness of the sun and the coldness of the outer space are inexhaustible\nthermodynamic resources for human beings. From a thermodynamic point of view,\nany energy conversion systems that receive energy from the sun and/or dissipate\nenergy to the universe are heat engines with photons as the \"working fluid\" and\ncan be analyzed using the concept of entropy.",
+    "source_paper": {
+      "title": "Where and how is entropy generated in solar energy conversion systems?",
+      "id": "http://arxiv.org/abs/1802.07404v3",
+      "source": "arxiv"
+    },
+    "topic": "solar energy"
+  },
+  {
+    "id": "qa_161",
+    "question": "What are the advantages of solar energy over traditional methods?",
+    "answer": "The optical properties of nanofluids are peculiar and interesting for a\nvariety of applications. Among them, the high light extinction coefficient of\nnanofluids can be useful in linear parabolic concentrating solar systems, while\ntheir properties under high light irradiation intensities can be exploited for\ndirect solar steam generation.",
+    "source_paper": {
+      "title": "Comparative study of different functionalized graphene-nanoplatelet aqueous nanofluids for solar energy applications",
+      "id": "http://arxiv.org/abs/2206.02516v1",
+      "source": "arxiv"
+    },
+    "topic": "solar energy"
+  },
+  {
+    "id": "qa_162",
+    "question": "What are the economic considerations for energy security?",
+    "answer": "Transactive energy systems (TES) are emerging as a transformative solution\nfor the problems that distribution system operators face due to an increase in\nthe use of distributed energy resources and rapid growth in scalability of\nmanaging active distribution system (ADS). On the one hand, these changes pose\na decentralized power system control problem, requiring strategic control to\nmaintain reliability and resiliency for the community and for the utility.",
+    "source_paper": {
+      "title": "Cyber-Physical Simulation Platform for Security Assessment of Transactive Energy Systems",
+      "id": "http://arxiv.org/abs/1903.01520v1",
+      "source": "arxiv"
+    },
+    "topic": "energy security"
+  },
+  {
+    "id": "qa_163",
+    "question": "How can integration challenges be addressed in renewable energy systems?",
+    "answer": "Wind energy has become increasingly important for meeting Europe's energy\nneeds. While onshore wind expansion faces public acceptance problems, for\noffshore wind the European Commission has introduced ambitious goals to\nincrease capacity from 15GW to 300GW in 2050.",
+    "source_paper": {
+      "title": "Offshore Wind Integration in the North Sea: The Benefits of an Offshore Grid and Floating Wind",
+      "id": "http://arxiv.org/abs/2305.01996v2",
+      "source": "arxiv"
+    },
+    "topic": "onshore wind"
+  },
+  {
+    "id": "qa_164",
+    "question": "What are the future prospects for solar energy?",
+    "answer": "This invention deals with the broad general concept for focussing light. A\nmini-optics tracking and focussing system is presented for solar power\nconversion that ranges from an individual's portable system to solar conversion\nof electrical power that can be used in large scale power plants for\nenvironmentally clean energy.",
+    "source_paper": {
+      "title": "Mini-Optics Solar Energy Concentrator",
+      "id": "http://arxiv.org/abs/physics/0309056v1",
+      "source": "arxiv"
+    },
+    "topic": "solar energy"
+  },
+  {
+    "id": "qa_165",
+    "question": "What are the economic considerations for hydroelectric?",
+    "answer": "Hydroelectricity accounted for roughly 66% of the total generation in Brazil\nin 2023 and addressed most of the intermittency of wind and solar generation. Thus, one of the most important steps in the operation planning of this country\nis the forecast of the natural inflow energy (NIE) time series, an\napproximation of the energetic value of the water inflows.",
+    "source_paper": {
+      "title": "Assessing the Optimistic Bias in the Natural Inflow Forecasts: A Call for Model Monitoring in Brazil",
+      "id": "http://arxiv.org/abs/2410.13763v2",
+      "source": "arxiv"
+    },
+    "topic": "hydroelectric"
+  },
+  {
+    "id": "qa_166",
+    "question": "What role does energy systems play in energy transition?",
+    "answer": "This paper proposes a novel taxonomy of coordination strategies for\ndistributed energy resources at the edge of the electricity grid, based on a\nsystematic analysis of key literature trends. The coordination of distributed\nenergy resources such as decentralised generation and flexibility sources is\ncritical for decarbonising electricity and achieving climate goals.",
+    "source_paper": {
+      "title": "Coordination of resources at the edge of the electricity grid: systematic review and taxonomy",
+      "id": "http://arxiv.org/abs/2202.03786v1",
+      "source": "arxiv"
+    },
+    "topic": "electric grid"
+  },
+  {
+    "id": "qa_167",
+    "question": "How can renewable energy be optimized for better performance?",
+    "answer": "In this paper, we propose a data-driven Evolutionary Game-Based Model\nPredictive Control (EG-MPC) framework for the energy dispatch of a hybrid\nrenewable energy system powering an autonomous ship. The system integrates\nsolar photovoltaic and wind turbine generation with battery energy storage and\ndiesel backup power to ensure reliable operation.",
+    "source_paper": {
+      "title": "Data-Driven Evolutionary Game-Based Model Predictive Control for Hybrid Renewable Energy Dispatch in Autonomous Ships",
+      "id": "http://arxiv.org/abs/2504.14750v1",
+      "source": "arxiv"
+    },
+    "topic": "renewable energy systems"
+  },
+  {
+    "id": "qa_168",
+    "question": "How can integration challenges be addressed in renewable energy systems?",
+    "answer": "Power plant rules finalized by the Environmental Protection Agency\n(EPA) in 2024 are one such example of complementary policies. The rules\nestablish emissions intensity standards, not technology mandates, meaning power\nplant owners can choose from a range of technologies and control options\nprovided that emissions standards are met.",
+    "source_paper": {
+      "title": "Impacts of EPA's Finalized Power Plant Greenhouse Gas Standards",
+      "id": "http://arxiv.org/abs/2501.05561v1",
+      "source": "arxiv"
+    },
+    "topic": "carbon capture and storage"
+  },
+  {
+    "id": "qa_169",
+    "question": "What are the economic considerations for solar energy?",
+    "answer": "The increasing demand for renewable energy is promoting technologies that\nintegrate solar energy harvesting materials with the human living environment,\nsuch as building-integrated photovoltaics (BIPVs). This places requirements on\ndeveloping colored covers with a trade-off between efficiency and aesthetics,\nproviding a new stage for the large-scale application of structural color\ntechnologies.",
+    "source_paper": {
+      "title": "Theoretic Guide for Using Photonic Glasses as Colored Covers for Solar Energy Harvesting",
+      "id": "http://arxiv.org/abs/2209.05026v1",
+      "source": "arxiv"
+    },
+    "topic": "solar energy"
+  },
+  {
+    "id": "qa_170",
+    "question": "What factors affect the efficiency of energy systems?",
+    "answer": "This paper presents a complete closed-form analytical model for determining\nthe per-cycle energy consumption of stepwise adiabatic drivers used for driving\na capacitive load such as a power FET gate. The model takes into account the\nnumber of steps used, the stepwise driver tank capacitance, the load\ncapacitance, and the stepwise driver switch resistance and on-time.",
+    "source_paper": {
+      "title": "An Analytical Model for Stepwise Adiabatic Driver Energy Consumption",
+      "id": "http://arxiv.org/abs/2210.16680v1",
+      "source": "arxiv"
+    },
+    "topic": "energy consumption"
+  },
+  {
+    "id": "qa_171",
+    "question": "What are the future prospects for energy systems?",
+    "answer": "In this article, we present an analysis of the effects of nonlinear circuits\non bistable vibration energy harvesters. We begin by introducing an analytical\nmodel for bistable vibration energy harvesters and demonstrate that the impact\nof nonlinear circuits can be characterized by two factors: electrically-induced\ndamping and electrically-induced stiffness.",
+    "source_paper": {
+      "title": "Enhancing Bistable Vibration Energy Harvesters with Tunable Circuits: A Comparative Analysis",
+      "id": "http://arxiv.org/abs/2409.00469v1",
+      "source": "arxiv"
+    },
+    "topic": "energy"
+  },
+  {
+    "id": "qa_172",
+    "question": "What are the future prospects for power system?",
+    "answer": "Power System Resource Planning is the recurrent process of studying and\ndetermining what facilities and procedures should be provided to satisfy and\npromote appropriate future demands for electricity. The electric power system\nas planned should meet or balance societal goals.",
+    "source_paper": {
+      "title": "Power System Resource Expansion Planning",
+      "id": "http://arxiv.org/abs/2401.12241v1",
+      "source": "arxiv"
+    },
+    "topic": "power system"
+  },
+  {
+    "id": "qa_173",
+    "question": "What are the future prospects for energy systems?",
+    "answer": "As the fast development of internet of things (IoTs), distributed sensors\nhave been frequently used and the small and portable power sources are highly\ndemanded. However, the present portable power source such as lithium battery\nhas low capacity and need to be replaced or recharged frequently.",
+    "source_paper": {
+      "title": "Wind Driven Semiconductor Electricity Generator With High Direct Current Output Based On a Dynamic Schottky Junction",
+      "id": "http://arxiv.org/abs/2010.12246v1",
+      "source": "arxiv"
+    },
+    "topic": "electricity generation"
+  },
+  {
+    "id": "qa_174",
+    "question": "What are the economic considerations for energy systems?",
+    "answer": "A novel smart metering technique capable of anomaly detection was proposed\nfor real-time home power management system. To detect\noutliers and missing values in smart meter data, a deep learning model, the\nautoencoder, consisting of a graph convolutional network and bidirectional long\nshort-term memory network, was applied to the smart metering technique.",
+    "source_paper": {
+      "title": "Anomaly Detection of Smart Metering System for Power Management with Battery Storage System/Electric Vehicle",
+      "id": "http://arxiv.org/abs/2207.09784v1",
+      "source": "arxiv"
+    },
+    "topic": "battery storage"
+  },
+  {
+    "id": "qa_175",
+    "question": "What are the future prospects for energy systems?",
+    "answer": "Spintronics, which aims at exploiting the spin degree of freedom of carriers\ninside electronic devices, has a huge potential for quantum computation and\ndissipationless interconnects. We have matched\nthese requirements by realizing the spintronic equivalent of a photovoltaic\ncell.",
+    "source_paper": {
+      "title": "Spin photovoltaic cell",
+      "id": "http://arxiv.org/abs/1404.0278v1",
+      "source": "arxiv"
+    },
+    "topic": "photovoltaic"
+  },
+  {
+    "id": "qa_176",
+    "question": "What research gaps exist in biomass?",
+    "answer": "The approach incorporated the CRNN\nmodel into the framework of neural ordinary differential equations to predict\nthe residual mass in TGA data. In addition to the flexibility of\nneural-network-based models, the learned CRNN model is interpretable, by\nincorporating the fundamental physics laws, such as the law of mass action and\nArrhenius law, into the neural network structure.",
+    "source_paper": {
+      "title": "Autonomous Kinetic Modeling of Biomass Pyrolysis using Chemical Reaction Neural Networks",
+      "id": "http://arxiv.org/abs/2105.11397v2",
+      "source": "arxiv"
+    },
+    "topic": "biomass"
+  },
+  {
+    "id": "qa_177",
+    "question": "How can integration challenges be addressed in renewable energy systems?",
+    "answer": "In the light of the JEF(F) European project longstanding story according to\nthe determination of the most exact shape of the 239Pu(n, 2n)238Pu reaction\ncross section and a recent measurement by Meot et al. Present diligent calculation\nof the (n,2n) cross section over the energy range from the threshold to the\nonset of third-chance fission at about 12 MeV, suggests that current\nevaluations under-estimate the 239Pu(n,2n) cross section below 10 MeV;\nunder-estimation of the order of 7% relatively to the JEFF-3.",
+    "source_paper": {
+      "title": "Questioning the 239Pu(n,2n)238Pu cross section shape above emission threshold",
+      "id": "http://arxiv.org/abs/2203.11073v1",
+      "source": "arxiv"
+    },
+    "topic": "LNG"
+  },
+  {
+    "id": "qa_178",
+    "question": "How does power system integrate with existing infrastructure?",
+    "answer": "This work seeks to quantify the benefits of using energy storage toward the\nreduction of the energy generation cost of a power system. Since\nthe operational cost depends on the storage capacity, a second optimization\nproblem is then formulated with the aim of finding the optimal storage capacity\nto be deployed.",
+    "source_paper": {
+      "title": "On the Value of Energy Storage in Generation Cost Reduction",
+      "id": "http://arxiv.org/abs/2010.01257v1",
+      "source": "arxiv"
+    },
+    "topic": "energy storage"
+  },
+  {
+    "id": "qa_179",
+    "question": "What research gaps exist in power system?",
+    "answer": "As a part of the integrated energy system (IES), gas pipeline networks can\nprovide additional flexibility to power systems through coordinated optimal\ndispatch. However, inaccuracies or unavailability of\naccurate pipeline parameters often introduce errors in the mathematical models\nof such networks.",
+    "source_paper": {
+      "title": "Physics-Informed Recurrent Network for Gas Pipeline Network Parameters Identification",
+      "id": "http://arxiv.org/abs/2502.07230v1",
+      "source": "arxiv"
+    },
+    "topic": "gas pipeline"
+  },
+  {
+    "id": "qa_180",
+    "question": "What are the environmental impacts of energy systems?",
+    "answer": "Automating the theory-experiment cycle requires effective distributed\nworkflows that utilize a computing continuum spanning lab instruments, edge\nsensors, computing resources at multiple facilities, data sets distributed\nacross multiple information sources, and potentially cloud. Unfortunately, the\nobvious methods for constructing continuum platforms, orchestrating workflow\ntasks, and curating datasets over time fail to achieve scientific requirements\nfor performance, energy, security, and reliability.",
+    "source_paper": {
+      "title": "Final Report for CHESS: Cloud, High-Performance Computing, and Edge for Science and Security",
+      "id": "http://arxiv.org/abs/2410.16093v1",
+      "source": "arxiv"
+    },
+    "topic": "energy security"
+  },
+  {
+    "id": "qa_181",
+    "question": "What are the economic considerations for energy systems?",
+    "answer": "One of the aspects currently holding back commercial scale deployment of\ncarbon capture and storage (CCS) is an accurate understanding of the\nthermodynamic behaviour of carbon dioxide and relevant impurities during the\npipeline transport stage. In this article we develop a general framework for\nderiving pressure-explicit EoS for impure CO2.",
+    "source_paper": {
+      "title": "A New Equation of State for CCS Pipeline Transport: Calibration of Mixing Rules for Binary Mixtures of CO2 with N2, O2 and H2",
+      "id": "http://arxiv.org/abs/1507.01545v1",
+      "source": "arxiv"
+    },
+    "topic": "CCS"
+  },
+  {
+    "id": "qa_182",
+    "question": "How does sustainability contribute to energy efficiency?",
+    "answer": "The retailer's objective is to maximize\nthe revenue, minimize the operating cost, and maximize the consumer's welfare. The retailer wants to optimize a convex combination of the above objectives\nusing price signals specific to each consumer.",
+    "source_paper": {
+      "title": "Discriminatory Price Mechanism for Smart Grid",
+      "id": "http://arxiv.org/abs/2003.13560v3",
+      "source": "arxiv"
+    },
+    "topic": "smart grid"
+  },
+  {
+    "id": "qa_183",
+    "question": "What are the technical barriers to widespread adoption?",
+    "answer": "Dynamic grid emission factors provide a temporally resolved signal about the\ncarbon intensity of electricity generation in the power system. Since actual\ncarbon dioxide emission measurements are usually lacking, such a signal must be\nderived from system-specific emission factors combined with power generation\ntime series.",
+    "source_paper": {
+      "title": "Open-data based carbon emission intensity signals for electricity generation in European countries -- top down vs. bottom up approach",
+      "id": "http://arxiv.org/abs/2110.07999v2",
+      "source": "arxiv"
+    },
+    "topic": "electricity generation"
+  },
+  {
+    "id": "qa_184",
+    "question": "How does energy systems integrate with existing infrastructure?",
+    "answer": "Accurate detection and diagnosis of abnormal behaviors such as network\nattacks from multivariate time series (MTS) are crucial for ensuring the stable\nand effective operation of industrial cyber-physical systems (CPS). However,\nexisting researches pay little attention to the logical dependencies among\nsystem working states, and have difficulties in explaining the evolution\nmechanisms of abnormal signals.",
+    "source_paper": {
+      "title": "Unsupervised Spatio-Temporal State Estimation for Fine-grained Adaptive Anomaly Diagnosis of Industrial Cyber-physical Systems",
+      "id": "http://arxiv.org/abs/2403.02616v1",
+      "source": "arxiv"
+    },
+    "topic": "petroleum refining"
+  },
+  {
+    "id": "qa_185",
+    "question": "How can renewable energy be optimized for better performance?",
+    "answer": "Due to proliferation of energy efficiency measures and availability of the\nrenewable energy resources, traditional energy infrastructure systems\n(electricity, heat, gas) can no longer be operated in a centralized manner\nunder the assumption that consumer behavior is inflexible, i. cannot be\nadjusted in return for an adequate incentive.",
+    "source_paper": {
+      "title": "A Hierarchical Approach to Multi-Energy Demand Response: From Electricity to Multi-Energy Applications",
+      "id": "http://arxiv.org/abs/2005.02339v1",
+      "source": "arxiv"
+    },
+    "topic": "energy infrastructure"
+  },
+  {
+    "id": "qa_186",
+    "question": "What are the technical barriers to widespread adoption?",
+    "answer": "In order to reach EU's goal of zero emissions in 2050, the energy system will\ngo through a significant transition over the next decades. To substitute fossil\nenergy carriers, renewable energy sources will be mainly integrated in the\npower system.",
+    "source_paper": {
+      "title": "Multi-Horizon Planning of Multi-Energy Systems",
+      "id": "http://arxiv.org/abs/2110.11806v1",
+      "source": "arxiv"
+    },
+    "topic": "energy system"
+  },
+  {
+    "id": "qa_187",
+    "question": "How does sustainability contribute to energy efficiency?",
+    "answer": "The demand for research supporting the development of new policy frameworks\nfor energy saving and conservation has never been more critical. In\nresponse to this global challenge, the ten articles of this special issue seek\nto explore how advances in Artificial Intelligence and Data Science can drive\nthe energy transition and enhance environmental sustainability.",
+    "source_paper": {
+      "title": "Boosting the clean energy transition through data science",
+      "id": "http://arxiv.org/abs/2408.15211v1",
+      "source": "arxiv"
+    },
+    "topic": "energy transition"
+  },
+  {
+    "id": "qa_188",
+    "question": "What are the future prospects for renewable energy?",
+    "answer": "Accurate load forecasting is crucial for maintaining the power balance\nbetween generators and consumers,particularly with the increasing integration\nof renewable energy sources, which introduce significant intermittent\nvolatility. With the advancement of data-driven methods, machine learning and\ndeep learning models have become the predominant approaches for load\nforecasting tasks.",
+    "source_paper": {
+      "title": "A General Framework for Load Forecasting based on Pre-trained Large Language Model",
+      "id": "http://arxiv.org/abs/2406.11336v2",
+      "source": "arxiv"
+    },
+    "topic": "load forecasting"
+  },
+  {
+    "id": "qa_189",
+    "question": "What are the advantages of carbon emission over traditional methods?",
+    "answer": "The rapid increase in Electric Vehicle (EV) adoption provides a promising\nsolution for reducing carbon emissions and fossil fuel dependency in\ntransportation systems. However, the increasing numbers of EVs pose significant\nchallenges to the electrical grids.",
+    "source_paper": {
+      "title": "Energy Sharing among Resources within Electrical Distribution Systems: A Systematic Review",
+      "id": "http://arxiv.org/abs/2401.01597v1",
+      "source": "arxiv"
+    },
+    "topic": "energy infrastructure"
+  },
+  {
+    "id": "qa_190",
+    "question": "How does energy systems integrate with existing infrastructure?",
+    "answer": "The International Air Transport Association (IATA) is one of several\norganizations that have presented goals for future CO2 emissions from\ncommercial aviation with the intent of alleviating the associated environmental\nimpacts. Results indicate that, in future scenarios with increasing\ndemand for air travel, it is difficult to reduce CO2 emissions in 2050 to\nlevels equal to or below 2005 levels, although neutral CO2 growth after 2020\nmay be possible.",
+    "source_paper": {
+      "title": "Fleet-Level Environmental Assessments for Feasibility of Aviation Emission Reduction Goals",
+      "id": "http://arxiv.org/abs/2210.11302v1",
+      "source": "arxiv"
+    },
+    "topic": "carbon neutrality"
+  },
+  {
+    "id": "qa_191",
+    "question": "What are the future prospects for energy storage?",
+    "answer": "Future highly renewable energy systems might require substantial storage\ndeployment. At the current stage, the technology portfolio of dominant storage\noptions is limited to pumped-hydro storage and Li-Ion batteries.",
+    "source_paper": {
+      "title": "Cost and efficiency requirements for a successful electricity storage in a highly renewable European energy system",
+      "id": "http://arxiv.org/abs/2208.09169v2",
+      "source": "arxiv"
+    },
+    "topic": "renewable energy systems"
+  },
+  {
+    "id": "qa_192",
+    "question": "What research gaps exist in energy systems?",
+    "answer": "We calculate\nefficiency limits of up to 13% for the devices fabricated in this work,\ncomparable to those predicted for polymer solar cells.",
+    "source_paper": {
+      "title": "Nanocarbon-Based photovoltaics",
+      "id": "http://arxiv.org/abs/1206.5042v2",
+      "source": "arxiv"
+    },
+    "topic": "photovoltaic"
+  },
+  {
+    "id": "qa_193",
+    "question": "How does temperature influence performance?",
+    "answer": "In 2020, the COVID-19 pandemic spreads all over the world.",
+    "source_paper": {
+      "title": "The Impact of COVID-19 on Urban Energy Consumption of the Commercial Tourism City",
+      "id": "http://arxiv.org/abs/2104.09351v2",
+      "source": "arxiv"
+    },
+    "topic": "energy"
+  },
+  {
+    "id": "qa_194",
+    "question": "How can integration challenges be addressed in renewable energy systems?",
+    "answer": "As one of the most pressing challenges of the 21st century, global climate\nchange demands a host of changes across four critical energy infrastructures:\nthe electric grid, the natural gas system, the oil system, and the coal system. Instead, holistic multi-energy system models\ncan serve to improve the understanding of these interdependent systems and\nguide policies that shape the systems as they evolve into the future.",
+    "source_paper": {
+      "title": "A Hetero-functional Graph Structural Analysis of the American Multi-modal Energy System",
+      "id": "http://arxiv.org/abs/2208.06430v1",
+      "source": "arxiv"
+    },
+    "topic": "energy system"
+  },
+  {
+    "id": "qa_195",
+    "question": "How can integration challenges be addressed in renewable energy systems?",
+    "answer": "The nucleation of gas hydrates is of great interest in flow assurance, global\nenergy demand, and carbon capture and storage. A complex molecular\nunderstanding is critical to control hydrate nucleation and growth in the\ncontext of potential applications.",
+    "source_paper": {
+      "title": "Molecular dynamics characterization of the interfacial structure and forces of the methane-ethane sII gas hydrate interface",
+      "id": "http://arxiv.org/abs/2405.05454v1",
+      "source": "arxiv"
+    },
+    "topic": "carbon capture and storage"
+  },
+  {
+    "id": "qa_196",
+    "question": "What are the technical barriers to widespread adoption?",
+    "answer": "Machine learning and optimisation techniques (MLOPT) hold significant\npotential to accelerate the decarbonisation of industrial systems by enabling\ndata-driven operational improvements. However, the practical application of\nMLOPT in industrial settings is often hindered by a lack of domain compliance\nand system-specific consistency, resulting in suboptimal solutions with limited\nreal-world applicability.",
+    "source_paper": {
+      "title": "Domain Consistent Industrial Decarbonisation of Global Coal Power Plants",
+      "id": "http://arxiv.org/abs/2503.03571v1",
+      "source": "arxiv"
+    },
+    "topic": "coal power"
+  },
+  {
+    "id": "qa_197",
+    "question": "What are the main challenges in energy systems?",
+    "answer": "This paper presents an optimized silicon-MEMS electromagnetic vibration\nenergy harvester suitable for applications such as machine health monitoring. The harvester comprises a DRIE-etched silicon suspension, and pick-and-place\nN42 NdBFe magnets and copper coils, housed in a 3D-printed package.",
+    "source_paper": {
+      "title": "A Silicon MEMS EM vibration energy harvester",
+      "id": "http://arxiv.org/abs/1910.02131v1",
+      "source": "arxiv"
+    },
+    "topic": "energy"
+  },
+  {
+    "id": "qa_198",
+    "question": "How does wind energy integrate with existing infrastructure?",
+    "answer": "Ground based, wind energy extraction systems have reached their maximum\ncapability. The limitations of current designs are: wind instability, high cost\nof installations, and small power output of a single unit.",
+    "source_paper": {
+      "title": "Utilization of Wind Energy at High Altitude",
+      "id": "http://arxiv.org/abs/physics/0701114v1",
+      "source": "arxiv"
+    },
+    "topic": "wind energy"
+  },
+  {
+    "id": "qa_199",
+    "question": "What are the technical barriers to widespread adoption?",
+    "answer": "The\ndeposited sulfur behaves as a superstrate layer above a sensing microstrip\npatch antenna that is optimally placed on the inner wall of the gas pipeline. Increasing the superstrate thickness by the sulfur deposition alters the\nantenna resonance behavior, which can be monitored externally.",
+    "source_paper": {
+      "title": "Microwave Sensing of Elemental Sulfur Deposition in Gas Pipelines",
+      "id": "http://arxiv.org/abs/2202.09796v1",
+      "source": "arxiv"
+    },
+    "topic": "gas pipeline"
+  },
+  {
+    "id": "qa_200",
+    "question": "How does temperature influence performance?",
+    "answer": "In the evolving power system, where new renewable resources continually\ndisplace conventional generation, conventional hydropower resources can be an\nimportant asset that helps to maintain reliability and flexibility.",
+    "source_paper": {
+      "title": "Gaps in Representations of Hydropower Generation in Steady-State and Dynamic Models",
+      "id": "http://arxiv.org/abs/2311.03277v1",
+      "source": "arxiv"
+    },
+    "topic": "hydropower"
+  }
+]

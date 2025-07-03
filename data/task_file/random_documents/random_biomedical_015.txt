@@ -1,0 +1,30 @@
+Title: ProHap Explorer: Visualizing Haplotypes in Proteogenomic Datasets
+
+Authors: Jakub Vašíček, Dafni Skiadopoulou, Ksenia G. Kuznetsova, Lukas Käll, Marc Vaudel
+
+Abstract: In mass spectrometry-based proteomics, experts usually project data onto a
+single set of reference sequences, overlooking the influence of common
+haplotypes (combinations of genetic variants inherited together from a parent).
+We recently introduced ProHap, a tool for generating customized protein
+haplotype databases. Here, we present ProHap Explorer, a visualization
+interface designed to investigate the influence of common haplotypes on the
+human proteome. It enables users to explore haplotypes, their effects on
+protein sequences, and the identification of non-canonical peptides in public
+mass spectrometry datasets. The design builds on well-established
+representations in biological sequence analysis, ensuring familiarity for
+domain experts while integrating novel interactive elements tailored to
+proteogenomic data exploration. User interviews with proteomics experts
+confirmed the tool's utility, highlighting its ability to reveal whether
+haplotypes affect proteins of interest. By facilitating the intuitive
+exploration of proteogenomic variation, ProHap Explorer supports research in
+personalized medicine and the development of targeted therapies.
+
+Introduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.
+
+Methodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.
+
+Results: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.
+
+Discussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.
+
+Conclusion: This work presents a significant advancement in the field with practical implications for real-world applications.

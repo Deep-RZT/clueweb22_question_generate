@@ -1,0 +1,179 @@
+telescope | History, Types, & Facts | Britannica
+Home Science Astronomy
+telescope
+By B.L. Klock | See All • Edit History
+Keck Observatory
+See all media
+Key People:
+Lewis Morris RutherfurdGiuseppe Campani
+Related Topics:
+Schmidt telescopeKeplerian telescope Galilean telescope astronomical transit instrument photographic zenith tube
+... (Show more)
+See all related content →
+telescope,  device used to form magnified images of distant objects. The telescope is undoubtedly the most important investigative tool in astronomy. It provides a means of collecting and analyzing radiation from celestial objects, even those in the far reaches of the universe.
+Galileo revolutionized astronomy when he applied the telescope to the study of extraterrestrial bodies in the early 17th century. Until then, magnification instruments had never been used for this purpose. Since Galileo’s pioneering work, increasingly more powerful optical telescopes have been developed, as has a wide array of instruments capable of detecting and measuring radiation in every region of the electromagnetic spectrum. Observational capability has been further enhanced by the invention of various kinds of auxiliary instruments (e.g., the camera, spectrograph, and charge-coupled device) and by the use of electronic computers, rockets, and spacecraft in conjunction with telescope systems. These developments have contributed dramatically to advances in scientific knowledge about the solar system, the Milky Way Galaxy, and the universe as a whole.
+Galileo's telescopes
+Two of Galileo's first telescopes; in the Museo Galileo, Florence.
+Scala/Art Resource, New York
+Britannica Quiz
+Astronomy and Space Quiz
+What makes a planet a dwarf planet? How many miles are in a light-year? What exactly is a quasar? Launch into other worlds while testing your knowledge about space, celestial bodies, and the solar system.
+This article describes the operating principles and historical development of optical telescopes. For explanation of instruments that operate in other portions of the electromagnetic spectrum, see radio telescope; X-ray telescope; and gamma-ray telescope.
+Refracting telescopes
+Commonly known as refractors, telescopes of this kind are typically used to examine the Moon, other objects of the solar system such as Jupiter and Mars, and binary stars. The name refractor is derived from the term refraction, which is the bending of light when it passes from one medium to another of different density—e.g., from air to glass. The glass is referred to as a lens and may have one or more components. The physical shape of the components may be convex, concave, or plane-parallel. This diagram illustrates the principle of refraction and the term focal length. The focus is the point, or plane, at which light rays from infinity converge after passing through a lens and traveling a distance of one focal length. In a refractor the first lens through which light from a celestial object passes is called the objective lens. It should be noted that the light will be inverted at the focal plane. A second lens, referred to as the eyepiece lens, is placed behind the focal plane and enables the observer to view the enlarged, or magnified, image. Thus, the simplest form of refractor consists of an objective and an eyepiece, as illustrated in the diagram.
+refractor at Lick Observatory
+The historical 91-cm (36-inch) refractor at the Lick Observatory on Mount Hamilton, near San Jose, California, U.S.
+© Joe Mercier/Shutterstock.com
+focal length of a lens
+Focal length of a lens.
+Encyclopædia Britannica, Inc.
+refracting telescope
+Refracting telescope.
+Encyclopædia Britannica, Inc.
+The diameter of the objective is referred to as the aperture; it typically ranges from a few centimetres for small spotting telescopes up to one metre for the largest refractor in existence. The objective, as well as the eyepiece, may have several components. Small spotting telescopes may contain an extra lens behind the eyepiece to erect the image so that it does not appear upside-down. When an object is viewed with a refractor, the image may not appear sharply defined, or it may even have a predominant colour in it. Such distortions, or aberrations, are sometimes introduced when the lens is polished into its design shape. The major kind of distortion in a refractor is chromatic aberration, which is the failure of the differently coloured light rays to come to a common focus. Chromatic aberration can be minimized by adding components to the objective. In lens-design technology, the coefficients of expansion of different kinds of glass are carefully matched to minimize the aberrations that result from temperature changes of the telescope at night.
+Eyepieces, which are used with both refractors and reflectors (see below Reflecting telescopes ), have a wide variety of applications and provide observers with the ability to select the magnification of their instruments. The magnification, sometimes referred to as magnifying power, is determined by dividing the focal length of the objective by the focal length of the eyepiece. For example, if the objective has a focal length of 254 cm (100 inches) and the eyepiece has a focal length of 2.54 cm (1 inch), then the magnification will be 100. Large magnifications are very useful for observing the Moon and the planets. However, since stars appear as point sources owing to their great distances, magnification provides no additional advantage when viewing them. Another important factor that one must take into consideration when attempting to view at high magnification is the stability of the telescope mounting. Any vibration in the mounting will also be magnified and may severely reduce the quality of the observed image. Thus, great care is usually taken to provide a stable platform for the telescope. This problem should not be associated with that of atmospheric seeing, which may introduce a disturbance to the image because of fluctuating air currents in the path of the light from a celestial or terrestrial object. Generally, most of the seeing disturbance arises in the first 30 metres (100 feet) of air above the telescope. Large telescopes are frequently installed on mountain peaks in order to get above the seeing disturbances.
+Light gathering and resolution
+The most important of all the powers of an optical telescope is its light-gathering power. This capacity is strictly a function of the diameter of the clear objective—that is, the aperture—of the telescope. Comparisons of different-sized apertures for their light-gathering power are calculated by the ratio of their diameters squared; for example, a 25-cm (10-inch) objective will collect four times the light of a 12.5-cm (5-inch) objective ([25 × 25] ÷ [12.5 × 12.5] = 4). The advantage of collecting more light with a larger-aperture telescope is that one can observe fainter stars, nebulae, and very distant galaxies.
+Resolving power is another important feature of a telescope. This is the ability of the instrument to distinguish clearly between two points whose angular separation is less than the smallest angle that the observer’s eye can resolve. The resolving power of a telescope can be calculated by the following formula: resolving power = 11.25 seconds of arc/ d, where d is the diameter of the objective expressed in centimetres. Thus, a 25-cm-diameter objective has a theoretical resolution of 0.45 second of arc and a 250-cm (100-inch) telescope has one of 0.045 second of arc. An important application of resolving power is in the observation of visual binary stars. There, one star is routinely observed as it revolves around a second star. Many observatories conduct extensive visual binary observing programs and publish catalogs of their observational results. One of the major contributors in this field is the United States Naval Observatory in Washington, D.C.
+Most refractors currently in use at observatories have equatorial mountings. The mounting describes the orientation of the physical bearings and structure that permits a telescope to be pointed at a celestial object for viewing. In the equatorial mounting, the polar axis of the telescope is constructed parallel to Earth ’s axis. The polar axis supports the declination axis of the instrument. Declination is measured on the celestial sky north or south from the celestial equator. The declination axis makes it possible for the telescope to be pointed at various declination angles as the instrument is rotated about the polar axis with respect to right ascension. Right ascension is measured along the celestial equator from the vernal equinox (i.e., the position on the celestial sphere where the Sun crosses the celestial equator from south to north on the first day of spring). Declination and right ascension are the two coordinates that define a celestial object on the celestial sphere. Declination is analogous to latitude, and right ascension is analogous to longitude. Graduated dials are mounted on the axis to permit the observer to point the telescope precisely. To track an object, the telescope’s polar axis is driven smoothly by an electric motor at a sidereal rate—namely, at a rate equal to the rate of rotation of Earth with respect to the stars. Thus, one can track or observe with a telescope for long periods of time if the sidereal rate of the motor is very accurate. High-accuracy motor-driven systems have become readily available with the rapid advancement of quartz -clock technology. Most major observatories now rely on either quartz or atomic clocks to provide accurate sidereal time for observations as well as to drive telescopes at an extremely uniform rate.
+A notable example of a refracting telescope is the 66-cm (26-inch) refractor of the U.S. Naval Observatory. This instrument was used by the astronomer Asaph Hall to discover the two moons of Mars, Phobos and Deimos, in 1877. Today, the telescope is used primarily for observing binary stars. The 91-cm (36-inch) refractor at Lick Observatory on Mount Hamilton, California, U.S., is the largest refracting system currently in operation. (The 1-metre [40-inch] instrument at Yerkes Observatory in Williams Bay, Wisconsin, U.S., has been inactive since 2018 [see table].)
+Some important ground-based optical telescopes
+name
+aperture (metres)
+type
+observatory
+location
+date observations began
+Gran Telescopio Canarias
+10.4
+reflector
+Roque de los Muchachos Observatory
+La Palma, Canary Islands, Spain
+2007
+Keck I, Keck II
+10, 10
+reflector
+Keck Observatory
+Mauna Kea, Hawaii
+1993, 1996
+Southern African Large Telescope
+11.1 × 9.8
+reflector
+Sutherland, South Africa
+2005
+Hobby-Eberly Telescope
+11.1 × 9.8
+reflector
+McDonald Observatory
+Fort Davis, Texas
+1999
+Large Binocular Telescope
+2 mirrors, each 8.4
+reflector
+Mount Graham, Arizona
+2008
+Subaru
+8.3
+reflector
+Mauna Kea, Hawaii
+1999
+Antu, Kueyen, Melipal, Yepun
+8.2, 8.2, 8.2, 8.2
+reflector
+Very Large Telescope
+Cerro Paranal, Chile
+1998, 1999, 2000, 2000
+Frederick C. Gillett Gemini North Telescope
+8.1
+reflector
+International Gemini Observatory
+Mauna Kea, Hawaii
+2000
+Gemini South Telescope
+8.1
+reflector
+International Gemini Observatory
+Cerro Pachon, Chile
+2000
+MMT
+6.5
+reflector
+MMT Observatory
+Mount Hopkins, Arizona
+2000
+Walter Baade, Landon Clay
+6.5, 6.5
+reflector
+Magellan Telescopes
+Cerro Las Campanas, Chile
+2000, 2002
+Bolshoi Teleskop
+6
+reflector
+Special Astrophysical Observatory
+Zelenchukskaya, Russia
+1976
+Hale Telescope
+5
+reflector
+Palomar Observatory
+Mount Palomar, California
+1948
+William Herschel Telescope
+4.2
+reflector
+Roque de los Muchachos Observatory
+La Palma, Canary Islands, Spain
+1987
+Victor M. Blanco Telescope
+4
+reflector
+Cerro Tololo Inter-American Observatory
+Cerro Tololo, Chile
+1974
+Anglo-Australian Telescope
+3.9
+reflector
+Siding Spring Observatory
+Siding Spring Mountain, New South Wales, Austl.
+1974
+Nicholas U. Mayall Telescope
+3.8
+reflector
+Kitt Peak National Observatory
+Kitt Peak, Arizona
+1970
+Canada-France-Hawaii Telescope
+3.6
+reflector
+Mauna Kea, Hawaii
+1979
+3.6
+reflector
+La Silla Observatory
+La Silla, Chile
+1977
+Hooker Telescope
+2.5
+reflector
+Mount Wilson Observatory
+Mount Wilson, California
+1918
+Samuel Oschin Telescope
+1.2
+reflector
+Palomar Observatory
+Mount Palomar, California
+1948
+1
+refractor
+Yerkes Observatory
+Williams Bay, Wisconsin
+1897
+Lick Refractor
+0.9
+refractor
+Lick Observatory
+Mount Hamilton, California
+1888
+Another type of refracting telescope is the astrograph, which usually has an objective diameter of approximately 20 cm (8 inches). The astrograph has a photographic plateholder mounted in the focal plane of the objective so that photographs of the celestial sphere can be taken. The photographs are usually taken on glass plates. The principal application of the astrograph is to determine the positions of a large number of faint stars. These positions are then published in catalogs such as the AGK 3 and serve as reference points for deep-space photography.

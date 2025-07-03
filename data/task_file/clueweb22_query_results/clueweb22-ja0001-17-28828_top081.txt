@@ -1,0 +1,148 @@
+Vessel Movement Search
+Sun
+Mon
+Tue
+Wed
+Tur
+Fri
+Sat
+Close
+Schedule
+>> Receipt - Delivery
+>>  Vessel - Voyage
+>>  Carrier's Schedule
+>>  Vessel Movement
+ShippingAccess - Vessel Movement Search
+<1 2
+NO.
+Carrier
+Vessel
+Voyage
+Service Type
+Port
+Arrive
+Berth
+Depart
+UpdateTime
+31
+SNL ...
+SINOTRANS KAOHSIUNG
+2208E / 2208W
+FCL
+横浜
+2022-04-27
+04-27
+04-27
+04-25 08:54
+32
+StarOcean ...
+TIAN FU(TIANJIN)
+2217E / 2217W
+FCL
+門司
+2022-04-27
+04-27
+04-27
+04-25 08:55
+33
+StarOcean ...
+TIAN FU(TIANJIN)
+2217E / 2217W
+FCL
+博多
+2022-04-26
+04-26
+04-26
+04-25 08:55
+34
+StarOcean ...
+ACACIA ARIES
+2217E / 2217W
+FCL
+門司
+2022-04-25 05:27
+04-25 05:27
+04-25 10:30
+04-25 08:55
+35
+StarOcean ...
+ACACIA ARIES
+2217E / 2217W
+FCL
+博多
+2022-04-25 22:00
+04-26 08:30
+04-26 17:00
+04-25 08:55
+36
+StarOcean ...
+LISBOA
+2217E / 2217W
+FCL
+大阪
+2022-04-25 08:36
+04-25 08:36
+04-25 11:30
+04-25 08:54
+37
+StarOcean ...
+LISBOA
+2217E / 2217W
+FCL
+神戸
+2022-04-26
+04-26
+04-26
+04-25 08:54
+38
+StarOcean ...
+A FUKU
+2217E / 2217W
+FCL
+名古屋
+2022-04-26 16:00
+04-26
+04-27
+04-25 08:54
+39
+StarOcean ...
+A FUKU
+2217E / 2217W
+FCL
+大阪
+2022-04-27
+04-27
+04-27
+04-25 08:54
+40
+StarOcean ...
+KANWAY GALAXY
+2216E / 2216W
+FCL
+横浜
+2022-04-24 07:00
+04-24 07:00
+04-24 17:00
+04-22 12:26
+41
+StarOcean ...
+A KIBO
+2217E / 2217W
+FCL
+大阪
+2022-04-27
+04-27
+04-27
+04-25 08:54
+42
+StarOcean ...
+A KIBO
+2217E / 2217W
+FCL
+神戸
+2022-04-27
+04-27
+04-28
+04-25 08:54
+Total 42 items|Current 31-42 items
+<1 2

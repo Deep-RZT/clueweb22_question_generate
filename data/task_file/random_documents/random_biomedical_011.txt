@@ -1,0 +1,24 @@
+Title: CLIBD: Bridging Vision and Genomics for Biodiversity Monitoring at Scale
+
+Authors: ZeMing Gong, Austin T. Wang, Xiaoliang Huo, Joakim Bruslund Haurum, Scott C. Lowe
+
+Abstract: Measuring biodiversity is crucial for understanding ecosystem health. While
+prior works have developed machine learning models for taxonomic classification
+of photographic images and DNA separately, in this work, we introduce a
+multimodal approach combining both, using CLIP-style contrastive learning to
+align images, barcode DNA, and text-based representations of taxonomic labels
+in a unified embedding space. This allows for accurate classification of both
+known and unknown insect species without task-specific fine-tuning, leveraging
+contrastive learning for the first time to fuse barcode DNA and image data. Our
+method surpasses previous single-modality approaches in accuracy by over 8% on
+zero-shot learning tasks, showcasing its effectiveness in biodiversity studies.
+
+Introduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.
+
+Methodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.
+
+Results: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.
+
+Discussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.
+
+Conclusion: This work presents a significant advancement in the field with practical implications for real-world applications.

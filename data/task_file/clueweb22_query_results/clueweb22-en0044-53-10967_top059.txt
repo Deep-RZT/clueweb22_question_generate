@@ -1,0 +1,27 @@
+How to Program a Clifford CE 0889 Remote
+How to Program a Clifford CE 0889 Remote
+by Matthew Fortuna
+keyless remote image by Ray Kasprzak from Fotolia.com
+Clifford is a common system of remote starters that can be used with a number of different vehicles. These starts are controlled with wireless remotes like the CE 0889 remote. You can add the remote to your key chain and use it to engage the car's ignition from as far as 200 feet away. Programming the remotes can be done in just minutes with no professional equipment or past experience.
+Step 1
+Enter your car, insert your key into the ignition and turn it to the "On" position.
+Step 2
+Access your starter transmitter underneath your driver's side dashboard and find the "PlainView" switch.
+Step 3
+Use the "PlainView" switch to enter your valet code, which was originally programmed to the transmitter. You can find this in the system manual or from the installer.
+Step 4
+Press the "PlainView" switch again after entering the valet code and wait for the system to chirp after pressing the switch.
+Press and hold any button on your remote afterwards, and wait for the LED light on the system to start blinking. The system will also emit another chirping sound to indicate that the programming is completed and successful.
+00:07 09:12
+Brought to you by Leaf Group
+References
+Writer Bio
+How to Program a Viper Remote Control
+How to Troubleshoot the Bulldog Remote ...
+How to Reprogram a Car Stereo Remote
+How to Toubleshoot an Avital Remote ...
+How to Program a Dodge Ram Key Fob
+How to Bypass a Viper Car Alarm
+How to Disable an Alarm on a Camry
+How to Program a Karr Alarm Remote
+How to Override the Security System on ...

@@ -1,0 +1,72 @@
+Galileo and the telescope – Explaining Science
+Galileo and the telescope
+Posted on March 13, 2018Steve Hurley
+Revised  6 April 2021
+Telescopes are instruments which use multiple lenses to produce magnified images of distant objects. It is unclear who invented the first telescope: lenses had been widely used in Europe to correct poor eyesight since the fourteenth century and I expect that, over time, the telescope was actually invented many times by different individuals, who discovered that combining different lenses could produce a magnified image.
+In 1608 a spectacle maker called Hans Lippershey applied to the Dutch government  for a patent for a device for seeing at a distance. His application was refused and, in the resulting publicity, the Italian astronomer Galileo Galilei (1564-1642) became aware of the device. Galileo refined the early telescopes to produce instruments with better magnification and in 1609 he took the first recorded astronomical observations with a telescope.  Indeed, the first use of the word telescope, which is constructed from the Greek words ‘tele’ meaning ‘far’ and ‘skopos’ meaning ‘seeing’, is associated with Galileo’s instrument.
+Galileo Galilei – image from Wikimedia Commons
+How the Galilean telescope works
+There are various combinations of lenses which can be used to magnify distant objects, but the simplest is the one used by Galileo.  Telescopes of this design are called Galilean telescopes and to understand how they work it is necessary to understand a little about lenses.
+There are two main types of lens:
+a converging lens, shown in the top of the diagram above, causes parallel light rays from a distant object, shown in red, to bend so that they converge at point known as its focus. The focal length of the lens is the distance between its centre and its focus.
+a diverging lens, shown in the bottom of the diagram, causes parallel light rays from a distant object to bend and spread out so they appear to have come from its focus. Like a converging lens, the focal length is the distance between its centre and the focus. By convention the focal length of a diverging lens is negative.
+The diagram below (which if you’ve studied physics at high school you may recall is called a ray diagram) shows that when the rays of light from a distant object pass through a converging lens, they form an inverted image, which is reduced in size compared to the object.
+The ray diagram below shows that when rays of light from a distant object pass through a diverging lens they spread out, so that they appear to come from an image which is closer to the lens and reduced in size compared to the object. This is called a virtual image, because the rays of light don’t actually form an image.
+A Galilean telescope consists of two lenses: a large converging lens of long focal length  (the objective) and the eyepiece – a diverging lens of a short focal length. Interestingly,  both of these lenses on their own produce a smaller image of a distant object, but when combined the produce a magnified image.
+The apparent size is how large an object appears when viewed by an observer.  For larger astronomical objects the apparent size is often measured in degrees. For example, the apparent diameter of the Moon is roughly 0.5 degrees. A telescope makes the apparent size larger.
+In the diagram above, the blue line shows a ray of light from the top of a distant object. The red line shows a ray of light from the bottom of the object. The apparent size is the angle between the two rays.
+If we put a converging lens in front of the distant object then it will focus the light rays and produce an inverted image, which will be positioned as shown below.
+The diagram above shows 4 light rays from the distant object.
+A light ray from the top of the object striking the top of the lens (labelled 1) and a light ray from the top of the object striking the middle of the lens (labelled 2) are both brought to a focus.
+A light ray from the bottom of the object striking the top of the lens (labelled 3) and a light ray from the bottom of the object striking the middle of the lens (labelled 4) are both brought to a focus.
+If we put a diverging lens with a short focal length in a position where it intercepts the light rays before they are brought to a focus, then the light rays are bent by the diverging lens and follow the path below.
+Key to diagram above
+As you can see from the diagram above. the apparent size of the distant object is increased. The magnification of the telescope (M) is defined as:
+M= apparent size of image divided by apparent size of object
+For more detail on this see the notes at the end of this post.
+Galileo’s discoveries
+Using his telescope, Galileo made a number of important discoveries which revolutionised astronomy. He discovered the four brightest moons of Jupiter which are now called the Galilean moons.
+Image credit from Wikimedia commons
+He studied the way that the Moon was lit and how this changed over time and correctly deduced that this was due to shadows of lunar mountains and craters. Galileo turned his telescope to the Milky Way and discovered that it consisted of a vast number of stars, each too faint to be seen individually with the naked eye. When viewed from Earth these stars are so closely packed together they appear to be clouds. However, his discovery which had the greatest impact on his life was the phases of Venus.
+As seen from the Earth,  Venus goes through a full set of phases in a similar way to the Moon.  However, because Venus appears so small, these are only visible through a telescope and Galileo was the first person to see them.
+At point A in the diagram above, when Venus is between the Earth and the Sun, the sunlit part of Venus faces away from us making the planet almost invisible. The amount of the sunlit part of Venus we can see gets larger or waxes through to a crescent phase (B), to a half Venus (C)  and then to a full Venus at point D, when the whole sunlit side facing the Earth is illuminated.  It then gets smaller or wanes back to a half Venus (E) , then to a crescent (F) and then finally back to being almost invisible back at point A.
+As readers of a previous post will know, in 1543, just before his death, Nicolas Copernicus (1473-1543) had published the theory of heliocentrism which states that the planets orbit the Sun. However, in Galileo’s time, the teaching of the Catholic church favoured geocentrism, the widely held view that the Earth was the centre of the Universe and the stars, planets, the Sun and the Moon were in orbit around it. Indeed certain verses of the bible could be interpreted as supporting that viewpoint, such as Psalm 104:5:
+‘the Lord set the earth on its foundations; it can never be moved’
+However, the phases of Venus which Galileo had seen can only be explained by Venus orbiting the Sun. Therefore, Galileo concluded that the geocentric theory was incorrect.   Unfortunately for Galileo, in 1616 the Catholic church declared heliocentrism to be heresy. Heliocentric books were banned and Galileo was ordered to refrain from holding, teaching or defending heliocentric ideas.
+Despite this ruling Galileo continued to defend heliocentrism, and in 1633 the Roman Inquisition found him ‘vehemently suspect of heresy’, sentencing him to indefinite imprisonment. Galileo was kept under house arrest until his death in 1642.
+Improvement to telescope design
+Galileo’s telescope could only magnify objects 30 times before the image became distorted. It also had a narrow field of view. In 1610 Johannes Kepler began investigations into the way that different combinations of lenses could work together to produce a magnified image. He invented a new type of telescope with a converging lens as the eyepiece This new design became known as the Keplerian telescope and  enables a higher magnification with less distortion than the Galilean telescope, although it produces an upside down image,  this doesn’t  matter for astronomy!.  Nowadays the Galilean telescope design is only used in  low power binoculars.
+Keplerian telescope – image from Wikimedia Commons
+Reflectors
+Keplerian and Galilean telescopes are both example of refractors where lenses are used to collect and focus light. Nowadays all large telescopes are reflectors where curved mirrors, rather than lenses, are used.  Reflectors have a number of advantages. One of them is that reflectors don’t suffer from chromatic aberration. This happens in refractors because different colours of light are bent very slightly differently as they pass through the lens, which results in a blurred image.  Chromatic aberration can be overcome by using achromatic lenses, which consist of two or more lenses made out of different types of glass joined together to form a compound lens, but this is expensive and technically difficult when constructing larger lenses. The main advantage of reflectors is that it is much easier to produce a large mirror than a large lens. A large lens many metres in diameters would be very thick, very heavy and difficult to manufacture to the quality needed in a telescope. It would also tend to sag, becoming deformed under its own weight,  producing a blurred image.
+For these reasons the largest refractor used in professional astronomy is the one at Yerkes Observatory. It has an objective lens which is 1 metre in diameter. All telescopes larger than this are reflectors. It  is based at Williams Bay, Wisconsin and was operated by the University of Chicago until its closure in 2018
+Yerkes Observatory – Image from University of Chicago
+Notes
+To calculate the magnification of a Galilean telescope, we divide the focal length of the objective by the focal length of the eyepiece. So, if the focal length of the objective is 200 cm and the focal length of the eyepiece is 10 cm, the magnification of the telescope would be 20.
+Update 22 November 2020
+There is now a video on the Explaining Science YouTube Channel which describes Venus’s orbit and how Galileo’s observation of its phases disproved the geocentric theory. To view it, please click on the link below.
+Venus -the Morning Star and Evening Star
+Share
+Watch on
+Share this:
+Email
+LinkedIn
+Twitter
+Facebook
+Pinterest
+Loading...
+Related
+Kepler’s other achievements
+January 27, 2018
+In "Galileo"
+James Webb Telescope
+November 17, 2021
+In "Space"
+Dark Sky Places
+May 3, 2020
+In "General"
+Published by Steve Hurley
+Hi I am Steve Hurley. I work in the IT industry. I studied for a  PhD in astronomy in the 1980s. Outside work my real passion is explaining scientific concepts to a non-scientific audience. My blog (explainingscience.org) covers various scientific topics, but primarily astronomy. It is written in a style that it is easily understandable to the non scientist.
+
+Publications and videos
+For links to my books and videos please visit www.explainingscience.org View all posts by Steve Hurley

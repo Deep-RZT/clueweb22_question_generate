@@ -1,0 +1,27 @@
+Title: Proteome-wide prediction of mode of inheritance and molecular mechanism
+  underlying genetic diseases using structural interactomics
+
+Authors: Ali Saadat, Jacques Fellay
+
+Abstract: Genetic diseases can be classified according to their modes of inheritance
+and their underlying molecular mechanisms. Autosomal dominant disorders often
+result from DNA variants that cause loss-of-function, gain-of-function, or
+dominant-negative effects, while autosomal recessive diseases are primarily
+linked to loss-of-function variants. In this study, we introduce a
+graph-of-graphs approach that leverages protein-protein interaction networks
+and high-resolution protein structures to predict the mode of inheritance of
+diseases caused by variants in autosomal genes, and to classify
+dominant-associated proteins based on their functional effect. Our approach
+integrates graph neural networks, structural interactomics and topological
+network features to provide proteome-wide predictions, thus offering a scalable
+method for understanding genetic disease mechanisms.
+
+Introduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.
+
+Methodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.
+
+Results: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.
+
+Discussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.
+
+Conclusion: This work presents a significant advancement in the field with practical implications for real-world applications.

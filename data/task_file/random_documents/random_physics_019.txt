@@ -1,0 +1,26 @@
+Title: First-order phase transitions in the cores of neutron stars
+
+Authors: Oleg Komoltsev
+
+Abstract: I explore various scenarios for the phase transition within neutron-star
+matter. I do so by generating large model-agnostic ensemble using Gaussian
+processes, both with and without explicit inclusion of first-order phase
+transitions (FOPTs). The ensemble is conditioned with state-of-the-art
+astrophysical and theoretical inputs in a fully Bayesian approach. I study how
+the current data affect the posterior probability of the location and the
+strength of FOPT. I find that the previously observed peak structure of the
+sound speed remains stable against inclusion of FOPTs. While the current data
+cannot differentiate between a smooth crossover and a first-order phase
+transition, 91% of the total evidence consists of equations of state with some
+form of phase changes, such as FOPT occurring within or terminating the stable
+branch of neutron stars, or an indication of a crossover to quark matter.
+
+Introduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.
+
+Methodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.
+
+Results: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.
+
+Discussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.
+
+Conclusion: This work presents a significant advancement in the field with practical implications for real-world applications.

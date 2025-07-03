@@ -1,0 +1,31 @@
+Title: Electric Field Sensing via Rydberg Electromagnetically Induced
+  Transparency Using Zeeman and Stark Effects
+
+Authors: Yu-Chi Chen, Shao-Cheng Fang, Hsuan-Jui Su, Yi-Hsin Chen
+
+Abstract: Rydberg-assisted atomic electrometry with thermal vapors offers a promising
+approach for detecting external electric fields. However, this technique
+presents significant challenges for measuring low frequencies due to the
+effects of metal-alkali atoms adsorbed on the interior surface of the vacuum
+chamber. In this work, we apply high-contrast Rydberg electromagnetically
+induced transparency (EIT) spectroscopy to systematically investigate these
+effects, including the influence of laser power and electric field strength. We
+demonstrate the ability to measure electric field frequencies ranging from 10
+Hz to 1 MHz. Additionally, this study identifies a fundamental limit for data
+capacity in such measurements. Furthermore, we propose a method for precise
+Stark shift measurements by locking the coupling laser to Zeeman-split Rydberg
+EIT peaks. Using the Zeeman shift in a reference cell as a stable frequency
+reference, we track Stark-induced shifts in a science cell and confirm
+excellent agreement with theoretical predictions. These results provide
+valuable insights for future precision measurement techniques and field sensing
+applications based on Rydberg atom systems.
+
+Introduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.
+
+Methodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.
+
+Results: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.
+
+Discussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.
+
+Conclusion: This work presents a significant advancement in the field with practical implications for real-world applications.

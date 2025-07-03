@@ -1,0 +1,162 @@
+Clifford CE0890 Car Starter - Possibly in Valet Mode | DIY Home Improvement Forum
+Clifford CE0890 Car Starter - Possibly in Valet Mode
+1 - 9 of 9 Posts
+G
+Gowest11c
+Registered
+Joined Sep 12, 2016
+3 Posts
+Discussion Starter · #1 · Sep 25, 2016
+Can someone please help me? My car starter will not start my truck but it will lock / unlock the doors. I read everything I could about Valet Mode and holding down two buttons, turning the key on and off 5 times, etc. I've been playing with it for an hour +. I even tried to find a toggle switch under the dash but I don't even see anything that looks like the starter module that was installed. There is a button up by the read-view mirror antenna and I did try to work with it but now I"m afraid I'm just going to make things worse. I can't find anything online about this particular remote, even on the Clifford web site!!! All I know is that it says CE0890 on the 5-button remote but does not indicate any Valet buttons to push on the back.
+rjniles
+A "Handy Husband"
+Joined Feb 5, 2007
+14,074 Posts
+#2 · Sep 25, 2016
+Bad starter is the most obvious answer.
+Bob Sanders
+Banned
+Joined Nov 10, 2013
+14,506 Posts
+#3 · Sep 25, 2016 (Edited)
+I'm assuming the key starts the vehicle. I'm also assuming you bought this vehicle USED because the valet switch could be located anywhere depending on where the customer directs the installer to place it.... if one is used at all.
+At any rate you will have to find the switch by locating the car starter itself (usually but not always under the dash on the drivers side) and follow the wires.
+There could be other things wrong though. There are interlocks and safety switches all over which won't allow the vehicle to start if all conditions aren't met. If a pro installer did the install then it won't start if you have the hood open or the vehicle in gear... foot on the brake, parking brake not on (manual transmission)... etc.
+All of this will have to be checked. Best way is to locate the starter control module and check each interlock with a meter.
+It should be noted that on newer vehicles there is an additional box which bypasses the stock vehicle security system. In other words if the key you have to start your vehicle has a resistor in it or something of that nature then a bypass box is used. This box must also be operational and in good order.
+Brainbucket
+What is that?
+Joined Mar 30, 2015
+1,024 Posts
+#4 · Sep 26, 2016
+What Year, Make, Model, and engine size. Without that, I can't help you. Each Manufacture has their own system.:vs_coffee:
+G
+Gowest11c
+Registered
+Joined Sep 12, 2016
+3 Posts
+Discussion Starter · #5 · Sep 26, 2016
+2006 Toyota Tacoma TRD Sport SR5 Quad Cab
+Thank You!
+G
+Gowest11c
+Registered
+Joined Sep 12, 2016
+3 Posts
+Discussion Starter · #6 · Sep 26, 2016
+2006 Toyota Tacoma TRD Sport SR5 Quad Cab 4.0 Ltr 6 cyl
+Thank You!
+Brainbucket
+What is that?
+Joined Mar 30, 2015
+1,024 Posts
+#7 · Sep 26, 2016
+On that system, gotta make sure you are not getting a signal to the starter. That is the first thing you have to do. :vs_cool:
+Bob Sanders
+Banned
+Joined Nov 10, 2013
+14,506 Posts
+#8 · Sep 27, 2016
+Brainbucket said:
+Clifford is an aftermarket system.
+@OP
+Clifford is Viper in North America. Try doing a google search on VIPER CE0890. They won't be EXACTLY the same but it should get you started.
+Brainbucket
+What is that?
+Joined Mar 30, 2015
+1,024 Posts
+#9 · Sep 27, 2016
+If it's not stock, can't help. Might want to go the Clifford and get support from them. I was wondering what Clifford was..:vs_worry:
+1 - 9 of 9 Posts
+This is an older thread, you may not receive a response, and could be reviving an old thread. Please consider creating a new thread.
+Products in Automotive Repairs
+TEKTON 1/2 Inch Drive Click Torque Wrench (10-150 ft.-lb.) | 24335
+$44 USD
+1 comment
+CUMMINS ISX VIBRATION DAMPER HARMONIC BALANCER 4101884
+$180 USD
+1 comment
+Airpower America FloTool 5060TSMI Topsider Multi-Purpose Fluid Removing System
+$56 USD
+1 comment
+Thumbwheel Ratchet Set, 3 Pc.
+$6 USD
+1 comment
+Automatic Battery Float Charger
+$10 USD
+6 comments
+EZ-POUR B00YP3YTXM Gas Can Replacement Spout – Multi Use Deluxe Gas Can 1, 2, 5 Gallon Hi-Flo System with Extension, Gas Can Nozzle, Flexible Gas Can Spout for Jerry can
+$13 USD
+2 comments
+EverStart Maxx 800 Peak Amp Jump Starter with 120 PSI Compressor, Pivoting LED Light, 3 USB Ports
+$45 USD
+1 comment
+NOCO GENIUS10, 10-Amp Fully-Automatic Smart Charger, 6V and 12V Portable Battery Charger, Battery Maintainer, Trickle Charger, and Battery Desulfator with Temperature Compensation
+$100 USD
+1 comment
+Caliper Slide Pin Boot / Bushing
+$5 USD
+2 comments
+28mm 'ENGINE START STOP' Billet Push Button Switch Push Start
+A$35 AUD
+1 comment
+1/0-3C w/ Ground Type MC Cable, Aluminum Conductors, PVC Jacketed, Interlocked Armor Cable
+$12 USD
+2 comments
+VOLT® Pro Macro-Junction Direct Burial Connector 8-Way | 2 Pack
+$18 USD
+3 comments
+Sousvide Art Deluxe All-In-One Immersion Cooker Kit
+$67 USD
+2 comments
+48 in. Gooseneck Wrecking Bar
+$27 USD
+2 comments
+2-2-2-4 Aluminum Mobile Home Feeder Cable
+$3 USD
+7 comments
+Decora 6P4C Telephone Insert, White
+$5 USD
+1 comment
+Oatey Clear Primer For CPVC/PVC 4 oz
+$7 USD
+1 comment
+Morris Products Black Insulated in-Line Splice Connector – 1/0-14 Wire Range, 3/16 Allen Hex – 3.55”L x 0.96”W x 2.05”H –Pre-Filled, Easy Entry, Rubber Vinyl Coating, 2 Set Screws, 5-Pack
+$71 USD
+1 comment
+Satin Nickel Drive in Ball Catch (2 per Pack)
+$7 USD
+1 comment
+98 in. Cutting Guide
+$26 USD
+1 comment
+Recommended Reading
+Ingition Trouble
+Automotive Repairs
+5
+385
+G
+giddyap · updated Feb 14, 2018
+Automatic door lock
+Automotive Repairs
+8
+2K
+rusty baker · updated Jan 8, 2013
+'93 Jeep Wrangler
+Automotive Repairs
+3
+2K
+H
+hbsurferjeep · updated Jan 26, 2010
+Where would I look for the starter motor?
+Automotive Repairs
+4
+411
+F
+farmerjohn1324 · updated May 29, 2019
+95 dodge dakoda, need part identification
+Automotive Repairs
+3
+1K
+B
+bernieb · updated Dec 9, 2010

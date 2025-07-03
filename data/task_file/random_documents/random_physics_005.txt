@@ -1,0 +1,39 @@
+Title: Test of conformal gravity as an alternative to dark matter from the
+  observations of elliptical galaxies
+
+Authors: Li-Xue Yue, Da-Ming Chen
+
+Abstract: As an alternative gravitational theory to General Relativity (GR), the
+Conformal Gravity (CG) has recently been successfully verified by observations
+of Type Ia supernovae (SN Ia) and the rotation curves of spiral galaxies. The
+observations of galaxies only pertain to the non-relativistic form of gravity.
+In this context, within the framework of the Newtonian theory of gravity (the
+non-relativistic form of GR), dark matter is postulated to account for the
+observations. On the other hand, the non-relativistic form of CG predicts an
+additional potential: besides the Newtonian potential, there is a so-called
+linear potential term, characterized by the parameter $\gamma^*$, as an
+alternative to dark matter in Newtonian gravity. To test CG in its
+non-relativistic form, much work has been done by fitting the predictions to
+the observations of circular velocity (rotation curves) for spiral galaxies. In
+this paper, we test CG with the observations from elliptical galaxies. Instead
+of the circular velocities for spiral galaxies, we use the velocity dispersion
+for elliptical galaxies. By replacing the Newtonian potential with that
+predicted by non-relativistic form of CG in Hamiltonian, we directly extend the
+Jeans equation derived in Newtonian theory to that for CG. By comparing the
+results derived from the ellipticals with that from spirals, we find that the
+extra potential predicted by CG is not sufficient to account for the
+observations of ellipticals. Furthermore, we discover a strong correlation
+between $\gamma^*$ and the stellar mass $M^*$ in dwarf spheroidal galaxies.
+This finding implies that the variation in $\gamma^*$ violates a fundamental
+prediction of Conformal Gravity (CG), which posits that $\gamma^*$ should be a
+universal constant.
+
+Introduction: Recent advances in this field have opened new possibilities for innovative applications. This research addresses current limitations and proposes novel solutions.
+
+Methodology: We employed rigorous experimental protocols and advanced computational techniques to validate our approach. Statistical analysis was performed to ensure result reliability.
+
+Results: The experimental data shows significant improvements over baseline methods. Key performance indicators demonstrate the effectiveness of our proposed approach.
+
+Discussion: These findings contribute to the current understanding of the field and provide insights for future research directions. Potential applications span multiple domains.
+
+Conclusion: This work presents a significant advancement in the field with practical implications for real-world applications.
