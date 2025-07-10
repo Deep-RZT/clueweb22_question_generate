@@ -1,0 +1,26 @@
+{
+    "quality_control": {
+        "min_report_words": 950,
+        "min_short_answer_ratio": 0.45,
+        "max_retries": 3,
+        "required_question_types": ["factual_specific", "methodological", "quantitative"]
+    },
+    "generation_settings": {
+        "questions_per_topic": 10,
+        "temperature": 0.3,
+        "max_tokens_report": 2500,
+        "max_tokens_questions": 1500
+    },
+    "experiment_settings": {
+        "batch_size": 5,
+        "save_interval": 10,
+        "enable_real_time_validation": true,
+        "stop_on_quality_failure": true
+    },
+    "output_settings": {
+        "save_individual_results": true,
+        "generate_excel_report": true,
+        "include_quality_metrics": true,
+        "detailed_logging": true
+    }
+} 

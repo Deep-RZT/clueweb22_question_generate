@@ -1,0 +1,119 @@
+{
+  "experiment_info": {
+    "name": "Short Answer Deep Query Experiment",
+    "version": "0.6.0",
+    "description": "Optimized experiment framework for generating and validating Short Answer Deep Query questions",
+    "model": "openai-gpt-4o",
+    "framework_type": "single_model_focused"
+  },
+  "quality_thresholds": {
+    "min_short_answer_questions": 0.65,
+    "max_report_words": 2500,
+    "min_report_words": 700,
+    "max_answer_sentences": 3,
+    "min_questions_per_topic": 15
+  },
+  "experiment_settings": {
+    "test_mode": {
+      "max_topics": 3,
+      "questions_per_topic": 50,
+      "enabled": true
+    },
+    "full_mode": {
+      "max_topics": 9,
+      "questions_per_topic": 50,
+      "enabled": true
+    },
+    "processing": {
+      "batch_size": 1,
+      "retry_attempts": 3,
+      "retry_delay": 2.0,
+      "timeout_seconds": 300,
+      "parallel_processing": false
+    }
+  },
+  "data_sources": {
+    "clueweb22": {
+      "enabled": true,
+      "data_dir": "../../data/task_file/clueweb22_query_results",
+      "topics": [
+        "clueweb22-ja0009-18-07874",
+        "clueweb22-en0023-77-17052",
+        "clueweb22-en0044-53-10967",
+        "clueweb22-en0028-68-06349",
+        "clueweb22-en0000-00-00000",
+        "clueweb22-en0005-84-07694",
+        "clueweb22-ja0001-17-28828",
+        "clueweb22-en0037-99-02648",
+        "clueweb22-en0026-20-03284"
+      ]
+    },
+    "random_documents": {
+      "enabled": false,
+      "data_dir": "../../data/task_file/random_documents",
+      "note": "Disabled for 06 framework - focusing on ClueWeb22 only"
+    }
+  },
+  "output_settings": {
+    "save_individual_results": true,
+    "save_qa_pairs_separately": true,
+    "save_reports_separately": true,
+    "generate_excel_report": true,
+    "generate_summary_stats": true,
+    "include_validation_details": true,
+    "save_intermediate_results": true,
+    "include_quality_metrics": true
+  },
+  "short_answer_indicators": [
+    "what is the exact",
+    "which specific",
+    "what was the precise",
+    "how many",
+    "when did",
+    "who first",
+    "what percentage",
+    "which method",
+    "what technique",
+    "which algorithm",
+    "what value",
+    "which author",
+    "what year",
+    "which study",
+    "what was the sample size",
+    "what was the accuracy",
+    "which approach achieved",
+    "what was the result"
+  ],
+  "structured_content_indicators": [
+    "abstract:",
+    "introduction:",
+    "conclusion:",
+    "summary:",
+    "## abstract",
+    "## introduction",
+    "## conclusion",
+    "## summary",
+    "1. introduction",
+    "2. methodology",
+    "3. results",
+    "4. conclusion",
+    "i. abstract",
+    "ii. introduction",
+    "iii. methodology",
+    "iv. results",
+    "v. conclusion"
+  ],
+  "validation_settings": {
+    "stop_on_quality_failure": true,
+    "interactive_continue_prompt": true,
+    "log_all_validations": true,
+    "detailed_error_reporting": true
+  },
+  "logging": {
+    "level": "INFO",
+    "save_logs": true,
+    "log_file_pattern": "experiment_{timestamp}.log",
+    "include_timestamps": true,
+    "include_performance_metrics": true
+  }
+} 

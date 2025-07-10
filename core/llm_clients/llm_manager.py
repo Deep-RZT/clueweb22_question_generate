@@ -666,6 +666,113 @@ class DynamicLLMManager:
         
         return info
 
+    def generate_simplified_report(self, 
+                                  documents: Union[str, List[Dict]], 
+                                  topic_id: Optional[str] = None,
+                                  provider: Optional[Union[LLMProvider, str]] = None) -> Optional[str]:
+        """生成简化报告"""
+        
+        # 确定使用的提供商
+        if provider:
+            if isinstance(provider, str):
+                provider = LLMProvider(provider.lower())
+            target_provider = provider
+        else:
+            target_provider = self.current_provider
+        
+        if not target_provider or target_provider not in self.clients:
+            raise ValueError(f"LLM提供商 {target_provider} 不可用")
+        
+        # 调用相应的客户端
+        client = self.clients[target_provider]
+        
+        try:
+            if hasattr(client, 'generate_simplified_report'):
+                return client.generate_simplified_report(documents, topic_id)
+            else:
+                # 如果客户端没有该方法，使用generate_report替代
+                if isinstance(documents, str):
+                    # 如果是字符串，转换为文档格式
+                    docs = [{"content": documents, "title": f"Document for {topic_id}"}]
+                else:
+                    docs = documents
+                
+                result = client.generate_report(docs, topic_id or "Unknown Topic")
+                return result.content if result.success else None
+        except Exception as e:
+            logger.error(f"简化报告生成失败 ({target_provider.value}): {e}")
+            return None
+
+    def generate_deep_short_answer_questions(self, 
+                                           report: str, 
+                                           topic_id: Optional[str] = None,
+                                           num_questions: int = 50,
+                                           provider: Optional[Union[LLMProvider, str]] = None) -> APIResponse:
+        """生成深度短答案问题 - 新的优化方法"""
+        
+        # 确定使用的提供商
+        if provider:
+            if isinstance(provider, str):
+                provider = LLMProvider(provider.lower())
+            target_provider = provider
+        else:
+            target_provider = self.current_provider
+        
+        if not target_provider or target_provider not in self.clients:
+            raise ValueError(f"LLM提供商 {target_provider} 不可用")
+        
+        # 调用相应的客户端
+        client = self.clients[target_provider]
+        
+        try:
+            if hasattr(client, 'generate_deep_short_answer_questions'):
+                return client.generate_deep_short_answer_questions(report, topic_id or "Research Topic", num_questions)
+            else:
+                # 如果客户端没有该方法，使用常规问题生成
+                logger.warning(f"客户端 {target_provider.value} 不支持深度短答案问题生成，使用常规方法")
+                return client.generate_questions(report, topic_id or "Research Topic", num_questions)
+        except Exception as e:
+            logger.error(f"深度短答案问题生成失败 ({target_provider.value}): {e}")
+            config = self.default_configs[target_provider]
+            return APIResponse(
+                content="",
+                model=config.model_name,
+                usage={},
+                success=False,
+                error=str(e)
+            )
+
+    def generate_short_answer_deep_questions(self, 
+                                           report: str, 
+                                           topic_id: Optional[str] = None,
+                                           provider: Optional[Union[LLMProvider, str]] = None) -> List[Dict[str, Any]]:
+        """生成短答案深度问题"""
+        
+        # 确定使用的提供商
+        if provider:
+            if isinstance(provider, str):
+                provider = LLMProvider(provider.lower())
+            target_provider = provider
+        else:
+            target_provider = self.current_provider
+        
+        if not target_provider or target_provider not in self.clients:
+            raise ValueError(f"LLM提供商 {target_provider} 不可用")
+        
+        # 调用相应的客户端
+        client = self.clients[target_provider]
+        
+        try:
+            if hasattr(client, 'generate_short_answer_deep_questions'):
+                return client.generate_short_answer_deep_questions(report, topic_id)
+            else:
+                # 如果客户端没有该方法，返回空列表
+                logger.warning(f"客户端 {target_provider.value} 不支持短答案深度问题生成")
+                return []
+        except Exception as e:
+            logger.error(f"短答案深度问题生成失败 ({target_provider.value}): {e}")
+            return []
+
 # 全局管理器实例
 llm_manager = DynamicLLMManager()
 

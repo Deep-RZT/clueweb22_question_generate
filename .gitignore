@@ -1,12 +1,72 @@
-RAG/models/*.bin
-*.bin
+# Python 缓存文件
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+*.pyd
+
 # 模型文件
+RAG/models/*.bin
 *.bin
 *.pkl
 *.model
 *.h5
 RAG/models/
 
+# 实验结果和输出
+experiments/*/results/
+experiments/*/logs/
+experiments/*/output/
+results/
+logs/
+output/
+
+# Excel 报告文件
+*.xlsx
+*.xls
+
+# JSON 结果文件
+*_results.json
+*_report.json
+complete_experiment_results.json
+
+# 临时文件
+*.tmp
+*.temp
+*.log
+
+# 系统文件
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE 文件
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 环境文件
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
 # 其他大文件
 *.zip
 *.tar.gz
+*.rar
+*.7z
+
+# 数据文件（如果太大）
+data/*/
+!data/README.md

@@ -255,22 +255,31 @@ class ClaudeAPIClient:
         
         logger.info(f"使用文档内容长度: {total_chars} 字符")
         
-        system_prompt = """You are a professional research analyst. Please generate a high-quality domain report based on the provided documents.
+        system_prompt = """You are a professional research analyst. Generate a comprehensive, focused summary based on the provided documents.
 
-Report requirements:
-1. Length: 1500-2000 words
-2. Clear structure with introduction, main findings, analysis, and conclusion
-3. Deep analysis and synthesis based on document content
-4. Use academic writing style
+Summary requirements:
+1. Length: 1000-1500 words (comprehensive and detailed)
+2. Direct summarization of document content without formal academic structure
+3. Avoid structured sections like "Abstract", "Introduction", "Conclusion", "Summary" etc.
+4. Focus on key findings, main concepts, methodologies, specific data, and important details from the documents
 5. Write ENTIRELY in English for consistency in comparative analysis
-6. If documents contain Japanese content, translate and analyze the concepts in English
-7. Maintain academic rigor while ensuring all output is in English"""
+6. If documents contain Japanese content, translate and summarize the concepts in English
+7. Keep it natural and flowing, like a comprehensive research summary rather than a formal report
+8. Include specific details, numbers, methodologies, and findings that would enable deep questions"""
 
-        prompt = f"""Please generate a professional research report on "{topic}" based on the following documents:
+        prompt = f"""Please generate a comprehensive, detailed summary of the following documents:
 
 {doc_content}
 
-Generate a comprehensive 1500-2000 word research report that deeply analyzes the current state, trends, and key findings in this field. Write entirely in English. If the documents contain Japanese content, translate the key concepts and analyze them in English to ensure consistency for comparative analysis."""
+Summary requirements:
+1. Length: 1000-1500 words (comprehensive and detailed)
+2. Direct summarization of document content without formal academic structure
+3. Avoid structured sections like "Abstract", "Introduction", "Conclusion", "Summary" etc.
+4. Focus on key findings, main concepts, methodologies, specific data, and important details from the documents
+5. Write ENTIRELY in English for consistency in comparative analysis
+6. If documents contain Japanese content, translate and summarize the concepts in English
+7. Keep it natural and flowing, like a comprehensive research summary rather than a formal report
+8. Include specific details, numbers, methodologies, and findings that would enable deep questions"""
 
         return self.generate_text(
             prompt=prompt,
@@ -376,26 +385,26 @@ Generate a comprehensive 1500-2000 word research report that deeply analyzes the
             reports_content += report['content']
             reports_content += "\n"
         
-        system_prompt = """You are a professional research analyst. Please merge and synthesize multiple segment reports into a single comprehensive report.
+        system_prompt = """You are a professional research analyst. Please merge and synthesize multiple segment summaries into a single comprehensive summary.
 
 Merge requirements:
-1. Length: 2000-2500 words (comprehensive synthesis)
+1. Length: 1200-1500 words (comprehensive but concise)
 2. Eliminate redundancy while preserving key insights
-3. Create coherent flow and logical structure
-4. Synthesize findings across all segments
-5. Maintain academic writing style
+3. Create natural flow without formal structure
+4. Avoid structured sections like "Abstract", "Introduction", "Conclusion" etc.
+5. Focus on synthesizing findings across all segments
 6. Write ENTIRELY in English
-7. Ensure the final report is well-structured with clear sections"""
+7. Keep it natural and flowing like a comprehensive research summary"""
 
-        prompt = f"""Please merge the following segment reports about "{topic}" into a single comprehensive research report:
+        prompt = f"""Please merge the following segment summaries about "{topic}" into a single comprehensive research summary:
 
 {reports_content}
 
 Requirements:
-- Create a unified, comprehensive report that synthesizes insights from all segments
+- Create a unified, comprehensive summary that synthesizes insights from all segments
 - Eliminate redundancy while preserving unique insights from each segment
-- Maintain logical flow and academic structure
-- Target length: 2000-2500 words
+- Maintain natural flow and academic structure
+- Target length: 1200-1500 words
 - Write entirely in English with professional academic tone"""
 
         try:
@@ -436,95 +445,260 @@ Requirements:
             )
     
     def generate_questions(self, report: str, topic: str, num_questions: int = 50) -> APIResponse:
-        """生成问题 - 使用简单文本格式"""
+        """生成Short Answer Deep Query问题 - 基于BrowseComp标准，重点生成短答案深度查询"""
         
-        system_prompt = """You are a professional question design expert. Generate high-quality research questions based on the research report.
+        system_prompt = """You are an expert question designer specializing in creating "BrowseComp-style Short Answer Deep Query" questions.
 
-Question requirements:
-1. Cover different difficulty levels: Easy (30%), Medium (40%), Hard (30%)
-2. Diverse question types: fact lookup, analytical reasoning, comprehensive evaluation, critical thinking
-3. Each question should be based on report content
-4. Questions should evaluate deep research capabilities
-5. Generate ALL questions in English for consistency in comparative analysis
+CORE DESIGN PHILOSOPHY (Based on OpenAI BrowseComp Research):
+1. "INVERTED QUESTIONS": Start with specific facts/details from the summary, then create questions that make these facts hard to find but easy to verify
+2. "MULTI-CONSTRAINT COMBINATION": Combine multiple constraints to create large search spaces that require creative navigation
+3. "HARD TO FIND, EASY TO VERIFY": Answers should be buried in details but quickly verifiable once found
+4. "STRATEGIC PERSISTENCE REQUIRED": Questions should demand flexible search reformulation and assembly of fragmented clues
 
-IMPORTANT: Use simple text format, not JSON. Format each question as:
-Q1: [Question text here]
-DIFFICULTY: Easy/Medium/Hard
-TYPE: Question type
-REASONING: Why this question is valuable
+MANDATORY TARGET: Generate EXACTLY 85% Short Answer Deep Query questions (to ensure >70% after parsing)
 
-Q2: [Next question]
-DIFFICULTY: Easy/Medium/Hard
-TYPE: Question type
-REASONING: Why this question is valuable"""
+BROWSECOMP-STYLE QUESTION DESIGN PATTERNS:
 
-        prompt = f"""Based on the following research report about "{topic}", generate {num_questions} high-quality research questions:
+🔍 **MULTI-CONSTRAINT RESEARCH QUESTIONS** (Use these heavily):
+- "What was the exact [metric] achieved by [method] in the study that also reported [secondary finding] and was conducted by researchers from [institution type]?"
+- "Which specific [technique] was used in the [year range] study that achieved [performance] on [dataset] and was authored by someone who previously worked on [related topic]?"
+- "What was the precise [parameter/value] in the experiment that used [method A], compared against [method B], and reported [specific result] in [time period]?"
 
-Report content:
-{report[:3000]}...
+🔍 **CROSS-REFERENCE DEEP QUERIES** (BrowseComp signature style):
+- "Who first proposed [concept] that was later cited in the study achieving [specific result] and involved collaboration between [institution type] researchers?"
+- "What was the exact sample size in the study that reported [finding A], used [method B], and whose first author also published work on [related topic]?"
+- "Which algorithm variant achieved [metric] while also demonstrating [secondary property] in experiments conducted between [time period]?"
+
+🔍 **NESTED CONSTRAINT QUESTIONS** (Maximum depth):
+- "What percentage improvement was achieved by [method] over [baseline] in the study that used [specific dataset], reported [additional metric], and was conducted by researchers who previously published on [related area]?"
+- "What was the exact training time for [model] in the experiment that achieved [accuracy] on [dataset] and compared against [specific baselines] using [hardware specification]?"
+
+🔍 **AUTHOR-RESEARCH INTERSECTION QUERIES**:
+- "Which authors conducted the study that reported [specific finding] and had previously published work on [related topic] at [institution type]?"
+- "Who were the researchers that achieved [metric] using [method] and also contributed to [related research area] in [time period]?"
+
+🔍 **TEMPORAL-TECHNICAL CONSTRAINT QUERIES**:
+- "In which year was [specific finding] first reported in the study that also introduced [method] and achieved [performance metric]?"
+- "What was the exact [parameter] used in the [year] study that first demonstrated [capability] and was later cited in [related work]?"
 
 CRITICAL REQUIREMENTS:
-1. Generate EXACTLY {num_questions} questions - THIS IS MANDATORY
-2. Use the simple text format shown above
-3. Difficulty distribution: ~{int(num_questions*0.3)} Easy, ~{int(num_questions*0.4)} Medium, ~{int(num_questions*0.3)} Hard
-4. All content in English
-5. Each question should be numbered Q1, Q2, Q3, ..., Q{num_questions}
+1. Each question must combine 3+ constraints that create a large search space
+2. Answers must be specific, factual, and easily verifiable (numbers, names, dates, exact values)
+3. Questions must require assembling information from multiple parts of the summary
+4. Avoid any question answerable by simple keyword search
+5. Focus on intersections between different research aspects (methods + results + authors + institutions + time)
 
-DO NOT STOP until you have generated all {num_questions} questions. Count them to ensure you have exactly {num_questions}.
+STRICTLY FORBIDDEN PATTERNS:
+- Simple fact lookup questions
+- Questions with obvious answers
+- General "What are..." or "How does..." questions
+- Questions answerable in one search step
+- Subjective or opinion-based questions
 
-Generate the questions now:"""
+QUESTION DISTRIBUTION REQUIREMENT:
+- EXACTLY 85% BrowseComp-style Short Answer Deep Queries
+- 15% Traditional research questions (for variety)
 
-        # 计算需要的token数量: 每个问题大约80-100 tokens
-        estimated_tokens = num_questions * 100 + 500  # 加上缓冲
-        max_tokens = min(max(estimated_tokens, 6000), 8000)  # 最少6000，最多8000
+FORMAT: Use simple text format, numbered Q1, Q2, etc."""
+
+        prompt = f"""Based on the following research summary about "{topic}", generate {num_questions} questions where AT LEAST 70% are SHORT ANSWER DEEP QUERIES:
+
+Research Summary:
+{report[:6000]}...
+
+MANDATORY REQUIREMENTS:
+1. Generate EXACTLY {num_questions} questions
+2. AT LEAST 70% must be Short Answer Deep Query type (use the mandatory patterns above)
+3. Focus on specific details, numbers, names, methodologies, exact findings in the summary
+4. Each question should target information that requires careful reading but has a clear, short answer
+
+QUESTION DISTRIBUTION TARGET:
+- 70%+ Short Answer Deep Queries (specific facts, numbers, methods, authors, dates)
+- 30% Traditional research questions (for variety)
+
+Format each question as:
+Q1: [Specific question requiring deep analysis but short answer - USE MANDATORY PATTERNS]
+DIFFICULTY: Easy/Medium/Hard
+TYPE: factual_specific/methodological/quantitative/relational
+REASONING: Why this requires deep analysis but has a short answer
+
+CRITICAL: Prioritize questions that start with "What was the exact...", "Which specific...", "Who first...", "What percentage...", "In which year...", etc.
+
+Generate exactly {num_questions} questions now:"""
+
+        # 增加token限制以确保完整生成
+        estimated_tokens = num_questions * 150 + 2000
+        max_tokens = min(max(estimated_tokens, 8000), 16000)
         
         return self.generate_text(
             prompt=prompt,
             max_tokens=max_tokens,
-            temperature=0.8,
+            temperature=0.7,  # 降低温度以获得更一致的结果
             system_prompt=system_prompt
         )
     
     def generate_answer(self, question: str, report: str, difficulty: str) -> APIResponse:
-        """生成答案"""
+        """生成答案 - 专业浓缩核心回答系统"""
         
-        # 根据难度设置字数要求
-        word_requirements = {
-            "Easy": "400-600字",
-            "Medium": "800-1200字", 
-            "Hard": "1500-2000字"
-        }
+        # 检查是否为短答案深度查询
+        is_short_answer_query = self._is_short_answer_deep_query(question)
         
-        word_req = word_requirements.get(difficulty, "800-1200字")
-        
-        system_prompt = f"""You are a professional research expert. Please answer questions based on the provided research report.
+        if is_short_answer_query:
+            # Short Answer Deep Query: 专业浓缩核心回答
+            system_prompt = """You are a subject matter expert providing CONCENTRATED PROFESSIONAL ANSWERS.
+
+CORE PRINCIPLE: Extract and distill the ESSENTIAL PROFESSIONAL ANSWER to the specific query.
+
+🎯 PROFESSIONAL CONCENTRATION REQUIREMENTS:
+1. DIRECT QUERY RESPONSE: Answer the exact question asked, nothing more
+2. PROFESSIONAL ACCURACY: Use precise technical/academic terminology
+3. CONCENTRATED ESSENCE: Distill to the core fact/concept/finding
+4. VERIFICATION READY: Answer must be independently verifiable
+5. EXPERT-LEVEL PRECISION: Use field-appropriate professional language
+
+📋 ANSWER TYPES & FORMATS:
+
+FOR QUANTITATIVE QUERIES:
+- Exact numbers with context: "94.2% classification accuracy"
+- Precise measurements: "500 participants across 3 institutions"
+- Statistical values: "p < 0.001, Cohen's d = 1.2"
+
+FOR METHODOLOGICAL QUERIES:
+- Technical precision: "Random Forest with bagging ensemble"
+- Algorithm specifications: "BERT-base transformer architecture"
+- Procedure names: "Cross-validation with stratified sampling"
+
+FOR TEMPORAL/ATTRIBUTION QUERIES:
+- Precise citations: "Smith et al. (2023, Nature Methods)"
+- Institutional attribution: "Stanford AI Lab in collaboration with MIT"
+- Chronological precision: "First proposed in 2019, validated 2021-2023"
+
+FOR TECHNICAL SPECIFICATION QUERIES:
+- Component details: "768-dimensional embedding layer"
+- Configuration specifics: "Learning rate 0.001, batch size 32"
+- Hardware specifications: "Tesla V100 GPUs, 32GB memory"
+
+❌ NEVER PROVIDE:
+- Background explanations or context
+- Multiple facts when only one is asked
+- Hedging language ("approximately", "around")
+- Introductory phrases ("The study found that...")
+
+✅ EXAMPLES OF CONCENTRATED PROFESSIONAL ANSWERS:
+Query: "What exact accuracy was achieved?"
+Answer: "94.2% macro-averaged F1 score"
+
+Query: "Which algorithm was used for classification?"
+Answer: "Random Forest with 100 decision trees"
+
+Query: "How many participants were included?"
+Answer: "500 participants (250 control, 250 treatment)"
+
+Query: "Who first proposed this methodology?"
+Answer: "Hinton et al. (2006) in deep belief networks paper"
+
+CRITICAL: Your answer must be PROFESSIONALLY CONCENTRATED - the essential expert response to the specific query."""
+            
+            prompt = f"""Research Context: {report[:2000]}
+
+EXPERT QUERY: {question}
+
+TASK: Provide the concentrated professional answer to this specific query.
+
+INSTRUCTIONS:
+1. Identify the exact information requested
+2. Extract the precise professional answer from the research context
+3. Formulate using appropriate technical/academic terminology
+4. Ensure answer is independently verifiable
+5. Concentrate to essential core - no elaboration
+
+CONCENTRATED PROFESSIONAL ANSWER:"""
+            
+            max_tokens = 50  # 稍微增加允许专业术语完整表达
+            temperature = 0.1  # 确保精确性
+            
+        else:
+            # 传统的长答案格式
+            word_requirements = {
+                "Easy": "400-600 words",
+                "Medium": "800-1200 words", 
+                "Hard": "1500-2000 words"
+            }
+            
+            word_req = word_requirements.get(difficulty, "800-1200 words")
+            
+            system_prompt = f"""You are a professional research expert. Please answer questions based on the provided research summary.
 
 Answer requirements:
 1. Length: {word_req}
-2. Based on report content, do not fabricate information
+2. Based on summary content, do not fabricate information
 3. Clear structure and rigorous logic
 4. Adjust answer depth according to question difficulty
 5. Use academic writing style
 6. Answer ENTIRELY in English for consistency in comparative analysis"""
 
-        prompt = f"""Based on the following research report, answer the question:
+            prompt = f"""Based on the following research summary, answer the question:
 
 Question: {question}
 Difficulty: {difficulty}
 
-Research Report:
+Research Summary:
 {report}
 
 Please provide a detailed answer of {word_req}. Write entirely in English for consistency in comparative analysis."""
 
-        max_tokens = 2000 if difficulty == "Hard" else 1500 if difficulty == "Medium" else 1000
+            max_tokens = 2000 if difficulty == "Hard" else 1500 if difficulty == "Medium" else 1000
+            temperature = 0.7
         
         return self.generate_text(
             prompt=prompt,
             max_tokens=max_tokens,
-            temperature=0.7,
+            temperature=temperature,
             system_prompt=system_prompt
         )
+    
+    def _is_short_answer_deep_query(self, question: str) -> bool:
+        """判断是否为短答案深度查询 - 更精确的识别"""
+        question_lower = question.lower()
+        
+        # 精确的短答案模式（答案应该是具体的数字、名称、术语）
+        exact_short_patterns = [
+            # 数字相关
+            "what exact", "what precise", "how many", "what percentage",
+            "what number", "what amount", "what value", "what rate",
+            "what score", "what accuracy", "what size",
+            
+            # 名称相关  
+            "which specific", "who first", "which author", "which researcher",
+            "which institution", "which university", "which company",
+            "which algorithm", "which method", "which technique",
+            "which approach", "which model", "which system",
+            
+            # 时间相关
+            "what year", "when did", "what date", "which year",
+            "what time", "what period",
+            
+            # 技术术语相关
+            "what was the", "which was the", "what type of",
+            "which type of", "what kind of", "which kind of"
+        ]
+        
+        # 检查是否有精确的短答案模式
+        has_exact_pattern = any(pattern in question_lower for pattern in exact_short_patterns)
+        
+        # 排除长答案指示词
+        long_answer_indicators = [
+            "why", "how does", "what are the main", "what are the key",
+            "explain", "describe", "analyze", "compare", "evaluate",
+            "discuss", "what factors", "what causes", "what leads to",
+            "what are the implications", "what are the benefits",
+            "what are the challenges", "what are the limitations"
+        ]
+        
+        has_long_indicator = any(indicator in question_lower for indicator in long_answer_indicators)
+        
+        # 只有精确短答案模式且没有长答案指示词才被认为是短答案问题
+        return has_exact_pattern and not has_long_indicator
     
     def refine_question(self, question: str, feedback: str, report: str) -> APIResponse:
         """优化问题"""
