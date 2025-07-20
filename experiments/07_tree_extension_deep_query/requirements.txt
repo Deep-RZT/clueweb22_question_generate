@@ -1,0 +1,17 @@
+# Tree Extension Deep Query Framework - Optimized Version
+# Requirements for the optimized question-answer tree generation system
+
+# Core dependencies
+openai>=1.0.0
+pandas>=2.0.0
+openpyxl>=3.1.0
+
+# Environment management
+python-dotenv>=1.0.0
+
+# Optional dependencies for enhanced functionality
+numpy>=1.24.0
+
+# Development and testing
+pytest>=7.0.0
+requests>=2.28.0 

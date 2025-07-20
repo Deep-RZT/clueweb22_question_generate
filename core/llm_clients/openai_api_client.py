@@ -37,7 +37,7 @@ class OpenAIClient:
         
     def generate_content(self, prompt: str, system_prompt: str = None, 
                         max_tokens: int = 6000, temperature: float = 0.7,
-                        max_retries: int = 3, retry_delay: float = 2.0) -> Optional[str]:
+                        max_retries: int = 10, retry_delay: float = 2.0) -> Optional[str]:
         """
         Generate content using OpenAI API with optimized parameters for longer responses
         
@@ -92,7 +92,14 @@ class OpenAIClient:
             except requests.exceptions.HTTPError as e:
                 if e.response.status_code == 429:  # Rate limit
                     if attempt < max_retries - 1:
-                        wait_time = retry_delay * (2 ** attempt)  # 指数退避
+                        # 尝试从响应头中读取建议的等待时间
+                        retry_after = e.response.headers.get('Retry-After')
+                        if retry_after:
+                            wait_time = int(retry_after)
+                        else:
+                            # 更保守的指数退避
+                            wait_time = min(retry_delay * (2 ** attempt), 60)  # 最大60秒
+                        
                         print(f"  🚦 API速率限制，{wait_time}秒后重试...")
                         time.sleep(wait_time)
                         continue
@@ -130,12 +137,21 @@ class OpenAIClient:
         
         return None
     
+    def generate_response(self, prompt: str, system_prompt: str = None, 
+                         max_tokens: int = 2000, temperature: float = 0.3,
+                         max_retries: int = 10) -> str:
+        """
+        Alias for generate_content method to maintain compatibility with existing code
+        """
+        result = self.generate_content(prompt, system_prompt, max_tokens, temperature, max_retries)
+        return result if result is not None else ""
+    
     def generate_text(self, 
                      prompt: str, 
                      max_tokens: int = 4000,
                      temperature: float = 0.7,
                      system_prompt: Optional[str] = None,
-                     max_retries: int = 3,
+                     max_retries: int = 10,
                      retry_delay: float = 2.0) -> APIResponse:
         """生成文本 - 与Claude API兼容的接口，增加重试机制"""
         
@@ -194,7 +210,14 @@ class OpenAIClient:
             except requests.exceptions.HTTPError as e:
                 if e.response.status_code == 429:  # Rate limit
                     if attempt < max_retries - 1:
-                        wait_time = retry_delay * (2 ** attempt)  # 指数退避
+                        # 尝试从响应头中读取建议的等待时间
+                        retry_after = e.response.headers.get('Retry-After')
+                        if retry_after:
+                            wait_time = int(retry_after)
+                        else:
+                            # 更保守的指数退避
+                            wait_time = min(retry_delay * (2 ** attempt), 60)  # 最大60秒
+                        
                         print(f"  🚦 API速率限制，{wait_time}秒后重试...")
                         time.sleep(wait_time)
                         continue

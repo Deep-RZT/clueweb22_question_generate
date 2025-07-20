@@ -169,6 +169,25 @@ class DynamicLLMManager:
                 error=str(e)
             )
     
+    def generate_content(self, 
+                        prompt: str,
+                        model: Optional[str] = None,
+                        temperature: Optional[float] = None,
+                        max_tokens: Optional[int] = None,
+                        system_prompt: Optional[str] = None) -> str:
+        """生成内容（简化版，返回字符串）"""
+        try:
+            response = self.generate_text(
+                prompt=prompt,
+                max_tokens=max_tokens,
+                temperature=temperature,
+                system_prompt=system_prompt
+            )
+            return response.content if response.success else ""
+        except Exception as e:
+            logger.error(f"内容生成失败: {e}")
+            return ""
+    
     def generate_report(self, 
                        documents: List[Dict], 
                        topic: str,
