@@ -24,7 +24,7 @@ from config import get_config
 from core.llm_clients.openai_api_client import OpenAIClient
 from document_loader import DocumentLoader
 from document_screener import DocumentScreener
-from agent_depth_reasoning_framework import AgentDepthReasoningFramework
+from agent_depth_reasoning_framework_fixed import AgentDepthReasoningFramework
 from agent_export_system import AgentExportSystem
 from web_search import web_search
 

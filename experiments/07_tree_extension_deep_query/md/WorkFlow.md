@@ -1,47 +1,115 @@
-# WorkFlow
+# Agent推理测试框架 - 工作流程
 
-## Feed a weblink / file sample (from Clueweb)
+## 🎯 核心流程设计
 
-### Extract root keywords following a certain rubric as the final answer
+### 📥 输入：文档/网页链接（来自ClueWeb22）
 
-1. Each keyword must be highly specific (e.g., proper nouns, numbers, technical terms).  
-2. All keywords should be distinctive and not too broad or ambiguous.  
-3. All keywords must be unique and not repeated.
+### 🔍 Step 1: 提取根关键词并构建Root Query
 
-### Generate a simple query. A root keyword is the only correct answer to the query
+1. **提取3个Short Answer**：每个文档最多提取3个高度特定的事实
+   - 专有名词（公司、产品、人名）
+   - 数字（年份、数量、价格）
+   - 技术术语、日期、地点
+   - 要求：独特且不重复，可通过Web搜索验证
 
-1. The query must based on the original doc (require a web search, not answerable by common sense)  
-2. The query must have only one correct answer  
-3. The query is solvable
+2. **构建最小精确问题**：为每个Short Answer生成Root Query
+   - 问题必须有唯一正确答案
+   - 包含至少2个关键词确保精确性
+   - 基于文档内容但需要Web搜索验证
 
-## Feed the query to an answer verifier 
+### ✅ Step 2: 验证Root Query有效性
 
-1. The question and its answer are fed to two independent LLM models. Each model will perform a validity and uniqueness check. The answer verifier will output True only if the query passes both model  
-2. Keep the queries which meet the requirements
+1. **双模型验证**：两个独立LLM模型分别检查
+   - 有效性检查：问题是否明确且可解决
+   - 唯一性检查：答案是否唯一且无歧义
+   - 只有通过双重验证的问题才会保留
 
-## Perform Series Extension and Parallel Extension
+### 🔧 Step 3: 提取最小关键词
 
-### Series extension
+1. **关键词提取**：从Root Query中提取最小数量的关键词
+   - n个关键词，n为识别答案的最小充分数量
+   - 关键词类型：专有名词、数字、技术术语、日期、地点
 
-1. Extract n sub-keywords from query(q0) (where n is the minimal number of keywords sufficient to identify answer a0); keywords: k01, k02, ..., k0n
-2. Perform Minimum Keyword Check: Each time a keyword is masked, check if the remaining keywords and descriptions can still pass the validity and uniqueness check  
-3. a11 = k01, a12 = k02, a1n = k0n (Treat the extracted sub-keywords as the next generation of answers, denoted as a11, a12, ... a1n)  
-4. For each answer, design a corresponding question (align with **Generate a simple query. A root keyword is the only correct answer to the query** based on 1-3 times search tool calls), denoted as q11 → a11, q12 → a12, q1n → a1n   
-5. Perform Minimum Keyword Check and Validity and Uniqueness Check for each sub-question (q11 - q1n)   
-6. Perform Shortcut Check: Ensure that each children question (q11, q12, ..., q1n) does not contain keywords that could directly pinpoint other ancestor answers. These new questions should only allow inference of their respective keyword answers (a11, a12, ..., a1n), and must not allow q11 to infer the answers to q12, q1n, etc. 
-7. Combine q11, q12, ..., q1n and q0 to derive a final, deeply expanded question → q1 
-8. Repeat steps 1-7 
-9. After 2-3 rounds of iteration, obtain a final deep query.
+2. **最小关键词检查**：对每个关键词执行masking测试
+   - 移除关键词后检查剩余关键词是否仍能唯一确定答案
+   - 只保留必要的关键词（必要性分数>0.5）
 
-### Parallel Extension
+### 🌊 Step 4: Series扩展（深度扩展）
 
-- To be fabricated
+1. **为每个关键词生成子问题**
+   - 关键词作为子问题的答案：k01 → q11, k02 → q12, k0n → q1n
+   - 基于Web搜索结果生成完全无关联的问题
+   - 确保子问题与父问题无循环推理关系
 
-#### Comparative reasoning extension
+2. **循环检测与预防**
+   - 语义相似度分析（TF-IDF向量计算）
+   - 知识模式检测（时间-事件对称、属性反转等）
+   - 风险分层处理：高风险跳过，中风险扩展，低风险多角度搜索
 
+### 🌐 Step 5: Parallel扩展（横向扩展）
 
-## Trajectory Record (for validation by labor and agent training)
+1. **并行分支生成**：为所有关键词同时生成不同角度的问题
+   - 每个关键词生成独立的问题分支
+   - 确保问题间无关联性和循环依赖
 
-- The entire tree structure consists of all question-answer pairs from top to bottom, along with their respective hierarchical levels.
+2. **Shortcut检查**：确保子问题不包含能直接推导其他答案的关键词
+   - q11不能推导出q12、q1n等的答案
+   - 防止Agent通过捷径直接获得最终答案
+
+### 🌳 Step 6: 构建推理树
+
+1. **动态树结构**：
+   - **单关键词**：Root → Series1 → Series2（2层深度）
+   - **多关键词**：Root → Series1/Parallel1 → Series2（3层深度）
+   - **最大深度**：3层（保持复杂度平衡）
+
+2. **重复扩展**：对每个子问题重复Steps 3-5，构建完整推理树
+
+### 🎯 Step 7: 生成最终综合问题
+
+1. **嵌套式综合问题**：将所有层级问题糅合成逻辑推理链
+   ```
+   To find {root_answer}, follow this reasoning chain:
+   Step 1: First determine [KEY_INFO_1] by solving [SUB_QUESTION_1]
+   Step 2: Use [KEY_INFO_1] to identify [KEY_INFO_2] through [SUB_QUESTION_2]  
+   Step 3: Apply [KEY_INFO_2] to finally determine {root_answer}
+   ```
+
+2. **逻辑依赖保证**：每步答案作为下一步输入，防止Agent直接跳跃
+
+## 📊 轨迹记录（验证与Agent训练）
+
+- **完整树结构**：记录所有问答对及其层级关系
+- **推理轨迹**：每个步骤的详细处理过程
+- **验证结果**：关键词验证、循环检测、质量评分
+- **性能指标**：处理时间、API调用次数、成功率
+
+## 🛡️ 质量保证机制
+
+### 🔍 **循环推理预防**
+- **智能检测系统**：基于语义相似度和知识模式
+- **多层风险评估**：LOW/MEDIUM/HIGH风险分类
+- **处理策略**：跳过/扩展/多角度搜索
+
+### ⚡ **性能优化**
+- **并行关键词验证**：线程池并行处理masking测试
+- **API调用优化**：减少重试次数和超时时间
+- **批量处理**：支持大规模文档处理
+
+### 📈 **输出质量**
+- **Excel多工作表**：摘要、推理树、综合问题、轨迹、统计
+- **JSON详细数据**：完整的推理树和轨迹记录
+- **Markdown摘要**：实验结果和质量指标
+
+## 🎯 Agent测试目标
+
+1. **防止直接答案**：普通LLM无法直接回答嵌套综合问题
+2. **要求推理能力**：Agent必须按逻辑链逐步推理
+3. **测试分解能力**：评估Agent的问题分解和综合能力
+4. **验证逻辑连贯性**：确保推理过程的逻辑性和完整性
+
+---
+
+**这个工作流程确保生成的每个问题都是高质量的Agent推理测试题，具备完整的循环检测、性能优化和质量保证机制。**
 
 

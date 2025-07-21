@@ -1612,9 +1612,9 @@ Mask the keyword "{keyword.keyword}" from the query and check if the remaining k
         pass
     
     def _build_nested_composite_query(self, queries_by_layer: Dict[int, List[str]], root_answer: str) -> str:
-        """构建嵌套式综合问题"""
+        """构建嵌套式综合问题 - 修复版"""
         if not self.api_client or not queries_by_layer:
-            return "Composite query placeholder"
+            return self._generate_fallback_composite_query(queries_by_layer, root_answer)
         
         try:
             logger.info(f"构建嵌套式综合问题，目标答案: {root_answer}")
@@ -1628,76 +1628,70 @@ Mask the keyword "{keyword.keyword}" from the query and check if the remaining k
                 all_queries.extend(queries)
                 layer_summary.append(f"Layer {layer}: {len(queries)} queries")
             
-            # 生成有逻辑链条的综合问题 
-            composite_prompt = f"""**TASK: Create a LOGICAL REASONING CHAIN for Agent testing (NOT simple concatenation).**
+            # 构建更简化、更稳定的prompt
+            composite_prompt = f"""Create a logical reasoning chain question that requires step-by-step solving to reach the answer: {root_answer}
 
-**TARGET FINAL ANSWER:** {root_answer}
-**AVAILABLE SUB-QUESTIONS:** {chr(10).join([f"Q{i+1}: {q}" for i, q in enumerate(all_queries)])}
-**LAYER STRUCTURE:** {' | '.join(layer_summary)}
+Available information from different reasoning layers:
+{chr(10).join([f"Layer {layer}: {', '.join(queries[:2])}" for layer, queries in sorted(queries_by_layer.items())])}
 
-**CRITICAL REQUIREMENTS for AGENT REASONING:**
-1. **LOGICAL CHAIN**: Each step's answer must be INPUT for next step
-2. **DEPENDENCY**: Question2 depends on Answer1, Question3 depends on Answer2, etc.
-3. **NO SHORTCUTS**: Agent cannot jump directly to final answer
-4. **STEP-BY-STEP**: Must solve in sequence to reach {root_answer}
+Requirements:
+1. Create ONE comprehensive question that connects multiple reasoning steps
+2. Each step should build on the previous step's answer
+3. The final step should lead to: {root_answer}
+4. Agent must solve sequentially, cannot skip to the answer
 
-**FORBIDDEN PATTERNS (avoid these):**
-❌ "First find X, then find Y, then find Z" (independent questions)
-❌ "Determine A, understand B, evaluate C" (no logical connection)  
-❌ Simple concatenation without reasoning dependencies
+Example pattern:
+"To determine [FINAL_ANSWER], first identify [STEP1_INFO] by [STEP1_ACTION], then use that information to find [STEP2_INFO] through [STEP2_ACTION], and finally apply those results to discover [FINAL_ANSWER]."
 
-**REQUIRED PATTERN (use this):**
-✅ "To find {root_answer}, you must follow this reasoning chain:
-Step 1: First determine [KEY_INFO_1] by solving [SUB_QUESTION_1]
-Step 2: Use [KEY_INFO_1] to identify [KEY_INFO_2] through [SUB_QUESTION_2]  
-Step 3: Apply [KEY_INFO_2] to finally determine {root_answer}"
+Generate a single, coherent question (100-200 words) that requires this sequential reasoning to reach: {root_answer}
 
-**REASONING CHAIN STRUCTURE:**
-Each step must provide information NEEDED for the next step.
-Answer₁ → Input₂ → Answer₂ → Input₃ → Final Answer
-
-**EXAMPLES of GOOD REASONING CHAINS:**
-- "To identify the company, first find what technology was developed in year X, then determine which company pioneered that technology in location Y."
-- "To determine the temperature, first identify the instrument type from description Z, then find which mission used that instrument, then lookup the operating temperature."
-
-**Output Format (JSON):**
-{{
-    "composite_query": "Logical reasoning chain question requiring genuine step-by-step solving",
-    "reasoning_steps": ["Step 1: Get X to use in Step 2", "Step 2: Use X to get Y for Step 3", "Step 3: Use Y to find {root_answer}"],
-    "dependency_chain": "Answer1 → Question2 → Answer2 → Question3 → {root_answer}",
-    "agent_difficulty": "medium/hard",
-    "prevents_direct_answer": "Why Agent must solve step-by-step instead of direct answer",
-    "final_answer_confirmed": "{root_answer}"
-}}
-
-**TARGET: Generate ONE reasoning chain that requires genuine sequential Agent reasoning to reach {root_answer}.**"""
+Response format: Just the question text, no JSON or extra formatting."""
 
             response = self.api_client.generate_response(
                 prompt=composite_prompt,
-                temperature=0.6,  # 较高创造性用于复杂问题构建
-                max_tokens=800
+                temperature=0.7,
+                max_tokens=400
             )
             
-            parsed_data = self._parse_json_response(response)
-            if parsed_data and 'composite_query' in parsed_data:
-                composite_query = parsed_data['composite_query']
-                reasoning_steps = parsed_data.get('reasoning_steps', [])
-                difficulty = parsed_data.get('agent_difficulty', 'medium')
+            if response and len(response.strip()) > 50:
+                # 清理响应
+                cleaned_response = response.strip()
+                # 移除可能的引号或格式标记
+                import re
+                cleaned_response = re.sub(r'^["\']|["\']$', '', cleaned_response)
+                cleaned_response = re.sub(r'```.*?```', '', cleaned_response, flags=re.DOTALL)
+                cleaned_response = cleaned_response.strip()
                 
-                logger.info(f"✅ 嵌套式综合问题生成完成")
-                logger.info(f"  难度级别: {difficulty}")
-                logger.info(f"  推理步骤: {len(reasoning_steps)} 步")
-                logger.info(f"  问题长度: {len(composite_query)} 字符")
-                
-                return composite_query
-            else:
-                logger.warning("无法解析综合问题生成响应")
-                # 生成简单的嵌套问题作为后备
-                return self._generate_simple_nested_query(all_queries, root_answer)
-                
+                if len(cleaned_response) > 30:
+                    logger.info(f"✅ API生成综合问题成功: {len(cleaned_response)} 字符")
+                    return cleaned_response
+            
+            logger.warning("API响应无效，使用后备方案")
+            return self._generate_fallback_composite_query(queries_by_layer, root_answer)
+            
         except Exception as e:
             logger.error(f"构建嵌套式综合问题失败: {e}")
-            return self._generate_simple_nested_query(queries_by_layer.get(0, ["What is the answer?"]), root_answer)
+            return self._generate_fallback_composite_query(queries_by_layer, root_answer)
+    
+    def _generate_fallback_composite_query(self, queries_by_layer: Dict[int, List[str]], root_answer: str) -> str:
+        """生成后备综合问题"""
+        all_queries = []
+        for layer in sorted(queries_by_layer.keys()):
+            all_queries.extend(queries_by_layer[layer])
+        
+        if not all_queries:
+            return f"Through multi-step reasoning and analysis, determine the answer: {root_answer}"
+        
+        # 选择最多3个关键问题
+        selected_queries = all_queries[:3]
+        
+        if len(selected_queries) == 1:
+            return f"To determine {root_answer}, analyze and solve: {selected_queries[0]}"
+        elif len(selected_queries) == 2:
+            return f"To identify {root_answer}, first address {selected_queries[0]}, then use that information to resolve {selected_queries[1]}"
+        else:
+            return f"To discover {root_answer}, follow this reasoning chain: first determine the answer to '{selected_queries[0]}', then apply that knowledge to solve '{selected_queries[1]}', and finally use both results to answer '{selected_queries[2]}' which will reveal the target answer."
+
     
     def _generate_simple_nested_query(self, queries: List[str], root_answer: str) -> str:
         """生成简单的嵌套问题作为后备"""
