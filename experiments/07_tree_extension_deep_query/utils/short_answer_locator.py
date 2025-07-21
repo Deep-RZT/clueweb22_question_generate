@@ -10,8 +10,19 @@ import time
 from typing import Dict, List, Optional, Tuple
 from dataclasses import dataclass
 
-from document_loader import DocumentData
-from config import get_config
+try:
+    from .document_loader import DocumentData
+    from ..config import get_config
+except ImportError:
+    # Fallback for when running as script
+    import sys
+    from pathlib import Path
+    current_dir = Path(__file__).parent
+    parent_dir = current_dir.parent
+    sys.path.append(str(current_dir))
+    sys.path.append(str(parent_dir))
+    from document_loader import DocumentData
+    from config import get_config
 
 # Setup logging
 logger = logging.getLogger(__name__)
@@ -409,7 +420,7 @@ def test_short_answer_locator():
             '''
     
     # Create test document
-    from document_loader import DocumentData
+    from .document_loader import DocumentData
     test_doc = DocumentData(
         doc_id="test_doc_001",
         file_path="/test/path",

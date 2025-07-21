@@ -11,7 +11,14 @@ from typing import List, Dict, Optional, Iterator
 from dataclasses import dataclass
 from pathlib import Path
 
-from config import get_config
+try:
+    from ..config import get_config
+except ImportError:
+    # Fallback for when running as script
+    import sys
+    from pathlib import Path
+    sys.path.append(str(Path(__file__).parent.parent))
+    from config import get_config
 
 # Setup logging
 logger = logging.getLogger(__name__)
