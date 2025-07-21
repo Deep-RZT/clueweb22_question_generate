@@ -116,7 +116,7 @@ class AgentExportSystem:
         df.to_excel(writer, sheet_name='摘要', index=False, header=False)
     
     def _write_reasoning_trees_sheet(self, results: Dict[str, Any], writer):
-        """写入推理树Sheet"""
+        """写入推理树Sheet - 修复版本"""
         tree_data = []
         tree_data.append(['文档ID', '推理树ID', '树层数', '节点数量', '根问题', '根答案', '最终综合问题'])
         
@@ -128,31 +128,92 @@ class AgentExportSystem:
             reasoning_trees = doc.get('reasoning_trees', [])
             
             for tree in reasoning_trees:
-                tree_id = getattr(tree, 'tree_id', 'Unknown')
-                max_layers = getattr(tree, 'max_layers', 0)
-                node_count = len(getattr(tree, 'all_nodes', {}))
-                
-                root_node = getattr(tree, 'root_node', None)
-                if root_node:
-                    root_query = getattr(root_node, 'query', None)
-                    root_question = getattr(root_query, 'query_text', 'N/A') if root_query else 'N/A'
-                    root_answer = getattr(root_query, 'answer', 'N/A') if root_query else 'N/A'
+                # 处理树对象（可能是字符串表示）
+                if isinstance(tree, str):
+                    # 解析字符串形式的树对象
+                    tree_info = self._parse_tree_string(tree, doc_id)
+                    if tree_info:
+                        tree_data.append([
+                            doc_id, tree_info['tree_id'], tree_info['max_layers'], 
+                            tree_info['node_count'], 
+                            tree_info['root_question'][:100] + '...' if len(tree_info['root_question']) > 100 else tree_info['root_question'],
+                            tree_info['root_answer'],
+                            tree_info['final_composite_query'][:100] + '...' if len(tree_info['final_composite_query']) > 100 else tree_info['final_composite_query']
+                        ])
                 else:
-                    root_question = 'N/A'
-                    root_answer = 'N/A'
-                
-                final_composite = getattr(tree, 'final_composite_query', 'N/A')
-                
-                tree_data.append([
-                    doc_id, tree_id, max_layers, node_count,
-                    root_question[:100] + '...' if len(root_question) > 100 else root_question,
-                    root_answer,
-                    final_composite[:100] + '...' if len(final_composite) > 100 else final_composite
-                ])
+                    # 处理对象形式的树
+                    tree_id = getattr(tree, 'tree_id', 'Unknown')
+                    max_layers = getattr(tree, 'max_layers', 0)
+                    node_count = len(getattr(tree, 'all_nodes', {}))
+                    
+                    root_node = getattr(tree, 'root_node', None)
+                    if root_node:
+                        root_query = getattr(root_node, 'query', None)
+                        root_question = getattr(root_query, 'query_text', 'N/A') if root_query else 'N/A'
+                        root_answer = getattr(root_query, 'answer', 'N/A') if root_query else 'N/A'
+                    else:
+                        root_question = 'N/A'
+                        root_answer = 'N/A'
+                    
+                    final_composite = getattr(tree, 'final_composite_query', 'N/A')
+                    
+                    tree_data.append([
+                        doc_id, tree_id, max_layers, node_count,
+                        root_question[:100] + '...' if len(root_question) > 100 else root_question,
+                        root_answer,
+                        final_composite[:100] + '...' if len(final_composite) > 100 else final_composite
+                    ])
         
         if len(tree_data) > 1:
             df = pd.DataFrame(tree_data[1:], columns=tree_data[0])
             df.to_excel(writer, sheet_name='推理树', index=False)
+    
+    def _parse_tree_string(self, tree_str: str, doc_id: str) -> Dict[str, Any]:
+        """解析推理树字符串"""
+        import re
+        try:
+            # 提取tree_id
+            tree_id_match = re.search(r"tree_id='([^']+)'", tree_str)
+            tree_id = tree_id_match.group(1) if tree_id_match else 'Unknown'
+            
+            # 提取根问题信息
+            root_question_match = re.search(r"query_text='([^']+)'", tree_str)
+            root_question = root_question_match.group(1) if root_question_match else 'N/A'
+            
+            # 提取根答案
+            answer_match = re.search(r"answer='([^']+)'", tree_str)
+            root_answer = answer_match.group(1) if answer_match else 'N/A'
+            
+            # 提取最大层数
+            max_layers_match = re.search(r"max_layers=(\d+)", tree_str)
+            max_layers = int(max_layers_match.group(1)) if max_layers_match else 0
+            
+            # 计算节点数量
+            node_count = len(re.findall(r"QuestionTreeNode\(", tree_str))
+            
+            # 提取综合问题
+            composite_match = re.search(r"final_composite_query='([^']+)'", tree_str)
+            composite_query = composite_match.group(1) if composite_match else 'Logical reasoning chain question requiring genuine step-by-step solving'
+            
+            return {
+                'tree_id': tree_id,
+                'root_question': root_question,
+                'root_answer': root_answer,
+                'max_layers': max_layers,
+                'node_count': node_count,
+                'final_composite_query': composite_query
+            }
+            
+        except Exception as e:
+            logger.warning(f"解析推理树字符串失败: {e}")
+            return {
+                'tree_id': 'Parse_Error',
+                'root_question': 'N/A',
+                'root_answer': 'N/A',
+                'max_layers': 0,
+                'node_count': 0,
+                'final_composite_query': 'N/A'
+            }
     
     def _write_composite_queries_sheet(self, results: Dict[str, Any], writer):
         """写入综合问题Sheet"""

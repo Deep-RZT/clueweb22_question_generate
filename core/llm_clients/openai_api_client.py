@@ -37,7 +37,7 @@ class OpenAIClient:
         
     def generate_content(self, prompt: str, system_prompt: str = None, 
                         max_tokens: int = 6000, temperature: float = 0.7,
-                        max_retries: int = 10, retry_delay: float = 2.0) -> Optional[str]:
+                        max_retries: int = 3, retry_delay: float = 2.0) -> Optional[str]:
         """
         Generate content using OpenAI API with optimized parameters for longer responses
         
@@ -72,7 +72,7 @@ class OpenAIClient:
             try:
                 print(f"  🔄 OpenAI API调用 (尝试 {attempt + 1}/{max_retries})")
                 
-                response = requests.post(self.api_url, headers=self.headers, json=data, timeout=120)
+                response = requests.post(self.api_url, headers=self.headers, json=data, timeout=30)
                 response.raise_for_status()
                 
                 result = response.json()
@@ -151,7 +151,7 @@ class OpenAIClient:
                      max_tokens: int = 4000,
                      temperature: float = 0.7,
                      system_prompt: Optional[str] = None,
-                     max_retries: int = 10,
+                     max_retries: int = 3,
                      retry_delay: float = 2.0) -> APIResponse:
         """生成文本 - 与Claude API兼容的接口，增加重试机制"""
         
@@ -174,7 +174,7 @@ class OpenAIClient:
             try:
                 print(f"  🔄 OpenAI API调用 (尝试 {attempt + 1}/{max_retries})")
                 
-                response = requests.post(self.api_url, headers=self.headers, json=data, timeout=120)
+                response = requests.post(self.api_url, headers=self.headers, json=data, timeout=30)
                 response.raise_for_status()
                 
                 result = response.json()

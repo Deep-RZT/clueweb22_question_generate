@@ -27,6 +27,10 @@ from dataclasses import dataclass, field
 from pathlib import Path
 import uuid
 
+# 导入循环问题处理器和并行验证器
+from circular_problem_handler import CircularProblemHandler
+from parallel_keyword_validator import create_parallel_validator
+
 # 设置日志
 logger = logging.getLogger(__name__)
 
@@ -91,6 +95,12 @@ class AgentDepthReasoningFramework:
         self.max_short_answers = 3
         self.max_tree_layers = 3
         self.trajectory_records = []
+        
+        # 初始化循环问题处理器
+        self.circular_handler = CircularProblemHandler()
+        
+        # 初始化并行关键词验证器
+        self.parallel_validator = create_parallel_validator(api_client, max_workers=3) if api_client else None
         
         # 统计信息
         self.stats = {
@@ -168,9 +178,17 @@ class AgentDepthReasoningFramework:
             processing_time = time.time() - start_time
             self.stats['documents_processed'] += 1
             
-            return self._create_success_result(
+            # 记录循环处理器统计
+            self.circular_handler.log_statistics()
+            
+            result = self._create_success_result(
                 document_id, reasoning_trees, processing_time
             )
+            
+            # 添加循环处理器统计到结果中
+            result['circular_handler_stats'] = self.circular_handler.get_statistics()
+            
+            return result
             
         except Exception as e:
             logger.error(f"处理文档失败 {document_id}: {e}")
@@ -265,18 +283,27 @@ class AgentDepthReasoningFramework:
             logger.info(f"✅ 提取到 {len(minimal_keywords)} 个最小关键词: {[kw.keyword for kw in minimal_keywords]}")
             self.stats['minimal_keywords_found'] += len(minimal_keywords)
             
-            # 记录轨迹
-            self._record_trajectory({
-                'step': 'step2_minimal_keywords',
-                'root_query_id': root_query.query_id,
-                'minimal_keywords': [{
-                    'keyword': kw.keyword,
-                    'type': kw.keyword_type,
-                    'uniqueness_score': kw.uniqueness_score,
-                    'necessity_score': kw.necessity_score
-                } for kw in minimal_keywords],
-                'total_count': len(minimal_keywords)
-            })
+            # 只有当有关键词时才记录轨迹
+            if minimal_keywords:
+                self._record_trajectory({
+                    'step': 'step2_minimal_keywords',
+                    'root_query_id': root_query.query_id,
+                    'minimal_keywords': [{
+                        'keyword': kw.keyword,
+                        'type': kw.keyword_type,
+                        'uniqueness_score': kw.uniqueness_score,
+                        'necessity_score': kw.necessity_score
+                    } for kw in minimal_keywords],
+                    'total_count': len(minimal_keywords)
+                })
+            else:
+                # 记录关键词提取失败的情况
+                self._record_trajectory({
+                    'step': 'step2_minimal_keywords_failed',
+                    'root_query_id': root_query.query_id,
+                    'error': 'No minimal keywords extracted',
+                    'total_count': 0
+                })
             
             return minimal_keywords
             
@@ -447,8 +474,10 @@ class AgentDepthReasoningFramework:
         try:
             logger.info(f"创建Series扩展 (Layer {layer}): 关键词 '{keyword.keyword}'")
             
-            # 使用Web搜索获取关键词相关信息
-            search_context = self._web_search_for_keyword(keyword.keyword)
+            # 使用智能Web搜索获取关键词相关信息 (集成循环检测)
+            search_context = self._smart_web_search_for_keyword(
+                keyword.keyword, parent_query.query_text, parent_query.answer
+            )
             
             # 生成无关联的新问题
             extension_query = self._generate_unrelated_query(
@@ -486,8 +515,10 @@ class AgentDepthReasoningFramework:
             
             parallel_queries = []
             for i, keyword in enumerate(keywords):
-                # 为每个关键词生成独立问题
-                search_context = self._web_search_for_keyword(keyword.keyword)
+                # 为每个关键词生成独立问题 (集成循环检测)
+                search_context = self._smart_web_search_for_keyword(
+                    keyword.keyword, root_query.query_text, root_query.answer
+                )
                 
                 extension_query = self._generate_unrelated_query(
                     keyword, search_context, layer, f"{tree_id}_parallel_{layer}_{i}"
@@ -546,8 +577,12 @@ class AgentDepthReasoningFramework:
                     'total_layers': max(queries_by_layer.keys()) + 1,
                     'queries_per_layer': {str(k): len(v) for k, v in queries_by_layer.items()},
                     'composite_query_length': len(composite_query),
-                    'complexity_score': self._calculate_complexity_score(composite_query)
+                    'complexity_score': self._calculate_complexity_score(composite_query),
+                    'composite_query': composite_query
                 })
+                
+                # 记录完整推理树结构
+                self._record_complete_tree_trajectory(tree)
                 
                 return composite_query
             
@@ -562,6 +597,44 @@ class AgentDepthReasoningFramework:
         record['timestamp'] = time.time()
         record['step_id'] = len(self.trajectory_records) + 1
         self.trajectory_records.append(record)
+    
+    def _record_complete_tree_trajectory(self, tree: AgentReasoningTree):
+        """记录完整的推理树轨迹结构"""
+        try:
+            # 记录推理树的所有节点
+            for node_id, node in tree.all_nodes.items():
+                if hasattr(node, 'precise_query') and node.precise_query:
+                    self._record_trajectory({
+                        'step': f'tree_node_layer_{node.layer}',
+                        'tree_id': tree.tree_id,
+                        'node_id': node_id,
+                        'layer': node.layer,
+                        'query_text': node.precise_query.query_text,
+                        'answer': node.precise_query.answer,
+                        'minimal_keywords': [kw.keyword for kw in node.precise_query.minimal_keywords] if hasattr(node.precise_query, 'minimal_keywords') else [],
+                        'keyword_count': len(node.precise_query.minimal_keywords) if hasattr(node.precise_query, 'minimal_keywords') else 0,
+                        'parent_id': node.parent_id,
+                        'children_ids': node.children_ids,
+                        'branch_type': node.branch_type if hasattr(node, 'branch_type') else 'unknown',
+                        'validation_passed': node.precise_query.validation_passed if hasattr(node.precise_query, 'validation_passed') else True
+                    })
+            
+            # 记录最终综合问题
+            if tree.final_composite_query:
+                self._record_trajectory({
+                    'step': 'final_composite_query_complete',
+                    'tree_id': tree.tree_id,
+                    'composite_query': tree.final_composite_query,
+                    'root_answer': tree.root_answer,
+                    'total_nodes': len(tree.all_nodes),
+                    'max_depth': tree.max_depth,
+                    'complexity_score': tree.complexity_score if hasattr(tree, 'complexity_score') else 0.0
+                })
+            
+            logger.info(f"✅ 完整推理树轨迹记录完成: {len(tree.all_nodes)} 个节点")
+            
+        except Exception as e:
+            logger.error(f"记录完整推理树轨迹失败: {e}")
     
     def _create_success_result(
         self, document_id: str, reasoning_trees: List[AgentReasoningTree], 
@@ -955,11 +1028,17 @@ class AgentDepthReasoningFramework:
             # 参考WorkFlow：Perform Minimum Keyword Check - masking test
             logger.info(f"验证 {len(keywords)} 个关键词的必要性")
             
-            necessary_keywords = []
-            
-            for keyword in keywords:
-                # 为每个关键词执行masking测试
-                masking_prompt = f"""**TASK: Perform Minimum Keyword Check for Agent reasoning testing.**
+            # 使用并行验证器
+            if self.parallel_validator:
+                necessary_keywords = self.parallel_validator.validate_keywords_parallel(
+                    keywords, query_text, answer
+                )
+            else:
+                # 回退到串行验证
+                necessary_keywords = []
+                for keyword in keywords:
+                    # 为每个关键词执行masking测试
+                    masking_prompt = f"""**TASK: Perform Minimum Keyword Check for Agent reasoning testing.**
 
 **ORIGINAL QUERY:** {query_text}
 **TARGET ANSWER:** {answer}
@@ -993,34 +1072,34 @@ Mask the keyword "{keyword.keyword}" from the query and check if the remaining k
 
 **TARGET: Determine if this keyword is essential for unique answer identification.**"""
 
-                response = self.api_client.generate_response(
-                    prompt=masking_prompt,
-                    temperature=0.2,
-                    max_tokens=400
-                )
-                
-                parsed_data = self._parse_json_response(response)
-                if parsed_data:
-                    is_necessary = parsed_data.get('is_necessary', True)
+                    response = self.api_client.generate_response(
+                        prompt=masking_prompt,
+                        temperature=0.2,
+                        max_tokens=400
+                    )
                     
-                    # 安全地解析necessity_score
-                    try:
-                        necessity_score = float(parsed_data.get('necessity_score', 0.8))
-                    except (ValueError, TypeError):
-                        necessity_score = 0.8
-                    
-                    # 更新关键词的必要性分数
-                    keyword.necessity_score = necessity_score
-                    
-                    # 只保留必要的关键词（分数 > 0.5）
-                    if is_necessary and necessity_score > 0.5:
-                        necessary_keywords.append(keyword)
-                        logger.info(f"✅ 关键词 '{keyword.keyword}' 是必要的 (分数: {necessity_score:.2f})")
+                    parsed_data = self._parse_json_response(response)
+                    if parsed_data:
+                        is_necessary = parsed_data.get('is_necessary', True)
+                        
+                        # 安全地解析necessity_score
+                        try:
+                            necessity_score = float(parsed_data.get('necessity_score', 0.8))
+                        except (ValueError, TypeError):
+                            necessity_score = 0.8
+                        
+                        # 更新关键词的必要性分数
+                        keyword.necessity_score = necessity_score
+                        
+                        # 只保留必要的关键词（分数 > 0.5）
+                        if is_necessary and necessity_score > 0.5:
+                            necessary_keywords.append(keyword)
+                            logger.info(f"✅ 关键词 '{keyword.keyword}' 是必要的 (分数: {necessity_score:.2f})")
+                        else:
+                            logger.info(f"❌ 关键词 '{keyword.keyword}' 不是必要的 (分数: {necessity_score:.2f})")
                     else:
-                        logger.info(f"❌ 关键词 '{keyword.keyword}' 不是必要的 (分数: {necessity_score:.2f})")
-                else:
-                    # 解析失败，保守地保留关键词
-                    necessary_keywords.append(keyword)
+                        # 解析失败，保守地保留关键词
+                        necessary_keywords.append(keyword)
             
             logger.info(f"验证完成: {len(necessary_keywords)}/{len(keywords)} 个关键词是必要的")
             return necessary_keywords
@@ -1066,6 +1145,63 @@ Mask the keyword "{keyword.keyword}" from the query and check if the remaining k
         except Exception as e:
             logger.error(f"Web搜索 '{keyword}' 失败: {e}")
             return f"Search context for {keyword}"
+    
+    def _smart_web_search_for_keyword(self, keyword: str, parent_question: str, parent_answer: str) -> str:
+        """智能Web搜索 - 集成循环问题处理器"""
+        
+        # 如果没有搜索客户端，使用简单上下文
+        if not self.search_client:
+            return f"Search context for {keyword}"
+        
+        try:
+            # 1. 使用循环问题处理器评估和处理循环风险
+            search_results = self.circular_handler.handle_circular_risk(
+                keyword, parent_question, parent_answer, self
+            )
+            
+            # 2. 如果循环处理器返回None，表示跳过该关键词
+            if search_results is None:
+                logger.warning(f"🚫 循环风险过高，跳过关键词: {keyword}")
+                self.stats['circular_reasoning_prevented'] = self.stats.get('circular_reasoning_prevented', 0) + 1
+                return ""  # 返回空字符串表示跳过
+            
+            # 3. 处理搜索结果
+            if search_results:
+                search_content = []
+                for result in search_results[:3]:  # 最多使用3个结果
+                    content = result.get('content', '')
+                    snippet = result.get('snippet', '')
+                    combined = f"{snippet} {content}"[:300]
+                    if combined.strip():
+                        search_content.append(combined)
+                
+                if search_content:
+                    search_context = " ".join(search_content)
+                    logger.info(f"🌐 智能搜索 '{keyword}': 获取 {len(search_content)} 个结果 (循环已检测)")
+                    return search_context
+            
+            # 4. 如果没有有效结果，回退到原始搜索
+            logger.info(f"🔄 循环处理无结果，回退到标准搜索: {keyword}")
+            return self._web_search_for_keyword(keyword)
+                
+        except Exception as e:
+            logger.error(f"智能搜索 '{keyword}' 失败: {e}")
+            # 出错时回退到标准搜索
+            return self._web_search_for_keyword(keyword)
+    
+    def search(self, query: str, max_results: int = 3):
+        """提供给循环处理器使用的搜索接口"""
+        if not self.search_client:
+            return None
+        
+        try:
+            results = self.search_client(query, max_results=max_results)
+            if results and 'results' in results:
+                return results['results']
+            return None
+        except Exception as e:
+            logger.error(f"搜索接口调用失败: {e}")
+            return None
     
     def _generate_unrelated_query(
         self, keyword: MinimalKeyword, search_context: str, 
@@ -1492,43 +1628,49 @@ Mask the keyword "{keyword.keyword}" from the query and check if the remaining k
                 all_queries.extend(queries)
                 layer_summary.append(f"Layer {layer}: {len(queries)} queries")
             
-            # 生成嵌套式综合问题
-            composite_prompt = f"""**TASK: Generate a nested composite question for Agent depth reasoning testing.**
+            # 生成有逻辑链条的综合问题 
+            composite_prompt = f"""**TASK: Create a LOGICAL REASONING CHAIN for Agent testing (NOT simple concatenation).**
 
-**TARGET ANSWER:** {root_answer}
+**TARGET FINAL ANSWER:** {root_answer}
+**AVAILABLE SUB-QUESTIONS:** {chr(10).join([f"Q{i+1}: {q}" for i, q in enumerate(all_queries)])}
 **LAYER STRUCTURE:** {' | '.join(layer_summary)}
 
-**ALL LAYER QUERIES:**
-{chr(10).join([f"Q{i+1}: {q}" for i, q in enumerate(all_queries)])}
+**CRITICAL REQUIREMENTS for AGENT REASONING:**
+1. **LOGICAL CHAIN**: Each step's answer must be INPUT for next step
+2. **DEPENDENCY**: Question2 depends on Answer1, Question3 depends on Answer2, etc.
+3. **NO SHORTCUTS**: Agent cannot jump directly to final answer
+4. **STEP-BY-STEP**: Must solve in sequence to reach {root_answer}
 
-**COMPOSITE DESIGN REQUIREMENTS:**
-1. Create a **NESTED** question structure: (query, query, query...) format
-2. The composite question must require **STEP-BY-STEP reasoning** to reach "{root_answer}"
-3. **Prevent direct answer**: Normal LLMs should NOT be able to answer directly
-4. **Force Agent reasoning**: Require logical progression through multiple steps
-5. **Maintain answer consistency**: Final answer must still be "{root_answer}"
+**FORBIDDEN PATTERNS (avoid these):**
+❌ "First find X, then find Y, then find Z" (independent questions)
+❌ "Determine A, understand B, evaluate C" (no logical connection)  
+❌ Simple concatenation without reasoning dependencies
 
-**NESTING STRATEGIES:**
-- **Sequential Dependencies**: Answer A leads to Question B leads to Question C
-- **Information Gathering**: Collect pieces from different questions to form final answer
-- **Logical Inference**: Combine insights from multiple questions for final conclusion
-- **Elimination Process**: Use multiple questions to eliminate wrong answers
+**REQUIRED PATTERN (use this):**
+✅ "To find {root_answer}, you must follow this reasoning chain:
+Step 1: First determine [KEY_INFO_1] by solving [SUB_QUESTION_1]
+Step 2: Use [KEY_INFO_1] to identify [KEY_INFO_2] through [SUB_QUESTION_2]  
+Step 3: Apply [KEY_INFO_2] to finally determine {root_answer}"
 
-**COMPOSITE PATTERNS:**
-- "Given that [Q1] and considering [Q2], which [specific aspect] related to [Q3] represents [target]?"
-- "To identify [target], first determine [Q1], then analyze [Q2], and finally evaluate [Q3]."
-- "The answer to [target] requires understanding [Q1] in context of [Q2] while considering [Q3]."
+**REASONING CHAIN STRUCTURE:**
+Each step must provide information NEEDED for the next step.
+Answer₁ → Input₂ → Answer₂ → Input₃ → Final Answer
+
+**EXAMPLES of GOOD REASONING CHAINS:**
+- "To identify the company, first find what technology was developed in year X, then determine which company pioneered that technology in location Y."
+- "To determine the temperature, first identify the instrument type from description Z, then find which mission used that instrument, then lookup the operating temperature."
 
 **Output Format (JSON):**
 {{
-    "composite_query": "Nested composite question requiring step-by-step reasoning",
-    "reasoning_steps": ["Step 1: ...", "Step 2: ...", "Step 3: ..."],
-    "agent_difficulty": "easy/medium/hard/expert",
-    "direct_answer_prevention": "how this prevents direct answering",
-    "final_answer_verification": "confirmation that answer is still '{root_answer}'"
+    "composite_query": "Logical reasoning chain question requiring genuine step-by-step solving",
+    "reasoning_steps": ["Step 1: Get X to use in Step 2", "Step 2: Use X to get Y for Step 3", "Step 3: Use Y to find {root_answer}"],
+    "dependency_chain": "Answer1 → Question2 → Answer2 → Question3 → {root_answer}",
+    "agent_difficulty": "medium/hard",
+    "prevents_direct_answer": "Why Agent must solve step-by-step instead of direct answer",
+    "final_answer_confirmed": "{root_answer}"
 }}
 
-**TARGET: Generate ONE complex nested question that challenges Agent reasoning while maintaining answer consistency.**"""
+**TARGET: Generate ONE reasoning chain that requires genuine sequential Agent reasoning to reach {root_answer}.**"""
 
             response = self.api_client.generate_response(
                 prompt=composite_prompt,
