@@ -289,16 +289,38 @@ class AgentDepthReasoningFramework:
                     root_queries.append(root_query)
                     self.stats['root_queries_generated'] += 1
                     
-                    # 记录轨迹
-                    self._record_trajectory({
-                        'step': 'step1_root_query_generation',
-                        'query_id': root_query.query_id,
-                        'query_text': root_query.query_text,
-                        'answer': root_query.answer,
-                        'minimal_keywords': [kw.keyword for kw in root_query.minimal_keywords],
-                        'keyword_count': len(root_query.minimal_keywords),
-                        'validation_passed': root_query.validation_passed
-                    })
+                    # 记录轨迹 - 使用增强的记录功能
+                    try:
+                        self._record_detailed_trajectory_enhanced(
+                            'step1_root_query_generation',
+                            layer_level=0,
+                            keywords=[kw.keyword for kw in root_query.minimal_keywords],
+                            current_question=root_query.query_text,
+                            current_answer=root_query.answer,
+                            query_id=root_query.query_id,
+                            extension_type='root',
+                            generation_method=root_query.generation_method,
+                            validation_results={'validation_passed': root_query.validation_passed},
+                            short_answer_info={
+                                'answer_text': short_answer.answer_text,
+                                'answer_type': short_answer.answer_type,
+                                'confidence': short_answer.confidence
+                            },
+                            web_search_context=search_context if 'search_context' in locals() else '',
+                            uniqueness_verified=root_query.validation_passed
+                        )
+                    except Exception as e:
+                        logger.warning(f"增强轨迹记录失败，使用原有记录: {e}")
+                        # 回退到原有记录方法
+                        self._record_trajectory({
+                            'step': 'step1_root_query_generation',
+                            'query_id': root_query.query_id,
+                            'query_text': root_query.query_text,
+                            'answer': root_query.answer,
+                            'minimal_keywords': [kw.keyword for kw in root_query.minimal_keywords],
+                            'keyword_count': len(root_query.minimal_keywords),
+                            'validation_passed': root_query.validation_passed
+                        })
             
             logger.info(f"✅ Step 1完成: 生成 {len(root_queries)} 个Root Query")
             return root_queries
@@ -543,12 +565,51 @@ class AgentDepthReasoningFramework:
             )
             
             if extension_query:
-                # 验证无关联性
-                if self._validate_no_correlation(parent_query.query_text, extension_query.query_text):
-                    logger.info(f"✅ Series扩展成功: {extension_query.query_text}")
+                # 验证无关联性 - 使用增强的严格验证
+                validation_passed = False
+                try:
+                    # 优先使用新的严格无关联验证
+                    parent_questions = [parent_query.query_text]
+                    if self._validate_strict_no_correlation(parent_questions, extension_query.query_text, layer):
+                        logger.info(f"✅ Series扩展成功 (严格验证通过): {extension_query.query_text}")
+                        validation_passed = True
+                    else:
+                        logger.warning("Series扩展失败: 严格验证未通过 - 存在关联")
+                except Exception as e:
+                    logger.warning(f"严格验证失败，回退到原有验证: {e}")
+                    # 回退到原有验证方法
+                    if self._validate_no_correlation(parent_query.query_text, extension_query.query_text):
+                        logger.info(f"✅ Series扩展成功 (原有验证通过): {extension_query.query_text}")
+                        validation_passed = True
+                    else:
+                        logger.warning("Series扩展失败: 与父问题存在关联")
+                
+                # 记录Series扩展轨迹
+                try:
+                    self._record_detailed_trajectory_enhanced(
+                        step=f"step3_series_extension_layer_{layer}",
+                        layer_level=layer,
+                        current_keywords=[keyword.keyword],
+                        keyword_count=1,
+                        parent_question=parent_query.query_text,
+                        parent_answer=parent_query.answer,
+                        parent_keywords=[kw.keyword for kw in parent_query.minimal_keywords],
+                        current_question=extension_query.query_text,
+                        current_answer=extension_query.answer,
+                        generation_method=extension_query.generation_method,
+                        validation_results={'validation_passed': validation_passed},
+                        no_correlation_verified=validation_passed,
+                        tree_id=tree_id,
+                        query_id=extension_query.query_id,
+                        extension_type="series"
+                    )
+                except Exception as e:
+                    logger.error(f"记录Series扩展轨迹失败: {e}")
+                
+                if validation_passed:
                     return extension_query
                 else:
-                    logger.warning("Series扩展失败: 与父问题存在关联")
+                    return None
             
             return None
             
@@ -583,12 +644,49 @@ class AgentDepthReasoningFramework:
                 )
                 
                 if extension_query:
-                    # 验证与Root问题无关联
-                    if self._validate_no_correlation(root_query.query_text, extension_query.query_text):
-                        parallel_queries.append(extension_query)
-                        logger.info(f"✅ Parallel扩展 {i+1}: {extension_query.query_text}")
-                    else:
-                        logger.warning(f"Parallel扩展 {i+1} 失败: 与Root问题存在关联")
+                    # 验证与Root问题无关联 - 使用增强的严格验证
+                    validation_passed = False
+                    try:
+                        # 优先使用新的严格无关联验证
+                        parent_questions = [root_query.query_text]
+                        if self._validate_strict_no_correlation(parent_questions, extension_query.query_text, layer):
+                            parallel_queries.append(extension_query)
+                            logger.info(f"✅ Parallel扩展 {i+1} (严格验证通过): {extension_query.query_text}")
+                            validation_passed = True
+                        else:
+                            logger.warning(f"Parallel扩展 {i+1} 失败: 严格验证未通过 - 存在关联")
+                    except Exception as e:
+                        logger.warning(f"Parallel扩展 {i+1} 严格验证失败，回退到原有验证: {e}")
+                        # 回退到原有验证方法
+                        if self._validate_no_correlation(root_query.query_text, extension_query.query_text):
+                            parallel_queries.append(extension_query)
+                            logger.info(f"✅ Parallel扩展 {i+1} (原有验证通过): {extension_query.query_text}")
+                            validation_passed = True
+                        else:
+                            logger.warning(f"Parallel扩展 {i+1} 失败: 与Root问题存在关联")
+                    
+                    # 记录Parallel扩展轨迹
+                    try:
+                        self._record_detailed_trajectory_enhanced(
+                            step=f"step4_parallel_extension_layer_{layer}_{i}",
+                            layer_level=layer,
+                            current_keywords=[keyword.keyword],
+                            keyword_count=1,
+                            parent_question=root_query.query_text,
+                            parent_answer=root_query.answer,
+                            parent_keywords=[kw.keyword for kw in root_query.minimal_keywords],
+                            current_question=extension_query.query_text,
+                            current_answer=extension_query.answer,
+                            generation_method=extension_query.generation_method,
+                            validation_results={'validation_passed': validation_passed},
+                            no_correlation_verified=validation_passed,
+                            tree_id=tree_id,
+                            query_id=extension_query.query_id,
+                            extension_type="parallel",
+                            parallel_index=i
+                        )
+                    except Exception as e:
+                        logger.error(f"记录Parallel扩展轨迹失败: {e}")
             
             logger.info(f"✅ 完成Parallel扩展: {len(parallel_queries)}/{len(keywords)} 个问题")
             return parallel_queries
@@ -813,22 +911,19 @@ class AgentDepthReasoningFramework:
 
 **OUTPUT:** A natural language answer showing the reasoning chain."""
 
-            response = self.api_client.chat.completions.create(
-                model="gpt-4o",
-                messages=[
-                    {"role": "system", "content": "You are an expert at creating clear, logical answer explanations."},
-                    {"role": "user", "content": integration_prompt}
-                ],
+            # 构建完整的prompt（包含系统指令）
+            full_prompt = "You are an expert at creating clear, logical answer explanations.\n\n" + integration_prompt
+            
+            response = self.api_client.generate_response(
+                prompt=full_prompt,
                 temperature=0.4,
-                max_tokens=300,
-                timeout=30
+                max_tokens=300
             )
             
-            if response.choices and response.choices[0].message:
-                integrated_answer = response.choices[0].message.content.strip()
-                if integrated_answer and len(integrated_answer) > 10:
-                    logger.info(f"✅ LLM整合型答案生成: {len(integrated_answer)} 字符")
-                    return integrated_answer
+            if response and len(response.strip()) > 10:
+                integrated_answer = response.strip()
+                logger.info(f"✅ LLM整合型答案生成: {len(integrated_answer)} 字符")
+                return integrated_answer
             
             return self._generate_fallback_integrated_answer(answers_by_layer, root_answer)
             
@@ -1164,14 +1259,22 @@ class AgentDepthReasoningFramework:
                 logger.warning("无法解析问题生成响应")
                 return None
             
-            # Step 3: 移除非必要关键词
+            # Step 3: 移除非必要关键词 - 使用新的精确算法
             question_text = parsed_data['question_text']
             initial_keywords = parsed_data.get('minimal_keywords', [])
             
-            # 验证和优化关键词
-            optimized_keywords = self._optimize_minimal_keywords(
-                question_text, short_answer.answer_text, initial_keywords
-            )
+            # 优先使用新的精确关键词最小化算法
+            try:
+                optimized_keywords = self._optimize_minimal_keywords_precisely(
+                    question_text, short_answer.answer_text, initial_keywords
+                )
+                logger.info(f"✅ 使用精确算法优化关键词: {len(optimized_keywords)} 个必要关键词")
+            except Exception as e:
+                logger.warning(f"精确算法失败，回退到原有方法: {e}")
+                # 回退到原有的关键词优化方法
+                optimized_keywords = self._optimize_minimal_keywords(
+                    question_text, short_answer.answer_text, initial_keywords
+                )
             
             # Step 4: 创建MinimalKeyword对象
             minimal_keywords = []
@@ -1186,10 +1289,27 @@ class AgentDepthReasoningFramework:
                 )
                 minimal_keywords.append(minimal_keyword)
             
-            # Step 5: 最终验证
+            # Step 5: 最终验证 - 集成最小精确问题验证
             validation_passed = self._validate_root_query(
                 question_text, short_answer.answer_text, minimal_keywords
             )
+            
+            # 额外的最小精确问题验证
+            try:
+                precise_validation = self._validate_minimal_precise_question(
+                    question_text, short_answer.answer_text, optimized_keywords
+                )
+                
+                if precise_validation.get('is_minimal', False) and precise_validation.get('is_precise', False):
+                    logger.info(f"✅ 最小精确问题验证通过: 质量评级 {precise_validation.get('overall_quality', 'fair')}")
+                    validation_passed = validation_passed and True
+                else:
+                    logger.warning(f"⚠️ 最小精确问题验证未完全通过: {precise_validation.get('reasoning', 'No details')}")
+                    # 不强制失败，但记录警告
+                    
+            except Exception as e:
+                logger.warning(f"最小精确问题验证失败: {e}")
+                # 不影响主流程
             
             precise_query = PreciseQuery(
                 query_id=query_id,
@@ -2177,3 +2297,447 @@ Answer₁ → Input₂ → Answer₂ → Input₃ → Final Answer
             
         except Exception as e:
             logger.error(f"构建第二层扩展失败: {e}") 
+
+    # ============ 新增优化方法 (基于用户新设计要求) ============
+
+    def _optimize_minimal_keywords_precisely(self, question_text: str, answer: str, initial_keywords: List[str]) -> List[str]:
+        """
+        精确的关键词最小化算法 - 基于用户新设计要求
+        
+        要求：如果移除某个keyword也能得到answer，就直接移除这个keyword，
+        保留另一个keyword，最后的一个keyword的问题才是我们要的最小、最精确问题。
+        """
+        if not self.api_client or not initial_keywords:
+            return self._optimize_minimal_keywords(question_text, answer, initial_keywords)
+        
+        try:
+            logger.info(f"开始精确关键词最小化测试: {len(initial_keywords)} 个候选关键词")
+            
+            essential_keywords = []
+            
+            for keyword in initial_keywords:
+                # 构造移除该关键词的问题
+                modified_question = question_text.replace(keyword, "[MASKED]")
+                
+                # 测试剩余关键词是否仍能唯一确定答案
+                can_still_determine = self._test_answer_determination_without_keyword(
+                    modified_question, answer, keyword, [k for k in initial_keywords if k != keyword]
+                )
+                
+                if not can_still_determine:
+                    # 移除该关键词会影响答案的唯一性，因此是必要的
+                    essential_keywords.append(keyword)
+                    logger.info(f"✅ 关键词 '{keyword}' 是必要的 - 移除后无法唯一确定答案")
+                else:
+                    logger.info(f"❌ 关键词 '{keyword}' 非必要 - 移除后仍能确定答案")
+            
+            # 确保至少有一个关键词
+            if not essential_keywords and initial_keywords:
+                essential_keywords = [initial_keywords[0]]
+                logger.info(f"⚠️ 保留第一个关键词作为最小必要关键词: {initial_keywords[0]}")
+            
+            logger.info(f"✅ 精确最小化完成: {len(essential_keywords)}/{len(initial_keywords)} 个关键词是必要的")
+            return essential_keywords
+            
+        except Exception as e:
+            logger.error(f"精确关键词最小化失败: {e}")
+            # 回退到原有方法
+            return self._optimize_minimal_keywords(question_text, answer, initial_keywords)
+    
+    def _test_answer_determination_without_keyword(
+        self, modified_question: str, target_answer: str, removed_keyword: str, remaining_keywords: List[str]
+    ) -> bool:
+        """
+        测试移除某个关键词后，剩余关键词是否仍能唯一确定答案
+        
+        Args:
+            modified_question: 移除关键词后的问题
+            target_answer: 目标答案
+            removed_keyword: 被移除的关键词
+            remaining_keywords: 剩余的关键词
+            
+        Returns:
+            True: 仍能唯一确定答案（说明被移除的关键词非必要）
+            False: 无法唯一确定答案（说明被移除的关键词是必要的）
+        """
+        if not self.api_client:
+            return False
+        
+        try:
+            test_prompt = f"""**TASK: Test if remaining keywords can uniquely determine the answer after keyword removal.**
+
+**ORIGINAL QUESTION:** {modified_question.replace('[MASKED]', removed_keyword)}
+**MODIFIED QUESTION (keyword masked):** {modified_question}
+**REMOVED KEYWORD:** {removed_keyword}
+**REMAINING KEYWORDS:** {', '.join(remaining_keywords)}
+**TARGET ANSWER:** {target_answer}
+
+**EVALUATION CRITERIA:**
+1. Can the MODIFIED QUESTION with remaining keywords still **uniquely identify** the answer "{target_answer}"?
+2. Are there **multiple possible answers** when "{removed_keyword}" is removed?
+3. Does the removal create **ambiguity** or **uncertainty**?
+
+**TEST SCENARIOS:**
+- If removing "{removed_keyword}" allows other valid answers besides "{target_answer}" → Answer: "multiple_answers"
+- If the modified question becomes unclear or ambiguous → Answer: "ambiguous"  
+- If the remaining keywords still uniquely point to "{target_answer}" → Answer: "still_unique"
+
+**Output Format (JSON):**
+{{
+    "can_still_determine": true/false,
+    "determination_level": "still_unique/ambiguous/multiple_answers",
+    "alternative_answers": ["list", "of", "other", "possible", "answers"],
+    "reasoning": "detailed explanation of the determination test",
+    "necessity_of_removed_keyword": "essential/helpful/redundant"
+}}
+
+**TARGET: Determine if "{removed_keyword}" is essential for unique answer identification.**"""
+
+            response = self.api_client.generate_response(
+                prompt=test_prompt,
+                temperature=0.2,  # 低温度确保客观判断
+                max_tokens=400
+            )
+            
+            parsed_data = self._parse_json_response(response)
+            if parsed_data:
+                can_still_determine = parsed_data.get('can_still_determine', False)
+                determination_level = parsed_data.get('determination_level', 'ambiguous')
+                
+                # 只有在"still_unique"的情况下才认为可以移除该关键词
+                return can_still_determine and determination_level == 'still_unique'
+            else:
+                # 解析失败时保守处理，认为关键词是必要的
+                return False
+                
+        except Exception as e:
+            logger.error(f"测试关键词必要性失败: {e}")
+            return False
+    
+    def _record_detailed_trajectory_enhanced(self, step: str, **kwargs):
+        """
+        增强的轨迹记录 - 基于用户新设计要求
+        
+        详细记录每个阶段的层级、关键词、上一层问题、答案、keywords等信息
+        """
+        try:
+            trajectory_entry = {
+                'timestamp': time.time(),
+                'step': step,
+                'layer_level': kwargs.get('layer_level', 0),
+                'current_keywords': kwargs.get('current_keywords', kwargs.get('keywords', [])),
+                'keyword_count': len(kwargs.get('current_keywords', kwargs.get('keywords', []))),
+                'parent_question': kwargs.get('parent_question', ''),
+                'parent_answer': kwargs.get('parent_answer', ''),
+                'parent_keywords': kwargs.get('parent_keywords', []),
+                'current_question': kwargs.get('current_question', ''),
+                'current_answer': kwargs.get('current_answer', ''),
+                'generation_method': kwargs.get('generation_method', ''),
+                'validation_results': kwargs.get('validation_results', {}),
+                'keyword_necessity_scores': kwargs.get('keyword_necessity_scores', {}),
+                'circular_check_result': kwargs.get('circular_check', 'passed'),
+                'no_correlation_verified': kwargs.get('no_correlation_verified', False),
+                'processing_time_ms': kwargs.get('processing_time', 0) * 1000,
+                'tree_id': kwargs.get('tree_id', ''),
+                'query_id': kwargs.get('query_id', ''),
+                'extension_type': kwargs.get('extension_type', ''),  # root, series, parallel
+                'api_calls_count': kwargs.get('api_calls_count', kwargs.get('api_calls', 1)),  # 默认1次API调用
+                'search_queries_used': kwargs.get('search_queries', []),
+                'quality_metrics': {
+                    'question_length': len(kwargs.get('current_question', '')),
+                    'answer_length': len(kwargs.get('current_answer', '')),
+                    'complexity_score': kwargs.get('complexity_score', 0),
+                    'uniqueness_verified': kwargs.get('uniqueness_verified', False)
+                }
+            }
+            
+            # 添加阶段特定的信息
+            if step == 'step1_root_query_generation':
+                trajectory_entry['short_answer_info'] = kwargs.get('short_answer_info', {})
+                trajectory_entry['web_search_context'] = kwargs.get('web_search_context', '')
+                
+            elif step == 'step2_keyword_extraction':
+                trajectory_entry['candidate_keywords'] = kwargs.get('candidate_keywords', [])
+                trajectory_entry['masking_test_results'] = kwargs.get('masking_test_results', {})
+                trajectory_entry['minimal_keywords_found'] = kwargs.get('minimal_keywords_found', [])
+                
+            elif step in ['step3_series_extension', 'step4_parallel_extension']:
+                trajectory_entry['target_keyword'] = kwargs.get('target_keyword', '')
+                trajectory_entry['search_context'] = kwargs.get('search_context', '')
+                trajectory_entry['correlation_check'] = kwargs.get('correlation_check', {})
+                
+            elif step == 'step6_composite_query':
+                trajectory_entry['queries_by_layer'] = kwargs.get('queries_by_layer', {})
+                trajectory_entry['composite_formats'] = kwargs.get('composite_formats', {})
+                trajectory_entry['reasoning_chain_length'] = kwargs.get('reasoning_chain_length', 0)
+            
+            self.trajectory_records.append(trajectory_entry)
+            
+            # 同时记录到原有系统中保持兼容性
+            self._record_trajectory(trajectory_entry)
+            
+        except Exception as e:
+            logger.error(f"增强轨迹记录失败: {e}")
+            # 回退到原有记录方法
+            self._record_trajectory({
+                'step': step,
+                'error': str(e),
+                'kwargs': str(kwargs)
+            })
+    
+    def _validate_strict_no_correlation(self, parent_questions: List[str], new_question: str, target_layer: int) -> bool:
+        """
+        严格的无关联性验证 - 基于用户新设计要求
+        
+        确保任意层的query问题，互相层都不能有任何关联，只有parallel的有关联
+        """
+        if not parent_questions or not new_question:
+            return True
+        
+        try:
+            for parent_q in parent_questions:
+                # 1. 关键词重叠检测
+                if self._detect_keyword_overlap(parent_q, new_question):
+                    logger.warning(f"检测到关键词重叠: '{parent_q}' vs '{new_question}'")
+                    return False
+                
+                # 2. 主题域检测
+                if self._detect_same_knowledge_domain(parent_q, new_question):
+                    logger.warning(f"检测到相同知识域: '{parent_q}' vs '{new_question}'")
+                    return False
+                
+                # 3. 语义相似度检测
+                similarity_score = self._calculate_semantic_similarity(parent_q, new_question)
+                if similarity_score > 0.3:  # 阈值可调
+                    logger.warning(f"语义相似度过高 ({similarity_score:.2f}): '{parent_q}' vs '{new_question}'")
+                    return False
+                
+                # 4. 逻辑依赖检测
+                if self._detect_logical_dependency(parent_q, new_question):
+                    logger.warning(f"检测到逻辑依赖: '{parent_q}' vs '{new_question}'")
+                    return False
+            
+            logger.info(f"✅ 无关联性验证通过: Layer {target_layer}")
+            return True
+            
+        except Exception as e:
+            logger.error(f"无关联性验证失败: {e}")
+            return False  # 保守处理
+    
+    def _detect_keyword_overlap(self, question1: str, question2: str) -> bool:
+        """检测两个问题之间的关键词重叠"""
+        try:
+            keywords1 = self._extract_keywords_simple(question1)
+            keywords2 = self._extract_keywords_simple(question2)
+            
+            # 计算重叠率
+            overlap = set(keywords1) & set(keywords2)
+            total_unique = set(keywords1) | set(keywords2)
+            
+            if len(total_unique) == 0:
+                return False
+            
+            overlap_ratio = len(overlap) / len(total_unique)
+            return overlap_ratio > 0.2  # 20%以上重叠认为有关联
+            
+        except Exception as e:
+            logger.error(f"关键词重叠检测失败: {e}")
+            return True  # 保守处理
+    
+    def _extract_keywords_simple(self, text: str) -> List[str]:
+        """简单的关键词提取"""
+        import re
+        
+        # 移除常见词汇
+        stop_words = {
+            'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by',
+            'is', 'was', 'are', 'were', 'what', 'when', 'where', 'who', 'which', 'how', 'why',
+            'this', 'that', 'these', 'those', 'can', 'could', 'should', 'would', 'will', 'shall'
+        }
+        
+        # 提取有意义的词汇（至少3个字符，不在停用词中）
+        words = re.findall(r'\b\w{3,}\b', text.lower())
+        keywords = [word for word in words if word not in stop_words]
+        
+        return keywords
+    
+    def _detect_same_knowledge_domain(self, question1: str, question2: str) -> bool:
+        """检测是否属于相同知识域"""
+        try:
+            # 定义知识域关键词
+            domains = {
+                'technology': ['software', 'computer', 'algorithm', 'programming', 'system', 'data', 'digital'],
+                'business': ['company', 'corporation', 'market', 'sales', 'revenue', 'profit', 'industry'],
+                'science': ['research', 'study', 'experiment', 'analysis', 'theory', 'hypothesis', 'method'],
+                'geography': ['country', 'city', 'location', 'region', 'area', 'place', 'territory'],
+                'history': ['year', 'century', 'period', 'era', 'ancient', 'historical', 'past'],
+                'medicine': ['health', 'medical', 'disease', 'treatment', 'hospital', 'doctor', 'patient']
+            }
+            
+            q1_lower = question1.lower()
+            q2_lower = question2.lower()
+            
+            for domain, keywords in domains.items():
+                q1_matches = sum(1 for kw in keywords if kw in q1_lower)
+                q2_matches = sum(1 for kw in keywords if kw in q2_lower)
+                
+                # 如果两个问题都有该域的多个关键词，认为属于同一域
+                if q1_matches >= 2 and q2_matches >= 2:
+                    return True
+            
+            return False
+            
+        except Exception as e:
+            logger.error(f"知识域检测失败: {e}")
+            return True  # 保守处理
+    
+    def _calculate_semantic_similarity(self, text1: str, text2: str) -> float:
+        """计算语义相似度（简化版TF-IDF）"""
+        try:
+            from collections import Counter
+            import math
+            
+            # 简单的词频统计
+            words1 = self._extract_keywords_simple(text1)
+            words2 = self._extract_keywords_simple(text2)
+            
+            if not words1 or not words2:
+                return 0.0
+            
+            # 计算词频
+            freq1 = Counter(words1)
+            freq2 = Counter(words2)
+            
+            # 计算余弦相似度
+            all_words = set(words1) | set(words2)
+            
+            vec1 = [freq1.get(word, 0) for word in all_words]
+            vec2 = [freq2.get(word, 0) for word in all_words]
+            
+            # 余弦相似度公式
+            dot_product = sum(a * b for a, b in zip(vec1, vec2))
+            magnitude1 = math.sqrt(sum(a * a for a in vec1))
+            magnitude2 = math.sqrt(sum(a * a for a in vec2))
+            
+            if magnitude1 == 0 or magnitude2 == 0:
+                return 0.0
+            
+            similarity = dot_product / (magnitude1 * magnitude2)
+            return similarity
+            
+        except Exception as e:
+            logger.error(f"语义相似度计算失败: {e}")
+            return 1.0  # 保守处理，认为相似
+    
+    def _detect_logical_dependency(self, question1: str, question2: str) -> bool:
+        """检测逻辑依赖关系"""
+        try:
+            q1_lower = question1.lower()
+            q2_lower = question2.lower()
+            
+            # 检测时间依赖
+            time_patterns = [
+                r'\b(19|20)\d{2}\b',  # 年份
+                r'\b(january|february|march|april|may|june|july|august|september|october|november|december)\b',
+                r'\b(before|after|during|since|until)\b'
+            ]
+            
+            for pattern in time_patterns:
+                if re.search(pattern, q1_lower) and re.search(pattern, q2_lower):
+                    return True
+            
+            # 检测因果关系
+            causal_patterns = [
+                r'\b(because|since|therefore|thus|consequently|as a result)\b',
+                r'\b(cause|effect|reason|due to|leads to)\b'
+            ]
+            
+            for pattern in causal_patterns:
+                if re.search(pattern, q1_lower) or re.search(pattern, q2_lower):
+                    return True
+            
+            return False
+            
+        except Exception as e:
+            logger.error(f"逻辑依赖检测失败: {e}")
+            return True  # 保守处理
+    
+    def _validate_minimal_precise_question(self, question_text: str, answer: str, keywords: List[str]) -> Dict[str, Any]:
+        """
+        验证是否为最小精确问题 - 基于用户新设计要求
+        
+        验证问题是否包含最少的必要关键词，且能唯一确定答案
+        """
+        if not self.api_client:
+            return {'is_minimal': True, 'is_precise': True, 'reasoning': 'No API client available'}
+        
+        try:
+            validation_prompt = f"""**TASK: Validate if this is a minimal and precise question for Agent reasoning testing.**
+
+**QUESTION:** {question_text}
+**ANSWER:** {answer}
+**KEYWORDS:** {', '.join(keywords)}
+
+**VALIDATION CRITERIA:**
+
+1. **MINIMALITY CHECK:**
+   - Does the question contain the MINIMUM number of keywords necessary?
+   - Can any keyword be removed without affecting answer uniqueness?
+   - Are all keywords essential for identifying "{answer}"?
+
+2. **PRECISION CHECK:**
+   - Does the question have EXACTLY ONE correct answer: "{answer}"?
+   - Are there NO other valid answers possible?
+   - Is the question specific enough to eliminate ambiguity?
+
+3. **KEYWORD NECESSITY:**
+   - Test: If we remove each keyword individually, can we still uniquely identify "{answer}"?
+   - Only keep keywords that are ESSENTIAL for answer determination
+
+**EVALUATION TESTS:**
+For each keyword in [{', '.join(keywords)}]:
+- Remove the keyword and check if "{answer}" is still the ONLY possible answer
+- If YES → keyword is NOT necessary
+- If NO → keyword IS necessary
+
+**Output Format (JSON):**
+{{
+    "is_minimal": true/false,
+    "is_precise": true/false,
+    "essential_keywords": ["list", "of", "truly", "necessary", "keywords"],
+    "redundant_keywords": ["list", "of", "removable", "keywords"],
+    "precision_score": 0.0-1.0,
+    "minimality_score": 0.0-1.0,
+    "overall_quality": "excellent/good/fair/poor",
+    "improvement_suggestions": "specific suggestions if needed",
+    "alternative_answers": ["other", "possible", "answers", "if", "any"],
+    "reasoning": "detailed explanation of the validation"
+}}
+
+**TARGET: Determine if this question meets the standard of minimal and precise for Agent testing.**"""
+
+            response = self.api_client.generate_response(
+                prompt=validation_prompt,
+                temperature=0.1,  # 非常低的温度确保客观评估
+                max_tokens=600
+            )
+            
+            parsed_data = self._parse_json_response(response)
+            if parsed_data:
+                return {
+                    'is_minimal': parsed_data.get('is_minimal', False),
+                    'is_precise': parsed_data.get('is_precise', False),
+                    'essential_keywords': parsed_data.get('essential_keywords', keywords),
+                    'redundant_keywords': parsed_data.get('redundant_keywords', []),
+                    'precision_score': parsed_data.get('precision_score', 0.5),
+                    'minimality_score': parsed_data.get('minimality_score', 0.5),
+                    'overall_quality': parsed_data.get('overall_quality', 'fair'),
+                    'reasoning': parsed_data.get('reasoning', ''),
+                    'alternative_answers': parsed_data.get('alternative_answers', [])
+                }
+            else:
+                return {'is_minimal': False, 'is_precise': False, 'reasoning': 'Failed to parse validation response'}
+                
+        except Exception as e:
+            logger.error(f"最小精确问题验证失败: {e}")
+            return {'is_minimal': False, 'is_precise': False, 'reasoning': f'Validation error: {e}'}

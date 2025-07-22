@@ -430,7 +430,7 @@ class AgentReasoningMainFramework:
             json_file = self._save_production_results(final_results, topic, session_id)
             
             # 使用修复的Excel导出器
-            excel_file = self.export_system.export_final_excel(json_file)
+            excel_file = self.export_system.export_clean_excel(json_file)
             
             exported_files = {
                 'json': str(json_file),

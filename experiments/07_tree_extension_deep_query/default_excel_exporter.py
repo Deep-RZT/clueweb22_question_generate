@@ -193,17 +193,34 @@ class FixedCleanExcelExporter:
     def _parse_trajectory(self, traj: Dict, doc_id: str) -> Optional[Dict]:
         """解析轨迹记录"""
         try:
+            # 从实际的轨迹记录字段中提取数据
+            keywords_list = traj.get('current_keywords', [])
+            keywords_str = ', '.join(keywords_list) if isinstance(keywords_list, list) else str(keywords_list)
+            
+            # 获取验证结果
+            validation_results = traj.get('validation_results', {})
+            validation_passed = validation_results.get('validation_passed', False) if isinstance(validation_results, dict) else False
+            
             return {
                 'doc_id': doc_id,
                 'step': traj.get('step', 'unknown'),
+                'layer_level': traj.get('layer_level', 0),
                 'query_id': traj.get('query_id', 'N/A'),
-                'query_text': traj.get('query_text', 'N/A')[:200],
-                'answer': traj.get('answer', 'N/A')[:200],
-                'minimal_keywords': ', '.join(traj.get('minimal_keywords', [])),
+                'query_text': traj.get('current_question', 'N/A')[:200],
+                'answer': traj.get('current_answer', 'N/A')[:200],
+                'minimal_keywords': keywords_str[:100],  # 限制长度
                 'generation_method': traj.get('generation_method', 'unknown'),
-                'validation_passed': traj.get('validation_passed', False)
+                'validation_passed': validation_passed,
+                'processing_time_ms': traj.get('processing_time_ms', 0),
+                'extension_type': traj.get('extension_type', 'N/A'),
+                'tree_id': traj.get('tree_id', 'N/A'),
+                'parent_question': traj.get('parent_question', 'N/A')[:100] if traj.get('parent_question') else 'N/A',
+                'parent_answer': traj.get('parent_answer', 'N/A')[:100] if traj.get('parent_answer') else 'N/A',
+                'circular_check': traj.get('circular_check_result', 'N/A'),
+                'api_calls': traj.get('api_calls_count', 0)
             }
-        except Exception:
+        except Exception as e:
+            print(f"解析轨迹记录失败: {e}")
             return None
 
     def _write_excel_sheets(self, parsed_data: Dict[str, Any], excel_path: Path):
@@ -266,16 +283,39 @@ class FixedCleanExcelExporter:
             return
         
         df = pd.DataFrame(trajectories)
-        df = df.reindex(columns=[
-            'doc_id', 'step', 'query_id', 'query_text', 'answer', 
-            'minimal_keywords', 'generation_method', 'validation_passed'
-        ])
+        # 更新列定义以匹配新的轨迹记录字段
+        available_columns = [col for col in [
+            'doc_id', 'step', 'layer_level', 'query_id', 'query_text', 'answer', 
+            'minimal_keywords', 'generation_method', 'validation_passed', 
+            'processing_time_ms', 'extension_type', 'tree_id', 'parent_question', 
+            'parent_answer', 'circular_check', 'api_calls'
+        ] if col in df.columns]
         
-        # 重命名列
-        df.columns = [
-            '文档ID', '步骤', '查询ID', '查询文本', '答案', 
-            '最小关键词', '生成方法', '验证通过'
-        ]
+        df = df.reindex(columns=available_columns)
+        
+        # 动态重命名列，以匹配实际可用的列
+        column_mapping = {
+            'doc_id': '文档ID',
+            'step': '步骤',
+            'layer_level': '层级',
+            'query_id': '查询ID',
+            'query_text': '查询文本',
+            'answer': '答案',
+            'minimal_keywords': '最小关键词',
+            'generation_method': '生成方法',
+            'validation_passed': '验证通过',
+            'processing_time_ms': '处理时间(ms)',
+            'extension_type': '扩展类型',
+            'tree_id': '推理树ID',
+            'parent_question': '父问题',
+            'parent_answer': '父答案',
+            'circular_check': '循环检查',
+            'api_calls': 'API调用次数'
+        }
+        
+        # 只重命名存在的列
+        new_column_names = [column_mapping.get(col, col) for col in df.columns]
+        df.columns = new_column_names
         
         df.to_excel(writer, sheet_name='Sheet3-推理轨迹记录', index=False)
 

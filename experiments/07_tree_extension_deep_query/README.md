@@ -13,20 +13,37 @@
 
 ## 快速开始
 
-### 1. 运行主程序
+### 1. 设置环境
 ```bash
-python main.py
+# 安装依赖
+pip install -r requirements.txt
+
+# 设置API密钥（可选）
+export OPENAI_API_KEY="your-openai-api-key"
 ```
 
-### 2. 程序功能
+### 2. 运行程序
+```bash
+# 方式1：使用主程序（推荐）
+python main.py
+
+# 方式2：直接运行推理生成
+python agent_reasoning_main.py
+```
+
+### 3. 程序功能
 - **自动检测**：扫描results目录中的JSON文件
 - **智能导出**：生成包含4个工作表的Excel文件
 - **支持生成**：如果没有数据，可选择运行推理生成
 
-### 3. 输出文件
+### 4. 输出文件
+运行完成后会生成：
+- `results/agent_reasoning_production_*.json` - 原始推理数据
+- `results/agent_reasoning_production_*.xlsx` - Excel格式报告
+
 Excel文件包含以下工作表：
 - **Sheet1**: 文档处理效率统计
-- **Sheet2**: 所有过程中的问答对 
+- **Sheet2**: 所有过程中的问答对（完整层级结构）
 - **Sheet3**: 推理轨迹记录
 - **Sheet4**: 糅合后的综合问答（双格式）
 
