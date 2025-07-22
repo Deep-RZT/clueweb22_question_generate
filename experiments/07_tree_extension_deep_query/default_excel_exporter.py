@@ -1,14 +1,10 @@
 #!/usr/bin/env python3
 """
-修复版简洁Excel导出器 - 修复分支类型识别和糅合问题处理
-1. 糅合后的问答对结果 - 如果是占位符，则显示"未生成真正的综合问题"
-2. 过程中所有问答对（每层）- 正确识别root/series/parallel分支类型
-3. 轨迹数据
-4. 效率数据
+优化版Excel导出器 - 专门处理dict格式的JSON数据
+支持嵌套累积型和LLM整合型综合问题及答案的完整导出
 """
 
 import json
-import re
 import pandas as pd
 from pathlib import Path
 from typing import Dict, List, Any, Optional
@@ -17,86 +13,46 @@ import logging
 logger = logging.getLogger(__name__)
 
 class FixedCleanExcelExporter:
-    """修复版简洁Excel导出器 - 4个核心工作表"""
+    """优化版Excel导出器 - 完全dict格式支持"""
     
     def __init__(self, output_dir: str = "results"):
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(exist_ok=True)
-    
-    def export_agent_reasoning_results(self, results: Dict[str, Any], session_id: str) -> Dict[str, str]:
-        """Export agent reasoning results to Excel - wrapper for backward compatibility"""
-        try:
-            # Save results to JSON first
-            json_file = self.output_dir / f"{session_id}_agent_reasoning_results.json"
-            with open(json_file, 'w', encoding='utf-8') as f:
-                json.dump(results, f, ensure_ascii=False, indent=2, default=str)
-            
-            # Generate Excel
-            excel_file = self.export_clean_excel(json_file)
-            
-            return {
-                'json': str(json_file),
-                'excel': str(excel_file) if excel_file else 'Failed'
-            }
-        except Exception as e:
-            logger.error(f"导出失败: {e}")
-            return {'error': str(e)}
-    
-    def export_final_excel(self, json_file: Path) -> Optional[Path]:
-        """Export final Excel file - wrapper for backward compatibility"""
-        return self.export_clean_excel(json_file)
-    
-    def export_clean_excel(self, json_file: Path) -> Optional[Path]:
-        """生成修复版简洁Excel文件"""
-        try:
-            print(f"🔄 读取JSON文件: {json_file.name}")
-            with open(json_file, 'r', encoding='utf-8') as f:
-                data = json.load(f)
-            
-            print(f"📊 解析数据...")
-            # 解析数据
-            parsed_data = self._parse_data(data)
-            
-            # 生成Excel文件名
-            excel_file = self.output_dir / f"FIXED_{json_file.stem}.xlsx"
-            
-            print(f"📋 生成4个修复的核心工作表...")
-            # 导出Excel - 只有4个工作表
-            with pd.ExcelWriter(excel_file, engine='openpyxl') as writer:
-                # 1. 糅合后的问答对结果
-                self._write_final_composite_qa(parsed_data, writer)
-                
-                # 2. 过程中所有问答对（每层）
-                self._write_all_process_qa(parsed_data, writer)
-                
-                # 3. 轨迹数据
-                self._write_trajectory_data(parsed_data, writer)
-                
-                # 4. 效率数据
-                self._write_efficiency_data(parsed_data, writer)
-            
-            print(f"✅ 修复版简洁Excel已生成: {excel_file.name}")
-            return excel_file
-            
-        except Exception as e:
-            logger.error(f"修复版Excel导出失败: {e}")
-            print(f"❌ 导出失败: {e}")
-            return None
-    
-    def _parse_data(self, data: Dict[str, Any]) -> Dict[str, Any]:
-        """解析数据"""
+
+    def export_clean_excel(self, json_file_path: Path) -> str:
+        """导出简洁版Excel文件"""
+        print(f"🔄 读取JSON文件: {json_file_path.name}")
+        
+        # 读取JSON数据
+        with open(json_file_path, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+        
+        print("📊 解析数据...")
+        parsed_data = self._parse_dict_data(data)
+        
+        # 生成Excel文件名
+        timestamp = json_file_path.stem.split('_')[-1]
+        excel_filename = f"agent_reasoning_analysis_{timestamp}.xlsx"
+        excel_path = self.output_dir / excel_filename
+        
+        print("📝 生成Excel工作表...")
+        self._write_excel_sheets(parsed_data, excel_path)
+        
+        return str(excel_path)
+
+    def _parse_dict_data(self, data: Dict[str, Any]) -> Dict[str, Any]:
+        """解析dict格式的JSON数据"""
         parsed = {
-            'session_info': self._extract_session_info(data),
+            'efficiency_data': [],   # 文档处理效率统计
             'composite_qa': [],      # 糅合后的问答对
             'all_process_qa': [],    # 所有过程中的问答对
             'trajectories': [],      # 轨迹数据
-            'efficiency_data': []    # 效率数据
         }
         
         processing_results = data.get('processing_results', {})
         processed_docs = processing_results.get('processed_documents', [])
         
-        print(f"📋 解析处理结果...")
+        print(f"📋 解析 {len(processed_docs)} 个处理文档...")
         
         for doc_idx, doc in enumerate(processed_docs):
             doc_id = doc.get('doc_id', f'Unknown_{doc_idx}')
@@ -105,54 +61,79 @@ class FixedCleanExcelExporter:
             
             print(f"  📄 处理文档: {doc_id} ({len(reasoning_trees)} 推理树)")
             
-            # 解析推理树
-            for tree_idx, tree_str in enumerate(reasoning_trees):
-                if isinstance(tree_str, str):
-                    # 提取树ID
-                    tree_id_match = re.search(r"tree_id='([^']+)'", tree_str)
-                    tree_id = tree_id_match.group(1) if tree_id_match else f'{doc_id}_tree_{tree_idx}'
+            # 解析推理树（现在应该是dict格式）
+            for tree_idx, tree_data in enumerate(reasoning_trees):
+                if isinstance(tree_data, dict):  # dict格式数据
+                    tree_id = tree_data.get('tree_id', f'{doc_id}_tree_{tree_idx}')
+                    final_composite = tree_data.get('final_composite_query', {})
                     
-                    # 提取final_composite_query（糅合后的问答对）
-                    composite_match = re.search(r"final_composite_query='([^']*)'", tree_str)
-                    final_composite = composite_match.group(1) if composite_match else 'N/A'
+                    # 获取根节点答案
+                    root_node = tree_data.get('root_node', {})
+                    root_query = root_node.get('query', {})
+                    root_answer = root_query.get('answer', 'N/A')
                     
-                    # 检查是否是占位符或无效内容
-                    is_placeholder = (
-                        not final_composite or 
-                        final_composite == 'N/A' or 
-                        final_composite == 'Logical reasoning chain question requiring genuine step-by-step solving' or
-                        len(final_composite) < 30
-                    )
-                    
-                    if not is_placeholder:
-                        # 找根答案
-                        root_answer = self._extract_root_answer(tree_str)
+                    # 处理双格式的综合问题和答案
+                    if isinstance(final_composite, dict):
+                        # 新的双格式（支持问题和答案）
+                        nested_question = final_composite.get('nested_cumulative', '')
+                        nested_answer = final_composite.get('nested_cumulative_answer', root_answer)
+                        llm_question = final_composite.get('llm_integrated', '')
+                        llm_answer = final_composite.get('llm_integrated_answer', root_answer)
+                        
+                        # 检查两种格式是否有效
+                        nested_valid = nested_question and len(nested_question.strip()) > 30
+                        llm_valid = llm_question and len(llm_question.strip()) > 30
+                        
+                        # 添加嵌套累积型
+                        parsed['composite_qa'].append({
+                            'doc_id': doc_id,
+                            'tree_id': tree_id,
+                            'composite_question': nested_question if nested_valid else '❌ 嵌套累积型问题生成失败',
+                            'composite_answer': nested_answer if nested_valid else '❌ 嵌套累积型答案生成失败',
+                            'target_answer': root_answer,
+                            'question_length': len(nested_question) if nested_valid else 0,
+                            'tree_index': tree_idx,
+                            'question_type': '嵌套累积型',
+                            'is_valid': nested_valid
+                        })
+                        
+                        # 添加LLM整合型
+                        parsed['composite_qa'].append({
+                            'doc_id': doc_id,
+                            'tree_id': tree_id,
+                            'composite_question': llm_question if llm_valid else '❌ LLM整合型问题生成失败',
+                            'composite_answer': llm_answer if llm_valid else '❌ LLM整合型答案生成失败',
+                            'target_answer': root_answer,
+                            'question_length': len(llm_question) if llm_valid else 0,
+                            'tree_index': tree_idx,
+                            'question_type': 'LLM整合型',
+                            'is_valid': llm_valid
+                        })
+                    else:
+                        # 兼容旧格式
+                        composite_question = str(final_composite) if final_composite else ''
+                        is_valid = len(composite_question.strip()) > 30
                         
                         parsed['composite_qa'].append({
                             'doc_id': doc_id,
                             'tree_id': tree_id,
-                            'composite_question': final_composite,
+                            'composite_question': composite_question if is_valid else '❌ 未生成有效综合问题',
+                            'composite_answer': root_answer,
                             'target_answer': root_answer,
-                            'question_length': len(final_composite),
+                            'question_length': len(composite_question) if is_valid else 0,
                             'tree_index': tree_idx,
-                            'is_valid': True
-                        })
-                    else:
-                        # 记录无效的糅合问题
-                        root_answer = self._extract_root_answer(tree_str)
-                        parsed['composite_qa'].append({
-                            'doc_id': doc_id,
-                            'tree_id': tree_id,
-                            'composite_question': '❌ 未生成真正的综合问题（仅为占位符）',
-                            'target_answer': root_answer,
-                            'question_length': 0,
-                            'tree_index': tree_idx,
-                            'is_valid': False
+                            'question_type': '旧格式（单一类型）',
+                            'is_valid': is_valid
                         })
                     
-                    # 提取所有层级的问答对
-                    process_qa = self._extract_all_qa_from_tree(tree_str, doc_id, tree_id, tree_idx)
+                    # 提取所有层级的问答对 - dict格式
+                    process_qa = self._extract_qa_from_dict_tree(tree_data, doc_id, tree_id, tree_idx)
                     parsed['all_process_qa'].extend(process_qa)
+                    
+                else:
+                    # 字符串格式数据 - 不应该出现在新系统中
+                    print(f"    ⚠️ 发现字符串格式推理树，跳过处理")
+                    continue
             
             # 解析轨迹记录
             for traj in trajectory_records:
@@ -168,301 +149,160 @@ class FixedCleanExcelExporter:
                 'processing_time': doc.get('processing_time', 0),
                 'trees_generated': len(reasoning_trees),
                 'valid_composite_questions': valid_composites,
-                'placeholder_composite_questions': len(reasoning_trees) - valid_composites,
+                'invalid_composite_questions': len(reasoning_trees) * 2 - valid_composites,  # 乘以2因为每个树生成2种类型
                 'success': len(reasoning_trees) > 0
             }
             parsed['efficiency_data'].append(doc_efficiency)
         
-        valid_composites = sum(1 for comp in parsed['composite_qa'] if comp['is_valid'])
-        total_composites = len(parsed['composite_qa'])
-        
-        print(f"📊 解析完成:")
-        print(f"   糅合问答对: {total_composites} 个 (有效: {valid_composites}, 占位符: {total_composites - valid_composites})")
-        print(f"   过程问答对: {len(parsed['all_process_qa'])} 个")
-        print(f"   轨迹记录: {len(parsed['trajectories'])} 条")
-        
         return parsed
-    
-    def _extract_all_qa_from_tree(self, tree_str: str, doc_id: str, tree_id: str, tree_idx: int) -> List[Dict[str, Any]]:
-        """提取推理树中所有层级的问答对，修复分支类型识别"""
+
+    def _extract_qa_from_dict_tree(self, tree_data: Dict[str, Any], doc_id: str, tree_id: str, tree_idx: int) -> List[Dict[str, Any]]:
+        """从dict格式的推理树中提取所有问答对"""
         qa_pairs = []
         
-        # 查找所有节点ID
-        node_ids = re.findall(r"'([^']+)': QuestionTreeNode\(", tree_str)
-        
-        for node_idx, node_id in enumerate(node_ids):
-            try:
-                # 定位节点
-                node_start = tree_str.find(f"'{node_id}': QuestionTreeNode(")
-                if node_start == -1:
-                    continue
+        try:
+            all_nodes = tree_data.get('all_nodes', {})
+            
+            for node_id, node_data in all_nodes.items():
+                query_data = node_data.get('query', {})
                 
-                # 直接取一个足够长的段落，包含完整的节点信息
-                node_section = tree_str[node_start:node_start + 1500]
-                
-                # 提取问题和答案
-                query_match = re.search(r"query_text='([^']+)'", node_section)
-                answer_match = re.search(r"answer='([^']+)'", node_section)
-                
-                if query_match and answer_match:
-                    query_text = query_match.group(1)
-                    answer = answer_match.group(1)
-                    
-                    # 提取层级
-                    layer_match = re.search(r"layer_level=(\d+)", node_section)
-                    layer = int(layer_match.group(1)) if layer_match else 0
-                    
-                    # 提取验证状态
-                    validation_match = re.search(r"validation_passed=(\w+)", node_section)
-                    validation_passed = validation_match.group(1) == 'True' if validation_match else False
-                    
-                    # 修复分支类型识别 - 按优先级匹配
-                    branch_type = self._identify_branch_type(node_id)
-                    
-                    qa_pairs.append({
-                        'doc_id': doc_id,
-                        'tree_id': tree_id,
-                        'tree_index': tree_idx,
-                        'node_id': node_id,
-                        'layer': layer,
-                        'branch_type': branch_type,
-                        'question': query_text,
-                        'answer': answer,
-                        'validation_passed': validation_passed
-                    })
-                    
-            except Exception as e:
-                print(f"    ⚠️ 节点解析失败: {node_id} - {e}")
-                continue
-        
-        # 按层级排序
-        qa_pairs.sort(key=lambda x: (x['layer'], x['node_id']))
-        print(f"    ✅ 提取了 {len(qa_pairs)} 个问答对")
+                qa_pairs.append({
+                    'doc_id': doc_id,
+                    'tree_id': tree_id,
+                    'tree_index': tree_idx,
+                    'node_id': node_id,
+                    'question': query_data.get('query_text', 'N/A'),
+                    'answer': query_data.get('answer', 'N/A'),
+                    'branch_type': node_data.get('branch_type', 'unknown'),
+                    'layer': node_data.get('layer', 0),
+                    'generation_method': query_data.get('generation_method', 'unknown'),
+                    'validation_passed': query_data.get('validation_passed', False),
+                    'minimal_keywords': len(query_data.get('minimal_keywords', [])),
+                    'parent_query_id': query_data.get('parent_query_id'),
+                    'extension_type': query_data.get('extension_type', 'unknown')
+                })
+            
+            print(f"    ✅ 提取了 {len(qa_pairs)} 个问答对")
+            
+        except Exception as e:
+            print(f"    ❌ 提取问答对失败: {e}")
+            logger.error(f"从树 {tree_id} 提取问答对失败: {e}")
         
         return qa_pairs
-    
-    def _identify_branch_type(self, node_id: str) -> str:
-        """正确识别分支类型 - 按优先级匹配"""
-        # 按照最具体的特征优先匹配
-        if '_parallel' in node_id:
-            return 'parallel'
-        elif '_series' in node_id:
-            return 'series'
-        elif '_root' in node_id or node_id.endswith('_root'):
-            return 'root'
-        else:
-            return 'unknown'
-    
-    def _extract_root_answer(self, tree_str: str) -> str:
-        """提取根答案"""
-        try:
-            # 查找root节点
-            root_match = re.search(r"_root.*?answer='([^']+)'", tree_str)
-            if root_match:
-                return root_match.group(1)
-            return 'N/A'
-        except:
-            return 'N/A'
-    
-    def _parse_trajectory(self, traj: Dict[str, Any], doc_id: str) -> Dict[str, Any]:
+
+    def _parse_trajectory(self, traj: Dict, doc_id: str) -> Optional[Dict]:
         """解析轨迹记录"""
-        return {
-            'doc_id': doc_id,
-            'step': traj.get('step', 'N/A'),
-            'step_id': traj.get('step_id', 0),
-            'query_text': traj.get('query_text', 'N/A'),
-            'answer': traj.get('answer', 'N/A'),
-            'validation_passed': traj.get('validation_passed', False),
-            'keyword_count': traj.get('keyword_count', 0),
-            'layer': traj.get('layer', 0),
-            'tree_id': traj.get('tree_id', 'N/A'),
-            'timestamp': traj.get('timestamp', 0)
-        }
-    
-    def _extract_session_info(self, data: Dict[str, Any]) -> Dict[str, Any]:
-        """提取会话信息"""
-        summary = data.get('summary', {})
-        return {
-            'session_id': data.get('session_id', 'N/A'),
-            'total_docs': summary.get('total_documents_attempted', 0),
-            'successful_docs': summary.get('successful_documents', 0),
-            'total_trees': summary.get('total_reasoning_trees', 0),
-            'success_rate': summary.get('success_rate', 0),
-            'total_time': data.get('total_processing_time', 0)
-        }
-    
-    # Excel工作表生成函数
-    def _write_final_composite_qa(self, data: Dict[str, Any], writer):
-        """1. 糅合后的问答对结果 - 显示真实状态"""
-        valid_count = sum(1 for comp in data['composite_qa'] if comp.get('is_valid', True))
-        total_count = len(data['composite_qa'])
-        placeholder_count = total_count - valid_count
+        try:
+            return {
+                'doc_id': doc_id,
+                'step': traj.get('step', 'unknown'),
+                'query_id': traj.get('query_id', 'N/A'),
+                'query_text': traj.get('query_text', 'N/A')[:200],
+                'answer': traj.get('answer', 'N/A')[:200],
+                'minimal_keywords': ', '.join(traj.get('minimal_keywords', [])),
+                'generation_method': traj.get('generation_method', 'unknown'),
+                'validation_passed': traj.get('validation_passed', False)
+            }
+        except Exception:
+            return None
+
+    def _write_excel_sheets(self, parsed_data: Dict[str, Any], excel_path: Path):
+        """写入Excel工作表"""
         
-        print(f"  📋 生成糅合后问答对工作表 (总数: {total_count}, 有效: {valid_count}, 占位符: {placeholder_count})")
-        
-        if not data['composite_qa']:
-            # 创建空表
-            empty_data = [['文档ID', '推理树ID', '糅合后的综合问题', '目标答案', '问题状态', '问题长度', '树索引']]
-            df = pd.DataFrame(empty_data[1:], columns=empty_data[0])
-        else:
-            composite_data = []
-            for idx, comp in enumerate(data['composite_qa']):
-                status = '✅ 有效' if comp.get('is_valid', True) else '❌ 占位符'
-                composite_data.append({
-                    '序号': idx + 1,
-                    '文档ID': comp['doc_id'],
-                    '推理树ID': comp['tree_id'],
-                    '糅合后的综合问题': comp['composite_question'],
-                    '目标答案': comp['target_answer'],
-                    '问题状态': status,
-                    '问题长度': comp['question_length'],
-                    '树索引': comp['tree_index']
-                })
+        with pd.ExcelWriter(excel_path, engine='openpyxl') as writer:
             
-            df = pd.DataFrame(composite_data)
-        
-        df.to_excel(writer, sheet_name='1-糅合后问答对', index=False)
-    
-    def _write_all_process_qa(self, data: Dict[str, Any], writer):
-        """2. 过程中所有问答对（每层）- 正确的分支类型"""
-        print(f"  📋 生成过程问答对工作表 ({len(data['all_process_qa'])} 个)")
-        
-        # 统计分支类型
-        branch_stats = {}
-        for qa in data['all_process_qa']:
-            branch_type = qa['branch_type']
-            branch_stats[branch_type] = branch_stats.get(branch_type, 0) + 1
-        
-        print(f"    分支类型统计: {branch_stats}")
-        
-        if not data['all_process_qa']:
-            # 创建空表
-            empty_data = [['文档ID', '推理树ID', '节点ID', '层级', '分支类型', '问题', '答案', '验证状态']]
-            df = pd.DataFrame(empty_data[1:], columns=empty_data[0])
-        else:
-            process_data = []
-            for idx, qa in enumerate(data['all_process_qa']):
-                process_data.append({
-                    '序号': idx + 1,
-                    '文档ID': qa['doc_id'],
-                    '推理树ID': qa['tree_id'],
-                    '树索引': qa['tree_index'],
-                    '节点ID': qa['node_id'],
-                    '层级': qa['layer'],
-                    '分支类型': qa['branch_type'],
-                    '问题': qa['question'],
-                    '答案': qa['answer'],
-                    '验证状态': '✅ 通过' if qa['validation_passed'] else '❌ 失败'
-                })
+            # Sheet1: 文档处理效率统计
+            self._write_efficiency_data(parsed_data['efficiency_data'], writer)
             
-            df = pd.DataFrame(process_data)
-        
-        df.to_excel(writer, sheet_name='2-过程中所有问答对', index=False)
-    
-    def _write_trajectory_data(self, data: Dict[str, Any], writer):
-        """3. 轨迹数据"""
-        print(f"  📋 生成轨迹数据工作表 ({len(data['trajectories'])} 条)")
-        
-        if not data['trajectories']:
-            # 创建空表
-            empty_data = [['文档ID', '步骤', '步骤ID', '层级', '问题', '答案', '验证状态', '关键词数量']]
-            df = pd.DataFrame(empty_data[1:], columns=empty_data[0])
-        else:
-            traj_data = []
-            for idx, traj in enumerate(data['trajectories']):
-                traj_data.append({
-                    '序号': idx + 1,
-                    '文档ID': traj['doc_id'],
-                    '步骤': traj['step'],
-                    '步骤ID': traj['step_id'],
-                    '层级': traj['layer'],
-                    '问题': traj['query_text'],
-                    '答案': traj['answer'],
-                    '验证状态': '✅ 通过' if traj['validation_passed'] else '❌ 失败',
-                    '关键词数量': traj['keyword_count'],
-                    '推理树ID': traj['tree_id'],
-                    '时间戳': traj['timestamp']
-                })
+            # Sheet2: 所有过程中的问答对
+            self._write_all_process_qa(parsed_data['all_process_qa'], writer)
             
-            df = pd.DataFrame(traj_data)
+            # Sheet3: 推理轨迹记录
+            self._write_trajectories(parsed_data['trajectories'], writer)
+            
+            # Sheet4: 糅合后的综合问答（双格式）
+            self._write_final_composite_qa(parsed_data['composite_qa'], writer)
         
-        df.to_excel(writer, sheet_name='3-轨迹数据', index=False)
-    
-    def _write_efficiency_data(self, data: Dict[str, Any], writer):
-        """4. 效率数据 - 包含糅合问题质量统计"""
-        print(f"  📋 生成效率数据工作表")
+        print(f"✅ Excel文件已生成: {excel_path}")
+
+    def _write_efficiency_data(self, efficiency_data: List[Dict], writer):
+        """写入文档处理效率统计"""
+        if not efficiency_data:
+            return
         
-        session_info = data['session_info']
-        valid_composites = sum(1 for comp in data['composite_qa'] if comp.get('is_valid', True))
-        total_composites = len(data['composite_qa'])
-        placeholder_composites = total_composites - valid_composites
+        df = pd.DataFrame(efficiency_data)
+        df = df.reindex(columns=[
+            'doc_id', 'processing_time', 'trees_generated', 
+            'valid_composite_questions', 'invalid_composite_questions', 'success'
+        ])
         
-        # 整体效率数据
-        overall_data = [
-            ['项目', '数值', '单位'],
-            ['会话ID', session_info['session_id'], ''],
-            ['总处理时间', f"{session_info['total_time']:.2f}", '秒'],
-            ['处理文档数', session_info['total_docs'], '个'],
-            ['成功文档数', session_info['successful_docs'], '个'],
-            ['成功率', f"{session_info['success_rate']:.1%}", ''],
-            ['生成推理树', session_info['total_trees'], '个'],
-            ['', '', ''],
-            ['糅合问题质量', '', ''],
-            ['总糅合问答对', total_composites, '个'],
-            ['有效糅合问题', valid_composites, '个'],
-            ['占位符问题', placeholder_composites, '个'],
-            ['糅合问题有效率', f"{(valid_composites/max(total_composites, 1))*100:.1f}", '%'],
-            ['', '', ''],
-            ['过程数据', '', ''],
-            ['过程问答对', len(data['all_process_qa']), '个'],
-            ['轨迹记录', len(data['trajectories']), '条'],
-            ['', '', ''],
-            ['平均效率', '', ''],
-            ['平均时间/文档', f"{session_info['total_time']/max(session_info['total_docs'], 1):.2f}", '秒/文档'],
-            ['平均推理树/文档', f"{session_info['total_trees']/max(session_info['successful_docs'], 1):.1f}", '个/文档'],
-            ['平均问答对/推理树', f"{len(data['all_process_qa'])/max(session_info['total_trees'], 1):.1f}", '个/树']
+        # 重命名列
+        df.columns = ['文档ID', '处理时间(秒)', '生成推理树数', '有效综合问题数', '无效问题数', '处理成功']
+        
+        df.to_excel(writer, sheet_name='Sheet1-文档处理效率统计', index=False)
+
+    def _write_all_process_qa(self, all_process_qa: List[Dict], writer):
+        """写入所有过程中的问答对"""
+        if not all_process_qa:
+            return
+        
+        df = pd.DataFrame(all_process_qa)
+        df = df.reindex(columns=[
+            'doc_id', 'tree_id', 'node_id', 'layer', 'branch_type', 
+            'question', 'answer', 'generation_method', 'validation_passed'
+        ])
+        
+        # 重命名列
+        df.columns = [
+            '文档ID', '推理树ID', '节点ID', '层级', '分支类型', 
+            '问题', '答案', '生成方法', '验证通过'
         ]
         
-        # 文档级效率数据
-        if data['efficiency_data']:
-            overall_data.extend([
-                ['', '', ''],
-                ['文档级详细数据', '', ''],
-                ['文档ID', '处理时间', '推理树数量', '有效糅合问题', '占位符糅合问题']
-            ])
+        df.to_excel(writer, sheet_name='Sheet2-所有过程中的问答对', index=False)
+
+    def _write_trajectories(self, trajectories: List[Dict], writer):
+        """写入推理轨迹记录"""
+        if not trajectories:
+            return
+        
+        df = pd.DataFrame(trajectories)
+        df = df.reindex(columns=[
+            'doc_id', 'step', 'query_id', 'query_text', 'answer', 
+            'minimal_keywords', 'generation_method', 'validation_passed'
+        ])
+        
+        # 重命名列
+        df.columns = [
+            '文档ID', '步骤', '查询ID', '查询文本', '答案', 
+            '最小关键词', '生成方法', '验证通过'
+        ]
+        
+        df.to_excel(writer, sheet_name='Sheet3-推理轨迹记录', index=False)
+
+    def _write_final_composite_qa(self, composite_qa: List[Dict], writer):
+        """写入糅合后的综合问答（双格式）"""
+        if not composite_qa:
+            return
+        
+        # 准备数据
+        composite_data = []
+        
+        for idx, comp in enumerate(composite_qa):
+            question_type = comp['question_type']
+            status = "✅ 有效" if comp['is_valid'] else "❌ 无效"
             
-            for eff in data['efficiency_data']:
-                overall_data.append([
-                    eff['doc_id'],
-                    f"{eff['processing_time']:.1f}秒",
-                    f"{eff['trees_generated']}个",
-                    f"{eff['valid_composite_questions']}个",
-                    f"{eff['placeholder_composite_questions']}个"
-                ])
+            composite_data.append({
+                '序号': idx + 1,
+                '文档ID': comp['doc_id'],
+                '推理树ID': comp['tree_id'],
+                '问题类型': question_type,
+                '嵌套问题': comp['composite_question'],
+                '嵌套答案': comp['composite_answer'],
+                '最终答案': comp['target_answer'],
+                '问题状态': status,
+                '问题长度': comp['question_length'],
+                '树索引': comp['tree_index']
+            })
         
-        df = pd.DataFrame(overall_data)
-        df.to_excel(writer, sheet_name='4-效率数据', index=False, header=False)
-
-def main():
-    """主函数"""
-    results_dir = Path("results")
-    
-    json_files = list(results_dir.glob("agent_reasoning_production_*.json"))
-    
-    if not json_files:
-        print("❌ 未找到JSON文件")
-        return
-    
-    exporter = FixedCleanExcelExporter()
-    
-    for json_file in json_files:
-        print(f"\n🚀 生成修复版简洁Excel: {json_file.name}")
-        excel_file = exporter.export_clean_excel(json_file)
-        
-        if excel_file:
-            print(f"✅ 修复版简洁Excel已生成: {excel_file.name}")
-        else:
-            print(f"❌ 生成失败: {json_file.name}")
-
-if __name__ == "__main__":
-    main() 
+        df = pd.DataFrame(composite_data)
+        df.to_excel(writer, sheet_name='Sheet4-糅合后的综合问答', index=False) 

@@ -42,6 +42,16 @@ class ShortAnswer:
     confidence: float
     extraction_source: str
     document_position: int
+    
+    def to_dict(self) -> Dict[str, Any]:
+        """转换为字典格式"""
+        return {
+            'answer_text': self.answer_text,
+            'answer_type': self.answer_type,
+            'confidence': self.confidence,
+            'extraction_source': self.extraction_source,
+            'document_position': self.document_position
+        }
 
 @dataclass
 class MinimalKeyword:
@@ -52,6 +62,17 @@ class MinimalKeyword:
     necessity_score: float   # 必要性分数（移除后是否还能确定答案）
     extraction_context: str
     position_in_query: int
+    
+    def to_dict(self) -> Dict[str, Any]:
+        """转换为字典格式"""
+        return {
+            'keyword': self.keyword,
+            'keyword_type': self.keyword_type,
+            'uniqueness_score': self.uniqueness_score,
+            'necessity_score': self.necessity_score,
+            'extraction_context': self.extraction_context,
+            'position_in_query': self.position_in_query
+        }
 
 @dataclass
 class PreciseQuery:
@@ -65,6 +86,20 @@ class PreciseQuery:
     layer_level: int  # 0=root, 1=first_extension, 2=second_extension
     parent_query_id: Optional[str] = None
     extension_type: str = "root"  # root, series, parallel
+    
+    def to_dict(self) -> Dict[str, Any]:
+        """转换为字典格式"""
+        return {
+            'query_id': self.query_id,
+            'query_text': self.query_text,
+            'answer': self.answer,
+            'minimal_keywords': [kw.to_dict() for kw in self.minimal_keywords],
+            'generation_method': self.generation_method,
+            'validation_passed': self.validation_passed,
+            'layer_level': self.layer_level,
+            'parent_query_id': self.parent_query_id,
+            'extension_type': self.extension_type
+        }
 
 @dataclass
 class QuestionTreeNode:
@@ -75,6 +110,17 @@ class QuestionTreeNode:
     children_ids: List[str] = field(default_factory=list)
     layer: int = 0
     branch_type: str = "root"  # root, series, parallel
+    
+    def to_dict(self) -> Dict[str, Any]:
+        """转换为字典格式"""
+        return {
+            'node_id': self.node_id,
+            'query': self.query.to_dict(),
+            'parent_id': self.parent_id,
+            'children_ids': self.children_ids,
+            'layer': self.layer,
+            'branch_type': self.branch_type
+        }
 
 @dataclass
 class AgentReasoningTree:
@@ -83,8 +129,19 @@ class AgentReasoningTree:
     root_node: QuestionTreeNode
     all_nodes: Dict[str, QuestionTreeNode] = field(default_factory=dict)
     max_layers: int = 3
-    final_composite_query: str = ""
+    final_composite_query: Any = ""  # 支持字符串或字典格式
     trajectory_records: List[Dict] = field(default_factory=list)
+    
+    def to_dict(self) -> Dict[str, Any]:
+        """转换为可序列化的字典"""
+        return {
+            'tree_id': self.tree_id,
+            'root_node': self.root_node.to_dict(),
+            'all_nodes': {k: v.to_dict() for k, v in self.all_nodes.items()},
+            'max_layers': self.max_layers,
+            'final_composite_query': self.final_composite_query,
+            'trajectory_records': self.trajectory_records
+        }
 
 class AgentDepthReasoningFramework:
     """Agent深度推理测试框架主类"""
@@ -170,8 +227,9 @@ class AgentDepthReasoningFramework:
                 if tree:
                     # Step 6: 生成最终综合问题
                     logger.info("📍 Step 6: 生成最终综合问题")
-                    tree.final_composite_query = self._step6_generate_composite_query(tree)
-                    reasoning_trees.append(tree)
+                    composite_queries = self._step6_generate_composite_query(tree)
+                    tree.final_composite_query = composite_queries  # 现在是字典格式
+                    reasoning_trees.append(tree.to_dict())  # 转换为字典存储
                     self.stats['total_reasoning_trees'] += 1
             
             # 计算处理时间
@@ -539,58 +597,276 @@ class AgentDepthReasoningFramework:
             logger.error(f"Step 4执行失败: {e}")
             return []
     
-    def _step6_generate_composite_query(self, tree: AgentReasoningTree) -> str:
+    def _step6_generate_composite_query(self, tree: AgentReasoningTree) -> Dict[str, str]:
         """
-        Step 6: 生成最终综合问题
+        Step 6: 生成最终综合问题和答案 - 双格式输出
         
-        要求：
-        - 糅合所有层级的query问题
-        - 生成嵌套式 (query,query,query...) 综合问题
-        - 答案仍然是Root的答案
-        - 需要Agent逐步推理才能解答
+        生成两种类型的糅合问题和对应答案：
+        1. 嵌套累积型：无LLM，纯问题累积 (Q1, (Q2, Q3...))
+        2. LLM整合型：LLM参与的自然语言整合，保持问题顺序
         """
         try:
-            logger.info(f"生成最终综合问题: Tree {tree.tree_id}")
+            logger.info(f"生成双格式最终综合问题和答案: Tree {tree.tree_id}")
             
-            # 收集所有层级的问题
+            # 收集所有层级的问题和答案
             queries_by_layer = {}
+            answers_by_layer = {}
+            
             for node in tree.all_nodes.values():
                 layer = node.layer
                 if layer not in queries_by_layer:
                     queries_by_layer[layer] = []
+                    answers_by_layer[layer] = []
                 queries_by_layer[layer].append(node.query.query_text)
+                answers_by_layer[layer].append(node.query.answer)
             
-            # 构建嵌套式综合问题
-            composite_query = self._build_nested_composite_query(
-                queries_by_layer, tree.root_node.query.answer
-            )
+            root_answer = tree.root_node.query.answer
             
-            if composite_query:
-                logger.info(f"✅ 最终综合问题生成成功")
-                self.stats['final_composite_queries'] += 1
-                
-                # 记录轨迹
-                self._record_trajectory({
-                    'step': 'step6_composite_query',
-                    'tree_id': tree.tree_id,
-                    'original_root_answer': tree.root_node.query.answer,
-                    'total_layers': max(queries_by_layer.keys()) + 1,
-                    'queries_per_layer': {str(k): len(v) for k, v in queries_by_layer.items()},
-                    'composite_query_length': len(composite_query),
-                    'complexity_score': self._calculate_complexity_score(composite_query),
-                    'composite_query': composite_query
-                })
-                
-                # 记录完整推理树结构
-                self._record_complete_tree_trajectory(tree)
-                
-                return composite_query
+            # 生成两种格式的综合问题和答案
+            nested_cumulative_question = self._generate_nested_cumulative_query(queries_by_layer, root_answer)
+            nested_cumulative_answer = self._generate_nested_cumulative_answer(answers_by_layer, root_answer)
             
-            return ""
+            llm_integrated_question = self._generate_llm_integrated_query(queries_by_layer, root_answer)
+            llm_integrated_answer = self._generate_llm_integrated_answer(answers_by_layer, root_answer)
+            
+            composite_queries = {
+                'nested_cumulative': nested_cumulative_question,
+                'nested_cumulative_answer': nested_cumulative_answer,
+                'llm_integrated': llm_integrated_question,
+                'llm_integrated_answer': llm_integrated_answer
+            }
+            
+            logger.info(f"✅ 双格式综合问题和答案生成成功")
+            self.stats['final_composite_queries'] += 1
+            
+            # 记录轨迹
+            self._record_trajectory({
+                'step': 'step6_composite_query',
+                'tree_id': tree.tree_id,
+                'original_root_answer': root_answer,
+                'total_layers': max(queries_by_layer.keys()) + 1,
+                'queries_per_layer': {str(k): len(v) for k, v in queries_by_layer.items()},
+                'nested_cumulative_length': len(nested_cumulative_question),
+                'llm_integrated_length': len(llm_integrated_question),
+                'complexity_score': self._calculate_complexity_score(llm_integrated_question),
+                'composite_queries': composite_queries
+            })
+            
+            # 记录完整推理树结构
+            self._record_complete_tree_trajectory(tree)
+            
+            return composite_queries
             
         except Exception as e:
             logger.error(f"Step 6执行失败: {e}")
-            return ""
+            return {
+                'nested_cumulative': f"Multi-step reasoning required for: {tree.root_node.query.answer}",
+                'nested_cumulative_answer': tree.root_node.query.answer,
+                'llm_integrated': f"Complex reasoning chain needed to determine: {tree.root_node.query.answer}",
+                'llm_integrated_answer': tree.root_node.query.answer
+            }
+    
+    def _generate_nested_cumulative_query(self, queries_by_layer: Dict[int, List[str]], root_answer: str) -> str:
+        """生成嵌套累积型问题 - 无LLM，纯问题累积"""
+        try:
+            # 从最深层向root顶层累积问题
+            layers = sorted(queries_by_layer.keys(), reverse=True)  # 从深层到浅层
+            if not layers:
+                return f"({root_answer})"
+            
+            # 构建嵌套结构：(Q_deepest, (Q_middle, Q_root))
+            nested_query = ""
+            for i, layer in enumerate(layers):
+                layer_queries = queries_by_layer[layer]
+                if not layer_queries:
+                    continue
+                    
+                # 每层取第一个问题作为代表
+                current_query = layer_queries[0]
+                
+                if i == 0:
+                    # 最深层
+                    nested_query = f"({current_query})"
+                else:
+                    # 嵌套包装
+                    nested_query = f"({current_query}, {nested_query})"
+            
+            logger.info(f"✅ 嵌套累积型问题生成: {len(nested_query)} 字符")
+            return nested_query
+            
+        except Exception as e:
+            logger.error(f"生成嵌套累积型问题失败: {e}")
+            return f"(Multi-step reasoning for {root_answer})"
+    
+    def _generate_nested_cumulative_answer(self, answers_by_layer: Dict[int, List[str]], root_answer: str) -> str:
+        """生成嵌套累积型答案 - 无LLM，纯答案累积"""
+        try:
+            # 从最深层向root顶层累积答案
+            layers = sorted(answers_by_layer.keys(), reverse=True)  # 从深层到浅层
+            if not layers:
+                return f"({root_answer})"
+            
+            # 构建嵌套结构：(A_deepest, (A_middle, A_root))
+            nested_answer = ""
+            for i, layer in enumerate(layers):
+                layer_answers = answers_by_layer[layer]
+                if not layer_answers:
+                    continue
+                    
+                # 每层取第一个答案作为代表
+                current_answer = layer_answers[0]
+                
+                if i == 0:
+                    # 最深层
+                    nested_answer = f"({current_answer})"
+                else:
+                    # 嵌套包装
+                    nested_answer = f"({current_answer}, {nested_answer})"
+            
+            logger.info(f"✅ 嵌套累积型答案生成: {len(nested_answer)} 字符")
+            return nested_answer
+            
+        except Exception as e:
+            logger.error(f"生成嵌套累积型答案失败: {e}")
+            return f"(Multi-step reasoning answer for {root_answer})"
+    
+    def _generate_llm_integrated_query(self, queries_by_layer: Dict[int, List[str]], root_answer: str) -> str:
+        """生成LLM整合型问题 - 自然语言整合，保持问题顺序"""
+        if not self.api_client or not queries_by_layer:
+            return self._generate_fallback_integrated_query(queries_by_layer, root_answer)
+        
+        try:
+            # 收集所有问题，按层级从深到浅排序
+            all_queries_ordered = []
+            for layer in sorted(queries_by_layer.keys(), reverse=True):
+                all_queries_ordered.extend(queries_by_layer[layer])
+            
+            if not all_queries_ordered:
+                return f"Through multi-step analysis, determine: {root_answer}"
+            
+            integration_prompt = f"""**TASK: Create a natural language reasoning question that integrates multiple sub-questions while maintaining their logical order.**
+
+**TARGET ANSWER:** {root_answer}
+**SUB-QUESTIONS (ordered from deepest to shallowest):**
+{chr(10).join([f"{i+1}. {q}" for i, q in enumerate(all_queries_ordered)])}
+
+**REQUIREMENTS:**
+1. Create ONE natural language question that integrates all sub-questions
+2. Maintain the logical order: deepest layer → root layer
+3. Use natural connectors: "by first", "then", "finally", "through", etc.
+4. The final answer should be: {root_answer}
+5. Keep the integrated question under 300 words
+6. Ensure it flows naturally while preserving the logical dependency
+
+**INTEGRATION PATTERNS:**
+- "To determine {root_answer}, analyze [DEEP_QUESTION] by first [MID_QUESTION], then [SHALLOW_QUESTION]"
+- "Through examining [DEEP_QUESTION], then evaluating [MID_QUESTION], finally establish {root_answer}"
+- "By first addressing [DEEP_QUESTION], followed by [MID_QUESTION], you can determine {root_answer}"
+
+**OUTPUT:** A single, naturally flowing question that integrates all sub-questions in the correct order."""
+
+            response = self.api_client.generate_response(
+                prompt=integration_prompt,
+                temperature=0.6,
+                max_tokens=400
+            )
+            
+            if response and len(response.strip()) > 50:
+                integrated_query = response.strip()
+                # 简单清理
+                integrated_query = integrated_query.replace('"', '').replace('*', '').strip()
+                
+                logger.info(f"✅ LLM整合型问题生成: {len(integrated_query)} 字符")
+                return integrated_query
+            
+            return self._generate_fallback_integrated_query(queries_by_layer, root_answer)
+            
+        except Exception as e:
+            logger.error(f"生成LLM整合型问题失败: {e}")
+            return self._generate_fallback_integrated_query(queries_by_layer, root_answer)
+    
+    def _generate_llm_integrated_answer(self, answers_by_layer: Dict[int, List[str]], root_answer: str) -> str:
+        """生成LLM整合型答案 - 自然语言整合答案，显示推理过程"""
+        if not self.api_client or not answers_by_layer:
+            return self._generate_fallback_integrated_answer(answers_by_layer, root_answer)
+        
+        try:
+            # 收集所有答案，按层级从深到浅排序
+            all_answers_ordered = []
+            for layer in sorted(answers_by_layer.keys(), reverse=True):
+                all_answers_ordered.extend(answers_by_layer[layer])
+            
+            if not all_answers_ordered:
+                return root_answer
+            
+            integration_prompt = f"""**TASK: Create a natural language integrated answer that shows the reasoning flow.**
+
+**FINAL ANSWER:** {root_answer}
+**SUB-ANSWERS (ordered from deepest to shallowest):**
+{chr(10).join([f"{i+1}. {a}" for i, a in enumerate(all_answers_ordered)])}
+
+**REQUIREMENTS:**
+1. Create a flowing answer that shows how sub-answers lead to the final answer
+2. Use logical connectors: "because", "since", "therefore", "thus", etc.
+3. Keep it concise but clear (under 200 words)
+4. End with the final answer: {root_answer}
+
+**OUTPUT:** A natural language answer showing the reasoning chain."""
+
+            response = self.api_client.chat.completions.create(
+                model="gpt-4o",
+                messages=[
+                    {"role": "system", "content": "You are an expert at creating clear, logical answer explanations."},
+                    {"role": "user", "content": integration_prompt}
+                ],
+                temperature=0.4,
+                max_tokens=300,
+                timeout=30
+            )
+            
+            if response.choices and response.choices[0].message:
+                integrated_answer = response.choices[0].message.content.strip()
+                if integrated_answer and len(integrated_answer) > 10:
+                    logger.info(f"✅ LLM整合型答案生成: {len(integrated_answer)} 字符")
+                    return integrated_answer
+            
+            return self._generate_fallback_integrated_answer(answers_by_layer, root_answer)
+            
+        except Exception as e:
+            logger.error(f"生成LLM整合型答案失败: {e}")
+            return self._generate_fallback_integrated_answer(answers_by_layer, root_answer)
+    
+    def _generate_fallback_integrated_query(self, queries_by_layer: Dict[int, List[str]], root_answer: str) -> str:
+        """生成后备整合型问题"""
+        all_queries = []
+        for layer in sorted(queries_by_layer.keys(), reverse=True):
+            all_queries.extend(queries_by_layer[layer])
+        
+        if not all_queries:
+            return f"Through comprehensive analysis, determine: {root_answer}"
+        
+        if len(all_queries) == 1:
+            return f"To determine {root_answer}, analyze: {all_queries[0]}"
+        elif len(all_queries) == 2:
+            return f"To identify {root_answer}, first examine {all_queries[0]}, then evaluate {all_queries[1]}"
+        else:
+            return f"To establish {root_answer}, first analyze {all_queries[0]}, then examine {all_queries[1]}, and finally evaluate {all_queries[2]}"
+    
+    def _generate_fallback_integrated_answer(self, answers_by_layer: Dict[int, List[str]], root_answer: str) -> str:
+        """生成后备整合型答案"""
+        all_answers = []
+        for layer in sorted(answers_by_layer.keys(), reverse=True):
+            all_answers.extend(answers_by_layer[layer])
+        
+        if not all_answers:
+            return root_answer
+        
+        if len(all_answers) == 1:
+            return f"Based on analysis: {all_answers[0]}, therefore the answer is {root_answer}"
+        elif len(all_answers) == 2:
+            return f"Through step-by-step analysis: {all_answers[0]} → {all_answers[1]} → {root_answer}"
+        else:
+            return f"Multi-step reasoning shows: {all_answers[0]} → {all_answers[1]} → {all_answers[2]} → {root_answer}"
     
     def _record_trajectory(self, record: Dict[str, Any]):
         """记录轨迹数据"""
@@ -620,18 +896,20 @@ class AgentDepthReasoningFramework:
                     })
             
             # 记录最终综合问题
-            if tree.final_composite_query:
+            final_composite = tree.get('final_composite_query') if isinstance(tree, dict) else tree.final_composite_query
+            if final_composite:
                 self._record_trajectory({
                     'step': 'final_composite_query_complete',
-                    'tree_id': tree.tree_id,
-                    'composite_query': tree.final_composite_query,
-                    'root_answer': tree.root_answer,
-                    'total_nodes': len(tree.all_nodes),
-                    'max_depth': tree.max_depth,
-                    'complexity_score': tree.complexity_score if hasattr(tree, 'complexity_score') else 0.0
+                    'tree_id': tree.get('tree_id') if isinstance(tree, dict) else tree.tree_id,
+                    'composite_query': final_composite,
+                    'root_answer': tree.get('root_node', {}).get('query', {}).get('answer') if isinstance(tree, dict) else tree.root_node.query.answer,
+                    'total_nodes': len(tree.get('all_nodes', {})) if isinstance(tree, dict) else len(tree.all_nodes),
+                    'max_depth': tree.get('max_layers', 3) if isinstance(tree, dict) else (tree.max_depth if hasattr(tree, 'max_depth') else 3),
+                    'complexity_score': tree.get('complexity_score', 0.0) if isinstance(tree, dict) else (tree.complexity_score if hasattr(tree, 'complexity_score') else 0.0)
                 })
             
-            logger.info(f"✅ 完整推理树轨迹记录完成: {len(tree.all_nodes)} 个节点")
+            total_nodes = len(tree.get('all_nodes', {})) if isinstance(tree, dict) else len(tree.all_nodes)
+            logger.info(f"✅ 完整推理树轨迹记录完成: {total_nodes} 个节点")
             
         except Exception as e:
             logger.error(f"记录完整推理树轨迹失败: {e}")
@@ -650,7 +928,7 @@ class AgentDepthReasoningFramework:
             'statistics': self.stats.copy(),
             'framework_type': 'agent_depth_reasoning',
             'total_trees': len(reasoning_trees),
-            'total_composite_queries': sum(1 for tree in reasoning_trees if tree.final_composite_query)
+            'total_composite_queries': sum(1 for tree in reasoning_trees if (tree.get('final_composite_query') if isinstance(tree, dict) else tree.final_composite_query))
         }
     
     def _create_error_result(self, document_id: str, error_message: str) -> Dict[str, Any]:

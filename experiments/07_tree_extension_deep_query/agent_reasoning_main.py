@@ -25,7 +25,7 @@ from core.llm_clients.openai_api_client import OpenAIClient
 from utils.document_loader import DocumentLoader
 from utils.document_screener import DocumentScreener
 from agent_depth_reasoning_framework_fixed import AgentDepthReasoningFramework
-from default_excel_exporter import DefaultExcelExporter
+from default_excel_exporter import FixedCleanExcelExporter
 from utils.web_search import web_search
 
 # 设置日志
@@ -51,7 +51,7 @@ class AgentReasoningMainFramework:
         self.document_loader = DocumentLoader()
         self.document_screener = DocumentScreener()
         self.agent_reasoning_framework = None
-        self.export_system = DefaultExcelExporter() # Changed from AgentExportSystem
+        self.export_system = FixedCleanExcelExporter() # Updated to new exporter
         
         # 统计信息
         self.experiment_stats = {
@@ -209,7 +209,7 @@ class AgentReasoningMainFramework:
                     # 成功处理
                     reasoning_trees = doc_result.get('reasoning_trees', [])
                     composite_queries_count = sum(
-                        1 for tree in reasoning_trees if tree.final_composite_query
+                        1 for tree in reasoning_trees if (tree.get('final_composite_query') if isinstance(tree, dict) else tree.final_composite_query)
                     )
                     
                     results['processed_documents'].append({
@@ -507,7 +507,7 @@ class AgentReasoningMainFramework:
                     # 成功处理
                     reasoning_trees = doc_result.get('reasoning_trees', [])
                     composite_queries_count = sum(
-                        1 for tree in reasoning_trees if tree.final_composite_query
+                        1 for tree in reasoning_trees if (tree.get('final_composite_query') if isinstance(tree, dict) else tree.final_composite_query)
                     )
                     
                     results['processed_documents'].append({
