@@ -289,6 +289,19 @@ class AgentDepthReasoningFramework:
                     root_queries.append(root_query)
                     self.stats['root_queries_generated'] += 1
                     
+                    # 获取搜索上下文用于轨迹记录
+                    search_context = ""
+                    if self.search_client:
+                        try:
+                            search_results = self.search_client(f"{short_answer.answer_text} definition characteristics")
+                            if search_results and 'results' in search_results:
+                                search_context = " ".join([
+                                    result.get('content', '')[:200] 
+                                    for result in search_results['results'][:2]
+                                ])
+                        except Exception:
+                            search_context = ""
+                    
                     # 记录轨迹 - 使用增强的记录功能
                     try:
                         self._record_detailed_trajectory_enhanced(
@@ -306,7 +319,7 @@ class AgentDepthReasoningFramework:
                                 'answer_type': short_answer.answer_type,
                                 'confidence': short_answer.confidence
                             },
-                            web_search_context=search_context if 'search_context' in locals() else '',
+                            web_search_context=search_context,
                             uniqueness_verified=root_query.validation_passed
                         )
                     except Exception as e:
