@@ -761,10 +761,12 @@ class AgentDepthReasoningFramework:
             root_answer = tree.root_node.query.answer
             
             # 生成两种格式的综合问题和答案
-            nested_cumulative_question = self._generate_nested_cumulative_query(queries_by_layer, root_answer)
-            nested_cumulative_answer = self._generate_nested_cumulative_answer(answers_by_layer, root_answer)
+            # 问题生成：完全基于问题，不传递答案信息
+            nested_cumulative_question = self._generate_nested_cumulative_query(queries_by_layer, "")
+            llm_integrated_question = self._generate_llm_integrated_query(queries_by_layer, "")
             
-            llm_integrated_question = self._generate_llm_integrated_query(queries_by_layer, root_answer)
+            # 答案生成：可以使用root_answer
+            nested_cumulative_answer = self._generate_nested_cumulative_answer(answers_by_layer, root_answer)
             llm_integrated_answer = self._generate_llm_integrated_answer(answers_by_layer, root_answer)
             
             composite_queries = {
@@ -804,13 +806,13 @@ class AgentDepthReasoningFramework:
                 'llm_integrated_answer': tree.root_node.query.answer
             }
     
-    def _generate_nested_cumulative_query(self, queries_by_layer: Dict[int, List[str]], root_answer: str) -> str:
-        """生成嵌套累积型问题 - 无LLM，纯问题累积"""
+    def _generate_nested_cumulative_query(self, queries_by_layer: Dict[int, List[str]], root_answer: str = "") -> str:
+        """生成嵌套累积型问题 - 简单括号拼装结构"""
         try:
             # 从最深层向root顶层累积问题
             layers = sorted(queries_by_layer.keys(), reverse=True)  # 从深层到浅层
             if not layers:
-                return f"({root_answer})"
+                return "(Multi-step reasoning required)"
             
             # 构建嵌套结构：(Q_deepest, (Q_middle, Q_root))
             nested_query = ""
@@ -834,7 +836,9 @@ class AgentDepthReasoningFramework:
             
         except Exception as e:
             logger.error(f"生成嵌套累积型问题失败: {e}")
-            return f"(Multi-step reasoning for {root_answer})"
+            return "(Multi-step reasoning required)"
+    
+
     
     def _generate_nested_cumulative_answer(self, answers_by_layer: Dict[int, List[str]], root_answer: str) -> str:
         """生成嵌套累积型答案 - 无LLM，纯答案累积"""
@@ -868,10 +872,10 @@ class AgentDepthReasoningFramework:
             logger.error(f"生成嵌套累积型答案失败: {e}")
             return f"(Multi-step reasoning answer for {root_answer})"
     
-    def _generate_llm_integrated_query(self, queries_by_layer: Dict[int, List[str]], root_answer: str) -> str:
-        """生成LLM整合型问题 - 自然语言整合，保持问题顺序"""
+    def _generate_llm_integrated_query(self, queries_by_layer: Dict[int, List[str]], root_answer: str = "") -> str:
+        """生成LLM整合型问题 - 完全基于问题进行自然语言组织，不涉及任何答案"""
         if not self.api_client or not queries_by_layer:
-            return self._generate_fallback_integrated_query(queries_by_layer, root_answer)
+            return self._generate_fallback_integrated_query(queries_by_layer, "")
         
         try:
             # 收集所有问题，按层级从深到浅排序
@@ -880,41 +884,39 @@ class AgentDepthReasoningFramework:
                 all_queries_ordered.extend(queries_by_layer[layer])
             
             if not all_queries_ordered:
-                return f"Through multi-step analysis, determine: {root_answer}"
+                return "What is the final answer that requires multi-step reasoning to determine?"
             
-            integration_prompt = f"""**TASK: Create an objective, factual question that integrates multiple sub-questions for Agent reasoning testing.**
+            integration_prompt = f"""**TASK: Create a REASONING CHAIN question that requires step-by-step logic, NOT parallel verification.**
 
-**TARGET ANSWER:** {root_answer}
 **SUB-QUESTIONS (ordered from deepest to shallowest):**
 {chr(10).join([f"{i+1}. {q}" for i, q in enumerate(all_queries_ordered)])}
 
 **CRITICAL REQUIREMENTS:**
-1. Create a **PURE FACTUAL QUESTION** without any reasoning process descriptions
-2. **NO thinking process words**: Avoid "analyze", "examine", "determine", "consider", "through", "by first"
-3. **NO instructional language**: Avoid "To find X, do Y" or "In order to establish Z"
-4. **DIRECT FACTUAL INQUIRY**: Ask for the information directly and objectively
-5. The answer should be: {root_answer}
-6. Keep under 250 words
-7. **OBJECTIVE TONE**: Like a neutral encyclopedia or reference question
+1. Create a **SEQUENTIAL REASONING CHAIN** where each step depends on the previous answer
+2. **NOT PARALLEL CONDITIONS**: Don't ask "What satisfies A, B, and C?"
+3. **STEP-BY-STEP DEPENDENCY**: Answer1 → Input for Step2 → Answer2 → Input for Step3
+4. **NO ANSWER EXPOSURE**: The question must NEVER contain or hint at any answers
+5. **NATURAL FLOW**: Like a detective following clues, each answer leads to the next question
+6. **LOGICAL DEPENDENCY**: Each step must genuinely need the previous step's result
 
-**FORBIDDEN PATTERNS (DO NOT USE):**
-❌ "To determine X, analyze Y by first examining Z"
-❌ "Through investigating A, then evaluating B, establish C"
-❌ "By examining X and considering Y, you can find Z"
-❌ "In order to identify A, first analyze B, then evaluate C"
+**FORBIDDEN PATTERNS (PARALLEL - DON'T USE):**
+❌ "What entity satisfies conditions A, B, and C?"
+❌ "Which company meets criteria X, Y, and Z?"
+❌ "What organization has features A, B, and C?"
 
-**REQUIRED PATTERNS (USE THESE):**
-✅ "What is X, considering Y and Z?"
-✅ "Which A corresponds to B, given C and D?"
-✅ "What X exists at Y, featuring Z characteristics?"
-✅ "Which entity satisfies conditions A, B, and C?"
+**REQUIRED PATTERNS (SEQUENTIAL - USE THESE):**
+✅ "Starting with [CONDITION], what [INFO] can be identified? Using that [INFO], what [NEXT_INFO] follows? Finally, with [NEXT_INFO], what is the answer?"
+✅ "Given [INITIAL_CLUE], determine [STEP1]. From [STEP1], identify [STEP2]. Using [STEP2], what is the final answer?"
+✅ "Begin by finding [A]. Once [A] is known, use it to discover [B]. With [B] established, what [C] emerges?"
 
-**EXAMPLES OF CORRECT STYLE:**
-- "What business operates at [ADDRESS], specializes in [SERVICE], and has been established for [TIME PERIOD]?"
-- "Which organization founded in [YEAR] produces [PRODUCT] and is headquartered in [LOCATION]?"
-- "What entity combines characteristics [A], [B], and [C] in the context of [DOMAIN]?"
+**EXAMPLES OF CORRECT REASONING CHAINS:**
+- "Starting with the founding year, identify the company. Using that company's name, determine its headquarters location. From the headquarters, what is the current CEO's name?"
+- "First establish the technology invented. Once the technology is known, find which company pioneered it. With the company identified, what is its current market value?"
+- "Begin with the location described. From that location, identify the institution. Using the institution's identity, what field does it specialize in?"
 
-**OUTPUT:** One objective, factual question that directly asks for the information without describing any reasoning process."""
+**GOAL: Create ONE question that forces Agent to solve sequentially: Answer1 → Question2 → Answer2 → Question3 → Final Answer**
+
+**OUTPUT:** One reasoning chain question that requires genuine step-by-step logic, NOT parallel verification."""
 
             response = self.api_client.generate_response(
                 prompt=integration_prompt,
@@ -930,14 +932,14 @@ class AgentDepthReasoningFramework:
                 logger.info(f"✅ LLM整合型问题生成: {len(integrated_query)} 字符")
                 return integrated_query
             
-            return self._generate_fallback_integrated_query(queries_by_layer, root_answer)
+            return self._generate_fallback_integrated_query(queries_by_layer, "")
             
         except Exception as e:
             logger.error(f"生成LLM整合型问题失败: {e}")
-            return self._generate_fallback_integrated_query(queries_by_layer, root_answer)
+            return self._generate_fallback_integrated_query(queries_by_layer, "")
     
     def _generate_llm_integrated_answer(self, answers_by_layer: Dict[int, List[str]], root_answer: str) -> str:
-        """生成LLM整合型答案 - 自然语言整合答案，显示推理过程"""
+        """生成LLM整合型答案 - 纯客观事实答案，无思考过程描述"""
         if not self.api_client or not answers_by_layer:
             return self._generate_fallback_integrated_answer(answers_by_layer, root_answer)
         
@@ -950,33 +952,31 @@ class AgentDepthReasoningFramework:
             if not all_answers_ordered:
                 return root_answer
             
-            integration_prompt = f"""**TASK: Create an objective, factual answer without reasoning process descriptions.**
+            integration_prompt = f"""**TASK: Create a pure, objective factual answer - NO reasoning process, NO thinking descriptions.**
 
-**FINAL ANSWER:** {root_answer}
-**SUB-ANSWERS (ordered from deepest to shallowest):**
-{chr(10).join([f"{i+1}. {a}" for i, a in enumerate(all_answers_ordered)])}
+**SUPPORTING FACTS:**
+{chr(10).join([f"- {a}" for a in all_answers_ordered])}
 
-**CRITICAL REQUIREMENTS:**
-1. Provide a **DIRECT, FACTUAL ANSWER** without explaining the reasoning process
-2. **NO reasoning connectors**: Avoid "because", "since", "therefore", "thus", "through analyzing"
-3. **NO process descriptions**: Don't describe how the answer was derived
-4. **PURE FACTUAL STATEMENT**: Like a definitive reference answer
-5. Keep it concise and objective (under 100 words)
-6. State the final answer: {root_answer}
+**ABSOLUTE REQUIREMENTS:**
+1. **ONLY factual statement** - like an encyclopedia entry
+2. **ZERO reasoning words**: No "because", "since", "therefore", "thus", "through", "based on", "by", "analysis"
+3. **ZERO process words**: No "determine", "examine", "investigate", "consider", "conclude", "derive"
+4. **ZERO connecting phrases**: No "leads to", "indicates", "shows that", "reveals", "demonstrates"
+5. **DIRECT FACT ONLY**: State the answer as pure fact without explanation
 
-**FORBIDDEN PATTERNS (DO NOT USE):**
-❌ "Based on analysis of X, we can determine that..."
-❌ "Through step-by-step reasoning: A → B → C, therefore..."
-❌ "Since X leads to Y, and Y indicates Z, the answer is..."
-❌ "By examining the evidence, we conclude that..."
+**ABSOLUTELY FORBIDDEN:**
+❌ ANY reasoning explanation
+❌ ANY thinking process description  
+❌ ANY analysis words
+❌ ANY step-by-step description
+❌ ANY cause-and-effect language
 
-**REQUIRED PATTERNS (USE THESE):**
-✅ "The answer is {root_answer}."
-✅ "{root_answer} satisfies all the specified criteria."
-✅ "{root_answer} corresponds to the described characteristics."
-✅ "The entity matching these conditions is {root_answer}."
+**REQUIRED FORMAT:**
+✅ Simple factual statement like: "The answer is [FACT]."
+✅ Or: "[ENTITY] is the correct answer."
+✅ Or: "[FACT] matches the specified criteria."
 
-**OUTPUT:** A direct, objective factual answer without any reasoning process description."""
+**GOAL: Pure factual answer exactly like a reference book - NO thinking process whatsoever.**"""
 
             # 构建完整的prompt（包含系统指令）
             full_prompt = "You are an expert at creating clear, logical answer explanations.\n\n" + integration_prompt
@@ -999,20 +999,21 @@ class AgentDepthReasoningFramework:
             return self._generate_fallback_integrated_answer(answers_by_layer, root_answer)
     
     def _generate_fallback_integrated_query(self, queries_by_layer: Dict[int, List[str]], root_answer: str) -> str:
-        """生成后备整合型问题 - 纯客观表述"""
+        """生成后备整合型问题 - 自然推理链描述"""
         all_queries = []
         for layer in sorted(queries_by_layer.keys(), reverse=True):
             all_queries.extend(queries_by_layer[layer])
         
         if not all_queries:
-            return f"What entity matches the characteristics leading to {root_answer}?"
+            return "What is the final answer that requires multi-step reasoning to determine?"
         
         if len(all_queries) == 1:
-            return f"What corresponds to {all_queries[0]} resulting in {root_answer}?"
+            return f"What is the answer to: {all_queries[0]}"
         elif len(all_queries) == 2:
-            return f"What entity satisfies conditions: {all_queries[0]} and {all_queries[1]}, corresponding to {root_answer}?"
+            return f"Starting with '{all_queries[0]}', use that result to determine the answer to '{all_queries[1]}'. What is the final outcome?"
         else:
-            return f"What entity meets criteria: {all_queries[0]}, {all_queries[1]}, and {all_queries[2]}, matching {root_answer}?"
+            # 自然的推理链描述
+            return f"Begin by solving '{all_queries[0]}'. Use that answer to address '{all_queries[1]}'. Finally, apply the result to solve '{all_queries[2]}'. What is the ultimate conclusion?"
     
     def _generate_fallback_integrated_answer(self, answers_by_layer: Dict[int, List[str]], root_answer: str) -> str:
         """生成后备整合型答案 - 纯客观表述"""
@@ -2173,105 +2174,14 @@ Mask the keyword "{keyword.keyword}" from the query and check if the remaining k
         except Exception as e:
             logger.error(f"构建第二层扩展失败: {e}")
     
-    def _build_nested_composite_query(self, queries_by_layer: Dict[int, List[str]], root_answer: str) -> str:
-        """构建嵌套式综合问题"""
-        if not self.api_client:
-            logger.warning("无API客户端，无法生成综合问题")
-            return ""
-        
-        if not queries_by_layer:
-            logger.warning("无查询数据，无法生成综合问题") 
-            return ""
-        
-        try:
-            logger.info(f"构建嵌套式综合问题，目标答案: {root_answer}")
-            
-            # 收集所有层级的问题
-            all_queries = []
-            layer_summary = []
-            
-            for layer in sorted(queries_by_layer.keys()):
-                queries = queries_by_layer[layer]
-                all_queries.extend(queries)
-                layer_summary.append(f"Layer {layer}: {len(queries)} queries")
-            
-            # 生成有逻辑链条的综合问题 
-            composite_prompt = f"""**TASK: Create a LOGICAL REASONING CHAIN for Agent testing (NOT simple concatenation).**
 
-**TARGET FINAL ANSWER:** {root_answer}
-**AVAILABLE SUB-QUESTIONS:** {chr(10).join([f"Q{i+1}: {q}" for i, q in enumerate(all_queries)])}
-**LAYER STRUCTURE:** {' | '.join(layer_summary)}
-
-**CRITICAL REQUIREMENTS for AGENT REASONING:**
-1. **LOGICAL CHAIN**: Each step's answer must be INPUT for next step
-2. **DEPENDENCY**: Question2 depends on Answer1, Question3 depends on Answer2, etc.
-3. **NO SHORTCUTS**: Agent cannot jump directly to final answer
-4. **STEP-BY-STEP**: Must solve in sequence to reach {root_answer}
-
-**FORBIDDEN PATTERNS (avoid these):**
-❌ "First find X, then find Y, then find Z" (independent questions)
-❌ "Determine A, understand B, evaluate C" (no logical connection)  
-❌ Simple concatenation without reasoning dependencies
-
-**REQUIRED PATTERN (use this):**
-✅ "To find {root_answer}, you must follow this reasoning chain:
-Step 1: First determine [KEY_INFO_1] by solving [SUB_QUESTION_1]
-Step 2: Use [KEY_INFO_1] to identify [KEY_INFO_2] through [SUB_QUESTION_2]  
-Step 3: Apply [KEY_INFO_2] to finally determine {root_answer}"
-
-**REASONING CHAIN STRUCTURE:**
-Each step must provide information NEEDED for the next step.
-Answer₁ → Input₂ → Answer₂ → Input₃ → Final Answer
-
-**EXAMPLES of GOOD REASONING CHAINS:**
-- "To identify the company, first find what technology was developed in year X, then determine which company pioneered that technology in location Y."
-- "To determine the temperature, first identify the instrument type from description Z, then find which mission used that instrument, then lookup the operating temperature."
-
-**Output Format (JSON):**
-{{
-    "composite_query": "Logical reasoning chain question requiring genuine step-by-step solving",
-    "reasoning_steps": ["Step 1: Get X to use in Step 2", "Step 2: Use X to get Y for Step 3", "Step 3: Use Y to find {root_answer}"],
-    "dependency_chain": "Answer1 → Question2 → Answer2 → Question3 → {root_answer}",
-    "agent_difficulty": "medium/hard", 
-    "prevents_direct_answer": "Why Agent must solve step-by-step instead of direct answer",
-    "final_answer_confirmed": "{root_answer}"
-}}
-
-**TARGET: Generate ONE reasoning chain that requires genuine sequential Agent reasoning to reach {root_answer}.**"""
-
-            response = self.api_client.generate_response(
-                prompt=composite_prompt,
-                temperature=0.6,  # 较高创造性用于复杂问题构建
-                max_tokens=800
-            )
-            
-            parsed_data = self._parse_json_response(response)
-            if parsed_data and 'composite_query' in parsed_data:
-                composite_query = parsed_data['composite_query']
-                reasoning_steps = parsed_data.get('reasoning_steps', [])
-                difficulty = parsed_data.get('agent_difficulty', 'medium')
-                
-                logger.info(f"✅ 嵌套式综合问题生成完成")
-                logger.info(f"  难度级别: {difficulty}")
-                logger.info(f"  推理步骤: {len(reasoning_steps)} 步")
-                logger.info(f"  问题长度: {len(composite_query)} 字符")
-                
-                return composite_query
-            else:
-                logger.warning("无法解析综合问题生成响应")
-                # 生成简单的嵌套问题作为后备
-                return self._generate_simple_nested_query(all_queries, root_answer)
-                
-        except Exception as e:
-            logger.error(f"构建嵌套式综合问题失败: {e}")
-            return self._generate_simple_nested_query(queries_by_layer.get(0, ["What is the answer?"]), root_answer)
     
     def _generate_simple_nested_query(self, queries: List[str], root_answer: str) -> str:
-        """生成简单的嵌套问题作为后备"""
+        """生成简单的嵌套问题作为后备 - 绝不包含答案信息"""
         if not queries:
-            return f"What is the answer that requires multi-step reasoning to identify {root_answer}?"
+            return "What is the final answer that requires multi-step reasoning to determine?"
         
-        # 选择前3个问题构建简单嵌套
+        # 选择前3个问题构建简单嵌套，确保不泄露答案
         selected_queries = queries[:3]
         if len(selected_queries) == 1:
             return f"To determine the final answer, consider: {selected_queries[0]}"

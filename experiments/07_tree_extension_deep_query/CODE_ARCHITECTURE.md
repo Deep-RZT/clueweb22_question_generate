@@ -270,25 +270,36 @@ def _build_second_layer_extensions(self, tree: AgentReasoningTree, parent_node: 
 
 #### 7. Step 6: 综合问题生成
 ```python
-def _step6_generate_composite_query(self, reasoning_trees: List[AgentReasoningTree]) -> List[AgentReasoningTree]:
+def _step6_generate_composite_query(self, tree: AgentReasoningTree) -> Dict[str, str]:
     """
     综合问题生成流程：
     
-    1. 收集每个树的所有层级问题
-    2. 调用_build_nested_composite_query生成嵌套问题
-    3. 验证综合问题的逻辑链条
-    4. 设置final_composite_query字段
+    1. 收集推理树的所有层级问题和答案
+    2. 生成两种格式的糅合问题：
+       - 嵌套累积型：(Q1, (Q2, Q3)) 结构化拼装
+       - LLM整合型：GPT-4o自然生成推理链
+    3. 确保问题不包含任何层级的答案信息
+    4. 形成真正的推理链而非并行条件验证
     """
 
-def _build_nested_composite_query(self, queries_by_layer: Dict[int, List[str]], root_answer: str) -> str:
+def _generate_nested_cumulative_query(self, queries_by_layer: Dict[int, List[str]], root_answer: str = "") -> str:
     """
-    嵌套综合问题构建算法：
+    嵌套累积型问题生成：
     
-    1. 收集所有层级的问题
-    2. 构造复杂的prompt要求生成逻辑推理链
-    3. 确保每步的答案为下一步提供输入
-    4. 生成需要按序解决的综合问题
-    5. 验证最终问题符合Agent推理模式
+    1. 简单括号拼装结构
+    2. 从深层到浅层嵌套：(Q_deepest, (Q_middle, Q_root))
+    3. 不使用任何答案信息，只使用问题文本
+    4. 保持清晰的结构化表达
+    """
+
+def _generate_llm_integrated_query(self, queries_by_layer: Dict[int, List[str]], root_answer: str = "") -> str:
+    """
+    LLM整合型问题生成：
+    
+    1. 交给GPT-4o自然生成推理链问题
+    2. 强调Sequential reasoning而非parallel conditions
+    3. 要求Answer1 → Question2 → Answer2 → Question3的依赖关系
+    4. 生成真正的逻辑推理链，Agent必须逐步解决
     """
 ```
 
@@ -311,6 +322,19 @@ def _validate_no_root_answer_exposure(self, question_text: str, root_answer: str
     
     风险评级：HIGH/MEDIUM/LOW/SAFE
     只接受LOW和SAFE级别的问题
+    """
+
+def _generate_nested_cumulative_query(self, queries_by_layer: Dict[int, List[str]], root_answer: str = "") -> str:
+    """
+    糅合问题生成（绝对隔离）：
+    
+    关键原则：
+    1. 完全基于问题文本生成，不使用root_answer参数
+    2. 纯问题嵌套：(Q_deepest, (Q_middle, Q_root))
+    3. 自然语言整合：智能组合多个问题而不暴露答案
+    4. 后备机制：确保在任何情况下都不泄露答案信息
+    
+    保证Agent必须通过推理才能获得答案
     """
 ```
 
