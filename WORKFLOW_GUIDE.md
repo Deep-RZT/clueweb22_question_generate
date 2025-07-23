@@ -17,7 +17,9 @@ clueweb22_question_generate/
 │   ├── 02_rag_approach/             # RAG with knowledge corpus
 │   ├── 03_hybrid_prompt_rag/        # PROMPT+RAG combination
 │   ├── 04_multi_stage/              # Multi-stage deep thinking
-│   └── 05_comparative/              # 🏆 RECOMMENDED APPROACH
+│   ├── 05_comparative/              # 🏆 RECOMMENDED APPROACH
+│   ├── 06_short_answer_deep_query/  # Short answer focused generation
+│   └── 07_tree_extension_deep_query/ # 🧠 AGENT REASONING FRAMEWORK
 │
 ├── 📁 core/                         # Shared components
 │   ├── llm_clients/                 # API clients (OpenAI, Claude)
@@ -34,12 +36,32 @@ clueweb22_question_generate/
 └── 📁 archived/                     # Historical versions
 ```
 
-## 🌟 Quick Start - Recommended Approach
+## 🌟 Quick Start - Recommended Approaches
 
-**For new users, start here:**
+### 🧠 For AI Agent Testing (NEW)
+
+**Latest and most advanced approach:**
 
 ```bash
-# 1. Navigate to the recommended approach
+# 1. Navigate to Agent Reasoning Framework
+cd experiments/07_tree_extension_deep_query
+
+# 2. Run the Agent deep reasoning test generator
+python main.py
+```
+
+**Why this approach?**
+- 🚀 **Cutting-edge**: Latest Agent reasoning test framework
+- 🛡️ **Anti-masking**: Prevents direct answer exposure
+- 📊 **Production-ready**: Automated quality assurance
+- 🔍 **Real-time**: OpenAI Web Search integration
+
+### 🏆 For General Question Generation
+
+**Traditional recommended approach:**
+
+```bash
+# 1. Navigate to the comparative approach
 cd experiments/05_comparative
 
 # 2. Run test mode (fast validation)
@@ -142,6 +164,31 @@ cd experiments/04_multi_stage
 python main.py
 ```
 
+### 6. 🧠 Agent Deep Reasoning Framework (LATEST)
+
+**Location**: `experiments/07_tree_extension_deep_query/`
+**Best for**: AI Agent reasoning test, preventing direct answers
+
+**Features**:
+- **6-Step Agent Design Flow**: Complete pipeline from short answers to composite questions
+- **Root Answer Exposure Protection**: Intelligent detection and prevention of answer leakage
+- **Pure Objective Q&A**: Elimination of LLM thinking process descriptions
+- **Real Web Search Integration**: OpenAI official API, no mock data pollution
+- **Tree Extension Structure**: Multi-level question dependency relationships
+- **4-Layer Quality Verification**: Comprehensive validation system
+
+**Usage**:
+```bash
+cd experiments/07_tree_extension_deep_query
+python main.py
+```
+
+**Key Innovation**:
+- Generates questions that **cannot be directly answered** by normal LLMs
+- Requires **Agent step-by-step reasoning** to solve
+- **Prevents masking**: Ensures root answers are not exposed during reasoning
+- **Production-ready**: Automated generation with quality guarantee
+
 ## ⚙️ Configuration & Setup
 
 ### API Keys Setup
@@ -240,6 +287,7 @@ Based on comprehensive testing:
 
 | Approach | Speed | Quality | Reliability | Use Case |
 |----------|-------|---------|-------------|----------|
+| **Agent Reasoning (07)** | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | **Agent Testing** |
 | Comparative | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | Production |
 | PROMPT-only | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐ | Prototyping |
 | RAG | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | Research |
