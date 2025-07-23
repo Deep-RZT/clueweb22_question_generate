@@ -84,9 +84,13 @@ class AgentReasoningMainFramework:
             if hasattr(self.agent_reasoning_framework, 'set_api_client'):
                 self.agent_reasoning_framework.set_api_client(self.api_client)
             
+            # 创建带API key的搜索客户端wrapper
+            def web_search_with_api_key(query: str, max_results: int = 5, **kwargs):
+                return self.search_client(query, max_results=max_results, api_key=api_key, **kwargs)
+            
             # 设置搜索客户端
             if hasattr(self.agent_reasoning_framework, 'set_search_client'):
-                self.agent_reasoning_framework.set_search_client(self.search_client)
+                self.agent_reasoning_framework.set_search_client(web_search_with_api_key)
             
             logger.info("✅ Agent推理框架初始化完成")
             logger.info("🎯 框架目标:")

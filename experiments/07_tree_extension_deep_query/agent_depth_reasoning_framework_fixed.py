@@ -293,8 +293,16 @@ class AgentDepthReasoningFramework:
                     search_context = ""
                     if self.search_client:
                         try:
-                            search_results = self.search_client(f"{short_answer.answer_text} definition characteristics")
-                            if search_results and 'results' in search_results:
+                            # 如果有API client，传递API key给web search
+                            if hasattr(self, 'api_client') and hasattr(self.api_client, 'api_key'):
+                                search_results = self.search_client(f"{short_answer.answer_text} definition characteristics", api_key=self.api_client.api_key)
+                            else:
+                                search_results = self.search_client(f"{short_answer.answer_text} definition characteristics")
+                            
+                            # 只有成功获取到真实搜索结果才使用，否则留空
+                            if (search_results and 
+                                search_results.get('status') == 'success' and 
+                                search_results.get('results')):
                                 search_context = " ".join([
                                     result.get('content', '')[:200] 
                                     for result in search_results['results'][:2]
@@ -597,6 +605,16 @@ class AgentDepthReasoningFramework:
                     else:
                         logger.warning("Series扩展失败: 与父问题存在关联")
                 
+                # 额外验证：检查是否会暴露根答案
+                root_answer = self._extract_root_answer_from_tree_id(tree_id)
+                if root_answer and validation_passed:
+                    exposure_safe = self._validate_no_root_answer_exposure(
+                        extension_query.query_text, root_answer, layer
+                    )
+                    if not exposure_safe:
+                        logger.warning(f"Series扩展问题可能暴露根答案，需要重新设计: {extension_query.query_text}")
+                        validation_passed = False
+                
                 # 记录Series扩展轨迹
                 try:
                     self._record_detailed_trajectory_enhanced(
@@ -677,6 +695,18 @@ class AgentDepthReasoningFramework:
                             validation_passed = True
                         else:
                             logger.warning(f"Parallel扩展 {i+1} 失败: 与Root问题存在关联")
+                    
+                    # 额外验证：检查是否会暴露根答案
+                    if validation_passed:
+                        exposure_safe = self._validate_no_root_answer_exposure(
+                            extension_query.query_text, root_query.answer, layer
+                        )
+                        if not exposure_safe:
+                            logger.warning(f"Parallel扩展问题可能暴露根答案，需要重新设计: {extension_query.query_text}")
+                            validation_passed = False
+                            # 从已添加的列表中移除这个问题
+                            if extension_query in parallel_queries:
+                                parallel_queries.remove(extension_query)
                     
                     # 记录Parallel扩展轨迹
                     try:
@@ -855,26 +885,39 @@ class AgentDepthReasoningFramework:
             if not all_queries_ordered:
                 return f"Through multi-step analysis, determine: {root_answer}"
             
-            integration_prompt = f"""**TASK: Create a natural language reasoning question that integrates multiple sub-questions while maintaining their logical order.**
+            integration_prompt = f"""**TASK: Create an objective, factual question that integrates multiple sub-questions for Agent reasoning testing.**
 
 **TARGET ANSWER:** {root_answer}
 **SUB-QUESTIONS (ordered from deepest to shallowest):**
 {chr(10).join([f"{i+1}. {q}" for i, q in enumerate(all_queries_ordered)])}
 
-**REQUIREMENTS:**
-1. Create ONE natural language question that integrates all sub-questions
-2. Maintain the logical order: deepest layer → root layer
-3. Use natural connectors: "by first", "then", "finally", "through", etc.
-4. The final answer should be: {root_answer}
-5. Keep the integrated question under 300 words
-6. Ensure it flows naturally while preserving the logical dependency
+**CRITICAL REQUIREMENTS:**
+1. Create a **PURE FACTUAL QUESTION** without any reasoning process descriptions
+2. **NO thinking process words**: Avoid "analyze", "examine", "determine", "consider", "through", "by first"
+3. **NO instructional language**: Avoid "To find X, do Y" or "In order to establish Z"
+4. **DIRECT FACTUAL INQUIRY**: Ask for the information directly and objectively
+5. The answer should be: {root_answer}
+6. Keep under 250 words
+7. **OBJECTIVE TONE**: Like a neutral encyclopedia or reference question
 
-**INTEGRATION PATTERNS:**
-- "To determine {root_answer}, analyze [DEEP_QUESTION] by first [MID_QUESTION], then [SHALLOW_QUESTION]"
-- "Through examining [DEEP_QUESTION], then evaluating [MID_QUESTION], finally establish {root_answer}"
-- "By first addressing [DEEP_QUESTION], followed by [MID_QUESTION], you can determine {root_answer}"
+**FORBIDDEN PATTERNS (DO NOT USE):**
+❌ "To determine X, analyze Y by first examining Z"
+❌ "Through investigating A, then evaluating B, establish C"
+❌ "By examining X and considering Y, you can find Z"
+❌ "In order to identify A, first analyze B, then evaluate C"
 
-**OUTPUT:** A single, naturally flowing question that integrates all sub-questions in the correct order."""
+**REQUIRED PATTERNS (USE THESE):**
+✅ "What is X, considering Y and Z?"
+✅ "Which A corresponds to B, given C and D?"
+✅ "What X exists at Y, featuring Z characteristics?"
+✅ "Which entity satisfies conditions A, B, and C?"
+
+**EXAMPLES OF CORRECT STYLE:**
+- "What business operates at [ADDRESS], specializes in [SERVICE], and has been established for [TIME PERIOD]?"
+- "Which organization founded in [YEAR] produces [PRODUCT] and is headquartered in [LOCATION]?"
+- "What entity combines characteristics [A], [B], and [C] in the context of [DOMAIN]?"
+
+**OUTPUT:** One objective, factual question that directly asks for the information without describing any reasoning process."""
 
             response = self.api_client.generate_response(
                 prompt=integration_prompt,
@@ -910,19 +953,33 @@ class AgentDepthReasoningFramework:
             if not all_answers_ordered:
                 return root_answer
             
-            integration_prompt = f"""**TASK: Create a natural language integrated answer that shows the reasoning flow.**
+            integration_prompt = f"""**TASK: Create an objective, factual answer without reasoning process descriptions.**
 
 **FINAL ANSWER:** {root_answer}
 **SUB-ANSWERS (ordered from deepest to shallowest):**
 {chr(10).join([f"{i+1}. {a}" for i, a in enumerate(all_answers_ordered)])}
 
-**REQUIREMENTS:**
-1. Create a flowing answer that shows how sub-answers lead to the final answer
-2. Use logical connectors: "because", "since", "therefore", "thus", etc.
-3. Keep it concise but clear (under 200 words)
-4. End with the final answer: {root_answer}
+**CRITICAL REQUIREMENTS:**
+1. Provide a **DIRECT, FACTUAL ANSWER** without explaining the reasoning process
+2. **NO reasoning connectors**: Avoid "because", "since", "therefore", "thus", "through analyzing"
+3. **NO process descriptions**: Don't describe how the answer was derived
+4. **PURE FACTUAL STATEMENT**: Like a definitive reference answer
+5. Keep it concise and objective (under 100 words)
+6. State the final answer: {root_answer}
 
-**OUTPUT:** A natural language answer showing the reasoning chain."""
+**FORBIDDEN PATTERNS (DO NOT USE):**
+❌ "Based on analysis of X, we can determine that..."
+❌ "Through step-by-step reasoning: A → B → C, therefore..."
+❌ "Since X leads to Y, and Y indicates Z, the answer is..."
+❌ "By examining the evidence, we conclude that..."
+
+**REQUIRED PATTERNS (USE THESE):**
+✅ "The answer is {root_answer}."
+✅ "{root_answer} satisfies all the specified criteria."
+✅ "{root_answer} corresponds to the described characteristics."
+✅ "The entity matching these conditions is {root_answer}."
+
+**OUTPUT:** A direct, objective factual answer without any reasoning process description."""
 
             # 构建完整的prompt（包含系统指令）
             full_prompt = "You are an expert at creating clear, logical answer explanations.\n\n" + integration_prompt
@@ -945,23 +1002,23 @@ class AgentDepthReasoningFramework:
             return self._generate_fallback_integrated_answer(answers_by_layer, root_answer)
     
     def _generate_fallback_integrated_query(self, queries_by_layer: Dict[int, List[str]], root_answer: str) -> str:
-        """生成后备整合型问题"""
+        """生成后备整合型问题 - 纯客观表述"""
         all_queries = []
         for layer in sorted(queries_by_layer.keys(), reverse=True):
             all_queries.extend(queries_by_layer[layer])
         
         if not all_queries:
-            return f"Through comprehensive analysis, determine: {root_answer}"
+            return f"What entity matches the characteristics leading to {root_answer}?"
         
         if len(all_queries) == 1:
-            return f"To determine {root_answer}, analyze: {all_queries[0]}"
+            return f"What corresponds to {all_queries[0]} resulting in {root_answer}?"
         elif len(all_queries) == 2:
-            return f"To identify {root_answer}, first examine {all_queries[0]}, then evaluate {all_queries[1]}"
+            return f"What entity satisfies conditions: {all_queries[0]} and {all_queries[1]}, corresponding to {root_answer}?"
         else:
-            return f"To establish {root_answer}, first analyze {all_queries[0]}, then examine {all_queries[1]}, and finally evaluate {all_queries[2]}"
+            return f"What entity meets criteria: {all_queries[0]}, {all_queries[1]}, and {all_queries[2]}, matching {root_answer}?"
     
     def _generate_fallback_integrated_answer(self, answers_by_layer: Dict[int, List[str]], root_answer: str) -> str:
-        """生成后备整合型答案"""
+        """生成后备整合型答案 - 纯客观表述"""
         all_answers = []
         for layer in sorted(answers_by_layer.keys(), reverse=True):
             all_answers.extend(answers_by_layer[layer])
@@ -970,11 +1027,11 @@ class AgentDepthReasoningFramework:
             return root_answer
         
         if len(all_answers) == 1:
-            return f"Based on analysis: {all_answers[0]}, therefore the answer is {root_answer}"
+            return f"The answer is {root_answer}."
         elif len(all_answers) == 2:
-            return f"Through step-by-step analysis: {all_answers[0]} → {all_answers[1]} → {root_answer}"
+            return f"{root_answer} corresponds to the specified criteria."
         else:
-            return f"Multi-step reasoning shows: {all_answers[0]} → {all_answers[1]} → {all_answers[2]} → {root_answer}"
+            return f"{root_answer} satisfies all the required conditions."
     
     def _record_trajectory(self, record: Dict[str, Any]):
         """记录轨迹数据"""
@@ -1222,8 +1279,16 @@ class AgentDepthReasoningFramework:
             # Step 1: 使用Web搜索增强问题生成
             search_context = ""
             if self.search_client:
-                search_results = self.search_client(f"{short_answer.answer_text} definition characteristics")
-                if search_results and 'results' in search_results:
+                # 如果有API client，传递API key给web search
+                if hasattr(self, 'api_client') and hasattr(self.api_client, 'api_key'):
+                    search_results = self.search_client(f"{short_answer.answer_text} definition characteristics", api_key=self.api_client.api_key)
+                else:
+                    search_results = self.search_client(f"{short_answer.answer_text} definition characteristics")
+                
+                # 只有成功获取到真实搜索结果才使用，否则留空
+                if (search_results and 
+                    search_results.get('status') == 'success' and 
+                    search_results.get('results')):
                     search_context = " ".join([
                         result.get('content', '')[:200] 
                         for result in search_results['results'][:2]
@@ -1521,8 +1586,47 @@ Mask the keyword "{keyword.keyword}" from the query and check if the remaining k
     
     def _calculate_keyword_uniqueness(self, keyword: str, answer: str) -> float:
         """计算关键词唯一性分数"""
-        # TODO: 实现唯一性计算
-        return 0.8
+        try:
+            # 基于多个因素计算唯一性分数
+            keyword_lower = keyword.lower()
+            answer_lower = answer.lower()
+            
+            # 1. 长度因子 - 更长的关键词通常更唯一
+            length_factor = min(len(keyword) / 10.0, 1.0)
+            
+            # 2. 特异性因子 - 数字、专有名词更唯一
+            specificity_factor = 0.5
+            if keyword.isdigit():
+                specificity_factor = 0.9  # 数字很特异
+            elif keyword[0].isupper():
+                specificity_factor = 0.8  # 专有名词较特异
+            elif any(char.isdigit() for char in keyword):
+                specificity_factor = 0.7  # 包含数字的词较特异
+            
+            # 3. 与答案的关联度 - 关键词应该强关联答案
+            if keyword_lower in answer_lower or answer_lower in keyword_lower:
+                association_factor = 0.9
+            else:
+                association_factor = 0.6
+            
+            # 4. 通用词惩罚
+            common_words = {'the', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by'}
+            if keyword_lower in common_words:
+                common_penalty = 0.3
+            else:
+                common_penalty = 1.0
+            
+            # 综合计算唯一性分数
+            uniqueness = (length_factor * 0.2 + 
+                         specificity_factor * 0.4 + 
+                         association_factor * 0.3 + 
+                         common_penalty * 0.1)
+            
+            return min(max(uniqueness, 0.1), 1.0)  # 限制在0.1-1.0范围内
+            
+        except Exception as e:
+            logger.error(f"计算关键词唯一性失败: {e}")
+            return 0.5  # 默认中等唯一性
     
     def _web_search_for_keyword(self, keyword: str) -> str:
         """为关键词进行Web搜索"""
@@ -1534,9 +1638,15 @@ Mask the keyword "{keyword.keyword}" from the query and check if the remaining k
             search_query = f"{keyword} definition characteristics properties"
             
             # 执行搜索
-            search_results = self.search_client(search_query, max_results=3)
+            if hasattr(self, 'api_client') and hasattr(self.api_client, 'api_key'):
+                search_results = self.search_client(search_query, max_results=3, api_key=self.api_client.api_key)
+            else:
+                search_results = self.search_client(search_query, max_results=3)
             
-            if search_results and 'results' in search_results:
+            # 只有成功获取到真实搜索结果才使用
+            if (search_results and 
+                search_results.get('status') == 'success' and 
+                search_results.get('results')):
                 # 提取搜索内容
                 search_content = []
                 for result in search_results['results'][:3]:
@@ -1606,8 +1716,15 @@ Mask the keyword "{keyword.keyword}" from the query and check if the remaining k
             return None
         
         try:
-            results = self.search_client(query, max_results=max_results)
-            if results and 'results' in results:
+            if hasattr(self, 'api_client') and hasattr(self.api_client, 'api_key'):
+                results = self.search_client(query, max_results=max_results, api_key=self.api_client.api_key)
+            else:
+                results = self.search_client(query, max_results=max_results)
+            
+            # 只有成功获取到真实搜索结果才返回
+            if (results and 
+                results.get('status') == 'success' and 
+                results.get('results')):
                 return results['results']
             return None
         except Exception as e:
@@ -2019,13 +2136,62 @@ Mask the keyword "{keyword.keyword}" from the query and check if the remaining k
     
     def _build_second_layer_extensions(self, tree: AgentReasoningTree, parent_node: QuestionTreeNode):
         """构建第二层扩展"""
-        # TODO: 实现第二层扩展构建
-        pass
+        try:
+            logger.info(f"开始构建第二层扩展，父节点: {parent_node.question[:50]}...")
+            
+            # 检查是否已经达到最大深度
+            if parent_node.layer >= 2:  # 限制最多3层（0, 1, 2）
+                logger.info("已达到最大扩展深度，跳过第二层扩展")
+                return
+            
+            # 为父节点的每个关键词尝试创建Series扩展
+            for keyword in parent_node.keywords:
+                try:
+                    series_query = self._step3_create_series_extension(
+                        keyword=keyword,
+                        parent_query=parent_node,
+                        layer=parent_node.layer + 1,
+                        tree_id=tree.tree_id
+                    )
+                    
+                    if series_query:
+                        # 创建子节点
+                        child_node = QuestionTreeNode(
+                            question=series_query.query_text,
+                            answer=series_query.answer,
+                            keywords=series_query.minimal_keywords,
+                            layer=parent_node.layer + 1,
+                            parent=parent_node,
+                            generation_method=series_query.generation_method
+                        )
+                        
+                        # 添加到父节点的子节点列表
+                        parent_node.children.append(child_node)
+                        
+                        logger.info(f"✅ 成功创建第二层Series扩展: {series_query.query_text[:50]}...")
+                        
+                        # 限制每个父节点最多2个子扩展，避免过度复杂
+                        if len(parent_node.children) >= 2:
+                            break
+                            
+                except Exception as e:
+                    logger.error(f"创建第二层Series扩展失败 (关键词: {keyword.keyword}): {e}")
+                    continue
+            
+            logger.info(f"第二层扩展完成，生成了 {len(parent_node.children)} 个子节点")
+            
+        except Exception as e:
+            logger.error(f"构建第二层扩展失败: {e}")
     
     def _build_nested_composite_query(self, queries_by_layer: Dict[int, List[str]], root_answer: str) -> str:
         """构建嵌套式综合问题"""
-        if not self.api_client or not queries_by_layer:
-            return "Composite query placeholder"
+        if not self.api_client:
+            logger.warning("无API客户端，无法生成综合问题")
+            return ""
+        
+        if not queries_by_layer:
+            logger.warning("无查询数据，无法生成综合问题") 
+            return ""
         
         try:
             logger.info(f"构建嵌套式综合问题，目标答案: {root_answer}")
@@ -2754,3 +2920,117 @@ For each keyword in [{', '.join(keywords)}]:
         except Exception as e:
             logger.error(f"最小精确问题验证失败: {e}")
             return {'is_minimal': False, 'is_precise': False, 'reasoning': f'Validation error: {e}'}
+    
+    def _validate_no_root_answer_exposure(self, question_text: str, root_answer: str, current_layer: int) -> bool:
+        """
+        验证问题是否会直接暴露根答案 - 防止Agent推理过程中答案泄露
+        
+        Args:
+            question_text: 待验证的问题
+            root_answer: 根答案（最终目标答案）
+            current_layer: 当前问题所在层级
+            
+        Returns:
+            True: 问题安全，不会暴露根答案
+            False: 问题有风险，可能暴露根答案
+        """
+        if not self.api_client:
+            return True  # 无法验证时保守返回True
+        
+        try:
+            exposure_test_prompt = f"""**TASK: Test if this question could directly expose the target answer during Agent reasoning.**
+
+**QUESTION TO TEST:** {question_text}
+**TARGET ANSWER (MUST NOT BE EXPOSED):** {root_answer}
+**QUESTION LAYER:** {current_layer}
+
+**CRITICAL TEST:**
+Imagine an Agent analyzing this question step by step. Would the Agent be able to directly identify or deduce "{root_answer}" as a likely answer during the reasoning process?
+
+**EXPOSURE RISK SCENARIOS:**
+1. **Direct Mention**: Does the question directly contain "{root_answer}"?
+2. **Obvious Implication**: Would a reasoning Agent immediately think of "{root_answer}" when seeing this question?
+3. **Contextual Clues**: Do the keywords/context strongly suggest "{root_answer}"?
+4. **Domain Overlap**: Is the question in the same knowledge domain as "{root_answer}"?
+5. **Logical Path**: Is there a short logical path from question to "{root_answer}"?
+
+**RISK ASSESSMENT:**
+- **HIGH RISK**: Agent would likely think of "{root_answer}" within 1-2 reasoning steps
+- **MEDIUM RISK**: Agent might consider "{root_answer}" among several possibilities
+- **LOW RISK**: Agent would need many steps and different information to reach "{root_answer}"
+- **SAFE**: No reasonable path from question to "{root_answer}"
+
+**EXAMPLES OF HIGH RISK:**
+- If root_answer="Tesla" and question asks "Which company makes electric vehicles?"
+- If root_answer="20" and question asks "How many years has X been in business?"
+- If root_answer="Apple" and question asks "Which tech company was founded by Steve Jobs?"
+
+**Output Format (JSON):**
+{{
+    "exposure_risk": "high/medium/low/safe",
+    "will_expose_answer": true/false,
+    "risk_factors": ["list", "of", "specific", "risk", "factors"],
+    "reasoning_path_to_answer": "explanation of how Agent might reach the target answer",
+    "safety_score": 0.0-1.0,
+    "recommendations": "suggestions to reduce exposure risk if needed"
+}}
+
+**TARGET: Determine if this question safely avoids exposing "{root_answer}" during Agent reasoning.**"""
+
+            response = self.api_client.generate_response(
+                prompt=exposure_test_prompt,
+                temperature=0.1,  # 很低温度确保客观分析
+                max_tokens=500
+            )
+            
+            parsed_data = self._parse_json_response(response)
+            if parsed_data:
+                will_expose = parsed_data.get('will_expose_answer', False)
+                exposure_risk = parsed_data.get('exposure_risk', 'high')
+                safety_score = parsed_data.get('safety_score', 0.0)
+                
+                # 验证通过条件：不会暴露答案 且 风险等级为safe或low 且 安全分数高
+                is_safe = (not will_expose and 
+                          exposure_risk in ['safe', 'low'] and 
+                          safety_score >= 0.7)
+                
+                if is_safe:
+                    logger.info(f"✅ 根答案暴露验证通过 (安全分数: {safety_score:.2f}, 风险: {exposure_risk})")
+                else:
+                    logger.warning(f"❌ 检测到根答案暴露风险 (安全分数: {safety_score:.2f}, 风险: {exposure_risk})")
+                    if parsed_data.get('reasoning_path_to_answer'):
+                        logger.warning(f"   暴露路径: {parsed_data['reasoning_path_to_answer']}")
+                
+                return is_safe
+            else:
+                logger.warning("无法解析根答案暴露验证响应")
+                return False  # 保守处理
+                
+        except Exception as e:
+            logger.error(f"根答案暴露验证失败: {e}")
+            return True  # 验证失败时保守返回True
+    
+    def _extract_root_answer_from_tree_id(self, tree_id: str) -> Optional[str]:
+        """
+        从tree_id中提取根答案 - 用于根答案暴露验证
+        
+        Args:
+            tree_id: 推理树ID
+            
+        Returns:
+            根答案字符串，如果无法提取则返回None
+        """
+        try:
+            # 尝试从当前轨迹记录中找到对应的根答案
+            for record in reversed(self.trajectory_records):
+                if (record.get('tree_id') == tree_id and 
+                    record.get('extension_type') == 'root' and
+                    record.get('current_answer')):
+                    return record['current_answer']
+            
+            # 如果找不到，返回None
+            return None
+            
+        except Exception as e:
+            logger.error(f"从tree_id提取根答案失败: {e}")
+            return None
