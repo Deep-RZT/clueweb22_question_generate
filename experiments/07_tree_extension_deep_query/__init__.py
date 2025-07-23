@@ -10,9 +10,9 @@ from pathlib import Path
 current_dir = Path(__file__).parent
 sys.path.append(str(current_dir))
 
-from agent_depth_reasoning_framework_fixed import AgentDepthReasoningFramework
-from agent_reasoning_main import AgentReasoningMainFramework
-from default_excel_exporter import DefaultExcelExporter
+from core_framework import AgentDepthReasoningFramework
+from main import AgentReasoningMainFramework
+from excel_exporter import DefaultExcelExporter
 
 __all__ = [
     'AgentDepthReasoningFramework',

@@ -293,11 +293,8 @@ class AgentDepthReasoningFramework:
                     search_context = ""
                     if self.search_client:
                         try:
-                            # 如果有API client，传递API key给web search
-                            if hasattr(self, 'api_client') and hasattr(self.api_client, 'api_key'):
-                                search_results = self.search_client(f"{short_answer.answer_text} definition characteristics", api_key=self.api_client.api_key)
-                            else:
-                                search_results = self.search_client(f"{short_answer.answer_text} definition characteristics")
+                            # 直接调用search_client，wrapper会处理API key
+                            search_results = self.search_client(f"{short_answer.answer_text} definition characteristics")
                             
                             # 只有成功获取到真实搜索结果才使用，否则留空
                             if (search_results and 
@@ -1279,11 +1276,8 @@ class AgentDepthReasoningFramework:
             # Step 1: 使用Web搜索增强问题生成
             search_context = ""
             if self.search_client:
-                # 如果有API client，传递API key给web search
-                if hasattr(self, 'api_client') and hasattr(self.api_client, 'api_key'):
-                    search_results = self.search_client(f"{short_answer.answer_text} definition characteristics", api_key=self.api_client.api_key)
-                else:
-                    search_results = self.search_client(f"{short_answer.answer_text} definition characteristics")
+                # 直接调用search_client，wrapper会处理API key
+                search_results = self.search_client(f"{short_answer.answer_text} definition characteristics")
                 
                 # 只有成功获取到真实搜索结果才使用，否则留空
                 if (search_results and 
@@ -1638,10 +1632,8 @@ Mask the keyword "{keyword.keyword}" from the query and check if the remaining k
             search_query = f"{keyword} definition characteristics properties"
             
             # 执行搜索
-            if hasattr(self, 'api_client') and hasattr(self.api_client, 'api_key'):
-                search_results = self.search_client(search_query, max_results=3, api_key=self.api_client.api_key)
-            else:
-                search_results = self.search_client(search_query, max_results=3)
+            # 直接调用search_client，wrapper会处理API key
+            search_results = self.search_client(search_query, max_results=3)
             
             # 只有成功获取到真实搜索结果才使用
             if (search_results and 
@@ -1716,10 +1708,8 @@ Mask the keyword "{keyword.keyword}" from the query and check if the remaining k
             return None
         
         try:
-            if hasattr(self, 'api_client') and hasattr(self.api_client, 'api_key'):
-                results = self.search_client(query, max_results=max_results, api_key=self.api_client.api_key)
-            else:
-                results = self.search_client(query, max_results=max_results)
+            # 直接调用search_client，wrapper会处理API key
+            results = self.search_client(query, max_results=max_results)
             
             # 只有成功获取到真实搜索结果才返回
             if (results and 
