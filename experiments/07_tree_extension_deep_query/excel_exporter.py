@@ -72,17 +72,25 @@ class FixedCleanExcelExporter:
                     root_query = root_node.get('query', {})
                     root_answer = root_query.get('answer', 'N/A')
                     
-                    # 处理双格式的综合问题和答案
+                    # 处理三格式的综合问题和答案
                     if isinstance(final_composite, dict):
-                        # 新的双格式（支持问题和答案）
+                        # 新的三格式（支持问题、答案和兜底标记）
                         nested_question = final_composite.get('nested_cumulative', '')
                         nested_answer = final_composite.get('nested_cumulative_answer', root_answer)
+                        nested_fallback = final_composite.get('nested_cumulative_fallback', False)
+                        
                         llm_question = final_composite.get('llm_integrated', '')
                         llm_answer = final_composite.get('llm_integrated_answer', root_answer)
+                        llm_fallback = final_composite.get('llm_integrated_fallback', False)
                         
-                        # 检查两种格式是否有效
+                        ambiguous_question = final_composite.get('ambiguous_integrated', '')
+                        ambiguous_answer = final_composite.get('ambiguous_integrated_answer', root_answer)
+                        ambiguous_fallback = final_composite.get('ambiguous_integrated_fallback', False)
+                        
+                        # 检查三种格式是否有效
                         nested_valid = nested_question and len(nested_question.strip()) > 30
                         llm_valid = llm_question and len(llm_question.strip()) > 30
+                        ambiguous_valid = ambiguous_question and len(ambiguous_question.strip()) > 30
                         
                         # 添加嵌套累积型
                         parsed['composite_qa'].append({
@@ -94,7 +102,8 @@ class FixedCleanExcelExporter:
                             'question_length': len(nested_question) if nested_valid else 0,
                             'tree_index': tree_idx,
                             'question_type': '嵌套累积型',
-                            'is_valid': nested_valid
+                            'is_valid': nested_valid,
+                            'is_fallback': nested_fallback
                         })
                         
                         # 添加LLM整合型
@@ -107,7 +116,22 @@ class FixedCleanExcelExporter:
                             'question_length': len(llm_question) if llm_valid else 0,
                             'tree_index': tree_idx,
                             'question_type': 'LLM整合型',
-                            'is_valid': llm_valid
+                            'is_valid': llm_valid,
+                            'is_fallback': llm_fallback
+                        })
+                        
+                        # 添加模糊化整合型
+                        parsed['composite_qa'].append({
+                            'doc_id': doc_id,
+                            'tree_id': tree_id,
+                            'composite_question': ambiguous_question if ambiguous_valid else '❌ 模糊化整合型问题生成失败',
+                            'composite_answer': ambiguous_answer if ambiguous_valid else '❌ 模糊化整合型答案生成失败',
+                            'target_answer': root_answer,
+                            'question_length': len(ambiguous_question) if ambiguous_valid else 0,
+                            'tree_index': tree_idx,
+                            'question_type': '模糊化整合型',
+                            'is_valid': ambiguous_valid,
+                            'is_fallback': ambiguous_fallback
                         })
                     else:
                         # 兼容旧格式
@@ -123,7 +147,8 @@ class FixedCleanExcelExporter:
                             'question_length': len(composite_question) if is_valid else 0,
                             'tree_index': tree_idx,
                             'question_type': '旧格式（单一类型）',
-                            'is_valid': is_valid
+                            'is_valid': is_valid,
+                            'is_fallback': True  # 旧格式都标记为兜底
                         })
                     
                     # 提取所有层级的问答对 - dict格式
@@ -237,7 +262,7 @@ class FixedCleanExcelExporter:
             # Sheet3: 推理轨迹记录
             self._write_trajectories(parsed_data['trajectories'], writer)
             
-            # Sheet4: 糅合后的综合问答（双格式）
+            # Sheet4: 糅合后的综合问答（三格式+兜底标记）
             self._write_final_composite_qa(parsed_data['composite_qa'], writer)
         
         print(f"✅ Excel文件已生成: {excel_path}")
@@ -320,7 +345,7 @@ class FixedCleanExcelExporter:
         df.to_excel(writer, sheet_name='Sheet3-推理轨迹记录', index=False)
 
     def _write_final_composite_qa(self, composite_qa: List[Dict], writer):
-        """写入糅合后的综合问答（双格式）"""
+        """写入糅合后的综合问答（三格式）"""
         if not composite_qa:
             return
         
@@ -330,19 +355,48 @@ class FixedCleanExcelExporter:
         for idx, comp in enumerate(composite_qa):
             question_type = comp['question_type']
             status = "✅ 有效" if comp['is_valid'] else "❌ 无效"
+            fallback_status = "🔄 兜底" if comp.get('is_fallback', False) else "✅ 生产"
             
             composite_data.append({
                 '序号': idx + 1,
                 '文档ID': comp['doc_id'],
                 '推理树ID': comp['tree_id'],
                 '问题类型': question_type,
-                '嵌套问题': comp['composite_question'],
-                '嵌套答案': comp['composite_answer'],
+                '糅合问题': comp['composite_question'],
+                '糅合答案': comp['composite_answer'],
                 '最终答案': comp['target_answer'],
                 '问题状态': status,
+                '生成方式': fallback_status,
                 '问题长度': comp['question_length'],
                 '树索引': comp['tree_index']
             })
         
         df = pd.DataFrame(composite_data)
-        df.to_excel(writer, sheet_name='Sheet4-糅合后的综合问答', index=False) 
+        
+        # 应用Excel格式化，兜底结果用不同颜色标记
+        df.to_excel(writer, sheet_name='Sheet4-糅合后的综合问答', index=False)
+        
+        # 获取工作表以应用格式化
+        workbook = writer.book
+        worksheet = writer.sheets['Sheet4-糅合后的综合问答']
+        
+        # 导入openpyxl样式
+        from openpyxl.styles import PatternFill, Font
+        
+        # 定义样式
+        fallback_fill = PatternFill(start_color='FFE6CC', end_color='FFE6CC', fill_type='solid')  # 橙色背景
+        production_fill = PatternFill(start_color='E6F3E6', end_color='E6F3E6', fill_type='solid')  # 绿色背景
+        
+        # 应用条件格式
+        for row_idx, row in enumerate(df.itertuples(), start=2):  # 从第2行开始（跳过表头）
+            generation_method = row[9]  # '生成方式'列
+            if '兜底' in generation_method:
+                # 对整行应用兜底样式
+                for col_idx in range(1, len(df.columns) + 1):
+                    cell = worksheet.cell(row=row_idx, column=col_idx)
+                    cell.fill = fallback_fill
+            elif '生产' in generation_method:
+                # 对整行应用生产样式
+                for col_idx in range(1, len(df.columns) + 1):
+                    cell = worksheet.cell(row=row_idx, column=col_idx)
+                    cell.fill = production_fill 

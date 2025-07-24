@@ -275,11 +275,14 @@ def _step6_generate_composite_query(self, tree: AgentReasoningTree) -> Dict[str,
     综合问题生成流程：
     
     1. 收集推理树的所有层级问题和答案
-    2. 生成两种格式的糅合问题：
+    2. 生成三种格式的糅合问题：
        - 嵌套累积型：(Q1, (Q2, Q3)) 结构化拼装
        - LLM整合型：GPT-4o自然生成推理链
+       - 模糊化整合型：增加认知负担的抽象表达
     3. 确保问题不包含任何层级的答案信息
     4. 形成真正的推理链而非并行条件验证
+    5. 自动检测和标记兜底结果
+    6. 清理问题前缀（Question:、1.等）
     """
 
 def _generate_nested_cumulative_query(self, queries_by_layer: Dict[int, List[str]], root_answer: str = "") -> str:
@@ -292,7 +295,7 @@ def _generate_nested_cumulative_query(self, queries_by_layer: Dict[int, List[str
     4. 保持清晰的结构化表达
     """
 
-def _generate_llm_integrated_query(self, queries_by_layer: Dict[int, List[str]], root_answer: str = "") -> str:
+def _generate_llm_integrated_query(self, queries_by_layer: Dict[int, List[str]], root_answer: str = "") -> Tuple[str, bool]:
     """
     LLM整合型问题生成：
     
@@ -300,6 +303,31 @@ def _generate_llm_integrated_query(self, queries_by_layer: Dict[int, List[str]],
     2. 强调Sequential reasoning而非parallel conditions
     3. 要求Answer1 → Question2 → Answer2 → Question3的依赖关系
     4. 生成真正的逻辑推理链，Agent必须逐步解决
+    5. 返回(问题文本, 是否兜底)元组
+    """
+
+def _generate_ambiguous_integrated_query(self, queries_by_layer: Dict[int, List[str]], root_answer: str = "") -> Tuple[str, bool]:
+    """
+    模糊化整合型问题生成：
+    
+    1. 使用抽象术语替代具体概念（"某个实体"、"特定因素"）
+    2. 增加语义歧义性但保持逻辑完整性
+    3. 强制Agent进行概念解释+逻辑推理
+    4. 提高认知负担，测试Agent的理解和推理能力
+    5. 返回(问题文本, 是否兜底)元组
+    """
+
+def _clean_question_prefix(self, question: str) -> str:
+    """
+    增强前缀清理功能（v1.1.0升级）：
+    
+    1. 支持20+种前缀模式清理
+    2. 处理换行符和格式问题（Question:\n\n）
+    3. 清理星号、井号标记（**Question:**、###Question:）
+    4. 移除引号包围和多余空格
+    5. 支持中英文混合前缀
+    6. 自动应用于所有问题生成环节
+    7. 确保输出的纯净性和专业性
     """
 ```
 

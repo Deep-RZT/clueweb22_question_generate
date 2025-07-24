@@ -737,14 +737,15 @@ class AgentDepthReasoningFramework:
     
     def _step6_generate_composite_query(self, tree: AgentReasoningTree) -> Dict[str, str]:
         """
-        Step 6: 生成最终综合问题和答案 - 双格式输出
+        Step 6: 生成最终综合问题和答案 - 三格式输出
         
-        生成两种类型的糅合问题和对应答案：
+        生成三种类型的糅合问题和对应答案：
         1. 嵌套累积型：无LLM，纯问题累积 (Q1, (Q2, Q3...))
         2. LLM整合型：LLM参与的自然语言整合，保持问题顺序
+        3. 模糊化整合型：LLM生成的模糊表达，增加推理难度
         """
         try:
-            logger.info(f"生成双格式最终综合问题和答案: Tree {tree.tree_id}")
+            logger.info(f"生成三格式最终综合问题和答案: Tree {tree.tree_id}")
             
             # 收集所有层级的问题和答案
             queries_by_layer = {}
@@ -760,23 +761,30 @@ class AgentDepthReasoningFramework:
             
             root_answer = tree.root_node.query.answer
             
-            # 生成两种格式的综合问题和答案
+            # 生成三种格式的综合问题和答案
             # 问题生成：完全基于问题，不传递答案信息
-            nested_cumulative_question = self._generate_nested_cumulative_query(queries_by_layer, "")
-            llm_integrated_question = self._generate_llm_integrated_query(queries_by_layer, "")
+            nested_cumulative_question, nested_fallback = self._generate_nested_cumulative_query(queries_by_layer, "")
+            llm_integrated_question, llm_fallback = self._generate_llm_integrated_query(queries_by_layer, "")
+            ambiguous_integrated_question, ambiguous_fallback = self._generate_ambiguous_integrated_query(queries_by_layer, "")
             
             # 答案生成：可以使用root_answer
             nested_cumulative_answer = self._generate_nested_cumulative_answer(answers_by_layer, root_answer)
             llm_integrated_answer = self._generate_llm_integrated_answer(answers_by_layer, root_answer)
+            ambiguous_integrated_answer = self._generate_ambiguous_integrated_answer(answers_by_layer, root_answer)
             
             composite_queries = {
                 'nested_cumulative': nested_cumulative_question,
                 'nested_cumulative_answer': nested_cumulative_answer,
+                'nested_cumulative_fallback': nested_fallback,
                 'llm_integrated': llm_integrated_question,
-                'llm_integrated_answer': llm_integrated_answer
+                'llm_integrated_answer': llm_integrated_answer,
+                'llm_integrated_fallback': llm_fallback,
+                'ambiguous_integrated': ambiguous_integrated_question,
+                'ambiguous_integrated_answer': ambiguous_integrated_answer,
+                'ambiguous_integrated_fallback': ambiguous_fallback
             }
             
-            logger.info(f"✅ 双格式综合问题和答案生成成功")
+            logger.info(f"✅ 三格式综合问题和答案生成成功")
             self.stats['final_composite_queries'] += 1
             
             # 记录轨迹
@@ -788,6 +796,7 @@ class AgentDepthReasoningFramework:
                 'queries_per_layer': {str(k): len(v) for k, v in queries_by_layer.items()},
                 'nested_cumulative_length': len(nested_cumulative_question),
                 'llm_integrated_length': len(llm_integrated_question),
+                'ambiguous_integrated_length': len(ambiguous_integrated_question),
                 'complexity_score': self._calculate_complexity_score(llm_integrated_question),
                 'composite_queries': composite_queries
             })
@@ -800,19 +809,71 @@ class AgentDepthReasoningFramework:
         except Exception as e:
             logger.error(f"Step 6执行失败: {e}")
             return {
-                'nested_cumulative': f"Multi-step reasoning required for: {tree.root_node.query.answer}",
+                'nested_cumulative': "Multi-step reasoning required",
                 'nested_cumulative_answer': tree.root_node.query.answer,
-                'llm_integrated': f"Complex reasoning chain needed to determine: {tree.root_node.query.answer}",
-                'llm_integrated_answer': tree.root_node.query.answer
+                'nested_cumulative_fallback': True,
+                'llm_integrated': "Complex reasoning chain needed to determine the final answer",
+                'llm_integrated_answer': tree.root_node.query.answer,
+                'llm_integrated_fallback': True,
+                'ambiguous_integrated': "Through multi-layered analysis, what conclusion can be reached?",
+                'ambiguous_integrated_answer': tree.root_node.query.answer,
+                'ambiguous_integrated_fallback': True
             }
     
-    def _generate_nested_cumulative_query(self, queries_by_layer: Dict[int, List[str]], root_answer: str = "") -> str:
+    def _clean_question_prefix(self, question: str) -> str:
+        """清理问题中的前缀标记和格式问题"""
+        import re
+        
+        if not question or not isinstance(question, str):
+            return ""
+        
+        # 首先清理换行符和多余空格
+        cleaned_question = question.strip()
+        cleaned_question = re.sub(r'\n+', ' ', cleaned_question)  # 换行符替换为空格
+        cleaned_question = re.sub(r'\s+', ' ', cleaned_question)  # 多个空格合并为一个
+        
+        # 定义需要清理的前缀模式（多行模式，考虑换行的情况）
+        prefix_patterns = [
+            r'^Question:\s*',
+            r'^QUESTION:\s*',
+            r'^问题：\s*',
+            r'^问题:\s*',
+            r'^\d+\.\s*',  # 数字编号
+            r'^Step\s+\d+:\s*',  # Step编号
+            r'^步骤\s*\d+:\s*',  # 中文步骤编号
+            r'^Query:\s*',
+            r'^QUERY:\s*',
+            r'^Task:\s*',
+            r'^TASK:\s*',
+            r'^Answer:\s*',  # 添加Answer前缀清理
+            r'^ANSWER:\s*',
+            r'^回答：\s*',
+            r'^A:\s*',  # 单字母前缀
+            r'^Q:\s*',
+            r'^\*+\s*\w+:\s*',  # 星号前缀（如 **Question:** ）
+            r'^-+\s*',   # 横线前缀
+            r'^#+\s*.*?:\s*'    # 井号前缀（如 ###Question: ）
+        ]
+        
+        # 逐个应用清理模式
+        for pattern in prefix_patterns:
+            cleaned_question = re.sub(pattern, '', cleaned_question, flags=re.IGNORECASE | re.MULTILINE).strip()
+        
+        # 清理引号包围的内容
+        cleaned_question = re.sub(r'^["\'](.+)["\']$', r'\1', cleaned_question).strip()
+        
+        # 最终清理：移除开头的冒号和空格
+        cleaned_question = re.sub(r'^:\s*', '', cleaned_question).strip()
+        
+        return cleaned_question
+    
+    def _generate_nested_cumulative_query(self, queries_by_layer: Dict[int, List[str]], root_answer: str = "") -> Tuple[str, bool]:
         """生成嵌套累积型问题 - 简单括号拼装结构"""
         try:
             # 从最深层向root顶层累积问题
             layers = sorted(queries_by_layer.keys(), reverse=True)  # 从深层到浅层
             if not layers:
-                return "(Multi-step reasoning required)"
+                return "(Multi-step reasoning required)", True  # 返回兜底结果
             
             # 构建嵌套结构：(Q_deepest, (Q_middle, Q_root))
             nested_query = ""
@@ -821,8 +882,8 @@ class AgentDepthReasoningFramework:
                 if not layer_queries:
                     continue
                     
-                # 每层取第一个问题作为代表
-                current_query = layer_queries[0]
+                # 每层取第一个问题作为代表，并清理前缀
+                current_query = self._clean_question_prefix(layer_queries[0])
                 
                 if i == 0:
                     # 最深层
@@ -831,12 +892,15 @@ class AgentDepthReasoningFramework:
                     # 嵌套包装
                     nested_query = f"({current_query}, {nested_query})"
             
+            if not nested_query:
+                return "(Multi-step reasoning required)", True  # 返回兜底结果
+            
             logger.info(f"✅ 嵌套累积型问题生成: {len(nested_query)} 字符")
-            return nested_query
+            return nested_query, False  # 成功生成，非兜底
             
         except Exception as e:
             logger.error(f"生成嵌套累积型问题失败: {e}")
-            return "(Multi-step reasoning required)"
+            return "(Multi-step reasoning required)", True  # 兜底结果
     
 
     
@@ -872,7 +936,7 @@ class AgentDepthReasoningFramework:
             logger.error(f"生成嵌套累积型答案失败: {e}")
             return f"(Multi-step reasoning answer for {root_answer})"
     
-    def _generate_llm_integrated_query(self, queries_by_layer: Dict[int, List[str]], root_answer: str = "") -> str:
+    def _generate_llm_integrated_query(self, queries_by_layer: Dict[int, List[str]], root_answer: str = "") -> Tuple[str, bool]:
         """生成LLM整合型问题 - 完全基于问题进行自然语言组织，不涉及任何答案"""
         if not self.api_client or not queries_by_layer:
             return self._generate_fallback_integrated_query(queries_by_layer, "")
@@ -926,17 +990,21 @@ class AgentDepthReasoningFramework:
             
             if response and len(response.strip()) > 50:
                 integrated_query = response.strip()
-                # 简单清理
+                # 清理前缀和格式
+                integrated_query = self._clean_question_prefix(integrated_query)
                 integrated_query = integrated_query.replace('"', '').replace('*', '').strip()
                 
                 logger.info(f"✅ LLM整合型问题生成: {len(integrated_query)} 字符")
-                return integrated_query
+                return integrated_query, False  # 成功生成，非兜底
             
-            return self._generate_fallback_integrated_query(queries_by_layer, "")
+            # 调用兜底函数
+            fallback_query, _ = self._generate_fallback_integrated_query(queries_by_layer, "")
+            return fallback_query, True  # 兜底结果
             
         except Exception as e:
             logger.error(f"生成LLM整合型问题失败: {e}")
-            return self._generate_fallback_integrated_query(queries_by_layer, "")
+            fallback_query, _ = self._generate_fallback_integrated_query(queries_by_layer, "")
+            return fallback_query, True  # 兜底结果
     
     def _generate_llm_integrated_answer(self, answers_by_layer: Dict[int, List[str]], root_answer: str) -> str:
         """生成LLM整合型答案 - 纯客观事实答案，无思考过程描述"""
@@ -998,22 +1066,24 @@ class AgentDepthReasoningFramework:
             logger.error(f"生成LLM整合型答案失败: {e}")
             return self._generate_fallback_integrated_answer(answers_by_layer, root_answer)
     
-    def _generate_fallback_integrated_query(self, queries_by_layer: Dict[int, List[str]], root_answer: str) -> str:
+    def _generate_fallback_integrated_query(self, queries_by_layer: Dict[int, List[str]], root_answer: str) -> Tuple[str, bool]:
         """生成后备整合型问题 - 自然推理链描述"""
         all_queries = []
         for layer in sorted(queries_by_layer.keys(), reverse=True):
-            all_queries.extend(queries_by_layer[layer])
+            # 清理每个问题的前缀
+            clean_queries = [self._clean_question_prefix(q) for q in queries_by_layer[layer]]
+            all_queries.extend(clean_queries)
         
         if not all_queries:
-            return "What is the final answer that requires multi-step reasoning to determine?"
+            return "What is the final answer that requires multi-step reasoning to determine?", True
         
         if len(all_queries) == 1:
-            return f"What is the answer to: {all_queries[0]}"
+            return f"What is the answer to: {all_queries[0]}", True
         elif len(all_queries) == 2:
-            return f"Starting with '{all_queries[0]}', use that result to determine the answer to '{all_queries[1]}'. What is the final outcome?"
+            return f"Starting with '{all_queries[0]}', use that result to determine the answer to '{all_queries[1]}'. What is the final outcome?", True
         else:
             # 自然的推理链描述
-            return f"Begin by solving '{all_queries[0]}'. Use that answer to address '{all_queries[1]}'. Finally, apply the result to solve '{all_queries[2]}'. What is the ultimate conclusion?"
+            return f"Begin by solving '{all_queries[0]}'. Use that answer to address '{all_queries[1]}'. Finally, apply the result to solve '{all_queries[2]}'. What is the ultimate conclusion?", True
     
     def _generate_fallback_integrated_answer(self, answers_by_layer: Dict[int, List[str]], root_answer: str) -> str:
         """生成后备整合型答案 - 纯客观表述"""
@@ -1030,6 +1100,112 @@ class AgentDepthReasoningFramework:
             return f"{root_answer} corresponds to the specified criteria."
         else:
             return f"{root_answer} satisfies all the required conditions."
+    
+    def _generate_ambiguous_integrated_query(self, queries_by_layer: Dict[int, List[str]], root_answer: str = "") -> Tuple[str, bool]:
+        """生成模糊化整合型问题 - 增加推理难度的模糊表达"""
+        if not self.api_client or not queries_by_layer:
+            return self._generate_fallback_ambiguous_query(queries_by_layer, "")
+        
+        try:
+            # 收集所有问题，按层级从深到浅排序
+            all_queries_ordered = []
+            for layer in sorted(queries_by_layer.keys(), reverse=True):
+                clean_queries = [self._clean_question_prefix(q) for q in queries_by_layer[layer]]
+                all_queries_ordered.extend(clean_queries)
+            
+            if not all_queries_ordered:
+                return "What underlying entity can be determined through systematic analytical processes?", True
+            
+            ambiguous_prompt = f"""**TASK: Create an AMBIGUOUS REASONING CHAIN question that increases cognitive difficulty while maintaining logical completeness.**
+
+**SOURCE QUESTIONS (ordered from deepest to shallowest):**
+{chr(10).join([f"{i+1}. {q}" for i, q in enumerate(all_queries_ordered)])}
+
+**AMBIGUITY REQUIREMENTS:**
+1. **ABSTRACT TERMINOLOGY**: Use "certain entity", "specific factor", "particular condition", "underlying element"
+2. **VAGUE DESCRIPTORS**: Replace concrete terms with abstract ones ("organization" instead of "company")
+3. **INDIRECT REFERENCES**: Use "what satisfies", "which corresponds to", "that demonstrates"
+4. **SEQUENTIAL LOGIC PRESERVED**: Maintain step-by-step dependency despite vague language
+5. **NO ANSWER EXPOSURE**: Never include or hint at any specific answers
+6. **COGNITIVE LOAD**: Force Agent to interpret vague terms while following logic
+
+**AMBIGUITY TECHNIQUES:**
+- Entity Abstraction: "company" → "organizational entity" 
+- Temporal Vagueness: "founded in 1976" → "established during a particular period"
+- Attribute Generalization: "CEO" → "primary leadership figure"
+- Locational Abstraction: "Cupertino" → "specific geographic location"
+- Numerical Vagueness: "45 years" → "certain duration of operation"
+
+**FORBIDDEN (TOO CONCRETE):**
+❌ "What company was founded in 1976?"
+❌ "Which organization has Tim Cook as CEO?"
+❌ "What business is headquartered in Cupertino?"
+
+**REQUIRED (APPROPRIATELY AMBIGUOUS):**
+✅ "What organizational entity was established during a specific timeframe that corresponds to particular foundational circumstances?"
+✅ "Which institutional structure operates under leadership that demonstrates certain executive characteristics?"
+✅ "What commercial entity maintains operational presence in a location that exhibits specific technological concentration?"
+
+**GOAL: Create one ambiguous reasoning chain that requires Agent interpretation + step-by-step solving**
+
+**OUTPUT:** One ambiguous but logically complete reasoning chain question."""
+
+            response = self.api_client.generate_response(
+                prompt=ambiguous_prompt,
+                temperature=0.7,
+                max_tokens=500
+            )
+            
+            if response and len(response.strip()) > 50:
+                ambiguous_query = response.strip()
+                # 清理前缀和格式
+                ambiguous_query = self._clean_question_prefix(ambiguous_query)
+                ambiguous_query = ambiguous_query.replace('"', '').replace('*', '').strip()
+                
+                logger.info(f"✅ 模糊化整合型问题生成: {len(ambiguous_query)} 字符")
+                return ambiguous_query, False  # 成功生成，非兜底
+            
+            # 调用兜底函数
+            fallback_query, _ = self._generate_fallback_ambiguous_query(queries_by_layer, "")
+            return fallback_query, True  # 兜底结果
+            
+        except Exception as e:
+            logger.error(f"生成模糊化整合型问题失败: {e}")
+            fallback_query, _ = self._generate_fallback_ambiguous_query(queries_by_layer, "")
+            return fallback_query, True  # 兜底结果
+    
+    def _generate_fallback_ambiguous_query(self, queries_by_layer: Dict[int, List[str]], root_answer: str) -> Tuple[str, bool]:
+        """生成后备模糊化问题"""
+        all_queries = []
+        for layer in sorted(queries_by_layer.keys(), reverse=True):
+            clean_queries = [self._clean_question_prefix(q) for q in queries_by_layer[layer]]
+            all_queries.extend(clean_queries)
+        
+        if not all_queries:
+            return "What underlying entity can be determined through systematic analytical processes?", True
+        
+        if len(all_queries) == 1:
+            return f"What particular element corresponds to the conditions implied by: {all_queries[0]}", True
+        elif len(all_queries) == 2:
+            return f"Starting with the entity that satisfies '{all_queries[0]}', what specific factor emerges when applying this to '{all_queries[1]}'?", True
+        else:
+            return f"Through systematic analysis beginning with '{all_queries[0]}', proceeding through '{all_queries[1]}', what ultimate conclusion can be derived regarding '{all_queries[2]}'?", True
+    
+    def _generate_ambiguous_integrated_answer(self, answers_by_layer: Dict[int, List[str]], root_answer: str) -> str:
+        """生成模糊化整合型答案 - 保持客观性的抽象表述"""
+        all_answers = []
+        for layer in sorted(answers_by_layer.keys(), reverse=True):
+            all_answers.extend(answers_by_layer[layer])
+        
+        if not all_answers:
+            return f"The systematic analysis reveals {root_answer}."
+        
+        if len(all_answers) == 1:
+            return f"The underlying entity is {root_answer}."
+        elif len(all_answers) == 2:
+            return f"{root_answer} represents the specific factor that satisfies the analytical requirements."
+        else:
+            return f"{root_answer} emerges as the conclusion through systematic multi-layered evaluation."
     
     def _record_trajectory(self, record: Dict[str, Any]):
         """记录轨迹数据"""
@@ -1333,7 +1509,7 @@ class AgentDepthReasoningFramework:
                 return None
             
             # Step 3: 移除非必要关键词 - 使用新的精确算法
-            question_text = parsed_data['question_text']
+            question_text = self._clean_question_prefix(parsed_data['question_text'])
             initial_keywords = parsed_data.get('minimal_keywords', [])
             
             # 优先使用新的精确关键词最小化算法
@@ -1806,6 +1982,9 @@ Mask the keyword "{keyword.keyword}" from the query and check if the remaining k
                 logger.warning("无法解析无关联问题生成响应")
                 return None
             
+            # 清理问题前缀
+            clean_question_text = self._clean_question_prefix(parsed_data['question_text'])
+            
             # 创建MinimalKeyword对象
             minimal_keywords = []
             for kw in parsed_data.get('minimal_keywords', []):
@@ -1814,21 +1993,21 @@ Mask the keyword "{keyword.keyword}" from the query and check if the remaining k
                     keyword_type=self._classify_keyword_type(kw),
                     uniqueness_score=0.7,
                     necessity_score=0.8,
-                    extraction_context=parsed_data['question_text'],
-                    position_in_query=parsed_data['question_text'].find(kw)
+                    extraction_context=clean_question_text,
+                    position_in_query=clean_question_text.find(kw)
                 )
                 minimal_keywords.append(minimal_keyword)
             
             # 验证问题质量
             validation_passed = self._validate_unrelated_query(
-                parsed_data['question_text'], 
+                clean_question_text, 
                 keyword.keyword,
                 minimal_keywords
             )
             
             precise_query = PreciseQuery(
                 query_id=query_id,
-                query_text=parsed_data['question_text'],
+                query_text=clean_question_text,
                 answer=keyword.keyword,
                 minimal_keywords=minimal_keywords,
                 generation_method="web_search",
@@ -1837,7 +2016,7 @@ Mask the keyword "{keyword.keyword}" from the query and check if the remaining k
                 extension_type="series" if "series" in query_id else "parallel"
             )
             
-            logger.info(f"✅ 无关联问题生成: {parsed_data['question_text']}")
+            logger.info(f"✅ 无关联问题生成: {clean_question_text}")
             return precise_query
             
         except Exception as e:

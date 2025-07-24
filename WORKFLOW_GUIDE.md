@@ -164,7 +164,7 @@ cd experiments/04_multi_stage
 python main.py
 ```
 
-### 6. 🧠 Agent Deep Reasoning Framework (LATEST)
+### 6. 🧠 Agent Deep Reasoning Framework (LATEST v1.1.0)
 
 **Location**: `experiments/07_tree_extension_deep_query/`
 **Best for**: AI Agent reasoning test, preventing direct answers
@@ -173,9 +173,12 @@ python main.py
 - **6-Step Agent Design Flow**: Complete pipeline from short answers to composite questions
 - **Root Answer Exposure Protection**: Intelligent detection and prevention of answer leakage
 - **Pure Objective Q&A**: Elimination of LLM thinking process descriptions
-- **Real Web Search Integration**: OpenAI official API, no mock data pollution
+- **Real Web Search Integration**: OpenAI official API, zero mock data pollution
+- **Three Composite Question Types**: Nested, LLM-integrated, and ambiguous reasoning chains
+- **Enhanced Prefix Cleaning**: 20+ patterns for professional question formatting
 - **Tree Extension Structure**: Multi-level question dependency relationships
 - **4-Layer Quality Verification**: Comprehensive validation system
+- **Data Purity Guarantee**: English prompts, real APIs, secure fallbacks
 
 **Usage**:
 ```bash

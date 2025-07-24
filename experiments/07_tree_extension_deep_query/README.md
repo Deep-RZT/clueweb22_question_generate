@@ -131,15 +131,22 @@
 
 **输出**：完整的推理树结构
 
-### Step 6: 综合问题生成
-**目标**：将所有层级的问题合并为嵌套的综合问题
+### Step 6: 综合问题生成（三种类型）
+**目标**：将所有层级的问题合并为三种不同难度的综合问题
+
+**三种类型**：
+1. **嵌套累积型**：`(Q1, (Q2, Q3))` 结构化拼装，最直观
+2. **LLM整合型**：GPT-4o自然生成的推理链问题，适中难度
+3. **模糊化整合型**：抽象表述增加认知负担，最高难度
 
 **过程**：
 1. **逻辑整合**：按照依赖关系整合各层问题
 2. **推理链条**：确保答案A→问题B→答案B→问题C的逻辑链
-3. **Agent优化**：确保最终问题适合Agent推理模式
+3. **前缀清理**：自动移除"Question:"等LLM生成的前缀
+4. **兜底检测**：标记API失败时的兜底结果
+5. **Agent优化**：确保最终问题适合Agent推理模式
 
-**输出**：最终的综合问题，答案为根答案
+**输出**：三种格式的综合问题+答案+兜底标记
 
 ---
 
@@ -228,13 +235,33 @@ ClueWeb22文档 → 文档筛选 → 短答案提取 → 根问题构建
 | **处理能力** | 20-40秒/文档 | 包含多次LLM调用和Web搜索 |
 | **推理层级** | 最多3层 | 根层 + 2个扩展层 |
 | **短答案数量** | 最多3个/文档 | 高质量客观答案 |
-| **问题类型** | 6种生成方式 | Root + Series + Parallel + Composite |
+| **问题类型** | 9种生成方式 | Root + Series + Parallel + 3种Composite |
+| **糅合问题格式** | 3种难度等级 | 嵌套累积型 + LLM整合型 + 模糊化型 |
 | **验证机制** | 4层质量检查 | 无关联性 + 根答案防护 + 客观性 + 唯一性 |
-| **API调用** | 15-25次/文档 | LLM + Web搜索混合调用 |
-| **数据格式** | JSON + Excel | 完整轨迹记录 |
+| **前缀清理** | 7种模式 | Question:, 数字编号, Step等自动移除 |
+| **兜底标记** | 完整追踪 | Excel单独列标记，区分生产/兜底结果 |
+| **API调用** | 18-30次/文档 | LLM + Web搜索混合调用（含3种糅合） |
+| **数据格式** | JSON + Excel | 完整轨迹记录 + 彩色标记 |
 | **文档支持** | ClueWeb22格式 | 支持大规模文档集 |
 | **并发处理** | 单线程顺序 | 保证质量优先 |
 | **错误恢复** | 自动跳过 + 继续 | 框架级别容错 |
+
+### 🎯 三种糅合问题示例
+
+#### 1. 嵌套累积型（结构化拼装）
+```
+(What specific organizational entity maintains operational presence in a location that exhibits technological concentration?, (What year was this entity established?, (Who founded this organizational structure?)))
+```
+
+#### 2. LLM整合型（自然推理链）
+```
+Starting with identifying the founding figures of a technological organization, determine their establishment year. Using that timeframe, identify the geographic location of their headquarters. Finally, what organizational entity emerges from this systematic analysis?
+```
+
+#### 3. 模糊化整合型（抽象认知负担）
+```
+What underlying institutional structure can be determined through systematic evaluation of foundational circumstances, temporal establishment patterns, and geographic operational positioning within technological concentration zones?
+```
 
 ---
 
@@ -362,7 +389,13 @@ A: 所有结果保存在`results/`目录，按时间戳命名
 
 ## 📝 版本信息
 
-**当前版本**: v1.0.0 (Production Ready)  
+**当前版本**: v1.1.0 (Production Ready - 数据纯净性升级)
+**最新更新**: 
+- ✅ 数据纯净性全面验证和修复
+- ✅ 英文prompt标准化完成  
+- ✅ 增强前缀清理功能（20+模式）
+- ✅ 兜底安全漏洞修复
+- ✅ 历史结果文件批量修复完成  
 **最后更新**: 2024年12月  
 **兼容性**: Python 3.8+, OpenAI API v1.97.1+
 
@@ -382,8 +415,14 @@ A: 所有结果保存在`results/`目录，按时间戳命名
 - 🔧 **API Key传递机制**：统一wrapper处理，避免重复参数
 - 🔧 **质量验证系统**：4层验证确保问题质量
 - 🔧 **根答案暴露防护**：智能检测并防止答案在推理过程中泄露
-- 🔧 **数据纯净性**：移除所有Mock数据和假信息
+- 🔧 **数据纯净性保证**：所有API调用真实有效，零Mock数据污染
+- 🔧 **英文prompt标准化**：所有提示词英文化，符合国际标准
 - 🔧 **客观性保证**：完全消除LLM思考过程描述
 - 🔧 **糅合问题安全性**：完全基于问题组织，绝不包含任何层级答案
+- 🔧 **兜底安全修复**：兜底字符串不包含具体答案，保证绝对隔离
 - 🔧 **推理链优化**：从并行条件改为真正的sequential reasoning chain
+- 🔧 **三种糅合问题类型**：嵌套累积型、LLM整合型、模糊化整合型
+- 🔧 **增强前缀清理**：20+模式清理LLM生成的前缀标记和换行问题
+- 🔧 **兜底标记系统**：Excel单独列标记兜底结果，便于识别
+- 🔧 **历史数据修复**：批量处理工具清理已有结果文件格式问题
 - 🔧 **文件结构优化**：清理命名，模块化组织 
